@@ -220,6 +220,13 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var typeBox = sender as FlatComboBox;
+                if (typeBox == typeBox1)
+                {
+                    _currentSpecies.EntryInfo.type_1 = typeBox.SelectedIndex;
+                } else
+                {
+                    _currentSpecies.EntryInfo.type_2 = typeBox.SelectedIndex;
+                }
             }
         }
 
@@ -228,6 +235,18 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var abilityBox = sender as FlatComboBox;
+                if (abilityBox == abilityBox1)
+                {
+                    _currentSpecies.EntryInfo.ability_1 = abilityBox.SelectedIndex;
+                }
+                else if (abilityBox == abilityBox2)
+                {
+                    _currentSpecies.EntryInfo.ability_2 = abilityBox.SelectedIndex;
+                } else
+                {
+                    _currentSpecies.EntryInfo.ability_hidden = abilityBox.SelectedIndex;
+
+                }
             }
         }
 
@@ -236,6 +255,13 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var eggBox = sender as FlatComboBox;
+                if (eggBox == eggBox1)
+                {
+                    _currentSpecies.EntryInfo.egg_group_1 = eggBox.SelectedIndex;
+                } else
+                {
+                    _currentSpecies.EntryInfo.egg_group_2 = eggBox.SelectedIndex;
+                }
             }
         }
 
@@ -244,6 +270,7 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var xpGroupBox = sender as FlatComboBox;
+                _currentSpecies.EntryInfo.xp_growth = xpGroupBox.SelectedIndex;
             }
         }
 
@@ -252,6 +279,7 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var heldItemBox = sender as FlatComboBox;
+                _currentSpecies.PokeDataInfo.bringItem.itemID = _form.items.First(x => x.Item3 == heldItemBox.SelectedIndex).Item2;
             }
         }
 
@@ -260,6 +288,7 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var ratioBox = sender as SiticoneNumericUpDown;
+                _currentSpecies.PokeDataInfo.bringItem.bringRate = (int)ratioBox.Value;
             }
         }
 
@@ -268,6 +297,15 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var genderBox = sender as FlatComboBox;
+                _currentSpecies.EntryInfo.gender.group = genderBox.SelectedIndex;
+                if (genderBox.SelectedIndex > 0)
+                {
+                    genderRatioBox.Visible = false;
+                    _currentSpecies.EntryInfo.gender.ratio = 0;
+                } else
+                {
+                    genderRatioBox.Visible = true;
+                }
             }
         }
 
@@ -276,6 +314,7 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var ratioBox = sender as SiticoneNumericUpDown;
+                _currentSpecies.EntryInfo.gender.ratio = (int)ratioBox.Value;
             }
         }
 
@@ -284,6 +323,17 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var miscStatBox = sender as SiticoneNumericUpDown;
+                if (miscStatBox == friendshipBox)
+                {
+                    _currentSpecies.EntryInfo.base_friendship = (int)miscStatBox.Value;
+                } else if (miscStatBox == catchRateBox)
+                {
+                    _currentSpecies.EntryInfo.catch_rate = (int)miscStatBox.Value;
+                }
+                else if (miscStatBox == hatchBox)
+                {
+                    _currentSpecies.EntryInfo.egg_hatch_steps = (int)miscStatBox.Value;
+                }
             }
         }
 
