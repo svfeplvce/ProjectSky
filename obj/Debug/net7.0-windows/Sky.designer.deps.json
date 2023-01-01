@@ -6,6 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
+      "CliWrap/3.6.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          }
+        }
+      },
       "MetroFramework/1.2.0.3": {
         "dependencies": {
           "MetroFramework.Design": "1.2.0.3",
@@ -81,6 +89,13 @@
     }
   },
   "libraries": {
+    "CliWrap/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AY6LvRZOEYuAiuaWPLnIDddJUnpiPpiSvfoPwweEXI1orRNnsAwf6sOv9Tt0J4GFrlwejFF/INuR57iEKIh7bw==",
+      "path": "cliwrap/3.6.0",
+      "hashPath": "cliwrap.3.6.0.nupkg.sha512"
+    },
     "MetroFramework/1.2.0.3": {
       "type": "package",
       "serviceable": true,

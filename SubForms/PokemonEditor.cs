@@ -25,9 +25,9 @@ namespace Sky.SubForms
         private PokeDevID.DevID pokeDevID;
         public List<Tuple<string, string, int>> items = new List<Tuple<string, string, int>> { };
         private List<string> abilityNames = new List<string> { };
-        private List<string> speciesNames = new List<string> { };
-        private List<string> moveNames = new List<string> { };
-        private List<string> itemNames = new List<string> { };
+        public List<string> speciesNames = new List<string> { };
+        public List<string> moveNames = new List<string> { };
+        public List<string> itemNames = new List<string> { };
         private List<string> alolaForms = new List<string> { "Rattata", "Raticate", "Raichu", "Sandshrew", "Sandslash", "Vulpix", "Ninetales", "Diglett", "Dugtrio", "Meowth", "Persian", "Geodude", "Graveler", "Golem", "Grimer", "Muk", "Exeggutor", "Marowak" }; 
         private List<string> galarForms = new List<string> { "Meowth", "Ponyta", "Rapidash", "Weezing", "Corsola", "Zigzagoon", "Linoone", "Darumaka", "Darmanitan", "Yamask", "Stunfisk", "Slowpoke", "Slowbro", "Slowking", "Articuno", "Zapdos", "Moltres" }; 
         private List<string> hisuiForms = new List<string> { "Lilligant", "Growlithe", "Arcanine", "Voltorb", "Electrode", "Typhlosion", "Samurott", "Decidueye", "Qwilfish", "Sneasel", "Zorua", "Zoroark", "Braviary", "Sliggoo", "Goodra", "Avalugg" }; 
@@ -130,13 +130,9 @@ namespace Sky.SubForms
                     }
                 }
 
-                foreach (var x in items)
+                foreach (var x in plib.values)
                 {
-                    currentItemID = x.Item3;
-                    if (plib.values.Exists(y => y.itemID == currentItemID))
-                    {
-                        plibItems.Add(plib.values.First(y => y.itemID == currentItemID).plibID, currentItemID);
-                    }
+                    plibItems.Add(x.plibID, x.itemID);
                 }
             }
         }

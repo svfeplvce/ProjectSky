@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2qI4OD8eP/DjFAG0AC3Tie8CxI/eaFlnfF4vtXFACL2POFsLONPjUvwiFY6XHRDJufb9U+jDqwA8fNivAUMM4g==",
+  "dgSpecHash": "odqo99iLM59OU0xPZH9sZtoot+cDRNeNP/rEP0GluqC4dyKPtZ/bQO9T6trNDzHqb3cBWIZ3wEuyzBl+JgFelg==",
   "success": true,
   "projectFilePath": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\foxna\\.nuget\\packages\\cliwrap\\3.6.0\\cliwrap.3.6.0.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework\\1.2.0.3\\metroframework.1.2.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework.design\\1.2.0.3\\metroframework.design.1.2.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework.fonts\\1.2.0.3\\metroframework.fonts.1.2.0.3.nupkg.sha512",

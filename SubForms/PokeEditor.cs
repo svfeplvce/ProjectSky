@@ -1,10 +1,13 @@
-﻿using Siticone.Desktop.UI.WinForms;
+﻿using CliWrap;
+using CliWrap.Buffered;
+using Siticone.Desktop.UI.WinForms;
 using Sky.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -22,7 +25,80 @@ namespace Sky.SubForms
         private Dictionary<int, int> _plibItems;
         private PokemonEditor _form;
         private bool isForm;
-        private bool isInitialised;
+        private bool isInitialised = false;
+        private bool presentCheckChanged = false;
+        private List<string> tmList = new List<string> { "Take Down", "Charm", "Fake Tears", "Agility", "Mud Slap", "Scary Face", "Protect", "Fire Fang", "Thunder Fang", "Ice Fang", "Water Pulse", "Low Kick", "Acid Spray", "Acrobatics", "Struggle Bug", "Psybeam", "Confuse Ray", "Thief", "Disarming Voice", "Trailblaze", "Pounce", "Chilling Water", "Charge Beam", "Fire Spin", "Facade", "Poison Tail", "Aerial Ace", "Bulldoze", "Hex", "Snarl", "Metal Claw", "Swift", "Magical Leaf", "Icy Wind", "Mud Shot", "Rock Tomb", "Draining Kiss", "Flame Charge", "Low Sweep", "Air Cutter", "Stored Power", "Night Shade", "Fling", "Dragon Tail", "Venoshock", "Avalanche", "Endure", "Volt Switch", "Sunny Day", "Rain Dance", "Sandstorm", "Snowscape", "Smart Strike", "Psyshock", "Dig", "Bullet Seed", "False Swipe", "Brick Break", "Zen Headbutt", "U-Turn", "Shadow Claw", "Foul Play", "Psychic Fangs", "Bulk Up", "Air Slash", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Seed Bomb", "Electro Ball", "Drain Punch", "Reflect", "Light Screen", "Rock Blast", "Waterfall", "Dragon Claw", "Dazzling Gleam", "Metronome", "Grass Knot", "Thunder Wave", "Poison Jab", "Stomping Tantrum", "Rest", "Rock Slide", "Taunt", "Swords Dance", "Body Press", "Spikes", "Toxic Spikes", "Imprison", "Flash Cannon", "Dark Pulse", "Leech Life", "Eerie Impulse", "Fly", "Skill Swap", "Iron Head", "Dragon Dance", "Power Gem", "Gunk Shot", "Substitute", "Iron Defense", "X-Scissor", "Drill Run", "Will-O-Wisp", "Crunch", "Trick", "Liquidation", "Giga Drain", "Aura Sphere", "Tailwind", "Shadow Ball", "Dragon Pulse", "Stealth Rock", "Hyper Voice", "Heat Wave", "Energy Ball", "Psychic", "Heavy Slam", "Encore", "Surf", "Ice Spinner", "Flamethrower", "Thunderbolt", "Play Rough", "Amnesia", "Calm Mind", "Helping Hand", "Pollen Puff", "Baton Pass", "Earth Power", "Reversal", "Ice Beam", "Electric Terrain", "Grassy Terrain", "Psychic Terrain", "Misty Terrain", "Nasty Plot", "Fire Blast", "Hydro Pump", "Blizzard", "Fire Pledge", "Water Pledge", "Grass Pledge", "Wild Charge", "Sludge Bomb", "Earthquake", "Stone Edge", "Phantom Force", "Giga Impact", "Blast Burn", "Hydro Cannon", "Frenzy Plant", "Outrage", "Overheat", "Focus Blast", "Leaf Storm", "Hurricane", "Trick Room", "Bug Buzz", "Hyper Beam", "Brave Bird", "Flare Blitz", "Thunder", "Close Combat", "Solar Beam", "Draco Meteor", "Steel Beam", "Tera Blast" };
+        private List<TMData> tms = new List<TMData> { };
+
+        private List<EvoMethod> evoMethods = new List<EvoMethod> { 
+            new EvoMethod{ Method="None", MethodID=0, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up With High Friendship", MethodID=1, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up With High Friendship At Daytime", MethodID=2, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up With High Friendship At Nighttime", MethodID=3, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up", MethodID=4, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Trade", MethodID=5, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Trade With Held Item", MethodID=6, AdditionalArgs=true, UsesLevel=false, ArgType="Item" },
+            new EvoMethod{ Method="Trade (Shelmet/Karrablast)", MethodID=7, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Use Item", MethodID=8, AdditionalArgs=true, UsesLevel=false, ArgType="Item" },
+            new EvoMethod{ Method="Level Up While ATK > DEF", MethodID=9, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up While ATK = DEF", MethodID=10, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up While ATK < DEF", MethodID=11, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up With A Certain Personality Value", MethodID=12, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up With A Certain Personality Value 2", MethodID=13, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up (Ninjask)", MethodID=14, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up (Shedinja)", MethodID=15, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up With High Beauty", MethodID=16, AdditionalArgs=true, UsesLevel=false, ArgType="Stat" },
+            new EvoMethod{ Method="Use Item While Pokemon is Male", MethodID=17, AdditionalArgs=true, UsesLevel=false, ArgType="Item" },
+            new EvoMethod{ Method="Use Item While Pokemon is Female", MethodID=18, AdditionalArgs=true, UsesLevel=false, ArgType="Item" },
+            new EvoMethod{ Method="Level Up With Held Item At Daytime", MethodID=19, AdditionalArgs=true, UsesLevel=false, ArgType="Item" },
+            new EvoMethod{ Method="Level Up With Held Item At Nighttime", MethodID=20, AdditionalArgs=true, UsesLevel=false, ArgType="Item" },
+            new EvoMethod{ Method="Level Up While Knowing Move", MethodID=21, AdditionalArgs=true, UsesLevel=false, ArgType="Move" },
+            new EvoMethod{ Method="Level Up With Teammate", MethodID=22, AdditionalArgs=true, UsesLevel=false, ArgType="Species" },
+            new EvoMethod{ Method="Level Up While Pokemon is Male", MethodID=23, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up While Pokemon is Female", MethodID=24, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up Near Electric Rock", MethodID=25, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up Near Mossy Rock", MethodID=26, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up Near Cold Rock", MethodID=27, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up While Console is Inverted", MethodID=28, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up With High Affection And A Move Of A Specific Type", MethodID=29, AdditionalArgs=true, UsesLevel=false, ArgType="Type" },
+            new EvoMethod{ Method="Level Up While Knowing A Move Of A Specific Type", MethodID=30, AdditionalArgs=true, UsesLevel=false, ArgType="Type" },
+            new EvoMethod{ Method="Level Up During Rainy Weather", MethodID=31, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up During Morning", MethodID=32, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up During Night", MethodID=33, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up While Pokemon is Female Form", MethodID=34, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="UNUSED", MethodID=35, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up In Specific Version", MethodID=36, AdditionalArgs=true, UsesLevel=false, ArgType="Misc" },
+            new EvoMethod{ Method="Level Up In Specific Version During Daytime", MethodID=37, AdditionalArgs=true, UsesLevel=false, ArgType="Misc" },
+            new EvoMethod{ Method="Level Up In Specific Version During Nighttime", MethodID=38, AdditionalArgs=true, UsesLevel=false, ArgType="Misc" },
+            new EvoMethod{ Method="Level Up At A Summit", MethodID=39, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up At Dusk", MethodID=40, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up In Ultra Wormhole", MethodID=41, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Use Item In Ultra Wormhole", MethodID=42, AdditionalArgs=true, UsesLevel=false, ArgType="Item" },
+            new EvoMethod{ Method="Get x Crits In Battle", MethodID=43, AdditionalArgs=true, UsesLevel=false, ArgType="Misc" },
+            new EvoMethod{ Method="Lose HP In Battle", MethodID=44, AdditionalArgs=true, UsesLevel=false, ArgType="Misc" },
+            new EvoMethod{ Method="Spin", MethodID=45, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up With Amped Nature", MethodID=46, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Level Up With LowKey Nature", MethodID=47, AdditionalArgs=false, UsesLevel=true, ArgType="None" },
+            new EvoMethod{ Method="Tower Of Darkness", MethodID=48, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Tower Of Waters", MethodID=49, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up After Walking x Steps With In Lets Go Mode", MethodID=50, AdditionalArgs=true, UsesLevel=false, ArgType="Misc" },
+            new EvoMethod{ Method="Level Up In Union Circle", MethodID=51, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up In Battle With A Certain Personality Value", MethodID=52, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up In Battle With A Certain Personality Value 2", MethodID=53, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up After Collecting 999 Gimmighoul Coins", MethodID=54, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up After Defeating 3 Leader Bisharp", MethodID=55, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up After Using A Move x Times", MethodID=56, AdditionalArgs=true, UsesLevel=false, ArgType="Misc" },
+            new EvoMethod{ Method="Level Up While Knowing A Move With A Certain Personality Value", MethodID=57, AdditionalArgs=true, UsesLevel=false, ArgType="Move" },
+            new EvoMethod{ Method="Level Up While Knowing A Move With A Certain Personality Value 2", MethodID=58, AdditionalArgs=true, UsesLevel=false, ArgType="Move" },
+            new EvoMethod{ Method="Level Up After Taking x Recoil Damage While Pokemon is Male", MethodID=59, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Level Up After Taking x Recoil Damage While Pokemon is Female", MethodID=60, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Hisui", MethodID=61, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Use Item During Full Moon", MethodID=90, AdditionalArgs=true, UsesLevel=false, ArgType="Item" },
+            new EvoMethod{ Method="Use Agile Style Moves", MethodID=91, AdditionalArgs=false, UsesLevel=false, ArgType="None" },
+            new EvoMethod{ Method="Use Strong Style Moves", MethodID=92, AdditionalArgs=false, UsesLevel=false, ArgType="None" }
+        };
+
+        private Dictionary<string, List<string>> evoArgs = new Dictionary<string, List<string>> {};
 
         public Species CurrentSpecies
         {
@@ -39,8 +115,52 @@ namespace Sky.SubForms
             _plib = plib;
             _plibItems = plibItems;
             _form = form;
+            List<int> ints = Enumerable.Range(1, 1000).ToList();
 
+            evoArgs.Add("Item", _form.itemNames);
+            evoArgs.Add("Move", _form.moveNames);
+            evoArgs.Add("Species", _form.speciesNames);
+            evoArgs.Add("Type", new List<string> { "Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon", "Dark", "Fairy" });
+            evoArgs.Add("Misc", ints.ConvertAll(x => x.ToString()));
+
+            SetTMList();
+            BuildMoveGrid();
             FillFields();
+        }
+
+        private void SetTMList()
+        {
+            foreach (var x in tmList)
+            {
+                foreach (var y in _form.moveNames)
+                {
+                    if (x == y)
+                    {
+                        var moveNum = _form.moveNames.IndexOf(x);
+                        var tmNum = tmList.IndexOf(x) + 1;
+                        tms.Add(new TMData { Name = x, MoveNumber = moveNum, TMNumber = tmNum });
+                    }
+                }
+            }
+        }
+
+        private void BuildMoveGrid()
+        {
+            DataGridViewTextBoxColumn level = new DataGridViewTextBoxColumn();
+            {
+                level.Width = movesetGrid.Width / 2;
+                level.HeaderText = "Level";
+                level.MaxInputLength = 3;
+            }
+            DataGridViewComboBoxColumn move = new DataGridViewComboBoxColumn();
+            {
+                move.Width = movesetGrid.Width / 2;
+                move.HeaderText = "Move";
+                move.DataSource = _form.moveNames;
+                move.FlatStyle = FlatStyle.Flat;
+            }
+            movesetGrid.Columns.Add(level);
+            movesetGrid.Columns.Add(move);
         }
 
         private void FillFields()
@@ -116,11 +236,104 @@ namespace Sky.SubForms
 
             // moveset page
 
+            foreach (var x in _currentSpecies.EntryInfo.tm_moves)
+            {
+                try
+                {
+                    tmBox.SetItemCheckState(tms.First(y => y.MoveNumber == x).TMNumber - 1, CheckState.Checked);
+                } catch
+                {
+                    Console.WriteLine("not a tm!!!");
+                }
+            }
 
+            movesetGrid.Rows.Add(_currentSpecies.EntryInfo.levelup_moves.Count);
+
+            for (int i = 0; i < _currentSpecies.EntryInfo.levelup_moves.Count; i++)
+            {
+                movesetGrid.Rows[i].Cells[0].Value = _currentSpecies.EntryInfo.levelup_moves[i].level;
+                movesetGrid.Rows[i].Cells[1].Value = _form.moveNames[_currentSpecies.EntryInfo.levelup_moves[i].move];
+            }
 
             // evo page
 
+            foreach (var x in _currentSpecies.EntryInfo.evo_data)
+            {
+                var panel = new Panel()
+                {
+                    Width = evoPanel.Width,
+                    Height = 50,
+                    BackColor = Color.FromArgb(30, 30, 30)
+                };
+                evoPanel.Controls.Add(panel);
 
+                var methodBox = new FlatComboBox()
+                {
+                    Width = 109,
+                    Height = 23,
+                    Location = new Point(15, 9),
+                    BackColor = Color.FromArgb(25, 25, 25),
+                    BorderColor = Color.FromArgb(25, 25, 25),
+                    ForeColor = Color.White,
+                    DataSource = evoMethods,
+                    DisplayMember = "Method"
+                };
+                panel.Controls.Add(methodBox);
+                methodBox.SelectedIndexChanged += EvoValueChanged;
+                methodBox.BindingContext = BindingContext;
+                methodBox.SelectedIndex = x.condition;
+
+                var argBox = new FlatComboBox()
+                {
+                    Width = 109,
+                    Height = 23,
+                    Location = new Point(194, 9),
+                    BackColor = Color.FromArgb(25, 25, 25),
+                    ForeColor = Color.White,
+                    BorderColor = Color.FromArgb(25, 25, 25)
+                };
+
+                if (evoMethods.First(z => z.MethodID == x.condition).ArgType != "None") {
+                    argBox.DataSource = evoArgs.First(y => y.Key == evoMethods.First(z => z.MethodID == x.condition).ArgType).Value;
+                    argBox.SelectedIndexChanged += EvoValueChanged;
+                    argBox.BindingContext = BindingContext;
+                    if (evoMethods.First(z => z.MethodID == x.condition).ArgType == "Item")
+                    {
+                        argBox.SelectedIndex = _plibItems[x.parameter];
+                    }
+                    else
+                    {
+                        argBox.SelectedIndex = x.parameter;
+                    }
+                    panel.Controls.Add(argBox);
+                }
+
+                var levelBox = new SiticoneNumericUpDown()
+                {
+                    Width = 109,
+                    Height = 23,
+                    Location = new Point(373, 9),
+                    Maximum = 100,
+                    Minimum = 1
+                };
+
+                var speciesBox = new FlatComboBox()
+                {
+                    Width = 109,
+                    Height = 23,
+                    Location = new Point(552, 9),
+                    BackColor = Color.FromArgb(25, 25, 25),
+                    BorderColor = Color.FromArgb(25, 25, 25)
+                };
+
+                var formBox = new SiticoneNumericUpDown()
+                {
+                    Width = 109,
+                    Height = 23,
+                    Location = new Point(731, 9),
+                    Maximum = 20
+                };
+            }
 
             isInitialised = true;
         }
@@ -193,25 +406,37 @@ namespace Sky.SubForms
         {
             if (isInitialised)
             {
-                var check = sender as SiticoneCheckBox;
-                if (check.Checked)
+                if (!presentCheckChanged)
                 {
-                    DialogResult res = MessageBox.Show("Unchecking this box can have unexpected consequences. Are you sure you want to continue?", "!! WARNING !!", MessageBoxButtons.YesNo);
-                    if (res == DialogResult.Yes)
+                    var check = sender as SiticoneCheckBox;
+                    if (!check.Checked)
                     {
-                        check.CheckState = CheckState.Unchecked;
-                        _currentSpecies.EntryInfo.is_present = false;
+                        DialogResult res = MessageBox.Show("Unchecking this box can have unexpected consequences. Are you sure you want to continue?", "!! WARNING !!", MessageBoxButtons.YesNo);
+                        if (res == DialogResult.Yes)
+                        {
+                            presentCheckChanged = true;
+                            _currentSpecies.EntryInfo.is_present = false;
+                        } else
+                        {
+                            presentCheckChanged = true;
+                            check.CheckState = CheckState.Unchecked;
+                        }
+                    }
+                    else
+                    {
+                        DialogResult res = MessageBox.Show("Checking this box can have unexpected consequences. Are you sure you want to continue?", "!! WARNING !!", MessageBoxButtons.YesNo);
+                        if (res == DialogResult.Yes)
+                        {
+                            presentCheckChanged = true;
+                            _currentSpecies.EntryInfo.is_present = true;
+                        } else
+                        {
+                            presentCheckChanged = true;
+                            check.CheckState = CheckState.Checked;
+                        }
                     }
                 }
-                else
-                {
-                    DialogResult res = MessageBox.Show("Checking this box can have unexpected consequences. Are you sure you want to continue?", "!! WARNING !!", MessageBoxButtons.YesNo);
-                    if (res == DialogResult.Yes)
-                    {
-                        check.CheckState = CheckState.Checked;
-                        _currentSpecies.EntryInfo.is_present = true;
-                    }
-                }
+                presentCheckChanged = false;
             }
         }
 
@@ -337,6 +562,53 @@ namespace Sky.SubForms
             }
         }
 
+        private void tmBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (isInitialised)
+            {
+                if (e.NewValue == CheckState.Unchecked)
+                {
+                    _currentSpecies.EntryInfo.tm_moves.Remove(e.Index);
+                } else
+                {
+                    _currentSpecies.EntryInfo.tm_moves.Add(e.Index);
+                }
+            }
+        }
+
+        private void movesetGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (isInitialised)
+            {
+                _currentSpecies.EntryInfo.levelup_moves.Clear();
+                for (var i = 0; i < movesetGrid.RowCount; i++)
+                {
+                    if (movesetGrid.Rows[i].Cells[0].Value != null)
+                    {
+                        _currentSpecies.EntryInfo.levelup_moves.Add(new Personal.LevelupMove { level = int.Parse(movesetGrid.Rows[i].Cells[0].Value.ToString()) != 253 ? Math.Min(int.Parse(movesetGrid.Rows[i].Cells[0].Value.ToString()), 100) : 253, move = movesetGrid.Rows[i].Cells[1].Value == null ? 0 : _form.moveNames.IndexOf((string)movesetGrid.Rows[i].Cells[1].Value) });
+                    }
+                }
+            }
+        }
+
+        private void newEvoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removeEvoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EvoValueChanged(object sender, EventArgs e)
+        {
+            if (isInitialised)
+            {
+
+            }
+        }
+
         private void returnButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -390,6 +662,56 @@ namespace Sky.SubForms
             await File.WriteAllTextAsync(personalPath, personalJson);
             await File.WriteAllTextAsync(pdataPath, pdataJson);
             await File.WriteAllTextAsync(plibPath, plibJson);
+
+            // create bins
+
+            var flatcExe = MainForm.assembly.GetManifestResourceStream("Sky.Assets.Flatc.flatc.exe");
+            var personalFBS = MainForm.assembly.GetManifestResourceStream("Sky.Assets.Flatc.personal_array.fbs");
+            var plibBFBS = MainForm.assembly.GetManifestResourceStream("Sky.Assets.Flatc.plib_item_conversion_array.bfbs");
+            var pdataBFBS = MainForm.assembly.GetManifestResourceStream("Sky.Assets.Flatc.pokedata_array.bfbs");
+
+            var tempExePath = Path.Combine(MainForm.outDir, "flatc.exe");
+            var personalFBSPath = Path.Combine(MainForm.outDir, "personal_array.fbs");
+            var plibBFBSPath = Path.Combine(MainForm.outDir, "plib_item_conversion_array.bfbs");
+            var pdataBFBSPath = Path.Combine(MainForm.outDir, "pokedata_array.bfbs");
+
+            byte[] exebytes = new byte[(int)flatcExe.Length];
+            byte[] pbytes = new byte[(int)personalFBS.Length];
+            byte[] plbytes = new byte[(int)plibBFBS.Length];
+            byte[] pdbytes = new byte[(int)pdataBFBS.Length];
+
+            flatcExe.Read(exebytes, 0, exebytes.Length);
+            personalFBS.Read(pbytes, 0, pbytes.Length);
+            plibBFBS.Read(plbytes, 0, plbytes.Length);
+            pdataBFBS.Read(pdbytes, 0, pdbytes.Length);
+
+            File.WriteAllBytesAsync(tempExePath, exebytes);
+            File.WriteAllBytesAsync(personalFBSPath, pbytes);
+            File.WriteAllBytesAsync(plibBFBSPath, plbytes);
+            File.WriteAllBytesAsync(pdataBFBSPath, pdbytes);
+
+            var pcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/avalon/data/ -b personal_array.fbs personal_array.json").WithWorkingDirectory(MainForm.outDir);
+            var plcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/world/data/battle/plib_item_conversion/ -b plib_item_conversion_array.bfbs plib_item_conversion_array.json").WithWorkingDirectory(MainForm.outDir);
+            var pdcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/world/data/encount/pokedata/pokedata/ -b pokedata_array.bfbs pokedata_array.json").WithWorkingDirectory(MainForm.outDir);
+
+            await pcmd.ExecuteBufferedAsync();
+            await plcmd.ExecuteBufferedAsync();
+            await pdcmd.ExecuteBufferedAsync();
+
+            File.Delete(tempExePath);
+            File.Delete(personalFBSPath);
+            File.Delete(plibBFBSPath);
+            File.Delete(pdataBFBSPath);
+
+            var zipDirectories = Path.Combine(MainForm.outDir, "romfs/");
+            var zipPath = Path.Combine(MainForm.outDir, "project_sky_mod.zip");
+
+            if (File.Exists(zipPath))
+            {
+                File.Delete(zipPath);
+            }
+
+            ZipFile.CreateFromDirectory(zipDirectories, zipPath);
         }
     }
 }

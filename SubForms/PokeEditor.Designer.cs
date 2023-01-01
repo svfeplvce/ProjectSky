@@ -32,6 +32,9 @@ namespace Sky.SubForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.returnButton = new System.Windows.Forms.Button();
             this.tabPages = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
@@ -95,8 +98,14 @@ namespace Sky.SubForms
             this.label1 = new System.Windows.Forms.Label();
             this.pokemonName = new System.Windows.Forms.Label();
             this.movesetPage = new System.Windows.Forms.TabPage();
+            this.tmBox = new System.Windows.Forms.CheckedListBox();
+            this.movesetGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.evolutionPage = new System.Windows.Forms.TabPage();
+            this.evoPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.removeEvoButton = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.newEvoButton = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label5 = new System.Windows.Forms.Label();
             this.BSTtooltip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
@@ -123,7 +132,10 @@ namespace Sky.SubForms
             ((System.ComponentModel.ISupportInitialize)(this.baseATK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseHP)).BeginInit();
             this.movesetPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.movesetGrid)).BeginInit();
             this.evolutionPage.SuspendLayout();
+            this.evoPanel.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -265,7 +277,6 @@ namespace Sky.SubForms
             this.hatchBox.Size = new System.Drawing.Size(100, 23);
             this.hatchBox.TabIndex = 27;
             this.hatchBox.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.hatchBox.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.hatchBox.ValueChanged += new System.EventHandler(this.miscStats_ValueChanged);
             // 
             // labelfriend
@@ -295,7 +306,6 @@ namespace Sky.SubForms
             this.friendshipBox.Size = new System.Drawing.Size(100, 23);
             this.friendshipBox.TabIndex = 25;
             this.friendshipBox.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.friendshipBox.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.friendshipBox.ValueChanged += new System.EventHandler(this.miscStats_ValueChanged);
             // 
             // label26
@@ -325,7 +335,6 @@ namespace Sky.SubForms
             this.catchRateBox.Size = new System.Drawing.Size(100, 23);
             this.catchRateBox.TabIndex = 23;
             this.catchRateBox.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.catchRateBox.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.catchRateBox.ValueChanged += new System.EventHandler(this.miscStats_ValueChanged);
             // 
             // label25
@@ -393,7 +402,6 @@ namespace Sky.SubForms
             this.genderRatioBox.Size = new System.Drawing.Size(100, 23);
             this.genderRatioBox.TabIndex = 18;
             this.genderRatioBox.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.genderRatioBox.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.genderRatioBox.ValueChanged += new System.EventHandler(this.genderRatio_ValueChanged);
             // 
             // genderBox
@@ -450,7 +458,6 @@ namespace Sky.SubForms
             this.heldItemRateBox.Size = new System.Drawing.Size(100, 23);
             this.heldItemRateBox.TabIndex = 13;
             this.heldItemRateBox.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.heldItemRateBox.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.heldItemRateBox.ValueChanged += new System.EventHandler(this.heldItemRatio_ValueChanged);
             // 
             // heldItemBox
@@ -4060,7 +4067,6 @@ namespace Sky.SubForms
             this.evSPA.Size = new System.Drawing.Size(52, 26);
             this.evSPA.TabIndex = 16;
             this.evSPA.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.evSPA.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.evSPA.ValueChanged += new System.EventHandler(this.ev_ValueChanged);
             // 
             // label14
@@ -4089,7 +4095,6 @@ namespace Sky.SubForms
             this.evHP.Size = new System.Drawing.Size(52, 26);
             this.evHP.TabIndex = 13;
             this.evHP.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.evHP.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.evHP.ValueChanged += new System.EventHandler(this.ev_ValueChanged);
             // 
             // label15
@@ -4119,7 +4124,6 @@ namespace Sky.SubForms
             this.evATK.Size = new System.Drawing.Size(52, 26);
             this.evATK.TabIndex = 14;
             this.evATK.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.evATK.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.evATK.ValueChanged += new System.EventHandler(this.ev_ValueChanged);
             // 
             // label16
@@ -4149,7 +4153,6 @@ namespace Sky.SubForms
             this.evDEF.Size = new System.Drawing.Size(52, 26);
             this.evDEF.TabIndex = 15;
             this.evDEF.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.evDEF.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.evDEF.ValueChanged += new System.EventHandler(this.ev_ValueChanged);
             // 
             // label17
@@ -4180,7 +4183,6 @@ namespace Sky.SubForms
             this.evSPD.Size = new System.Drawing.Size(52, 26);
             this.evSPD.TabIndex = 17;
             this.evSPD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.evSPD.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.evSPD.ValueChanged += new System.EventHandler(this.ev_ValueChanged);
             // 
             // evSPE
@@ -4201,7 +4203,6 @@ namespace Sky.SubForms
             this.evSPE.Size = new System.Drawing.Size(52, 26);
             this.evSPE.TabIndex = 18;
             this.evSPE.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.evSPE.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.evSPE.ValueChanged += new System.EventHandler(this.ev_ValueChanged);
             // 
             // panel3
@@ -4306,7 +4307,6 @@ namespace Sky.SubForms
             this.baseSPE.Size = new System.Drawing.Size(52, 26);
             this.baseSPE.TabIndex = 6;
             this.baseSPE.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.baseSPE.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.baseSPE.ValueChanged += new System.EventHandler(this.baseStat_ValueChanged);
             // 
             // baseSPD
@@ -4327,7 +4327,6 @@ namespace Sky.SubForms
             this.baseSPD.Size = new System.Drawing.Size(52, 26);
             this.baseSPD.TabIndex = 5;
             this.baseSPD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.baseSPD.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.baseSPD.ValueChanged += new System.EventHandler(this.baseStat_ValueChanged);
             // 
             // baseSPA
@@ -4348,7 +4347,6 @@ namespace Sky.SubForms
             this.baseSPA.Size = new System.Drawing.Size(52, 26);
             this.baseSPA.TabIndex = 4;
             this.baseSPA.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.baseSPA.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.baseSPA.ValueChanged += new System.EventHandler(this.baseStat_ValueChanged);
             // 
             // baseDEF
@@ -4368,7 +4366,6 @@ namespace Sky.SubForms
             this.baseDEF.Size = new System.Drawing.Size(52, 26);
             this.baseDEF.TabIndex = 3;
             this.baseDEF.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.baseDEF.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.baseDEF.ValueChanged += new System.EventHandler(this.baseStat_ValueChanged);
             // 
             // baseATK
@@ -4388,7 +4385,6 @@ namespace Sky.SubForms
             this.baseATK.Size = new System.Drawing.Size(52, 26);
             this.baseATK.TabIndex = 2;
             this.baseATK.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.baseATK.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.baseATK.ValueChanged += new System.EventHandler(this.baseStat_ValueChanged);
             // 
             // baseHP
@@ -4408,7 +4404,6 @@ namespace Sky.SubForms
             this.baseHP.Size = new System.Drawing.Size(52, 26);
             this.baseHP.TabIndex = 1;
             this.baseHP.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.baseHP.UpDownButtonForeColor = System.Drawing.SystemColors.Control;
             this.baseHP.ValueChanged += new System.EventHandler(this.baseStat_ValueChanged);
             // 
             // label1
@@ -4436,6 +4431,8 @@ namespace Sky.SubForms
             // movesetPage
             // 
             this.movesetPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.movesetPage.Controls.Add(this.tmBox);
+            this.movesetPage.Controls.Add(this.movesetGrid);
             this.movesetPage.Controls.Add(this.label4);
             this.movesetPage.Location = new System.Drawing.Point(4, 4);
             this.movesetPage.Name = "movesetPage";
@@ -4443,6 +4440,243 @@ namespace Sky.SubForms
             this.movesetPage.Size = new System.Drawing.Size(869, 602);
             this.movesetPage.TabIndex = 1;
             this.movesetPage.Text = "Movesets";
+            // 
+            // tmBox
+            // 
+            this.tmBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tmBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tmBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.tmBox.FormattingEnabled = true;
+            this.tmBox.Items.AddRange(new object[] {
+            "Take Down",
+            "Charm",
+            "Fake Tears",
+            "Agility",
+            "Mud Slap",
+            "Scary Face",
+            "Protect",
+            "Fire Fang",
+            "Thunder Fang",
+            "Ice Fang",
+            "Water Pulse",
+            "Low Kick",
+            "Acid Spray",
+            "Acrobatics",
+            "Struggle Bug",
+            "Psybeam",
+            "Confuse Ray",
+            "Thief",
+            "Disarming Voice",
+            "Trailblaze",
+            "Pounce",
+            "Chilling Water",
+            "Charge Beam",
+            "Fire Spin",
+            "Facade",
+            "Poison Tail",
+            "Aerial Ace",
+            "Bulldoze",
+            "Hex",
+            "Snarl",
+            "Metal Claw",
+            "Swift",
+            "Magical Leaf",
+            "Icy Wind",
+            "Mud Shot",
+            "Rock Tomb",
+            "Draining Kiss",
+            "Flame Charge",
+            "Low Sweep",
+            "Air Cutter",
+            "Stored Power",
+            "Night Shade",
+            "Fling",
+            "Dragon Tail",
+            "Venoshock",
+            "Avalanche",
+            "Endure",
+            "Volt Switch",
+            "Sunny Day",
+            "Rain Dance",
+            "Sandstorm",
+            "Snowscape",
+            "Smart Strike",
+            "Psyshock",
+            "Dig",
+            "Bullet Seed",
+            "False Swipe",
+            "Brick Break",
+            "Zen Headbutt",
+            "U-Turn",
+            "Shadow Claw",
+            "Foul Play",
+            "Psychic Fangs",
+            "Bulk Up",
+            "Air Slash",
+            "Body Slam",
+            "Fire Punch",
+            "Thunder Punch",
+            "Ice Punch",
+            "Sleep Talk",
+            "Seed Bomb",
+            "Electro Ball",
+            "Drain Punch",
+            "Reflect",
+            "Light Screen",
+            "Rock Blast",
+            "Waterfall",
+            "Dragon Claw",
+            "Dazzling Gleam",
+            "Metronome",
+            "Grass Knot",
+            "Thunder Wave",
+            "Poison Jab",
+            "Stomping Tantrum",
+            "Rest",
+            "Rock Slide",
+            "Taunt",
+            "Swords Dance",
+            "Body Press",
+            "Spikes",
+            "Toxic Spikes",
+            "Imprison",
+            "Flash Cannon",
+            "Dark Pulse",
+            "Leech Life",
+            "Eerie Impulse",
+            "Fly",
+            "Skill Swap",
+            "Iron Head",
+            "Dragon Dance",
+            "Power Gem",
+            "Gunk Shot",
+            "Substitute",
+            "Iron Defense",
+            "X-Scissor",
+            "Drill Run",
+            "Will-O-Wisp",
+            "Crunch",
+            "Trick",
+            "Liquidation",
+            "Giga Drain",
+            "Aura Sphere",
+            "Tailwind",
+            "Shadow Ball",
+            "Dragon Pulse",
+            "Stealth Rock",
+            "Hyper Voice",
+            "Heat Wave",
+            "Energy Ball",
+            "Psychic",
+            "Heavy Slam",
+            "Encore",
+            "Surf",
+            "Ice Spinner",
+            "Flamethrower",
+            "Thunderbolt",
+            "Play Rough",
+            "Amnesia",
+            "Calm Mind",
+            "Helping Hand",
+            "Pollen Puff",
+            "Baton Pass",
+            "Earth Power",
+            "Reversal",
+            "Ice Beam",
+            "Electric Terrain",
+            "Grassy Terrain",
+            "Psychic Terrain",
+            "Misty Terrain",
+            "Nasty Plot",
+            "Fire Blast",
+            "Hydro Pump",
+            "Blizzard",
+            "Fire Pledge",
+            "Water Pledge",
+            "Grass Pledge",
+            "Wild Charge",
+            "Sludge Bomb",
+            "Earthquake",
+            "Stone Edge",
+            "Phantom Force",
+            "Giga Impact",
+            "Blast Burn",
+            "Hydro Cannon",
+            "Frenzy Plant",
+            "Outrage",
+            "Overheat",
+            "Focus Blast",
+            "Leaf Storm",
+            "Hurricane",
+            "Trick Room",
+            "Bug Buzz",
+            "Hyper Beam",
+            "Brave Bird",
+            "Flare Blitz",
+            "Thunder",
+            "Close Combat",
+            "Solar Beam",
+            "Draco Meteor",
+            "Steel Beam",
+            "Tera Blast"});
+            this.tmBox.Location = new System.Drawing.Point(626, 108);
+            this.tmBox.Name = "tmBox";
+            this.tmBox.Size = new System.Drawing.Size(237, 486);
+            this.tmBox.TabIndex = 2;
+            this.tmBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.tmBox_ItemCheck);
+            // 
+            // movesetGrid
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.movesetGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.movesetGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.movesetGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.movesetGrid.ColumnHeadersHeight = 17;
+            this.movesetGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.movesetGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.movesetGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.movesetGrid.Location = new System.Drawing.Point(6, 103);
+            this.movesetGrid.Name = "movesetGrid";
+            this.movesetGrid.RowHeadersVisible = false;
+            this.movesetGrid.RowTemplate.Height = 25;
+            this.movesetGrid.Size = new System.Drawing.Size(614, 491);
+            this.movesetGrid.TabIndex = 1;
+            this.movesetGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.movesetGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.movesetGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.movesetGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.movesetGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.movesetGrid.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.movesetGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.movesetGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.movesetGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.movesetGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.movesetGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.movesetGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.movesetGrid.ThemeStyle.HeaderStyle.Height = 17;
+            this.movesetGrid.ThemeStyle.ReadOnly = false;
+            this.movesetGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.movesetGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.movesetGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.movesetGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.Control;
+            this.movesetGrid.ThemeStyle.RowsStyle.Height = 25;
+            this.movesetGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.movesetGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.SystemColors.Control;
+            this.movesetGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.movesetGrid_CellValueChanged);
             // 
             // label4
             // 
@@ -4458,12 +4692,67 @@ namespace Sky.SubForms
             // evolutionPage
             // 
             this.evolutionPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.evolutionPage.Controls.Add(this.evoPanel);
             this.evolutionPage.Controls.Add(this.label5);
             this.evolutionPage.Location = new System.Drawing.Point(4, 4);
             this.evolutionPage.Name = "evolutionPage";
             this.evolutionPage.Size = new System.Drawing.Size(869, 602);
             this.evolutionPage.TabIndex = 2;
             this.evolutionPage.Text = "Evolutions";
+            // 
+            // evoPanel
+            // 
+            this.evoPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.evoPanel.AutoScroll = true;
+            this.evoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.evoPanel.Controls.Add(this.panel5);
+            this.evoPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.evoPanel.Location = new System.Drawing.Point(0, 103);
+            this.evoPanel.Name = "evoPanel";
+            this.evoPanel.Size = new System.Drawing.Size(866, 496);
+            this.evoPanel.TabIndex = 1;
+            this.evoPanel.WrapContents = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.removeEvoButton);
+            this.panel5.Controls.Add(this.newEvoButton);
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(860, 50);
+            this.panel5.TabIndex = 1;
+            // 
+            // removeEvoButton
+            // 
+            this.removeEvoButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.removeEvoButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.removeEvoButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.removeEvoButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.removeEvoButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.removeEvoButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.removeEvoButton.ForeColor = System.Drawing.Color.White;
+            this.removeEvoButton.Location = new System.Drawing.Point(427, 3);
+            this.removeEvoButton.Name = "removeEvoButton";
+            this.removeEvoButton.Size = new System.Drawing.Size(433, 45);
+            this.removeEvoButton.TabIndex = 1;
+            this.removeEvoButton.Text = "Remove Evolution";
+            this.removeEvoButton.Click += new System.EventHandler(this.removeEvoButton_Click);
+            // 
+            // newEvoButton
+            // 
+            this.newEvoButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.newEvoButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.newEvoButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.newEvoButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.newEvoButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.newEvoButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.newEvoButton.ForeColor = System.Drawing.Color.White;
+            this.newEvoButton.Location = new System.Drawing.Point(3, 3);
+            this.newEvoButton.Name = "newEvoButton";
+            this.newEvoButton.Size = new System.Drawing.Size(425, 45);
+            this.newEvoButton.TabIndex = 0;
+            this.newEvoButton.Text = "Add New Evolution";
+            this.newEvoButton.Click += new System.EventHandler(this.newEvoButton_Click);
             // 
             // label5
             // 
@@ -4516,8 +4805,11 @@ namespace Sky.SubForms
             ((System.ComponentModel.ISupportInitialize)(this.baseHP)).EndInit();
             this.movesetPage.ResumeLayout(false);
             this.movesetPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.movesetGrid)).EndInit();
             this.evolutionPage.ResumeLayout(false);
             this.evolutionPage.PerformLayout();
+            this.evoPanel.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4590,5 +4882,11 @@ namespace Sky.SubForms
         private SiticoneNumericUpDown catchRateBox;
         private Label label27;
         private SiticoneNumericUpDown hatchBox;
+        private CheckedListBox tmBox;
+        private SiticoneDataGridView movesetGrid;
+        private FlowLayoutPanel evoPanel;
+        private Panel panel5;
+        private SiticoneButton removeEvoButton;
+        private SiticoneButton newEvoButton;
     }
 }

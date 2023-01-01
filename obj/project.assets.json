@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0-windows7.0": {
+      "CliWrap/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MetroFramework/1.2.0.3": {
         "type": "package",
         "dependencies": {
@@ -96,6 +109,27 @@
     }
   },
   "libraries": {
+    "CliWrap/3.6.0": {
+      "sha512": "AY6LvRZOEYuAiuaWPLnIDddJUnpiPpiSvfoPwweEXI1orRNnsAwf6sOv9Tt0J4GFrlwejFF/INuR57iEKIh7bw==",
+      "type": "package",
+      "path": "cliwrap/3.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.md",
+        "cliwrap.3.6.0.nupkg.sha512",
+        "cliwrap.nuspec",
+        "favicon.png",
+        "lib/net462/CliWrap.dll",
+        "lib/net462/CliWrap.xml",
+        "lib/netcoreapp3.0/CliWrap.dll",
+        "lib/netcoreapp3.0/CliWrap.xml",
+        "lib/netstandard2.0/CliWrap.dll",
+        "lib/netstandard2.0/CliWrap.xml",
+        "lib/netstandard2.1/CliWrap.dll",
+        "lib/netstandard2.1/CliWrap.xml"
+      ]
+    },
     "MetroFramework/1.2.0.3": {
       "sha512": "PldREwx2yJ9GFXoR4IsXgsrTuOOEL1c5qZYeIfv9SVCSd7cJobmNRDHo+2v78E6U1lIWHM+ZIceZEETdOj0+oA==",
       "type": "package",
@@ -269,6 +303,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
+      "CliWrap >= 3.6.0",
       "MetroFramework >= 1.2.0.3",
       "Siticone.Desktop.UI >= 2.1.1",
       "System.Text.Json >= 7.0.1"
@@ -318,6 +353,10 @@
       "net7.0-windows7.0": {
         "targetAlias": "net7.0-windows",
         "dependencies": {
+          "CliWrap": {
+            "target": "Package",
+            "version": "[3.6.0, )"
+          },
           "MetroFramework": {
             "target": "Package",
             "version": "[1.2.0.3, )"
