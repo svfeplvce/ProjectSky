@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.IO.Compression;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -115,7 +116,7 @@ namespace Sky.SubForms
             _plib = plib;
             _plibItems = plibItems;
             _form = form;
-            List<int> ints = Enumerable.Range(1, 1000).ToList();
+            List<int> ints = Enumerable.Range(0, 1000).ToList();
 
             evoArgs.Add("Item", _form.itemNames);
             evoArgs.Add("Move", _form.moveNames);
@@ -125,6 +126,7 @@ namespace Sky.SubForms
 
             SetTMList();
             BuildMoveGrid();
+            BuildEvoGrid();
             FillFields();
         }
 
@@ -146,21 +148,62 @@ namespace Sky.SubForms
 
         private void BuildMoveGrid()
         {
-            DataGridViewTextBoxColumn level = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn level = new DataGridViewTextBoxColumn()
             {
-                level.Width = movesetGrid.Width / 2;
-                level.HeaderText = "Level";
-                level.MaxInputLength = 3;
-            }
-            DataGridViewComboBoxColumn move = new DataGridViewComboBoxColumn();
+                Width = movesetGrid.Width / 2,
+                HeaderText = "Level",
+                MaxInputLength = 3
+        };
+            DataGridViewComboBoxColumn move = new DataGridViewComboBoxColumn()
             {
-                move.Width = movesetGrid.Width / 2;
-                move.HeaderText = "Move";
-                move.DataSource = _form.moveNames;
-                move.FlatStyle = FlatStyle.Flat;
-            }
+                Width = movesetGrid.Width / 2,
+                HeaderText = "Move",
+                DataSource = _form.moveNames,
+                FlatStyle = FlatStyle.Flat
+            };
             movesetGrid.Columns.Add(level);
             movesetGrid.Columns.Add(move);
+        }
+
+        private void BuildEvoGrid()
+        {
+            DataGridViewComboBoxColumn method = new DataGridViewComboBoxColumn()
+            {
+                Width = evoGrid.Width / 5,
+                HeaderText = "Method",
+                DataSource = evoMethods,
+                FlatStyle = FlatStyle.Flat,
+                DisplayMember = "Method"
+            };
+            DataGridViewComboBoxColumn arg = new DataGridViewComboBoxColumn()
+            {
+                Width = evoGrid.Width / 5,
+                HeaderText = "Argument",
+                FlatStyle = FlatStyle.Flat
+            };
+            DataGridViewTextBoxColumn level = new DataGridViewTextBoxColumn()
+            {
+                HeaderText = "Level",
+                Width = evoGrid.Width / 5
+            };
+            DataGridViewComboBoxColumn species = new DataGridViewComboBoxColumn()
+            {
+                Width = evoGrid.Width / 5,
+                HeaderText = "Species",
+                FlatStyle = FlatStyle.Flat,
+                DataSource = _form.speciesNames
+            };
+            DataGridViewComboBoxColumn form = new DataGridViewComboBoxColumn()
+            {
+                Width = evoGrid.Width / 5,
+                HeaderText = "Form",
+                FlatStyle = FlatStyle.Flat
+            };
+            evoGrid.Columns.Add(method);
+            evoGrid.Columns.Add(arg);
+            evoGrid.Columns.Add(level);
+            evoGrid.Columns.Add(species);
+            evoGrid.Columns.Add(form);
         }
 
         private void FillFields()
@@ -257,82 +300,43 @@ namespace Sky.SubForms
 
             // evo page
 
-            foreach (var x in _currentSpecies.EntryInfo.evo_data)
+            if (_currentSpecies.EntryInfo.evo_data.Count > 0)
             {
-                var panel = new Panel()
-                {
-                    Width = evoPanel.Width,
-                    Height = 50,
-                    BackColor = Color.FromArgb(30, 30, 30)
-                };
-                evoPanel.Controls.Add(panel);
+                evoGrid.Rows.Add(_currentSpecies.EntryInfo.evo_data.Count);
 
-                var methodBox = new FlatComboBox()
+                for (int i = 0; i < _currentSpecies.EntryInfo.evo_data.Count; i++)
                 {
-                    Width = 109,
-                    Height = 23,
-                    Location = new Point(15, 9),
-                    BackColor = Color.FromArgb(25, 25, 25),
-                    BorderColor = Color.FromArgb(25, 25, 25),
-                    ForeColor = Color.White,
-                    DataSource = evoMethods,
-                    DisplayMember = "Method"
-                };
-                panel.Controls.Add(methodBox);
-                methodBox.SelectedIndexChanged += EvoValueChanged;
-                methodBox.BindingContext = BindingContext;
-                methodBox.SelectedIndex = x.condition;
-
-                var argBox = new FlatComboBox()
-                {
-                    Width = 109,
-                    Height = 23,
-                    Location = new Point(194, 9),
-                    BackColor = Color.FromArgb(25, 25, 25),
-                    ForeColor = Color.White,
-                    BorderColor = Color.FromArgb(25, 25, 25)
-                };
-
-                if (evoMethods.First(z => z.MethodID == x.condition).ArgType != "None") {
-                    argBox.DataSource = evoArgs.First(y => y.Key == evoMethods.First(z => z.MethodID == x.condition).ArgType).Value;
-                    argBox.SelectedIndexChanged += EvoValueChanged;
-                    argBox.BindingContext = BindingContext;
-                    if (evoMethods.First(z => z.MethodID == x.condition).ArgType == "Item")
+                    evoGrid.Rows[i].Cells[0].Value = evoMethods.First(x => x.MethodID == _currentSpecies.EntryInfo.evo_data[i].condition).Method;
+                    if (evoMethods.First(y => y.Method == evoGrid.Rows[i].Cells[0].Value).ArgType == "None")
                     {
-                        argBox.SelectedIndex = _plibItems[x.parameter];
+                        evoGrid.Rows[i].Cells[1].ReadOnly = true;
                     }
                     else
                     {
-                        argBox.SelectedIndex = x.parameter;
+                        evoGrid.Rows[i].Cells[1].ReadOnly = false;
+                        (evoGrid.Rows[i].Cells[1] as DataGridViewComboBoxCell).DataSource = evoArgs.First(x => x.Key == evoMethods.First(y => y.Method == evoGrid.Rows[i].Cells[0].Value).ArgType).Value;
                     }
-                    panel.Controls.Add(argBox);
+                    if (evoMethods.First(y => y.Method == evoGrid.Rows[i].Cells[0].Value).UsesLevel)
+                    {
+                        evoGrid.Rows[i].Cells[2].ReadOnly = false;
+                        evoGrid.Rows[i].Cells[2].Value = _currentSpecies.EntryInfo.evo_data[i].level;
+                    }
+                    else
+                    {
+                        evoGrid.Rows[i].Cells[2].ReadOnly = true;
+                    }
+                    evoGrid.Rows[i].Cells[3].Value = _form.speciesNames[_currentSpecies.EntryInfo.evo_data[i].species];
+                    if (_personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.evo_data[i].species).Count() > 0)
+                    {
+                        evoGrid.Rows[i].Cells[4].ReadOnly = false;
+                        (evoGrid.Rows[i].Cells[4] as DataGridViewComboBoxCell).DataSource = Enumerable.Range(0, _personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.evo_data[i].species).Count() - 1).ToList();
+                    }
+                    else
+                    {
+                        evoGrid.Rows[i].Cells[4].ReadOnly = true;
+                        evoGrid.Rows[i].Cells[4].Value = 0;
+                    }
                 }
-
-                var levelBox = new SiticoneNumericUpDown()
-                {
-                    Width = 109,
-                    Height = 23,
-                    Location = new Point(373, 9),
-                    Maximum = 100,
-                    Minimum = 1
-                };
-
-                var speciesBox = new FlatComboBox()
-                {
-                    Width = 109,
-                    Height = 23,
-                    Location = new Point(552, 9),
-                    BackColor = Color.FromArgb(25, 25, 25),
-                    BorderColor = Color.FromArgb(25, 25, 25)
-                };
-
-                var formBox = new SiticoneNumericUpDown()
-                {
-                    Width = 109,
-                    Height = 23,
-                    Location = new Point(731, 9),
-                    Maximum = 20
-                };
             }
 
             isInitialised = true;
@@ -591,21 +595,94 @@ namespace Sky.SubForms
             }
         }
 
-        private void newEvoButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void removeEvoButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EvoValueChanged(object sender, EventArgs e)
+        private void evoGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (isInitialised)
             {
+                if (e.ColumnIndex == 0)
+                {
+                    DataGridViewComboBoxCell cell = evoGrid.Rows[e.RowIndex].Cells[1] as DataGridViewComboBoxCell;
+                    DataGridViewComboBoxCell cell2 = evoGrid.Rows[e.RowIndex].Cells[0] as DataGridViewComboBoxCell;
+                    DataGridViewTextBoxCell cell3 = evoGrid.Rows[e.RowIndex].Cells[2] as DataGridViewTextBoxCell;
+                    if (evoMethods.First(y => y.Method == cell2.Value).ArgType == "None")
+                    {
+                        cell.ReadOnly = true;
+                    }
+                    else
+                    {
+                        cell.ReadOnly = false;
+                        cell.DataSource = evoArgs.First(x => x.Key == evoMethods.First(y => y.Method == cell2.Value).ArgType).Value;
+                    }
 
+                    if (evoMethods.First(y => y.Method == cell2.Value).UsesLevel)
+                    {
+                        cell3.ReadOnly = false;
+                    } else
+                    {
+                        cell3.Value = 0;
+                        cell3.ReadOnly = true;
+                    }
+                }
+                if (evoGrid.Rows[e.RowIndex].Cells[3].Value != null)
+                {
+                    if (_personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.evo_data[e.RowIndex].species).Count() > 0)
+                    {
+                        evoGrid.Rows[e.RowIndex].Cells[4].ReadOnly = false;
+                        (evoGrid.Rows[e.RowIndex].Cells[4] as DataGridViewComboBoxCell).DataSource = Enumerable.Range(0, _personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.evo_data[e.RowIndex].species).Count() - 1).ToList().ConvertAll(x => x.ToString());
+                    }
+                    else
+                    {
+                        evoGrid.Rows[e.RowIndex].Cells[4].ReadOnly = true;
+                        evoGrid.Rows[e.RowIndex].Cells[4].Value = 0;
+                    }
+                }
+
+                // setting new values in currentspecies
+                _currentSpecies.EntryInfo.evo_data.Clear();
+
+                foreach (var x in evoGrid.Rows)
+                {
+                    var row = x as DataGridViewRow;
+                    if (row.Index != evoGrid.Rows.Count - 1)
+                    {
+                        var method = row.Cells[0].Value == null ? 0 : evoMethods.First(y => y.Method == row.Cells[0].Value.ToString()).MethodID;
+                        int arg;
+                        if (row.Cells[1].Value != null)
+                        {
+                            if (evoMethods.First(y => y.MethodID == method).ArgType == "None")
+                            {
+                                arg = 0;
+                            }
+                            else if (evoMethods.First(y => y.MethodID == method).ArgType == "Item")
+                            {
+                                // we have to set plib stuff here in this case
+                                var firstEmpty = _plib.values.First(y => y.itemID == 0);
+                                if (firstEmpty != null)
+                                {
+                                    arg = firstEmpty.plibID;
+                                    _plibItems[arg] = evoArgs["Item"].IndexOf(row.Cells[1].Value.ToString());
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"No more space is available in plib for new evolution items. Please change the argument box in the {row.Index + 1} row to an evolution item that already exists.");
+                                    arg = 0;
+                                }
+                            }
+                            else
+                            {
+                                arg = evoArgs.First(y => y.Key == evoMethods.First(z => z.MethodID == method).ArgType).Value.IndexOf(row.Cells[1].Value.ToString());
+                            }
+                        }
+                        else
+                        {
+                            arg = 0;
+                        }
+                        var level = (!evoMethods.First(y => y.MethodID == method).UsesLevel || row.Cells[2].Value == null) ? 0 : (int)row.Cells[2].Value;
+                        var species = row.Cells[3].Value == null ? 0 : _form.speciesNames.IndexOf(row.Cells[3].Value.ToString());
+                        var form = row.Cells[4].Value == null ? 0 : (int)row.Cells[4].Value;
+                        _currentSpecies.EntryInfo.evo_data.Add(new Personal.EvoDatum { condition = method, parameter = arg, level = level, species = species, form = form });
+                    }
+                }
             }
         }
 
@@ -704,7 +781,7 @@ namespace Sky.SubForms
             File.Delete(pdataBFBSPath);
 
             var zipDirectories = Path.Combine(MainForm.outDir, "romfs/");
-            var zipPath = Path.Combine(MainForm.outDir, "project_sky_mod.zip");
+            var zipPath = Path.Combine(MainForm.outDir, "project_sky_pokemon_mod.zip");
 
             if (File.Exists(zipPath))
             {

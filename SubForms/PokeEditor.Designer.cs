@@ -102,10 +102,7 @@ namespace Sky.SubForms
             this.movesetGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.evolutionPage = new System.Windows.Forms.TabPage();
-            this.evoPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.removeEvoButton = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.newEvoButton = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.evoGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.BSTtooltip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
@@ -134,8 +131,7 @@ namespace Sky.SubForms
             this.movesetPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.movesetGrid)).BeginInit();
             this.evolutionPage.SuspendLayout();
-            this.evoPanel.SuspendLayout();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.evoGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -4692,7 +4688,7 @@ namespace Sky.SubForms
             // evolutionPage
             // 
             this.evolutionPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.evolutionPage.Controls.Add(this.evoPanel);
+            this.evolutionPage.Controls.Add(this.evoGrid);
             this.evolutionPage.Controls.Add(this.label5);
             this.evolutionPage.Location = new System.Drawing.Point(4, 4);
             this.evolutionPage.Name = "evolutionPage";
@@ -4700,59 +4696,43 @@ namespace Sky.SubForms
             this.evolutionPage.TabIndex = 2;
             this.evolutionPage.Text = "Evolutions";
             // 
-            // evoPanel
+            // evoGrid
             // 
-            this.evoPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.evoPanel.AutoScroll = true;
-            this.evoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.evoPanel.Controls.Add(this.panel5);
-            this.evoPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.evoPanel.Location = new System.Drawing.Point(0, 103);
-            this.evoPanel.Name = "evoPanel";
-            this.evoPanel.Size = new System.Drawing.Size(866, 496);
-            this.evoPanel.TabIndex = 1;
-            this.evoPanel.WrapContents = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.removeEvoButton);
-            this.panel5.Controls.Add(this.newEvoButton);
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(860, 50);
-            this.panel5.TabIndex = 1;
-            // 
-            // removeEvoButton
-            // 
-            this.removeEvoButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.removeEvoButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.removeEvoButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.removeEvoButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.removeEvoButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.removeEvoButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.removeEvoButton.ForeColor = System.Drawing.Color.White;
-            this.removeEvoButton.Location = new System.Drawing.Point(427, 3);
-            this.removeEvoButton.Name = "removeEvoButton";
-            this.removeEvoButton.Size = new System.Drawing.Size(433, 45);
-            this.removeEvoButton.TabIndex = 1;
-            this.removeEvoButton.Text = "Remove Evolution";
-            this.removeEvoButton.Click += new System.EventHandler(this.removeEvoButton_Click);
-            // 
-            // newEvoButton
-            // 
-            this.newEvoButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.newEvoButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.newEvoButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.newEvoButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.newEvoButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.newEvoButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.newEvoButton.ForeColor = System.Drawing.Color.White;
-            this.newEvoButton.Location = new System.Drawing.Point(3, 3);
-            this.newEvoButton.Name = "newEvoButton";
-            this.newEvoButton.Size = new System.Drawing.Size(425, 45);
-            this.newEvoButton.TabIndex = 0;
-            this.newEvoButton.Text = "Add New Evolution";
-            this.newEvoButton.Click += new System.EventHandler(this.newEvoButton_Click);
+            this.evoGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.evoGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.evoGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.evoGrid.ColumnHeadersHeight = 17;
+            this.evoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.evoGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.evoGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.evoGrid.Location = new System.Drawing.Point(6, 103);
+            this.evoGrid.Name = "evoGrid";
+            this.evoGrid.RowHeadersVisible = false;
+            this.evoGrid.RowTemplate.Height = 25;
+            this.evoGrid.Size = new System.Drawing.Size(860, 491);
+            this.evoGrid.TabIndex = 1;
+            this.evoGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.evoGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.evoGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.evoGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.evoGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.evoGrid.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.evoGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.evoGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.evoGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.evoGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.evoGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.evoGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.evoGrid.ThemeStyle.HeaderStyle.Height = 17;
+            this.evoGrid.ThemeStyle.ReadOnly = false;
+            this.evoGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.evoGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.evoGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.evoGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.Control;
+            this.evoGrid.ThemeStyle.RowsStyle.Height = 25;
+            this.evoGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.evoGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.SystemColors.Control;
+            this.evoGrid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.evoGrid_CellEndEdit);
             // 
             // label5
             // 
@@ -4808,8 +4788,7 @@ namespace Sky.SubForms
             ((System.ComponentModel.ISupportInitialize)(this.movesetGrid)).EndInit();
             this.evolutionPage.ResumeLayout(false);
             this.evolutionPage.PerformLayout();
-            this.evoPanel.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.evoGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4884,9 +4863,6 @@ namespace Sky.SubForms
         private SiticoneNumericUpDown hatchBox;
         private CheckedListBox tmBox;
         private SiticoneDataGridView movesetGrid;
-        private FlowLayoutPanel evoPanel;
-        private Panel panel5;
-        private SiticoneButton removeEvoButton;
-        private SiticoneButton newEvoButton;
+        private SiticoneDataGridView evoGrid;
     }
 }
