@@ -94,10 +94,14 @@ namespace Sky
 
         private void TrainerButton_Click(object sender, EventArgs e)
         {
+            /*
             Form editor = new TrainerEditor();
             editor.FormClosed += Editor_FormClosed;
             editor.Show();
             Hide();
+            */
+
+            MessageBox.Show("Trainer editor is not finished yet... Coming soon.");
         }
 
         private void Editor_FormClosed(object sender, FormClosedEventArgs e)

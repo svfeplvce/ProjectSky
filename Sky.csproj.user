@@ -13,6 +13,9 @@
     <Compile Update="SubForms\PokemonEditor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SubForms\TEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SubForms\TrainerEditor.cs">
       <SubType>Form</SubType>
     </Compile>

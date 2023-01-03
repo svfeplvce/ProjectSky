@@ -25,3 +25,4 @@ C:\Users\foxna\Documents\SVEdit\Sky\obj\Debug\net7.0-windows\Sky.csproj.CopyComp
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Debug\net7.0-windows\Sky.SubForms.PokeEditor.resources
 C:\Users\foxna\Documents\SVEdit\Sky\bin\Debug\net7.0-windows\Siticone.Desktop.UI.dll
 C:\Users\foxna\Documents\SVEdit\Sky\bin\Debug\net7.0-windows\CliWrap.dll
+C:\Users\foxna\Documents\SVEdit\Sky\obj\Debug\net7.0-windows\Sky.SubForms.TEditor.resources
