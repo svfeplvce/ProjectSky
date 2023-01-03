@@ -188,6 +188,9 @@ namespace Sky.SubForms
                 } else if (speciesNames[entry.species.species] == "Slowbro" && entry.species.form == 2)
                 {
                     picName = "slowbrogalar";
+                } else if (speciesNames[entry.species.species] == "Slowbro" && entry.species.form == 1)
+                {
+                    picName = "slowbromega";
                 } else if (speciesNames[entry.species.species] == "Tauros" && entry.species.form == 2)
                 {
                     picName = "taurospaldeafire";
@@ -274,7 +277,7 @@ namespace Sky.SubForms
         {
             Button button = sender as Button;
             var num = selectorPanel.Controls.IndexOf(button) + 1;
-            var currentPdata = pdata.values.Exists(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", ""))).devName) ? pdata.values.First(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text)).devName) : null;
+            var currentPdata = pdata.values.Exists(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", ""))).devName) ? pdata.values.First(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", ""))).devName) : null;
             currentSpecies = new Species { Name = button.Text, DevID = pokeDevID.values.First(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", ""))).devName, Index = num, EntryInfo = personal.entry[num], PokeDataInfo = currentPdata };
             selectorPanel.Visible = false;
             Form editor = new PokeEditor(currentSpecies, personal, plib, plibItems, pdata, this);
