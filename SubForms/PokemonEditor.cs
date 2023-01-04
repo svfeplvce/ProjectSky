@@ -37,6 +37,7 @@ namespace Sky.SubForms
         private Personal.PersonalArray personal;
         private Plib.PlibArray plib;
         private PokeData.DataArray pdata;
+        public ItemDevID.DevID itemDevID;
 
         public Personal.PersonalArray _personal
         {
@@ -61,7 +62,7 @@ namespace Sky.SubForms
             FillSelectorPanel();
         }
 
-        public void LoadNecessaryFiles()
+        public async Task LoadNecessaryFiles()
         {
             // text files
 
@@ -105,17 +106,17 @@ namespace Sky.SubForms
             using (var pokeDevIDReader = new StreamReader(pokeDevIDFile))
             using (var itemDevIDReader = new StreamReader(itemDevIDFile))
             {
-                var personalJson = personalReader.ReadToEnd();
-                var plibJson = plibReader.ReadToEnd();
-                var pdataJson = pdataReader.ReadToEnd();
-                var pokeDevIDJson = pokeDevIDReader.ReadToEnd();
-                var itemDevIDJson = itemDevIDReader.ReadToEnd();
+                var personalJson = await personalReader.ReadToEndAsync();
+                var plibJson = await plibReader.ReadToEndAsync();
+                var pdataJson = await pdataReader.ReadToEndAsync();
+                var pokeDevIDJson = await pokeDevIDReader.ReadToEndAsync();
+                var itemDevIDJson = await itemDevIDReader.ReadToEndAsync();
                 
                 personal = JsonSerializer.Deserialize<Personal.PersonalArray>(personalJson);
                 plib = JsonSerializer.Deserialize<Plib.PlibArray>(plibJson);
                 pdata = JsonSerializer.Deserialize<PokeData.DataArray>(pdataJson);
                 pokeDevID = JsonSerializer.Deserialize<PokeDevID.DevID>(pokeDevIDJson);
-                var itemDevID = JsonSerializer.Deserialize<ItemDevID.DevID>(itemDevIDJson);
+                itemDevID = JsonSerializer.Deserialize<ItemDevID.DevID>(itemDevIDJson);
 
                 // we have to init some stuff in here oopsie
 
@@ -277,8 +278,8 @@ namespace Sky.SubForms
         {
             Button button = sender as Button;
             var num = selectorPanel.Controls.IndexOf(button) + 1;
-            var currentPdata = pdata.values.Exists(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", ""))).devName) ? pdata.values.First(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", ""))).devName) : null;
-            currentSpecies = new Species { Name = button.Text, DevID = pokeDevID.values.First(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", ""))).devName, Index = num, EntryInfo = personal.entry[num], PokeDataInfo = currentPdata };
+            var currentPdata = pdata.values.Exists(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", ""))).devName) ? pdata.values.First(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", ""))).devName) : null;
+            currentSpecies = new Species { Name = button.Text, DevID = pokeDevID.values.First(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", ""))).devName, Index = num, EntryInfo = personal.entry[num], PokeDataInfo = currentPdata };
             selectorPanel.Visible = false;
             Form editor = new PokeEditor(currentSpecies, personal, plib, plibItems, pdata, this);
             editor.TopLevel = false;

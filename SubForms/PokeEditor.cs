@@ -248,8 +248,8 @@ namespace Sky.SubForms
 
             if (_pdata.values.Exists(x => x.devid == _currentSpecies.DevID))
             {
-                heldItemBox.SelectedIndex = _form.items.IndexOf(_form.items.First(x => x.Item2 == _currentSpecies.PokeDataInfo.bringItem.itemID));
-                heldItemRateBox.Value = _currentSpecies.PokeDataInfo.bringItem.bringRate;
+                heldItemBox.SelectedIndex = _currentSpecies.PokeDataInfo.bringItem.itemID == null ? 0 : _form.itemDevID.items.IndexOf(_form.itemDevID.items.First(x => x.devName == _currentSpecies.PokeDataInfo.bringItem.itemID));
+                heldItemRateBox.Value = _currentSpecies.PokeDataInfo.bringItem.bringRate == null ? 0 : _currentSpecies.PokeDataInfo.bringItem.bringRate;
             } else
             {
                 heldItemBox.Visible = false;
@@ -677,7 +677,7 @@ namespace Sky.SubForms
                         {
                             arg = 0;
                         }
-                        var level = (!evoMethods.First(y => y.MethodID == method).UsesLevel || row.Cells[2].Value == null) ? 0 : (int)row.Cells[2].Value;
+                        var level = (!evoMethods.First(y => y.MethodID == method).UsesLevel || row.Cells[2].Value == null) ? 0 : int.Parse(row.Cells[2].Value.ToString());
                         var species = row.Cells[3].Value == null ? 0 : _form.speciesNames.IndexOf(row.Cells[3].Value.ToString());
                         var form = row.Cells[4].Value == null ? 0 : (int)row.Cells[4].Value;
                         _currentSpecies.EntryInfo.evo_data.Add(new Personal.EvoDatum { condition = method, parameter = arg, level = level, species = species, form = form });
