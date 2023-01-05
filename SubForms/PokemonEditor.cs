@@ -62,7 +62,7 @@ namespace Sky.SubForms
             FillSelectorPanel();
         }
 
-        public async Task LoadNecessaryFiles()
+        public void LoadNecessaryFiles()
         {
             // text files
 
@@ -106,11 +106,11 @@ namespace Sky.SubForms
             using (var pokeDevIDReader = new StreamReader(pokeDevIDFile))
             using (var itemDevIDReader = new StreamReader(itemDevIDFile))
             {
-                var personalJson = await personalReader.ReadToEndAsync();
-                var plibJson = await plibReader.ReadToEndAsync();
-                var pdataJson = await pdataReader.ReadToEndAsync();
-                var pokeDevIDJson = await pokeDevIDReader.ReadToEndAsync();
-                var itemDevIDJson = await itemDevIDReader.ReadToEndAsync();
+                var personalJson = personalReader.ReadToEnd();
+                var plibJson = plibReader.ReadToEnd();
+                var pdataJson = pdataReader.ReadToEnd();
+                var pokeDevIDJson = pokeDevIDReader.ReadToEnd();
+                var itemDevIDJson = itemDevIDReader.ReadToEnd();
                 
                 personal = JsonSerializer.Deserialize<Personal.PersonalArray>(personalJson);
                 plib = JsonSerializer.Deserialize<Plib.PlibArray>(plibJson);

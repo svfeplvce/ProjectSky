@@ -248,7 +248,7 @@ namespace Sky.SubForms
 
             if (_pdata.values.Exists(x => x.devid == _currentSpecies.DevID))
             {
-                heldItemBox.SelectedIndex = _currentSpecies.PokeDataInfo.bringItem.itemID == null ? 0 : _form.itemDevID.items.IndexOf(_form.itemDevID.items.First(x => x.devName == _currentSpecies.PokeDataInfo.bringItem.itemID));
+                heldItemBox.SelectedIndex = _currentSpecies.PokeDataInfo.bringItem.itemID == null ? 0 : _form.itemNames.IndexOf(_form.itemNames[_form.itemDevID.items.First(x => x.devName == _currentSpecies.PokeDataInfo.bringItem.itemID).id]);
                 heldItemRateBox.Value = _currentSpecies.PokeDataInfo.bringItem.bringRate == null ? 0 : _currentSpecies.PokeDataInfo.bringItem.bringRate;
             } else
             {
