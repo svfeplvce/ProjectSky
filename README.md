@@ -28,3 +28,5 @@
 1. Edited TMs don't show up if you load the Pokemon editor for the same Pokemon after closing it. It saves fine, though. A little annoying, I know, but I'm working on a fix.
 
 # Author's Note: Inherent moves will show up as level 253 in the editor. Don't worry about that.
+
+# The next big update (Project Sky 1.1) will improve thw GUI, performance, and overall usability of the application.
