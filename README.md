@@ -29,4 +29,4 @@
 
 # Author's Note: Inherent moves will show up as level 253 in the editor. Don't worry about that.
 
-# The next big update (Project Sky 1.1) will improve thw GUI, performance, and overall usability of the application.
+# The next big update (Project Sky 1.1) will improve the GUI, performance, and overall usability of the application.
