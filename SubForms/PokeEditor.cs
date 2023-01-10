@@ -110,7 +110,7 @@ namespace Sky.SubForms
         {
             InitializeComponent();
             _currentSpecies = currentSpecies;
-            if (_currentSpecies.Name.Contains("Alolan") || _currentSpecies.Name.Contains("Galarian") || _currentSpecies.Name.Contains("Hisuian") || _currentSpecies.Name.Contains("Mega") || _currentSpecies.Name.Contains("Paldean") || _currentSpecies.Name == "Indeedee") { isForm = true; } else { isForm = false; }
+            if (_currentSpecies.Name.Contains("Alolan") || _currentSpecies.Name.Contains("Galarian") || _currentSpecies.Name.Contains("Hisuian") || _currentSpecies.Name.Contains("Mega") || _currentSpecies.Name.Contains("Paldean") || _currentSpecies.Name == "Indeedee" || _currentSpecies.Name == "Oricorio" || _currentSpecies.Name == "Lycanroc") { isForm = true; } else { isForm = false; }
             _personal = personal;
             _pdata = pdata;
             _plib = plib;
@@ -700,7 +700,7 @@ namespace Sky.SubForms
             var newPersonalData = _currentSpecies.EntryInfo;
             var newPokeData = _currentSpecies.PokeDataInfo;
 
-            if (isForm)
+            if (!isForm)
             {
                 var totalForms = _personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.species.species).Count();
 
