@@ -1,17 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "odqo99iLM59OU0xPZH9sZtoot+cDRNeNP/rEP0GluqC4dyKPtZ/bQO9T6trNDzHqb3cBWIZ3wEuyzBl+JgFelg==",
+  "dgSpecHash": "xa3ens1vwdCWUyFotemTr+w+Nkjr+yvNUk/X26WkIAhXNVKTgfK48l+FPUZaeJosj+e7U8ISA1rrpTkiU9CNRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\foxna\\.nuget\\packages\\cliwrap\\3.6.0\\cliwrap.3.6.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\devzh.flatbuffers\\1.4.0\\devzh.flatbuffers.1.4.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\google.flatbuffers\\23.1.4\\google.flatbuffers.23.1.4.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework\\1.2.0.3\\metroframework.1.2.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework.design\\1.2.0.3\\metroframework.design.1.2.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework.fonts\\1.2.0.3\\metroframework.fonts.1.2.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework.runtime\\1.2.0.3\\metroframework.runtime.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\siticone.desktop.ui\\2.1.1\\siticone.desktop.ui.2.1.1.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.io\\4.1.0\\system.io.4.1.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.reflection\\4.1.0\\system.reflection.4.1.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.reflection.primitives\\4.0.1\\system.reflection.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.runtime.extensions\\4.1.0\\system.runtime.extensions.4.1.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.runtime.handles\\4.0.1\\system.runtime.handles.4.0.1.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.runtime.interopservices\\4.1.0\\system.runtime.interopservices.4.1.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\foxna\\.nuget\\packages\\system.text.json\\7.0.1\\system.text.json.7.0.1.nupkg.sha512"
+    "C:\\Users\\foxna\\.nuget\\packages\\system.text.json\\7.0.1\\system.text.json.7.0.1.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512"
   ],
   "logs": [
     {

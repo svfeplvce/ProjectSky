@@ -48,6 +48,14 @@
               "target": "Package",
               "version": "[3.6.0, )"
             },
+            "DevZH.FlatBuffers": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Google.FlatBuffers": {
+              "target": "Package",
+              "version": "[23.1.4, )"
+            },
             "MetroFramework": {
               "target": "Package",
               "version": "[1.2.0.3, )"

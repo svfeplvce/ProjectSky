@@ -110,7 +110,7 @@ namespace Sky.SubForms
         {
             InitializeComponent();
             _currentSpecies = currentSpecies;
-            if (_currentSpecies.Name.Contains("Alolan") || _currentSpecies.Name.Contains("Galarian") || _currentSpecies.Name.Contains("Hisuian") || _currentSpecies.Name.Contains("Mega") || _currentSpecies.Name.Contains("Paldean") || _currentSpecies.Name == "Indeedee" || _currentSpecies.Name == "Oricorio" || _currentSpecies.Name == "Lycanroc") { isForm = true; } else { isForm = false; }
+            isForm = _currentSpecies.isForm;
             _personal = personal;
             _pdata = pdata;
             _plib = plib;
@@ -707,6 +707,7 @@ namespace Sky.SubForms
                 for (var i = 0; i < totalForms; i++)
                 {
                     _personal.entry[_currentSpecies.Index + i] = newPersonalData;
+                    _personal.entry[_currentSpecies.Index + i].species.form = i;
                 }
             }
             else

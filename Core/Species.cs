@@ -13,5 +13,6 @@ namespace Sky.Core
         public int Index { get; set; }
         public Personal.Entry EntryInfo { get; set; }
         public PokeData.Value PokeDataInfo { get; set; }
+        public bool isForm { get; set; }
     }
 }
