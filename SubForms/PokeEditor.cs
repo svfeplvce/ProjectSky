@@ -25,6 +25,7 @@ namespace Sky.SubForms
         private Plib.PlibArray _plib;
         private Dictionary<int, int> _plibItems;
         private PokemonEditor _form;
+        private List<Tuple<string, string, int>> _items = new List<Tuple<string, string, int>> { };
         private bool isForm;
         private bool isInitialised = false;
         private bool presentCheckChanged = false;
@@ -106,7 +107,7 @@ namespace Sky.SubForms
             get { return _currentSpecies; }
         }
 
-        public PokeEditor(Species currentSpecies, Personal.PersonalArray personal, Plib.PlibArray plib, Dictionary<int, int> plibItems, PokeData.DataArray pdata, PokemonEditor form)
+        public PokeEditor(Species currentSpecies, Personal.PersonalArray personal, Plib.PlibArray plib, Dictionary<int, int> plibItems, PokeData.DataArray pdata, PokemonEditor form, List<Tuple<string, string, int>> items)
         {
             InitializeComponent();
             _currentSpecies = currentSpecies;
@@ -115,6 +116,7 @@ namespace Sky.SubForms
             _pdata = pdata;
             _plib = plib;
             _plibItems = plibItems;
+            _items = items;
             _form = form;
             List<int> ints = Enumerable.Range(0, 1000).ToList();
 
@@ -508,7 +510,9 @@ namespace Sky.SubForms
             if (isInitialised)
             {
                 var heldItemBox = sender as FlatComboBox;
-                _currentSpecies.PokeDataInfo.bringItem.itemID = _form.items.First(x => x.Item3 == heldItemBox.SelectedIndex).Item2;
+                var name = heldItemBox.Text == "???" ? "NO NAME" : heldItemBox.Text;
+                var newId = _items.First(x => x.Item1 == name).Item2;
+                _currentSpecies.PokeDataInfo.bringItem.itemID = newId;
             }
         }
 

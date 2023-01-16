@@ -23,7 +23,7 @@ namespace Sky.SubForms
         private readonly string outPath = MainForm.outDir;
         private Species currentSpecies = new Species { };
         private PokeDevID.DevID pokeDevID;
-        public List<Tuple<string, string, int>> items = new List<Tuple<string, string, int>> { };
+        private List<Tuple<string, string, int>> items = new List<Tuple<string, string, int>> { };
         private List<string> abilityNames = new List<string> { };
         public List<string> speciesNames = new List<string> { };
         public List<string> moveNames = new List<string> { };
@@ -122,13 +122,22 @@ namespace Sky.SubForms
 
                 var currentItemID = 0;
 
-                foreach (var x in itemDevID.items)
+                foreach (var x in itemNames)
                 {
-                    if (x.id == currentItemID)
+                    string name;
+                    string devName;
+                    var y = itemDevID.items.Exists(z => z.id == itemNames.IndexOf(x)) ? itemDevID.items.First(z => z.id == itemNames.IndexOf(x)).devName : "";
+                    if (x == "???")
                     {
-                        items.Add(new Tuple<string, string, int>(itemNames[currentItemID], x.devName, x.id));
-                        currentItemID++;
+                        name = "NO NAME";
+                        devName = "ITEMID_NONE";
                     }
+                    else
+                    {
+                        name = x;
+                        devName = y;
+                    }
+                    items.Add(new Tuple<string, string, int>(name, devName, itemNames.IndexOf(x)));
                 }
 
                 foreach (var x in plib.values)
@@ -281,7 +290,7 @@ namespace Sky.SubForms
             var currentPdata = pdata.values.Exists(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", ""))).devName) ? pdata.values.First(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", ""))).devName) : null;
             currentSpecies = new Species { Name = button.Text, DevID = pokeDevID.values.First(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", ""))).devName, Index = num, EntryInfo = personal.entry[num], PokeDataInfo = currentPdata, isForm = (alolaForms.Contains(speciesNames[personal.entry[num].species.species]) || galarForms.Contains(speciesNames[personal.entry[num].species.species]) || hisuiForms.Contains(speciesNames[personal.entry[num].species.species]) || megaForms.Contains(speciesNames[personal.entry[num].species.species]) || paldeaForms.Contains(speciesNames[personal.entry[num].species.species]) || button.Text == "Indeedee" || button.Text == "Oricorio" || button.Text == "Lycanroc" || button.Text.Contains("Charizard") || button.Text.Contains("Mewtwo")) ? true : false};
             selectorPanel.Visible = false;
-            Form editor = new PokeEditor(currentSpecies, personal, plib, plibItems, pdata, this);
+            Form editor = new PokeEditor(currentSpecies, personal, plib, plibItems, pdata, this, items);
             editor.TopLevel = false;
             editor.FormClosed += Editor_FormClosed;
             contentPanel.Controls.Add(editor);
