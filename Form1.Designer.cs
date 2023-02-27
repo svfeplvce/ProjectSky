@@ -30,22 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.topPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.PokemonButton = new System.Windows.Forms.Button();
             this.TrainerButton = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.topPanel.Controls.Add(this.label2);
-            this.topPanel.Controls.Add(this.label1);
+            this.topPanel.Controls.Add(this.pictureBox1);
             this.topPanel.Controls.Add(this.minimizeButton);
             this.topPanel.Controls.Add(this.exitButton);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -57,27 +56,14 @@
             this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
             this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mandatory Plaything", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(95, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "SKY";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Requiem", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "PROJECT";
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 24);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // minimizeButton
             // 
@@ -166,7 +152,7 @@
             this.Name = "MainForm";
             this.Text = "Form1";
             this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contentPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -177,10 +163,9 @@
         private Panel topPanel;
         private Button exitButton;
         private Button minimizeButton;
-        private Label label2;
-        private Label label1;
         private Button PokemonButton;
         private Button TrainerButton;
         private Panel contentPanel;
+        private PictureBox pictureBox1;
     }
 }

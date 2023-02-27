@@ -21,6 +21,9 @@ namespace Sky
         public MainForm()
         {
             InitializeComponent();
+
+            pictureBox1.BackgroundImage = Image.FromStream(assembly.GetManifestResourceStream("Sky.Assets.Images.sky_logo.png"));
+
             InitConfig();
         }
 

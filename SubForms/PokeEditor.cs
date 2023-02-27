@@ -710,8 +710,8 @@ namespace Sky.SubForms
 
                 for (var i = 0; i < totalForms; i++)
                 {
-                    _personal.entry[_currentSpecies.Index + i] = newPersonalData;
-                    _personal.entry[_currentSpecies.Index + i].species.form = i;
+                    _personal.entry[_currentSpecies.EntryInfo.species.species + i] = newPersonalData;
+                    _personal.entry[_currentSpecies.EntryInfo.species.species + i].species.form = i;
                 }
             }
             else

@@ -32,7 +32,8 @@ namespace Sky.SubForms
         private List<string> galarForms = new List<string> { "Meowth", "Ponyta", "Rapidash", "Weezing", "Corsola", "Zigzagoon", "Linoone", "Darumaka", "Darmanitan", "Yamask", "Stunfisk", "Slowpoke", "Slowbro", "Slowking", "Articuno", "Zapdos", "Moltres" }; 
         private List<string> hisuiForms = new List<string> { "Lilligant", "Growlithe", "Arcanine", "Voltorb", "Electrode", "Typhlosion", "Samurott", "Decidueye", "Qwilfish", "Sneasel", "Zorua", "Zoroark", "Braviary", "Sliggoo", "Goodra", "Avalugg" }; 
         private List<string> paldeaForms = new List<string> { "Wooper" }; 
-        private List<string> megaForms = new List<string> { "Venusaur", "Blastoise", "Alakazam", "Gengar", "Kangaskhan", "Pinsir", "Gyarados", "Aerodactyl", "Ampharos", "Scizor", "Heracross", "Houndoom", "Tyranitar", "Blaziken", "Gardevoir", "Gallade", "Mawile", "Aggron", "Medicham", "Manectric", "Banette", "Absol", "Latios", "Latias", "Garchomp", "Lucario", "Abomasnow", "Beedrill", "Pidgeot", "Slowbro", "Steelix", "Sceptile", "Swampert", "Sableye", "Sharpedo", "Camerupt", "Altaria", "Glalie", "Salamence", "Metagross", "Rayquaza", "Lopunny", "Audino", "Diancie" }; 
+        private List<string> megaForms = new List<string> { "Venusaur", "Blastoise", "Alakazam", "Gengar", "Kangaskhan", "Pinsir", "Gyarados", "Aerodactyl", "Ampharos", "Scizor", "Heracross", "Houndoom", "Tyranitar", "Blaziken", "Gardevoir", "Gallade", "Mawile", "Aggron", "Medicham", "Manectric", "Banette", "Absol", "Latios", "Latias", "Garchomp", "Lucario", "Abomasnow", "Beedrill", "Pidgeot", "Slowbro", "Steelix", "Sceptile", "Swampert", "Sableye", "Sharpedo", "Camerupt", "Altaria", "Glalie", "Salamence", "Metagross", "Rayquaza", "Lopunny", "Audino", "Diancie" };
+        private List<string> miscForms = new List<string> { "Dialga", "Palkia", "Giratina", "Kyogre", "Groudon" };
         private Dictionary<int, int> plibItems = new Dictionary<int, int> { };
         private Personal.PersonalArray personal;
         private Plib.PlibArray plib;
@@ -58,6 +59,9 @@ namespace Sky.SubForms
         public PokemonEditor()
         {
             InitializeComponent();
+
+            pictureBox1.BackgroundImage = Image.FromStream(assembly.GetManifestResourceStream("Sky.Assets.Images.sky_logo.png"));
+
             LoadNecessaryFiles();
             FillSelectorPanel();
         }
@@ -223,6 +227,12 @@ namespace Sky.SubForms
                 else if (megaForms.Contains(speciesNames[entry.species.species]) && entry.species.form == 1)
                 {
                     picName = (speciesNames[entry.species.species].ToLower() + "mega");
+                } else if (speciesNames[entry.species.species].ToLower() == "walking wake")
+                {
+                    picName = "suicune";
+                } else if (speciesNames[entry.species.species].ToLower() == "iron leaves")
+                {
+                    picName = "virizion";
                 }
                 else
                 {
@@ -248,25 +258,37 @@ namespace Sky.SubForms
                         if (alolaForms.Contains(speciesNames[entry.species.species]) || speciesNames[entry.species.species] == "Meowth" && entry.species.form == 1)
                         {
                             button.Text = ("Alolan " + speciesNames[entry.species.species]);
-                        } else if (galarForms.Contains(speciesNames[entry.species.species]) || speciesNames[entry.species.species] == "Meowth" && entry.species.form == 2 || speciesNames[entry.species.species] == "Slowbro" && entry.species.form == 2)
+                        }
+                        else if (galarForms.Contains(speciesNames[entry.species.species]) || speciesNames[entry.species.species] == "Meowth" && entry.species.form == 2 || speciesNames[entry.species.species] == "Slowbro" && entry.species.form == 2)
                         {
                             button.Text = ("Galarian " + speciesNames[entry.species.species]);
-                        } else if (paldeaForms.Contains(speciesNames[entry.species.species]))
+                        }
+                        else if (paldeaForms.Contains(speciesNames[entry.species.species]))
                         {
                             button.Text = ("Paldean " + speciesNames[entry.species.species]);
-                        } else if (hisuiForms.Contains(speciesNames[entry.species.species]))
+                        }
+                        else if (hisuiForms.Contains(speciesNames[entry.species.species]))
                         {
                             button.Text = ("Hisuian " + speciesNames[entry.species.species]);
                         }
                         else if ((megaForms.Contains(speciesNames[entry.species.species]) || speciesNames[entry.species.species] == "Slowbro" && entry.species.form == 1) && (speciesNames[entry.species.species] != "Charizard" || (speciesNames[entry.species.species] != "Mewtwo")))
                         {
                             button.Text = ("Mega " + speciesNames[entry.species.species]);
-                        } else if ((speciesNames[entry.species.species] == "Mewtwo" || speciesNames[entry.species.species] == "Charizard") && entry.species.form == 1)
+                        }
+                        else if ((speciesNames[entry.species.species] == "Mewtwo" || speciesNames[entry.species.species] == "Charizard") && entry.species.form == 1)
                         {
                             button.Text = ("Mega " + speciesNames[entry.species.species] + " X");
-                        } else if ((speciesNames[entry.species.species] == "Mewtwo" || speciesNames[entry.species.species] == "Charizard") && entry.species.form == 2)
+                        }
+                        else if ((speciesNames[entry.species.species] == "Mewtwo" || speciesNames[entry.species.species] == "Charizard") && entry.species.form == 2)
                         {
                             button.Text = ("Mega " + speciesNames[entry.species.species] + " Y");
+                        }
+                        else if (speciesNames[entry.species.species] == "Dialga" || speciesNames[entry.species.species] == "Palkia" || speciesNames[entry.species.species] == "Giratina")
+                        {
+                            button.Text = ("Origin " + speciesNames[entry.species.species]);
+                        }
+                        else if (speciesNames[entry.species.species] == "Kyogre" || speciesNames[entry.species.species] == "Groudon") {
+                            button.Text = ("Primal " + speciesNames[entry.species.species]);
                         }
                         else
                         {
@@ -287,8 +309,8 @@ namespace Sky.SubForms
         {
             Button button = sender as Button;
             var num = selectorPanel.Controls.IndexOf(button) + 1;
-            var currentPdata = pdata.values.Exists(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", ""))).devName) ? pdata.values.First(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", ""))).devName) : null;
-            currentSpecies = new Species { Name = button.Text, DevID = pokeDevID.values.First(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", ""))).devName, Index = num, EntryInfo = personal.entry[num], PokeDataInfo = currentPdata, isForm = (alolaForms.Contains(speciesNames[personal.entry[num].species.species]) || galarForms.Contains(speciesNames[personal.entry[num].species.species]) || hisuiForms.Contains(speciesNames[personal.entry[num].species.species]) || megaForms.Contains(speciesNames[personal.entry[num].species.species]) || paldeaForms.Contains(speciesNames[personal.entry[num].species.species]) || button.Text == "Indeedee" || button.Text == "Oricorio" || button.Text == "Lycanroc" || button.Text.Contains("Charizard") || button.Text.Contains("Mewtwo")) ? true : false};
+            var currentPdata = pdata.values.Exists(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", "").Replace("Origin ", "").Replace("Primal ", ""))).devName) ? pdata.values.First(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", "").Replace("Origin ", "").Replace("Primal ", ""))).devName) : null;
+            currentSpecies = new Species { Name = button.Text, DevID = pokeDevID.values.First(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", "").Replace("Origin ", "").Replace("Primal ", ""))).devName, Index = num, EntryInfo = personal.entry[num], PokeDataInfo = currentPdata, isForm = (alolaForms.Contains(speciesNames[personal.entry[num].species.species]) || galarForms.Contains(speciesNames[personal.entry[num].species.species]) || hisuiForms.Contains(speciesNames[personal.entry[num].species.species]) || megaForms.Contains(speciesNames[personal.entry[num].species.species]) || paldeaForms.Contains(speciesNames[personal.entry[num].species.species]) || miscForms.Contains(speciesNames[personal.entry[num].species.species]) || button.Text == "Indeedee" || button.Text == "Oricorio" || button.Text == "Lycanroc" || button.Text.Contains("Charizard") || button.Text.Contains("Mewtwo") || button.Text == "Eevee") ? true : false};
             selectorPanel.Visible = false;
             Form editor = new PokeEditor(currentSpecies, personal, plib, plibItems, pdata, this, items);
             editor.TopLevel = false;
