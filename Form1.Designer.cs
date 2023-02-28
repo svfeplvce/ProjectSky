@@ -36,6 +36,9 @@
             this.PokemonButton = new System.Windows.Forms.Button();
             this.TrainerButton = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.moveButton = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contentPanel.SuspendLayout();
@@ -99,38 +102,45 @@
             // 
             // PokemonButton
             // 
-            this.PokemonButton.BackColor = System.Drawing.Color.Transparent;
-            this.PokemonButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PokemonButton.BackgroundImage")));
+            this.PokemonButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.PokemonButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PokemonButton.FlatAppearance.BorderSize = 0;
             this.PokemonButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.PokemonButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.PokemonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PokemonButton.Location = new System.Drawing.Point(12, 40);
+            this.PokemonButton.Font = new System.Drawing.Font("BankGothic Md BT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PokemonButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.PokemonButton.Location = new System.Drawing.Point(30, 384);
             this.PokemonButton.Name = "PokemonButton";
-            this.PokemonButton.Size = new System.Drawing.Size(476, 525);
+            this.PokemonButton.Size = new System.Drawing.Size(306, 188);
             this.PokemonButton.TabIndex = 1;
+            this.PokemonButton.Text = "Pokemon Editor";
             this.PokemonButton.UseVisualStyleBackColor = false;
             this.PokemonButton.Click += new System.EventHandler(this.PokemonButton_Click);
             // 
             // TrainerButton
             // 
-            this.TrainerButton.BackColor = System.Drawing.Color.Transparent;
-            this.TrainerButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TrainerButton.BackgroundImage")));
+            this.TrainerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.TrainerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.TrainerButton.FlatAppearance.BorderSize = 0;
             this.TrainerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.TrainerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.TrainerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TrainerButton.Location = new System.Drawing.Point(513, 40);
+            this.TrainerButton.Font = new System.Drawing.Font("BankGothic Lt BT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TrainerButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.TrainerButton.Location = new System.Drawing.Point(658, 384);
             this.TrainerButton.Name = "TrainerButton";
-            this.TrainerButton.Size = new System.Drawing.Size(475, 525);
+            this.TrainerButton.Size = new System.Drawing.Size(306, 188);
             this.TrainerButton.TabIndex = 2;
+            this.TrainerButton.Text = "Trainer Editor";
             this.TrainerButton.UseVisualStyleBackColor = false;
             this.TrainerButton.Click += new System.EventHandler(this.TrainerButton_Click);
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.label2);
+            this.contentPanel.Controls.Add(this.label1);
+            this.contentPanel.Controls.Add(this.moveButton);
             this.contentPanel.Controls.Add(this.PokemonButton);
             this.contentPanel.Controls.Add(this.TrainerButton);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -138,6 +148,46 @@
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(1000, 610);
             this.contentPanel.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(215, 244);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(530, 29);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "To get started, select one of the options below!";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Akira Expanded", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(98, 179);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(764, 39);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Welcome to Project Sky!";
+            // 
+            // moveButton
+            // 
+            this.moveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.moveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.moveButton.FlatAppearance.BorderSize = 0;
+            this.moveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.moveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.moveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.moveButton.Font = new System.Drawing.Font("BankGothic Lt BT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moveButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.moveButton.Location = new System.Drawing.Point(342, 384);
+            this.moveButton.Name = "moveButton";
+            this.moveButton.Size = new System.Drawing.Size(306, 188);
+            this.moveButton.TabIndex = 3;
+            this.moveButton.Text = "Move Stat Editor";
+            this.moveButton.UseVisualStyleBackColor = false;
+            this.moveButton.Click += new System.EventHandler(this.moveButton_Click);
             // 
             // MainForm
             // 
@@ -154,6 +204,7 @@
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contentPanel.ResumeLayout(false);
+            this.contentPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +218,8 @@
         private Button TrainerButton;
         private Panel contentPanel;
         private PictureBox pictureBox1;
+        private Label label2;
+        private Label label1;
+        private Button moveButton;
     }
 }

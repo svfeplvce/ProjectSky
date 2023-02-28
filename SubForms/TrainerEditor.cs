@@ -21,6 +21,8 @@ namespace Sky.SubForms
         private readonly string outPath = MainForm.outDir;
         private Trainer.TrainerArray trainer;
         private CurrentTrainer currentTrainer = new CurrentTrainer { };
+        private TrainerDevID.DevID trainerDevID;
+        private PokeDevID.DevID pokeDevID;
         public List<string> abilityNames = new List<string> { };
         public List<string> moveNames = new List<string> { };
         public List<string> itemNames = new List<string> { };
@@ -41,6 +43,9 @@ namespace Sky.SubForms
         public TrainerEditor()
         {
             InitializeComponent();
+
+            pictureBox1.BackgroundImage = Image.FromStream(assembly.GetManifestResourceStream("Sky.Assets.Images.sky_logo.png"));
+
             LoadNecessaryFiles();
         }
 
@@ -89,8 +94,14 @@ namespace Sky.SubForms
                 var pokeDevIDJson = pokeDevIDReader.ReadToEnd();
 
                 trainer = JsonSerializer.Deserialize<Trainer.TrainerArray>(trainerJson);
+                trainerDevID = JsonSerializer.Deserialize<TrainerDevID.DevID>(trainerDevIDJson);
+                pokeDevID = JsonSerializer.Deserialize<PokeDevID.DevID>(pokeDevIDJson);
             }
         }
+
+        // now we code what we need to do
+
+
 
         // top panel shit
 

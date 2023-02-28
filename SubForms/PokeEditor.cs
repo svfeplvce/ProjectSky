@@ -110,6 +110,10 @@ namespace Sky.SubForms
         public PokeEditor(Species currentSpecies, Personal.PersonalArray personal, Plib.PlibArray plib, Dictionary<int, int> plibItems, PokeData.DataArray pdata, PokemonEditor form, List<Tuple<string, string, int>> items)
         {
             InitializeComponent();
+
+            returnButton.Font = new Font(MainForm.pfc.Families[2], 12, FontStyle.Regular);
+            pokemonName.Font = new Font(MainForm.pfc.Families[0], 33, FontStyle.Regular);
+
             _currentSpecies = currentSpecies;
             isForm = _currentSpecies.isForm;
             _personal = personal;

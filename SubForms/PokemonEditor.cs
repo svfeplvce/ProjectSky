@@ -62,6 +62,8 @@ namespace Sky.SubForms
 
             pictureBox1.BackgroundImage = Image.FromStream(assembly.GetManifestResourceStream("Sky.Assets.Images.sky_logo.png"));
 
+            exitButton.Font = new Font(MainForm.pfc.Families[2], 12, FontStyle.Regular);
+
             LoadNecessaryFiles();
             FillSelectorPanel();
         }

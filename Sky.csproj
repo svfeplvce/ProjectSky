@@ -32,12 +32,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Fonts\Akira.ttf" />
+    <None Remove="Assets\Fonts\BankGothic.ttf" />
+    <None Remove="Assets\Fonts\DripIcons.ttf" />
+    <None Remove="Assets\Fonts\Montserrat.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CliWrap" Version="3.6.0" />
     <PackageReference Include="DevZH.FlatBuffers" Version="1.4.0" />
     <PackageReference Include="Google.FlatBuffers" Version="23.1.4" />
     <PackageReference Include="MetroFramework" Version="1.2.0.3" />
     <PackageReference Include="Siticone.Desktop.UI" Version="2.1.1" />
     <PackageReference Include="System.Text.Json" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Fonts\Akira.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\BankGothic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\DripIcons.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Montserrat.ttf" />
   </ItemGroup>
 
 </Project>
