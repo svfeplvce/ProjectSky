@@ -133,8 +133,6 @@ namespace Sky
             editor.FormClosed += Editor_FormClosed;
             editor.Show();
             Hide();
-
-            MessageBox.Show("Trainer editor is not finished yet... Coming soon.");
         }
 
         private void moveButton_Click(object sender, EventArgs e)

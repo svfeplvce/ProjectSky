@@ -13,7 +13,6 @@ C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.MainForm.reso
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.Properties.Resources.resources
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.SubForms.PokeEditor.resources
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.SubForms.PokemonEditor.resources
-C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.SubForms.TEditor.resources
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.SubForms.TrainerEditor.resources
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.csproj.GenerateResource.cache
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.GeneratedMSBuildEditorConfig.editorconfig

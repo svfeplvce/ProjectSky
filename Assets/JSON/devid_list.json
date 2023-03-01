@@ -1,6 +1,11 @@
 ﻿{
   "values": [
     {
+      "devName": "DEV_NULL",
+      "id": 0,
+      "forms": 1
+    },
+    {
       "devName": "DEV_HUSIGIDANE",
       "id": 1,
       "forms": 1
