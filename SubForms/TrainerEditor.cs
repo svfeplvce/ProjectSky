@@ -187,6 +187,7 @@ namespace Sky.SubForms
             setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke1.devId).Key, currentTrainer.Data.poke1.formId, 0);
 
             speciesBox1.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke1.devId).Key);
+            formBox1.Value = mon1.formId;
 
             if (mon1.talentType == "RANDOM")
             {
@@ -291,6 +292,7 @@ namespace Sky.SubForms
 
             setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke2.devId).Key, currentTrainer.Data.poke2.formId, 1);
             speciesBox2.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke2.devId).Key);
+            formBox2.Value = mon2.formId;
 
             if (mon2.talentType == "RANDOM")
             {
@@ -396,6 +398,7 @@ namespace Sky.SubForms
 
             setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke3.devId).Key, currentTrainer.Data.poke3.formId, 2);
             speciesBox3.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke3.devId).Key);
+            formBox3.Value = mon3.formId;
 
             if (mon3.talentType == "RANDOM")
             {
@@ -501,6 +504,7 @@ namespace Sky.SubForms
 
             setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke4.devId).Key, currentTrainer.Data.poke4.formId, 3);
             speciesBox4.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke4.devId).Key);
+            formBox4.Value = mon1.formId;
 
             if (mon4.talentType == "RANDOM")
             {
@@ -606,6 +610,7 @@ namespace Sky.SubForms
 
             setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke5.devId).Key, currentTrainer.Data.poke5.formId, 4);
             speciesBox5.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke5.devId).Key);
+            formBox5.Value = mon5.formId;
 
             if (mon5.talentType == "RANDOM")
             {
@@ -711,6 +716,7 @@ namespace Sky.SubForms
 
             setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke6.devId).Key, currentTrainer.Data.poke6.formId, 5);
             speciesBox6.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke6.devId).Key);
+            formBox6.Value = mon6.formId;
 
             if (mon6.talentType == "RANDOM")
             {
@@ -864,6 +870,45 @@ namespace Sky.SubForms
                     currentTrainer.Data.poke6.devId = pokeDevID.values.First(x => x.id == species.SelectedIndex).devName;
                 }
                 setPicture(speciesNames[species.SelectedIndex], 0, currentPage);
+            }
+        }
+
+        private void formChanged(object sender, EventArgs e)
+        {
+            if (initialised)
+            {
+                var currentPage = siticoneTabControl1.SelectedIndex;
+                var form = (int)(sender as SiticoneNumericUpDown).Value;
+                if (currentPage == 0)
+                {
+                    currentTrainer.Data.poke1.formId = (int)formBox1.Value;
+                    setPicture(speciesNames[speciesBox1.SelectedIndex], form, currentPage);
+                }
+                else if (currentPage == 1)
+                {
+                    currentTrainer.Data.poke2.formId = (int)formBox2.Value;
+                    setPicture(speciesNames[speciesBox2.SelectedIndex], form, currentPage);
+                }
+                else if (currentPage == 2)
+                {
+                    currentTrainer.Data.poke3.formId = (int)formBox3.Value;
+                    setPicture(speciesNames[speciesBox3.SelectedIndex], form, currentPage);
+                }
+                else if (currentPage == 3)
+                {
+                    currentTrainer.Data.poke4.formId = (int)formBox4.Value;
+                    setPicture(speciesNames[speciesBox4.SelectedIndex], form, currentPage);
+                }
+                else if (currentPage == 4)
+                {
+                    currentTrainer.Data.poke5.formId = (int)formBox5.Value;
+                    setPicture(speciesNames[speciesBox5.SelectedIndex], form, currentPage);
+                }
+                else
+                {
+                    currentTrainer.Data.poke6.formId = (int)formBox6.Value;
+                    setPicture(speciesNames[speciesBox6.SelectedIndex], form, currentPage);
+                }
             }
         }
 

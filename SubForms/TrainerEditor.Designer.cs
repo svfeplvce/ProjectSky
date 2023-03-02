@@ -61,6 +61,7 @@
             this.ballBox1 = new Sky.Core.FlatComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.formBox1 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.speciesBox1 = new Sky.Core.FlatComboBox();
             this.spriteBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -119,6 +120,7 @@
             this.ballBox2 = new Sky.Core.FlatComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.formBox2 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.speciesBox2 = new Sky.Core.FlatComboBox();
             this.spriteBox2 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -177,6 +179,7 @@
             this.ballBox3 = new Sky.Core.FlatComboBox();
             this.label51 = new System.Windows.Forms.Label();
             this.siticonePanel11 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.formBox3 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.speciesBox3 = new Sky.Core.FlatComboBox();
             this.spriteBox3 = new System.Windows.Forms.PictureBox();
             this.label52 = new System.Windows.Forms.Label();
@@ -235,6 +238,7 @@
             this.ballBox4 = new Sky.Core.FlatComboBox();
             this.label73 = new System.Windows.Forms.Label();
             this.siticonePanel15 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.formBox4 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.speciesBox4 = new Sky.Core.FlatComboBox();
             this.spriteBox4 = new System.Windows.Forms.PictureBox();
             this.label74 = new System.Windows.Forms.Label();
@@ -293,6 +297,7 @@
             this.ballBox5 = new Sky.Core.FlatComboBox();
             this.label95 = new System.Windows.Forms.Label();
             this.siticonePanel19 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.formBox5 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.speciesBox5 = new Sky.Core.FlatComboBox();
             this.spriteBox5 = new System.Windows.Forms.PictureBox();
             this.label96 = new System.Windows.Forms.Label();
@@ -351,6 +356,7 @@
             this.ballBox6 = new Sky.Core.FlatComboBox();
             this.label117 = new System.Windows.Forms.Label();
             this.siticonePanel23 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.formBox6 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.speciesBox6 = new Sky.Core.FlatComboBox();
             this.spriteBox6 = new System.Windows.Forms.PictureBox();
             this.label118 = new System.Windows.Forms.Label();
@@ -402,6 +408,7 @@
             this.siticonePanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelBox1)).BeginInit();
             this.siticonePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox1)).BeginInit();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speEV1)).BeginInit();
@@ -425,6 +432,7 @@
             this.siticonePanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelBox2)).BeginInit();
             this.siticonePanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox2)).BeginInit();
             this.siticonePanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speEV2)).BeginInit();
@@ -448,6 +456,7 @@
             this.siticonePanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelBox3)).BeginInit();
             this.siticonePanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox3)).BeginInit();
             this.siticonePanel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speEV3)).BeginInit();
@@ -471,6 +480,7 @@
             this.siticonePanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelBox4)).BeginInit();
             this.siticonePanel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox4)).BeginInit();
             this.siticonePanel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speEV4)).BeginInit();
@@ -494,6 +504,7 @@
             this.siticonePanel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelBox5)).BeginInit();
             this.siticonePanel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox5)).BeginInit();
             this.siticonePanel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speEV5)).BeginInit();
@@ -517,6 +528,7 @@
             this.siticonePanel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelBox6)).BeginInit();
             this.siticonePanel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox6)).BeginInit();
             this.siticonePanel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speEV6)).BeginInit();
@@ -5976,6 +5988,7 @@
             // siticonePanel2
             // 
             this.siticonePanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.siticonePanel2.Controls.Add(this.formBox1);
             this.siticonePanel2.Controls.Add(this.speciesBox1);
             this.siticonePanel2.Controls.Add(this.spriteBox1);
             this.siticonePanel2.Controls.Add(this.label3);
@@ -5984,6 +5997,25 @@
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(316, 255);
             this.siticonePanel2.TabIndex = 1;
+            // 
+            // formBox1
+            // 
+            this.formBox1.BackColor = System.Drawing.Color.Transparent;
+            this.formBox1.BorderThickness = 0;
+            this.formBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.formBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.formBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.formBox1.Location = new System.Drawing.Point(215, 211);
+            this.formBox1.Maximum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.formBox1.Name = "formBox1";
+            this.formBox1.Size = new System.Drawing.Size(37, 26);
+            this.formBox1.TabIndex = 43;
+            this.formBox1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.formBox1.ValueChanged += new System.EventHandler(this.formChanged);
             // 
             // speciesBox1
             // 
@@ -7006,7 +7038,7 @@
             "Annihilape"});
             this.speciesBox1.Location = new System.Drawing.Point(76, 211);
             this.speciesBox1.Name = "speciesBox1";
-            this.speciesBox1.Size = new System.Drawing.Size(176, 23);
+            this.speciesBox1.Size = new System.Drawing.Size(133, 23);
             this.speciesBox1.TabIndex = 6;
             this.speciesBox1.SelectedIndexChanged += new System.EventHandler(this.speciesBox_SelectedIndexChanged);
             // 
@@ -12814,6 +12846,7 @@
             // siticonePanel7
             // 
             this.siticonePanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.siticonePanel7.Controls.Add(this.formBox2);
             this.siticonePanel7.Controls.Add(this.speciesBox2);
             this.siticonePanel7.Controls.Add(this.spriteBox2);
             this.siticonePanel7.Controls.Add(this.label30);
@@ -12822,6 +12855,25 @@
             this.siticonePanel7.Name = "siticonePanel7";
             this.siticonePanel7.Size = new System.Drawing.Size(316, 255);
             this.siticonePanel7.TabIndex = 5;
+            // 
+            // formBox2
+            // 
+            this.formBox2.BackColor = System.Drawing.Color.Transparent;
+            this.formBox2.BorderThickness = 0;
+            this.formBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.formBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.formBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.formBox2.Location = new System.Drawing.Point(215, 211);
+            this.formBox2.Maximum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.formBox2.Name = "formBox2";
+            this.formBox2.Size = new System.Drawing.Size(37, 26);
+            this.formBox2.TabIndex = 44;
+            this.formBox2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.formBox2.ValueChanged += new System.EventHandler(this.formChanged);
             // 
             // speciesBox2
             // 
@@ -13844,7 +13896,7 @@
             "Annihilape"});
             this.speciesBox2.Location = new System.Drawing.Point(76, 211);
             this.speciesBox2.Name = "speciesBox2";
-            this.speciesBox2.Size = new System.Drawing.Size(176, 23);
+            this.speciesBox2.Size = new System.Drawing.Size(133, 23);
             this.speciesBox2.TabIndex = 6;
             this.speciesBox2.SelectedIndexChanged += new System.EventHandler(this.speciesBox_SelectedIndexChanged);
             // 
@@ -19652,6 +19704,7 @@
             // siticonePanel11
             // 
             this.siticonePanel11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.siticonePanel11.Controls.Add(this.formBox3);
             this.siticonePanel11.Controls.Add(this.speciesBox3);
             this.siticonePanel11.Controls.Add(this.spriteBox3);
             this.siticonePanel11.Controls.Add(this.label52);
@@ -19660,6 +19713,25 @@
             this.siticonePanel11.Name = "siticonePanel11";
             this.siticonePanel11.Size = new System.Drawing.Size(316, 255);
             this.siticonePanel11.TabIndex = 5;
+            // 
+            // formBox3
+            // 
+            this.formBox3.BackColor = System.Drawing.Color.Transparent;
+            this.formBox3.BorderThickness = 0;
+            this.formBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.formBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.formBox3.ForeColor = System.Drawing.SystemColors.Control;
+            this.formBox3.Location = new System.Drawing.Point(215, 211);
+            this.formBox3.Maximum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.formBox3.Name = "formBox3";
+            this.formBox3.Size = new System.Drawing.Size(37, 26);
+            this.formBox3.TabIndex = 44;
+            this.formBox3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.formBox3.ValueChanged += new System.EventHandler(this.formChanged);
             // 
             // speciesBox3
             // 
@@ -20682,7 +20754,7 @@
             "Annihilape"});
             this.speciesBox3.Location = new System.Drawing.Point(76, 211);
             this.speciesBox3.Name = "speciesBox3";
-            this.speciesBox3.Size = new System.Drawing.Size(176, 23);
+            this.speciesBox3.Size = new System.Drawing.Size(133, 23);
             this.speciesBox3.TabIndex = 6;
             this.speciesBox3.SelectedIndexChanged += new System.EventHandler(this.speciesBox_SelectedIndexChanged);
             // 
@@ -26490,6 +26562,7 @@
             // siticonePanel15
             // 
             this.siticonePanel15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.siticonePanel15.Controls.Add(this.formBox4);
             this.siticonePanel15.Controls.Add(this.speciesBox4);
             this.siticonePanel15.Controls.Add(this.spriteBox4);
             this.siticonePanel15.Controls.Add(this.label74);
@@ -26498,6 +26571,25 @@
             this.siticonePanel15.Name = "siticonePanel15";
             this.siticonePanel15.Size = new System.Drawing.Size(316, 255);
             this.siticonePanel15.TabIndex = 5;
+            // 
+            // formBox4
+            // 
+            this.formBox4.BackColor = System.Drawing.Color.Transparent;
+            this.formBox4.BorderThickness = 0;
+            this.formBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.formBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.formBox4.ForeColor = System.Drawing.SystemColors.Control;
+            this.formBox4.Location = new System.Drawing.Point(215, 211);
+            this.formBox4.Maximum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.formBox4.Name = "formBox4";
+            this.formBox4.Size = new System.Drawing.Size(37, 26);
+            this.formBox4.TabIndex = 44;
+            this.formBox4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.formBox4.ValueChanged += new System.EventHandler(this.formChanged);
             // 
             // speciesBox4
             // 
@@ -27520,7 +27612,7 @@
             "Annihilape"});
             this.speciesBox4.Location = new System.Drawing.Point(76, 211);
             this.speciesBox4.Name = "speciesBox4";
-            this.speciesBox4.Size = new System.Drawing.Size(176, 23);
+            this.speciesBox4.Size = new System.Drawing.Size(133, 23);
             this.speciesBox4.TabIndex = 6;
             this.speciesBox4.SelectedIndexChanged += new System.EventHandler(this.speciesBox_SelectedIndexChanged);
             // 
@@ -33319,6 +33411,7 @@
             // siticonePanel19
             // 
             this.siticonePanel19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.siticonePanel19.Controls.Add(this.formBox5);
             this.siticonePanel19.Controls.Add(this.speciesBox5);
             this.siticonePanel19.Controls.Add(this.spriteBox5);
             this.siticonePanel19.Controls.Add(this.label96);
@@ -33327,6 +33420,25 @@
             this.siticonePanel19.Name = "siticonePanel19";
             this.siticonePanel19.Size = new System.Drawing.Size(316, 255);
             this.siticonePanel19.TabIndex = 5;
+            // 
+            // formBox5
+            // 
+            this.formBox5.BackColor = System.Drawing.Color.Transparent;
+            this.formBox5.BorderThickness = 0;
+            this.formBox5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.formBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.formBox5.ForeColor = System.Drawing.SystemColors.Control;
+            this.formBox5.Location = new System.Drawing.Point(215, 211);
+            this.formBox5.Maximum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.formBox5.Name = "formBox5";
+            this.formBox5.Size = new System.Drawing.Size(37, 26);
+            this.formBox5.TabIndex = 44;
+            this.formBox5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.formBox5.ValueChanged += new System.EventHandler(this.formChanged);
             // 
             // speciesBox5
             // 
@@ -34349,7 +34461,7 @@
             "Annihilape"});
             this.speciesBox5.Location = new System.Drawing.Point(76, 211);
             this.speciesBox5.Name = "speciesBox5";
-            this.speciesBox5.Size = new System.Drawing.Size(176, 23);
+            this.speciesBox5.Size = new System.Drawing.Size(133, 23);
             this.speciesBox5.TabIndex = 6;
             // 
             // spriteBox5
@@ -40156,6 +40268,7 @@
             // siticonePanel23
             // 
             this.siticonePanel23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.siticonePanel23.Controls.Add(this.formBox6);
             this.siticonePanel23.Controls.Add(this.speciesBox6);
             this.siticonePanel23.Controls.Add(this.spriteBox6);
             this.siticonePanel23.Controls.Add(this.label118);
@@ -40164,6 +40277,25 @@
             this.siticonePanel23.Name = "siticonePanel23";
             this.siticonePanel23.Size = new System.Drawing.Size(316, 255);
             this.siticonePanel23.TabIndex = 9;
+            // 
+            // formBox6
+            // 
+            this.formBox6.BackColor = System.Drawing.Color.Transparent;
+            this.formBox6.BorderThickness = 0;
+            this.formBox6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.formBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.formBox6.ForeColor = System.Drawing.SystemColors.Control;
+            this.formBox6.Location = new System.Drawing.Point(215, 211);
+            this.formBox6.Maximum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.formBox6.Name = "formBox6";
+            this.formBox6.Size = new System.Drawing.Size(37, 26);
+            this.formBox6.TabIndex = 44;
+            this.formBox6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.formBox6.ValueChanged += new System.EventHandler(this.formChanged);
             // 
             // speciesBox6
             // 
@@ -41186,7 +41318,7 @@
             "Annihilape"});
             this.speciesBox6.Location = new System.Drawing.Point(76, 211);
             this.speciesBox6.Name = "speciesBox6";
-            this.speciesBox6.Size = new System.Drawing.Size(176, 23);
+            this.speciesBox6.Size = new System.Drawing.Size(133, 23);
             this.speciesBox6.TabIndex = 6;
             // 
             // spriteBox6
@@ -42784,6 +42916,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.levelBox1)).EndInit();
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox1)).EndInit();
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
@@ -42811,6 +42944,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.levelBox2)).EndInit();
             this.siticonePanel7.ResumeLayout(false);
             this.siticonePanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox2)).EndInit();
             this.siticonePanel8.ResumeLayout(false);
             this.siticonePanel8.PerformLayout();
@@ -42838,6 +42972,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.levelBox3)).EndInit();
             this.siticonePanel11.ResumeLayout(false);
             this.siticonePanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox3)).EndInit();
             this.siticonePanel12.ResumeLayout(false);
             this.siticonePanel12.PerformLayout();
@@ -42865,6 +43000,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.levelBox4)).EndInit();
             this.siticonePanel15.ResumeLayout(false);
             this.siticonePanel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox4)).EndInit();
             this.siticonePanel16.ResumeLayout(false);
             this.siticonePanel16.PerformLayout();
@@ -42892,6 +43028,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.levelBox5)).EndInit();
             this.siticonePanel19.ResumeLayout(false);
             this.siticonePanel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox5)).EndInit();
             this.siticonePanel20.ResumeLayout(false);
             this.siticonePanel20.PerformLayout();
@@ -42919,6 +43056,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.levelBox6)).EndInit();
             this.siticonePanel23.ResumeLayout(false);
             this.siticonePanel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spriteBox6)).EndInit();
             this.siticonePanel24.ResumeLayout(false);
             this.siticonePanel24.PerformLayout();
@@ -43306,5 +43444,11 @@
         private Label label134;
         private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown moneyRateBox;
         private CheckedListBox checkedListBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown formBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown formBox2;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown formBox3;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown formBox4;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown formBox5;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown formBox6;
     }
 }
