@@ -35,7 +35,6 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.selectorPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.searchBox = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contentPanel.SuspendLayout();
@@ -101,45 +100,20 @@
             // 
             this.selectorPanel.AutoScroll = true;
             this.selectorPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.selectorPanel.Location = new System.Drawing.Point(0, 45);
+            this.selectorPanel.Location = new System.Drawing.Point(0, 0);
             this.selectorPanel.Margin = new System.Windows.Forms.Padding(0);
             this.selectorPanel.Name = "selectorPanel";
-            this.selectorPanel.Size = new System.Drawing.Size(1000, 565);
+            this.selectorPanel.Size = new System.Drawing.Size(1000, 610);
             this.selectorPanel.TabIndex = 2;
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.searchBox);
             this.contentPanel.Controls.Add(this.selectorPanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 30);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(1000, 610);
             this.contentPanel.TabIndex = 3;
-            // 
-            // searchBox
-            // 
-            this.searchBox.Animated = true;
-            this.searchBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.searchBox.BorderRadius = 5;
-            this.searchBox.DefaultText = "";
-            this.searchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.searchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.searchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.searchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.searchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBox.Location = new System.Drawing.Point(3, 6);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.PasswordChar = '\0';
-            this.searchBox.PlaceholderText = "Search";
-            this.searchBox.SelectedText = "";
-            this.searchBox.Size = new System.Drawing.Size(200, 36);
-            this.searchBox.TabIndex = 3;
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // PokemonEditor
             // 
@@ -168,6 +142,5 @@
         private FlowLayoutPanel selectorPanel;
         private Panel contentPanel;
         private PictureBox pictureBox1;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox searchBox;
     }
 }
