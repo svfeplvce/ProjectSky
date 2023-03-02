@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainerEditor));
             this.topPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.minimizeButton = new System.Windows.Forms.Button();
@@ -1381,6 +1382,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -2026,6 +2029,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -2671,6 +2676,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -3316,6 +3323,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -8239,6 +8248,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -8884,6 +8895,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -9529,6 +9542,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -10174,6 +10189,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -15097,6 +15114,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -15742,6 +15761,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -16387,6 +16408,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -17032,6 +17055,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -21955,6 +21980,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -22600,6 +22627,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -23245,6 +23274,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -23890,6 +23921,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -28808,6 +28841,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -29452,6 +29487,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -30096,6 +30133,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -30740,6 +30779,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -34463,6 +34504,7 @@
             this.speciesBox5.Name = "speciesBox5";
             this.speciesBox5.Size = new System.Drawing.Size(133, 23);
             this.speciesBox5.TabIndex = 6;
+            this.speciesBox5.SelectedIndexChanged += new System.EventHandler(this.speciesBox_SelectedIndexChanged);
             // 
             // spriteBox5
             // 
@@ -35661,6 +35703,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -36306,6 +36350,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -36951,6 +36997,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -37596,6 +37644,8 @@
             "Aqua Step",
             "Raging Bull",
             "Make It Rain",
+            "Psyblade",
+            "Hydro Steam",
             "Ruination",
             "Collision Course",
             "Electro Drift",
@@ -41320,6 +41370,7 @@
             this.speciesBox6.Name = "speciesBox6";
             this.speciesBox6.Size = new System.Drawing.Size(133, 23);
             this.speciesBox6.TabIndex = 6;
+            this.speciesBox6.SelectedIndexChanged += new System.EventHandler(this.speciesBox_SelectedIndexChanged);
             // 
             // spriteBox6
             // 
@@ -42898,8 +42949,9 @@
             this.Controls.Add(this.siticoneTabControl1);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TrainerEditor";
-            this.Text = "TrainerEditor";
+            this.Text = "PROJECT SKY";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrainerEditor_FormClosing);
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

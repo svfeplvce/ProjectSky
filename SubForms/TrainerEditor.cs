@@ -98,6 +98,7 @@ namespace Sky.SubForms
 
             // the 2 jsons
 
+            var exists = File.Exists(Path.Combine(outPath, "trdata_array.json"));
             var trainerFile = File.Exists(Path.Combine(outPath, "trdata_array.json")) ? File.Open(Path.Combine(outPath, "trdata_array.json"), FileMode.Open) : assembly.GetManifestResourceStream("Sky.Assets.JSON.trdata_array.json");
             var trainerDevIDFile = assembly.GetManifestResourceStream("Sky.Assets.JSON.trdev_id.json");
             var pokeDevIDFile = assembly.GetManifestResourceStream("Sky.Assets.JSON.devid_list.json");
@@ -265,10 +266,10 @@ namespace Sky.SubForms
             }
 
             ballBox1.SelectedIndex = ballBox1.Items.IndexOf(ballToDevID.First(x => x.Value == mon1.ballId).Key);
-            itemBox1.SelectedIndex = itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon1.item).id]);
+            itemBox1.SelectedIndex = mon1.item == null ? 0 : itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon1.item).id]);
             levelBox1.Value = mon1.level;
 
-            if (mon1.gemType != "DEFAULT")
+            if (mon1.gemType != "DEFAULT" && mon1.gemType != null)
             {
                 teraTypeBox1.Enabled = true;
                 teraTypeBox1.SelectedItem = typeToGemName.First(x => x.Value == mon1.gemType);
@@ -290,531 +291,546 @@ namespace Sky.SubForms
 
             var mon2 = currentTrainer.Data.poke2;
 
-            setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke2.devId).Key, currentTrainer.Data.poke2.formId, 1);
-            speciesBox2.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke2.devId).Key);
-            formBox2.Value = mon2.formId;
-
-            if (mon2.talentType == "RANDOM")
+            if (mon2.devId != null)
             {
-                hpIV2.Enabled = false;
-                atkIV2.Enabled = false;
-                defIV2.Enabled = false;
-                spaIV2.Enabled = false;
-                spdIV2.Enabled = false;
-                speIV2.Enabled = false;
+                setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke2.devId).Key, currentTrainer.Data.poke2.formId, 1);
+                speciesBox2.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke2.devId).Key);
+                formBox2.Value = mon2.formId;
 
-                randomIV2.Checked = true;
+                if (mon2.talentType == "RANDOM")
+                {
+                    hpIV2.Enabled = false;
+                    atkIV2.Enabled = false;
+                    defIV2.Enabled = false;
+                    spaIV2.Enabled = false;
+                    spdIV2.Enabled = false;
+                    speIV2.Enabled = false;
+
+                    randomIV2.Checked = true;
+                }
+                else
+                {
+                    // re-enabling just in case
+
+                    hpIV2.Enabled = true;
+                    atkIV2.Enabled = true;
+                    defIV2.Enabled = true;
+                    spaIV2.Enabled = true;
+                    spdIV2.Enabled = true;
+                    speIV2.Enabled = true;
+
+                    hpIV2.Value = mon2.talentValue.hp;
+                    atkIV2.Value = mon2.talentValue.atk;
+                    defIV2.Value = mon2.talentValue.def;
+                    spaIV2.Value = mon2.talentValue.spAtk;
+                    spdIV2.Value = mon2.talentValue.spDef;
+                    speIV2.Value = mon2.talentValue.agi;
+
+                    randomIV2.Checked = false;
+                }
+
+                hpEV2.Value = mon2.effortValue.hp;
+                atkEV2.Value = mon2.effortValue.atk;
+                defEV2.Value = mon2.effortValue.def;
+                spaEV2.Value = mon2.effortValue.spAtk;
+                spdEV2.Value = mon2.effortValue.spDef;
+                speEV2.Value = mon2.effortValue.agi;
+
+                if (mon2.wazaType == "MANUAL")
+                {
+                    moveOne2.Enabled = true;
+                    ppUpOne2.Enabled = true;
+                    moveTwo2.Enabled = true;
+                    ppUpTwo2.Enabled = true;
+                    moveThree2.Enabled = true;
+                    ppUpThree2.Enabled = true;
+                    moveFour2.Enabled = true;
+                    ppUpFour2.Enabled = true;
+
+                    moveOne2.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon2.waza1.wazaId));
+                    ppUpOne2.Value = mon2.waza1.pointUp;
+                    moveTwo2.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon2.waza2.wazaId));
+                    ppUpTwo2.Value = mon2.waza2.pointUp;
+                    moveThree2.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon2.waza3.wazaId));
+                    ppUpThree2.Value = mon2.waza3.pointUp;
+                    moveFour2.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon2.waza4.wazaId));
+                    ppUpFour2.Value = mon2.waza4.pointUp;
+                }
+                else
+                {
+                    moveOne2.SelectedIndex = 0;
+                    moveOne2.Enabled = false;
+                    ppUpOne2.Enabled = false;
+                    moveTwo2.SelectedIndex = 0;
+                    moveTwo2.Enabled = false;
+                    ppUpTwo2.Enabled = false;
+                    moveThree2.SelectedIndex = 0;
+                    moveThree2.Enabled = false;
+                    ppUpThree2.Enabled = false;
+                    moveFour2.SelectedIndex = 0;
+                    moveFour2.Enabled = false;
+                    ppUpFour2.Enabled = false;
+                }
+
+                ballBox2.SelectedIndex = ballBox2.Items.IndexOf(ballToDevID.First(x => x.Value == mon2.ballId).Key);
+                itemBox2.SelectedIndex = mon2.item == null ? 0 : itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon2.item).id]);
+                levelBox2.Value = mon2.level;
+
+                if (mon2.gemType != "DEFAULT" && mon2.gemType != null)
+                {
+                    teraTypeBox2.Enabled = true;
+                    teraTypeBox2.SelectedItem = typeToGemName.First(x => x.Value == mon2.gemType);
+                    defaultGemBox2.Checked = false;
+                }
+                else
+                {
+                    teraTypeBox2.Enabled = false;
+                    defaultGemBox2.Checked = true;
+                }
+
+                shinyBox2.Checked = mon2.rareType == "NO_RARE" ? false : true;
+
+                if (mon2.tokusei == "RANDOM_12") abilityBox2.SelectedIndex = 0;
+                if (mon2.tokusei == "SET_1") abilityBox2.SelectedIndex = 1;
+                if (mon2.tokusei == "SET_2") abilityBox2.SelectedIndex = 2;
+                if (mon2.tokusei == "SET_3") abilityBox2.SelectedIndex = 3;
             }
-            else
-            {
-                // re-enabling just in case
-
-                hpIV2.Enabled = true;
-                atkIV2.Enabled = true;
-                defIV2.Enabled = true;
-                spaIV2.Enabled = true;
-                spdIV2.Enabled = true;
-                speIV2.Enabled = true;
-
-                hpIV2.Value = mon2.talentValue.hp;
-                atkIV2.Value = mon2.talentValue.atk;
-                defIV2.Value = mon2.talentValue.def;
-                spaIV2.Value = mon2.talentValue.spAtk;
-                spdIV2.Value = mon2.talentValue.spDef;
-                speIV2.Value = mon2.talentValue.agi;
-
-                randomIV2.Checked = false;
-            }
-
-            hpEV2.Value = mon2.effortValue.hp;
-            atkEV2.Value = mon2.effortValue.atk;
-            defEV2.Value = mon2.effortValue.def;
-            spaEV2.Value = mon2.effortValue.spAtk;
-            spdEV2.Value = mon2.effortValue.spDef;
-            speEV2.Value = mon2.effortValue.agi;
-
-            if (mon2.wazaType == "MANUAL")
-            {
-                moveOne2.Enabled = true;
-                ppUpOne2.Enabled = true;
-                moveTwo2.Enabled = true;
-                ppUpTwo2.Enabled = true;
-                moveThree2.Enabled = true;
-                ppUpThree2.Enabled = true;
-                moveFour2.Enabled = true;
-                ppUpFour2.Enabled = true;
-
-                moveOne2.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon2.waza1.wazaId));
-                ppUpOne2.Value = mon2.waza1.pointUp;
-                moveTwo2.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon2.waza2.wazaId));
-                ppUpTwo2.Value = mon2.waza2.pointUp;
-                moveThree2.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon2.waza3.wazaId));
-                ppUpThree2.Value = mon2.waza3.pointUp;
-                moveFour2.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon2.waza4.wazaId));
-                ppUpFour2.Value = mon2.waza4.pointUp;
-            }
-            else
-            {
-                moveOne2.SelectedIndex = 0;
-                moveOne2.Enabled = false;
-                ppUpOne2.Enabled = false;
-                moveTwo2.SelectedIndex = 0;
-                moveTwo2.Enabled = false;
-                ppUpTwo2.Enabled = false;
-                moveThree2.SelectedIndex = 0;
-                moveThree2.Enabled = false;
-                ppUpThree2.Enabled = false;
-                moveFour2.SelectedIndex = 0;
-                moveFour2.Enabled = false;
-                ppUpFour2.Enabled = false;
-            }
-
-            ballBox2.SelectedIndex = ballBox2.Items.IndexOf(ballToDevID.First(x => x.Value == mon2.ballId).Key);
-            itemBox2.SelectedIndex = itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon2.item).id]);
-            levelBox2.Value = mon2.level;
-
-            if (mon2.gemType != "DEFAULT")
-            {
-                teraTypeBox2.Enabled = true;
-                teraTypeBox2.SelectedItem = typeToGemName.First(x => x.Value == mon2.gemType);
-                defaultGemBox2.Checked = false;
-            }
-            else
-            {
-                teraTypeBox2.Enabled = false;
-                defaultGemBox2.Checked = true;
-            }
-
-            shinyBox2.Checked = mon2.rareType == "NO_RARE" ? false : true;
-
-            if (mon2.tokusei == "RANDOM_12") abilityBox2.SelectedIndex = 0;
-            if (mon2.tokusei == "SET_1") abilityBox2.SelectedIndex = 1;
-            if (mon2.tokusei == "SET_2") abilityBox2.SelectedIndex = 2;
-            if (mon2.tokusei == "SET_3") abilityBox2.SelectedIndex = 3;
 
             // page 3
 
             var mon3 = currentTrainer.Data.poke3;
 
-            setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke3.devId).Key, currentTrainer.Data.poke3.formId, 2);
-            speciesBox3.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke3.devId).Key);
-            formBox3.Value = mon3.formId;
-
-            if (mon3.talentType == "RANDOM")
+            if (mon3.devId != null)
             {
-                hpIV3.Enabled = false;
-                atkIV3.Enabled = false;
-                defIV3.Enabled = false;
-                spaIV3.Enabled = false;
-                spdIV3.Enabled = false;
-                speIV3.Enabled = false;
+                setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke3.devId).Key, currentTrainer.Data.poke3.formId, 2);
+                speciesBox3.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke3.devId).Key);
+                formBox3.Value = mon3.formId;
 
-                randomIV3.Checked = true;
+                if (mon3.talentType == "RANDOM")
+                {
+                    hpIV3.Enabled = false;
+                    atkIV3.Enabled = false;
+                    defIV3.Enabled = false;
+                    spaIV3.Enabled = false;
+                    spdIV3.Enabled = false;
+                    speIV3.Enabled = false;
+
+                    randomIV3.Checked = true;
+                }
+                else
+                {
+                    // re-enabling just in case
+
+                    hpIV3.Enabled = true;
+                    atkIV3.Enabled = true;
+                    defIV3.Enabled = true;
+                    spaIV3.Enabled = true;
+                    spdIV3.Enabled = true;
+                    speIV3.Enabled = true;
+
+                    hpIV3.Value = mon3.talentValue.hp;
+                    atkIV3.Value = mon3.talentValue.atk;
+                    defIV3.Value = mon3.talentValue.def;
+                    spaIV3.Value = mon3.talentValue.spAtk;
+                    spdIV3.Value = mon3.talentValue.spDef;
+                    speIV3.Value = mon3.talentValue.agi;
+
+                    randomIV3.Checked = false;
+                }
+
+                hpEV3.Value = mon3.effortValue.hp;
+                atkEV3.Value = mon3.effortValue.atk;
+                defEV3.Value = mon3.effortValue.def;
+                spaEV3.Value = mon3.effortValue.spAtk;
+                spdEV3.Value = mon3.effortValue.spDef;
+                speEV3.Value = mon3.effortValue.agi;
+
+                if (mon3.wazaType == "MANUAL")
+                {
+                    moveOne3.Enabled = true;
+                    ppUpOne3.Enabled = true;
+                    moveTwo3.Enabled = true;
+                    ppUpTwo3.Enabled = true;
+                    moveThree3.Enabled = true;
+                    ppUpThree3.Enabled = true;
+                    moveFour3.Enabled = true;
+                    ppUpFour3.Enabled = true;
+
+                    moveOne3.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon3.waza1.wazaId));
+                    ppUpOne3.Value = mon3.waza1.pointUp;
+                    moveTwo3.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon3.waza2.wazaId));
+                    ppUpTwo3.Value = mon3.waza2.pointUp;
+                    moveThree3.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon3.waza3.wazaId));
+                    ppUpThree3.Value = mon3.waza3.pointUp;
+                    moveFour3.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon3.waza4.wazaId));
+                    ppUpFour3.Value = mon3.waza4.pointUp;
+                }
+                else
+                {
+                    moveOne3.SelectedIndex = 0;
+                    moveOne3.Enabled = false;
+                    ppUpOne3.Enabled = false;
+                    moveTwo3.SelectedIndex = 0;
+                    moveTwo3.Enabled = false;
+                    ppUpTwo3.Enabled = false;
+                    moveThree3.SelectedIndex = 0;
+                    moveThree3.Enabled = false;
+                    ppUpThree3.Enabled = false;
+                    moveFour3.SelectedIndex = 0;
+                    moveFour3.Enabled = false;
+                    ppUpFour3.Enabled = false;
+                }
+
+                ballBox3.SelectedIndex = ballBox3.Items.IndexOf(ballToDevID.First(x => x.Value == mon3.ballId).Key);
+                itemBox3.SelectedIndex = mon3.item == null ? 0 : itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon3.item).id]);
+                levelBox3.Value = mon3.level;
+
+                if (mon3.gemType != "DEFAULT" && mon3.gemType != null)
+                {
+                    teraTypeBox3.Enabled = true;
+                    teraTypeBox3.SelectedItem = typeToGemName.First(x => x.Value == mon3.gemType);
+                    defaultGemBox3.Checked = false;
+                }
+                else
+                {
+                    teraTypeBox3.Enabled = false;
+                    defaultGemBox3.Checked = true;
+                }
+
+                shinyBox3.Checked = mon3.rareType == "NO_RARE" ? false : true;
+
+                if (mon3.tokusei == "RANDOM_12") abilityBox3.SelectedIndex = 0;
+                if (mon3.tokusei == "SET_1") abilityBox3.SelectedIndex = 1;
+                if (mon3.tokusei == "SET_2") abilityBox3.SelectedIndex = 2;
+                if (mon3.tokusei == "SET_3") abilityBox3.SelectedIndex = 3;
             }
-            else
-            {
-                // re-enabling just in case
-
-                hpIV3.Enabled = true;
-                atkIV3.Enabled = true;
-                defIV3.Enabled = true;
-                spaIV3.Enabled = true;
-                spdIV3.Enabled = true;
-                speIV3.Enabled = true;
-
-                hpIV3.Value = mon3.talentValue.hp;
-                atkIV3.Value = mon3.talentValue.atk;
-                defIV3.Value = mon3.talentValue.def;
-                spaIV3.Value = mon3.talentValue.spAtk;
-                spdIV3.Value = mon3.talentValue.spDef;
-                speIV3.Value = mon3.talentValue.agi;
-
-                randomIV3.Checked = false;
-            }
-
-            hpEV3.Value = mon3.effortValue.hp;
-            atkEV3.Value = mon3.effortValue.atk;
-            defEV3.Value = mon3.effortValue.def;
-            spaEV3.Value = mon3.effortValue.spAtk;
-            spdEV3.Value = mon3.effortValue.spDef;
-            speEV3.Value = mon3.effortValue.agi;
-
-            if (mon3.wazaType == "MANUAL")
-            {
-                moveOne3.Enabled = true;
-                ppUpOne3.Enabled = true;
-                moveTwo3.Enabled = true;
-                ppUpTwo3.Enabled = true;
-                moveThree3.Enabled = true;
-                ppUpThree3.Enabled = true;
-                moveFour3.Enabled = true;
-                ppUpFour3.Enabled = true;
-
-                moveOne3.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon3.waza1.wazaId));
-                ppUpOne3.Value = mon3.waza1.pointUp;
-                moveTwo3.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon3.waza2.wazaId));
-                ppUpTwo3.Value = mon3.waza2.pointUp;
-                moveThree3.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon3.waza3.wazaId));
-                ppUpThree3.Value = mon3.waza3.pointUp;
-                moveFour3.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon3.waza4.wazaId));
-                ppUpFour3.Value = mon3.waza4.pointUp;
-            }
-            else
-            {
-                moveOne3.SelectedIndex = 0;
-                moveOne3.Enabled = false;
-                ppUpOne3.Enabled = false;
-                moveTwo3.SelectedIndex = 0;
-                moveTwo3.Enabled = false;
-                ppUpTwo3.Enabled = false;
-                moveThree3.SelectedIndex = 0;
-                moveThree3.Enabled = false;
-                ppUpThree3.Enabled = false;
-                moveFour3.SelectedIndex = 0;
-                moveFour3.Enabled = false;
-                ppUpFour3.Enabled = false;
-            }
-
-            ballBox3.SelectedIndex = ballBox3.Items.IndexOf(ballToDevID.First(x => x.Value == mon3.ballId).Key);
-            itemBox3.SelectedIndex = itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon3.item).id]);
-            levelBox3.Value = mon3.level;
-
-            if (mon3.gemType != "DEFAULT")
-            {
-                teraTypeBox3.Enabled = true;
-                teraTypeBox3.SelectedItem = typeToGemName.First(x => x.Value == mon3.gemType);
-                defaultGemBox3.Checked = false;
-            }
-            else
-            {
-                teraTypeBox3.Enabled = false;
-                defaultGemBox3.Checked = true;
-            }
-
-            shinyBox3.Checked = mon3.rareType == "NO_RARE" ? false : true;
-
-            if (mon3.tokusei == "RANDOM_12") abilityBox3.SelectedIndex = 0;
-            if (mon3.tokusei == "SET_1") abilityBox3.SelectedIndex = 1;
-            if (mon3.tokusei == "SET_2") abilityBox3.SelectedIndex = 2;
-            if (mon3.tokusei == "SET_3") abilityBox3.SelectedIndex = 3;
 
             // page 4
 
             var mon4 = currentTrainer.Data.poke4;
 
-            setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke4.devId).Key, currentTrainer.Data.poke4.formId, 3);
-            speciesBox4.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke4.devId).Key);
-            formBox4.Value = mon1.formId;
-
-            if (mon4.talentType == "RANDOM")
+            if (mon4.devId != null)
             {
-                hpIV4.Enabled = false;
-                atkIV4.Enabled = false;
-                defIV4.Enabled = false;
-                spaIV4.Enabled = false;
-                spdIV4.Enabled = false;
-                speIV4.Enabled = false;
+                setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke4.devId).Key, currentTrainer.Data.poke4.formId, 3);
+                speciesBox4.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke4.devId).Key);
+                formBox4.Value = mon1.formId;
 
-                randomIV4.Checked = true;
+                if (mon4.talentType == "RANDOM")
+                {
+                    hpIV4.Enabled = false;
+                    atkIV4.Enabled = false;
+                    defIV4.Enabled = false;
+                    spaIV4.Enabled = false;
+                    spdIV4.Enabled = false;
+                    speIV4.Enabled = false;
+
+                    randomIV4.Checked = true;
+                }
+                else
+                {
+                    // re-enabling just in case
+
+                    hpIV4.Enabled = true;
+                    atkIV4.Enabled = true;
+                    defIV4.Enabled = true;
+                    spaIV4.Enabled = true;
+                    spdIV4.Enabled = true;
+                    speIV4.Enabled = true;
+
+                    hpIV4.Value = mon4.talentValue.hp;
+                    atkIV4.Value = mon4.talentValue.atk;
+                    defIV4.Value = mon4.talentValue.def;
+                    spaIV4.Value = mon4.talentValue.spAtk;
+                    spdIV4.Value = mon4.talentValue.spDef;
+                    speIV4.Value = mon4.talentValue.agi;
+
+                    randomIV4.Checked = false;
+                }
+
+                hpEV4.Value = mon4.effortValue.hp;
+                atkEV4.Value = mon4.effortValue.atk;
+                defEV4.Value = mon4.effortValue.def;
+                spaEV4.Value = mon4.effortValue.spAtk;
+                spdEV4.Value = mon4.effortValue.spDef;
+                speEV4.Value = mon4.effortValue.agi;
+
+                if (mon4.wazaType == "MANUAL")
+                {
+                    moveOne4.Enabled = true;
+                    ppUpOne4.Enabled = true;
+                    moveTwo4.Enabled = true;
+                    ppUpTwo4.Enabled = true;
+                    moveThree4.Enabled = true;
+                    ppUpThree4.Enabled = true;
+                    moveFour4.Enabled = true;
+                    ppUpFour4.Enabled = true;
+
+                    moveOne4.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon4.waza1.wazaId));
+                    ppUpOne4.Value = mon4.waza1.pointUp;
+                    moveTwo4.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon4.waza2.wazaId));
+                    ppUpTwo4.Value = mon4.waza2.pointUp;
+                    moveThree4.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon4.waza3.wazaId));
+                    ppUpThree4.Value = mon4.waza3.pointUp;
+                    moveFour4.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon4.waza4.wazaId));
+                    ppUpFour4.Value = mon4.waza4.pointUp;
+                }
+                else
+                {
+                    moveOne4.SelectedIndex = 0;
+                    moveOne4.Enabled = false;
+                    ppUpOne4.Enabled = false;
+                    moveTwo4.SelectedIndex = 0;
+                    moveTwo4.Enabled = false;
+                    ppUpTwo4.Enabled = false;
+                    moveThree4.SelectedIndex = 0;
+                    moveThree4.Enabled = false;
+                    ppUpThree4.Enabled = false;
+                    moveFour4.SelectedIndex = 0;
+                    moveFour4.Enabled = false;
+                    ppUpFour4.Enabled = false;
+                }
+
+                ballBox4.SelectedIndex = ballBox4.Items.IndexOf(ballToDevID.First(x => x.Value == mon4.ballId).Key);
+                itemBox4.SelectedIndex = mon4.item == null ? 0 : itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon4.item).id]);
+                levelBox4.Value = mon4.level;
+
+                if (mon4.gemType != "DEFAULT" && mon4.gemType != null)
+                {
+                    teraTypeBox4.Enabled = true;
+                    teraTypeBox4.SelectedItem = typeToGemName.First(x => x.Value == mon4.gemType);
+                    defaultGemBox4.Checked = false;
+                }
+                else
+                {
+                    teraTypeBox4.Enabled = false;
+                    defaultGemBox4.Checked = true;
+                }
+
+                shinyBox4.Checked = mon4.rareType == "NO_RARE" ? false : true;
+
+                if (mon4.tokusei == "RANDOM_12") abilityBox4.SelectedIndex = 0;
+                if (mon4.tokusei == "SET_1") abilityBox4.SelectedIndex = 1;
+                if (mon4.tokusei == "SET_2") abilityBox4.SelectedIndex = 2;
+                if (mon4.tokusei == "SET_3") abilityBox4.SelectedIndex = 3;
             }
-            else
-            {
-                // re-enabling just in case
-
-                hpIV4.Enabled = true;
-                atkIV4.Enabled = true;
-                defIV4.Enabled = true;
-                spaIV4.Enabled = true;
-                spdIV4.Enabled = true;
-                speIV4.Enabled = true;
-
-                hpIV4.Value = mon4.talentValue.hp;
-                atkIV4.Value = mon4.talentValue.atk;
-                defIV4.Value = mon4.talentValue.def;
-                spaIV4.Value = mon4.talentValue.spAtk;
-                spdIV4.Value = mon4.talentValue.spDef;
-                speIV4.Value = mon4.talentValue.agi;
-
-                randomIV4.Checked = false;
-            }
-
-            hpEV4.Value = mon4.effortValue.hp;
-            atkEV4.Value = mon4.effortValue.atk;
-            defEV4.Value = mon4.effortValue.def;
-            spaEV4.Value = mon4.effortValue.spAtk;
-            spdEV4.Value = mon4.effortValue.spDef;
-            speEV4.Value = mon4.effortValue.agi;
-
-            if (mon4.wazaType == "MANUAL")
-            {
-                moveOne4.Enabled = true;
-                ppUpOne4.Enabled = true;
-                moveTwo4.Enabled = true;
-                ppUpTwo4.Enabled = true;
-                moveThree4.Enabled = true;
-                ppUpThree4.Enabled = true;
-                moveFour4.Enabled = true;
-                ppUpFour4.Enabled = true;
-
-                moveOne4.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon4.waza1.wazaId));
-                ppUpOne4.Value = mon4.waza1.pointUp;
-                moveTwo4.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon4.waza2.wazaId));
-                ppUpTwo4.Value = mon4.waza2.pointUp;
-                moveThree4.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon4.waza3.wazaId));
-                ppUpThree4.Value = mon4.waza3.pointUp;
-                moveFour4.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon4.waza4.wazaId));
-                ppUpFour4.Value = mon4.waza4.pointUp;
-            }
-            else
-            {
-                moveOne4.SelectedIndex = 0;
-                moveOne4.Enabled = false;
-                ppUpOne4.Enabled = false;
-                moveTwo4.SelectedIndex = 0;
-                moveTwo4.Enabled = false;
-                ppUpTwo4.Enabled = false;
-                moveThree4.SelectedIndex = 0;
-                moveThree4.Enabled = false;
-                ppUpThree4.Enabled = false;
-                moveFour4.SelectedIndex = 0;
-                moveFour4.Enabled = false;
-                ppUpFour4.Enabled = false;
-            }
-
-            ballBox4.SelectedIndex = ballBox4.Items.IndexOf(ballToDevID.First(x => x.Value == mon4.ballId).Key);
-            itemBox4.SelectedIndex = itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon4.item).id]);
-            levelBox4.Value = mon4.level;
-
-            if (mon4.gemType != "DEFAULT")
-            {
-                teraTypeBox4.Enabled = true;
-                teraTypeBox4.SelectedItem = typeToGemName.First(x => x.Value == mon4.gemType);
-                defaultGemBox4.Checked = false;
-            }
-            else
-            {
-                teraTypeBox4.Enabled = false;
-                defaultGemBox4.Checked = true;
-            }
-
-            shinyBox4.Checked = mon4.rareType == "NO_RARE" ? false : true;
-
-            if (mon4.tokusei == "RANDOM_12") abilityBox4.SelectedIndex = 0;
-            if (mon4.tokusei == "SET_1") abilityBox4.SelectedIndex = 1;
-            if (mon4.tokusei == "SET_2") abilityBox4.SelectedIndex = 2;
-            if (mon4.tokusei == "SET_3") abilityBox4.SelectedIndex = 3;
 
             // page 5
 
             var mon5 = currentTrainer.Data.poke5;
 
-            setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke5.devId).Key, currentTrainer.Data.poke5.formId, 4);
-            speciesBox5.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke5.devId).Key);
-            formBox5.Value = mon5.formId;
-
-            if (mon5.talentType == "RANDOM")
+            if (mon5.devId != null)
             {
-                hpIV5.Enabled = false;
-                atkIV5.Enabled = false;
-                defIV5.Enabled = false;
-                spaIV5.Enabled = false;
-                spdIV5.Enabled = false;
-                speIV5.Enabled = false;
+                setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke5.devId).Key, currentTrainer.Data.poke5.formId, 4);
+                speciesBox5.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke5.devId).Key);
+                formBox5.Value = mon5.formId;
 
-                randomIV5.Checked = true;
+                if (mon5.talentType == "RANDOM")
+                {
+                    hpIV5.Enabled = false;
+                    atkIV5.Enabled = false;
+                    defIV5.Enabled = false;
+                    spaIV5.Enabled = false;
+                    spdIV5.Enabled = false;
+                    speIV5.Enabled = false;
+
+                    randomIV5.Checked = true;
+                }
+                else
+                {
+                    // re-enabling just in case
+
+                    hpIV5.Enabled = true;
+                    atkIV5.Enabled = true;
+                    defIV5.Enabled = true;
+                    spaIV5.Enabled = true;
+                    spdIV5.Enabled = true;
+                    speIV5.Enabled = true;
+
+                    hpIV5.Value = mon5.talentValue.hp;
+                    atkIV5.Value = mon5.talentValue.atk;
+                    defIV5.Value = mon5.talentValue.def;
+                    spaIV5.Value = mon5.talentValue.spAtk;
+                    spdIV5.Value = mon5.talentValue.spDef;
+                    speIV5.Value = mon5.talentValue.agi;
+
+                    randomIV5.Checked = false;
+                }
+
+                hpEV5.Value = mon5.effortValue.hp;
+                atkEV5.Value = mon5.effortValue.atk;
+                defEV5.Value = mon5.effortValue.def;
+                spaEV5.Value = mon5.effortValue.spAtk;
+                spdEV5.Value = mon5.effortValue.spDef;
+                speEV5.Value = mon5.effortValue.agi;
+
+                if (mon5.wazaType == "MANUAL")
+                {
+                    moveOne5.Enabled = true;
+                    ppUpOne5.Enabled = true;
+                    moveTwo5.Enabled = true;
+                    ppUpTwo5.Enabled = true;
+                    moveThree5.Enabled = true;
+                    ppUpThree5.Enabled = true;
+                    moveFour5.Enabled = true;
+                    ppUpFour5.Enabled = true;
+
+                    moveOne5.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon5.waza1.wazaId));
+                    ppUpOne5.Value = mon5.waza1.pointUp;
+                    moveTwo5.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon5.waza2.wazaId));
+                    ppUpTwo5.Value = mon5.waza2.pointUp;
+                    moveThree5.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon5.waza3.wazaId));
+                    ppUpThree5.Value = mon5.waza3.pointUp;
+                    moveFour5.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon5.waza4.wazaId));
+                    ppUpFour5.Value = mon5.waza4.pointUp;
+                }
+                else
+                {
+                    moveOne5.SelectedIndex = 0;
+                    moveOne5.Enabled = false;
+                    ppUpOne5.Enabled = false;
+                    moveTwo5.SelectedIndex = 0;
+                    moveTwo5.Enabled = false;
+                    ppUpTwo5.Enabled = false;
+                    moveThree5.SelectedIndex = 0;
+                    moveThree5.Enabled = false;
+                    ppUpThree5.Enabled = false;
+                    moveFour5.SelectedIndex = 0;
+                    moveFour5.Enabled = false;
+                    ppUpFour5.Enabled = false;
+                }
+
+                ballBox5.SelectedIndex = ballBox5.Items.IndexOf(ballToDevID.First(x => x.Value == mon5.ballId).Key);
+                itemBox5.SelectedIndex = mon5.item == null ? 0 : itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon5.item).id]);
+                levelBox5.Value = mon5.level;
+
+                if (mon5.gemType != "DEFAULT" && mon5.gemType != null)
+                {
+                    teraTypeBox5.Enabled = true;
+                    teraTypeBox5.SelectedItem = typeToGemName.First(x => x.Value == mon5.gemType);
+                    defaultGemBox5.Checked = false;
+                }
+                else
+                {
+                    teraTypeBox5.Enabled = false;
+                    defaultGemBox5.Checked = true;
+                }
+
+                shinyBox5.Checked = mon5.rareType == "NO_RARE" ? false : true;
+
+                if (mon5.tokusei == "RANDOM_12") abilityBox5.SelectedIndex = 0;
+                if (mon5.tokusei == "SET_1") abilityBox5.SelectedIndex = 1;
+                if (mon5.tokusei == "SET_2") abilityBox5.SelectedIndex = 2;
+                if (mon5.tokusei == "SET_3") abilityBox5.SelectedIndex = 3;
             }
-            else
-            {
-                // re-enabling just in case
-
-                hpIV5.Enabled = true;
-                atkIV5.Enabled = true;
-                defIV5.Enabled = true;
-                spaIV5.Enabled = true;
-                spdIV5.Enabled = true;
-                speIV5.Enabled = true;
-
-                hpIV5.Value = mon5.talentValue.hp;
-                atkIV5.Value = mon5.talentValue.atk;
-                defIV5.Value = mon5.talentValue.def;
-                spaIV5.Value = mon5.talentValue.spAtk;
-                spdIV5.Value = mon5.talentValue.spDef;
-                speIV5.Value = mon5.talentValue.agi;
-
-                randomIV5.Checked = false;
-            }
-
-            hpEV5.Value = mon5.effortValue.hp;
-            atkEV5.Value = mon5.effortValue.atk;
-            defEV5.Value = mon5.effortValue.def;
-            spaEV5.Value = mon5.effortValue.spAtk;
-            spdEV5.Value = mon5.effortValue.spDef;
-            speEV5.Value = mon5.effortValue.agi;
-
-            if (mon5.wazaType == "MANUAL")
-            {
-                moveOne5.Enabled = true;
-                ppUpOne5.Enabled = true;
-                moveTwo5.Enabled = true;
-                ppUpTwo5.Enabled = true;
-                moveThree5.Enabled = true;
-                ppUpThree5.Enabled = true;
-                moveFour5.Enabled = true;
-                ppUpFour5.Enabled = true;
-
-                moveOne5.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon5.waza1.wazaId));
-                ppUpOne5.Value = mon5.waza1.pointUp;
-                moveTwo5.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon5.waza2.wazaId));
-                ppUpTwo5.Value = mon5.waza2.pointUp;
-                moveThree5.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon5.waza3.wazaId));
-                ppUpThree5.Value = mon5.waza3.pointUp;
-                moveFour5.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon5.waza4.wazaId));
-                ppUpFour5.Value = mon5.waza4.pointUp;
-            }
-            else
-            {
-                moveOne5.SelectedIndex = 0;
-                moveOne5.Enabled = false;
-                ppUpOne5.Enabled = false;
-                moveTwo5.SelectedIndex = 0;
-                moveTwo5.Enabled = false;
-                ppUpTwo5.Enabled = false;
-                moveThree5.SelectedIndex = 0;
-                moveThree5.Enabled = false;
-                ppUpThree5.Enabled = false;
-                moveFour5.SelectedIndex = 0;
-                moveFour5.Enabled = false;
-                ppUpFour5.Enabled = false;
-            }
-
-            ballBox5.SelectedIndex = ballBox5.Items.IndexOf(ballToDevID.First(x => x.Value == mon5.ballId).Key);
-            itemBox5.SelectedIndex = itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon5.item).id]);
-            levelBox5.Value = mon5.level;
-
-            if (mon5.gemType != "DEFAULT")
-            {
-                teraTypeBox5.Enabled = true;
-                teraTypeBox5.SelectedItem = typeToGemName.First(x => x.Value == mon5.gemType);
-                defaultGemBox5.Checked = false;
-            }
-            else
-            {
-                teraTypeBox5.Enabled = false;
-                defaultGemBox5.Checked = true;
-            }
-
-            shinyBox5.Checked = mon5.rareType == "NO_RARE" ? false : true;
-
-            if (mon5.tokusei == "RANDOM_12") abilityBox5.SelectedIndex = 0;
-            if (mon5.tokusei == "SET_1") abilityBox5.SelectedIndex = 1;
-            if (mon5.tokusei == "SET_2") abilityBox5.SelectedIndex = 2;
-            if (mon5.tokusei == "SET_3") abilityBox5.SelectedIndex = 3;
 
             // page 6
 
             var mon6 = currentTrainer.Data.poke6;
 
-            setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke6.devId).Key, currentTrainer.Data.poke6.formId, 5);
-            speciesBox6.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke6.devId).Key);
-            formBox6.Value = mon6.formId;
-
-            if (mon6.talentType == "RANDOM")
+            if (mon6.devId != null)
             {
-                hpIV6.Enabled = false;
-                atkIV6.Enabled = false;
-                defIV6.Enabled = false;
-                spaIV6.Enabled = false;
-                spdIV6.Enabled = false;
-                speIV6.Enabled = false;
+                setPicture(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke6.devId).Key, currentTrainer.Data.poke6.formId, 5);
+                speciesBox6.SelectedIndex = speciesNames.IndexOf(speciesToDevID.First(x => x.Value == currentTrainer.Data.poke6.devId).Key);
+                formBox6.Value = mon6.formId;
 
-                randomIV6.Checked = true;
+                if (mon6.talentType == "RANDOM")
+                {
+                    hpIV6.Enabled = false;
+                    atkIV6.Enabled = false;
+                    defIV6.Enabled = false;
+                    spaIV6.Enabled = false;
+                    spdIV6.Enabled = false;
+                    speIV6.Enabled = false;
+
+                    randomIV6.Checked = true;
+                }
+                else
+                {
+                    // re-enabling just in case
+
+                    hpIV6.Enabled = true;
+                    atkIV6.Enabled = true;
+                    defIV6.Enabled = true;
+                    spaIV6.Enabled = true;
+                    spdIV6.Enabled = true;
+                    speIV6.Enabled = true;
+
+                    hpIV6.Value = mon6.talentValue.hp;
+                    atkIV6.Value = mon6.talentValue.atk;
+                    defIV6.Value = mon6.talentValue.def;
+                    spaIV6.Value = mon6.talentValue.spAtk;
+                    spdIV6.Value = mon6.talentValue.spDef;
+                    speIV6.Value = mon6.talentValue.agi;
+
+                    randomIV6.Checked = false;
+                }
+
+                hpEV6.Value = mon6.effortValue.hp;
+                atkEV6.Value = mon6.effortValue.atk;
+                defEV6.Value = mon6.effortValue.def;
+                spaEV6.Value = mon6.effortValue.spAtk;
+                spdEV6.Value = mon6.effortValue.spDef;
+                speEV6.Value = mon6.effortValue.agi;
+
+                if (mon6.wazaType == "MANUAL")
+                {
+                    moveOne6.Enabled = true;
+                    ppUpOne6.Enabled = true;
+                    moveTwo6.Enabled = true;
+                    ppUpTwo6.Enabled = true;
+                    moveThree6.Enabled = true;
+                    ppUpThree6.Enabled = true;
+                    moveFour6.Enabled = true;
+                    ppUpFour6.Enabled = true;
+
+                    moveOne6.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon6.waza1.wazaId));
+                    ppUpOne6.Value = mon6.waza1.pointUp;
+                    moveTwo6.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon6.waza2.wazaId));
+                    ppUpTwo6.Value = mon6.waza2.pointUp;
+                    moveThree6.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon6.waza3.wazaId));
+                    ppUpThree6.Value = mon6.waza3.pointUp;
+                    moveFour6.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon6.waza4.wazaId));
+                    ppUpFour6.Value = mon6.waza4.pointUp;
+                }
+                else
+                {
+                    moveOne6.SelectedIndex = 0;
+                    moveOne6.Enabled = false;
+                    ppUpOne6.Enabled = false;
+                    moveTwo6.SelectedIndex = 0;
+                    moveTwo6.Enabled = false;
+                    ppUpTwo6.Enabled = false;
+                    moveThree6.SelectedIndex = 0;
+                    moveThree6.Enabled = false;
+                    ppUpThree6.Enabled = false;
+                    moveFour6.SelectedIndex = 0;
+                    moveFour6.Enabled = false;
+                    ppUpFour6.Enabled = false;
+                }
+
+                ballBox6.SelectedIndex = ballBox6.Items.IndexOf(ballToDevID.First(x => x.Value == mon6.ballId).Key);
+                itemBox6.SelectedIndex = mon6.item == null ? 0 : itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon6.item).id]);
+                levelBox6.Value = mon6.level;
+
+                if (mon6.gemType != "DEFAULT" && mon6.gemType != null)
+                {
+                    teraTypeBox6.Enabled = true;
+                    teraTypeBox6.SelectedItem = typeToGemName.First(x => x.Value == mon6.gemType);
+                    defaultGemBox6.Checked = false;
+                }
+                else
+                {
+                    teraTypeBox6.Enabled = false;
+                    defaultGemBox6.Checked = true;
+                }
+
+                shinyBox6.Checked = mon6.rareType == "NO_RARE" ? false : true;
+
+                if (mon6.tokusei == "RANDOM_12") abilityBox6.SelectedIndex = 0;
+                if (mon6.tokusei == "SET_1") abilityBox6.SelectedIndex = 1;
+                if (mon6.tokusei == "SET_2") abilityBox6.SelectedIndex = 2;
+                if (mon6.tokusei == "SET_3") abilityBox6.SelectedIndex = 3;
             }
-            else
-            {
-                // re-enabling just in case
-
-                hpIV6.Enabled = true;
-                atkIV6.Enabled = true;
-                defIV6.Enabled = true;
-                spaIV6.Enabled = true;
-                spdIV6.Enabled = true;
-                speIV6.Enabled = true;
-
-                hpIV6.Value = mon6.talentValue.hp;
-                atkIV6.Value = mon6.talentValue.atk;
-                defIV6.Value = mon6.talentValue.def;
-                spaIV6.Value = mon6.talentValue.spAtk;
-                spdIV6.Value = mon6.talentValue.spDef;
-                speIV6.Value = mon6.talentValue.agi;
-
-                randomIV6.Checked = false;
-            }
-
-            hpEV6.Value = mon6.effortValue.hp;
-            atkEV6.Value = mon6.effortValue.atk;
-            defEV6.Value = mon6.effortValue.def;
-            spaEV6.Value = mon6.effortValue.spAtk;
-            spdEV6.Value = mon6.effortValue.spDef;
-            speEV6.Value = mon6.effortValue.agi;
-
-            if (mon6.wazaType == "MANUAL")
-            {
-                moveOne6.Enabled = true;
-                ppUpOne6.Enabled = true;
-                moveTwo6.Enabled = true;
-                ppUpTwo6.Enabled = true;
-                moveThree6.Enabled = true;
-                ppUpThree6.Enabled = true;
-                moveFour6.Enabled = true;
-                ppUpFour6.Enabled = true;
-
-                moveOne6.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon6.waza1.wazaId));
-                ppUpOne6.Value = mon6.waza1.pointUp;
-                moveTwo6.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon6.waza2.wazaId));
-                ppUpTwo6.Value = mon6.waza2.pointUp;
-                moveThree6.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon6.waza3.wazaId));
-                ppUpThree6.Value = mon6.waza3.pointUp;
-                moveFour6.SelectedIndex = moveDevID.moves.IndexOf(moveDevID.moves.First(x => x.devName == mon6.waza4.wazaId));
-                ppUpFour6.Value = mon6.waza4.pointUp;
-            }
-            else
-            {
-                moveOne6.SelectedIndex = 0;
-                moveOne6.Enabled = false;
-                ppUpOne6.Enabled = false;
-                moveTwo6.SelectedIndex = 0;
-                moveTwo6.Enabled = false;
-                ppUpTwo6.Enabled = false;
-                moveThree6.SelectedIndex = 0;
-                moveThree6.Enabled = false;
-                ppUpThree6.Enabled = false;
-                moveFour6.SelectedIndex = 0;
-                moveFour6.Enabled = false;
-                ppUpFour6.Enabled = false;
-            }
-
-            ballBox6.SelectedIndex = ballBox6.Items.IndexOf(ballToDevID.First(x => x.Value == mon6.ballId).Key);
-            itemBox6.SelectedIndex = itemNames.IndexOf(itemNames[itemDevID.items.First(x => x.devName == mon6.item).id]);
-            levelBox6.Value = mon6.level;
-
-            if (mon6.gemType != "DEFAULT")
-            {
-                teraTypeBox6.Enabled = true;
-                teraTypeBox6.SelectedItem = typeToGemName.First(x => x.Value == mon6.gemType);
-                defaultGemBox6.Checked = false;
-            }
-            else
-            {
-                teraTypeBox6.Enabled = false;
-                defaultGemBox6.Checked = true;
-            }
-
-            shinyBox6.Checked = mon6.rareType == "NO_RARE" ? false : true;
-
-            if (mon6.tokusei == "RANDOM_12") abilityBox6.SelectedIndex = 0;
-            if (mon6.tokusei == "SET_1") abilityBox6.SelectedIndex = 1;
-            if (mon6.tokusei == "SET_2") abilityBox6.SelectedIndex = 2;
-            if (mon6.tokusei == "SET_3") abilityBox6.SelectedIndex = 3;
 
             // page 7
 

@@ -35,6 +35,7 @@ namespace Sky.SubForms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PokeEditor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.returnButton = new System.Windows.Forms.Button();
             this.tabPages = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
@@ -4753,8 +4754,9 @@ namespace Sky.SubForms
             this.ClientSize = new System.Drawing.Size(1000, 610);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PokeEditor";
-            this.Text = "PokeEditor";
+            this.Text = "PROJECT SKY";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PokeEditor_FormClosing);
             this.panel1.ResumeLayout(false);
             this.tabPages.ResumeLayout(false);

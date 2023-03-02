@@ -55,3 +55,4 @@ C:\Users\foxna\Documents\SVEdit\Sky\obj\Debug\net7.0-windows\refint\Sky.dll
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Debug\net7.0-windows\Sky.pdb
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Debug\net7.0-windows\Sky.genruntimeconfig.cache
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Debug\net7.0-windows\ref\Sky.dll
+C:\Users\foxna\Documents\SVEdit\Sky\obj\Debug\net7.0-windows\Sky.SubForms.MoveEditor.resources

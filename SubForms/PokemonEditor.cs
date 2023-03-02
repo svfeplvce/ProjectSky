@@ -314,6 +314,7 @@ namespace Sky.SubForms
             var currentPdata = pdata.values.Exists(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", "").Replace("Origin ", "").Replace("Primal ", ""))).devName) ? pdata.values.First(x => x.devid == pokeDevID.values.FirstOrDefault(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", "").Replace("Origin ", "").Replace("Primal ", ""))).devName) : null;
             currentSpecies = new Species { Name = button.Text, DevID = pokeDevID.values.First(x => x.id == speciesNames.IndexOf(button.Text.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", "").Replace("Origin ", "").Replace("Primal ", ""))).devName, Index = num, EntryInfo = personal.entry[num], PokeDataInfo = currentPdata, isForm = (alolaForms.Contains(speciesNames[personal.entry[num].species.species]) || galarForms.Contains(speciesNames[personal.entry[num].species.species]) || hisuiForms.Contains(speciesNames[personal.entry[num].species.species]) || megaForms.Contains(speciesNames[personal.entry[num].species.species]) || paldeaForms.Contains(speciesNames[personal.entry[num].species.species]) || miscForms.Contains(speciesNames[personal.entry[num].species.species]) || button.Text == "Indeedee" || button.Text == "Oricorio" || button.Text == "Lycanroc" || button.Text.Contains("Charizard") || button.Text.Contains("Mewtwo") || button.Text == "Eevee") ? true : false};
             selectorPanel.Visible = false;
+            searchBox.Visible = false;
             Form editor = new PokeEditor(currentSpecies, personal, plib, plibItems, pdata, this, items);
             editor.TopLevel = false;
             editor.FormClosed += Editor_FormClosed;
@@ -321,9 +322,23 @@ namespace Sky.SubForms
             editor.Show();
         }
 
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            foreach (var c in selectorPanel.Controls)
+            {
+                var button = c as Button;
+                if (button.Text.ToLower().Contains(searchBox.Text.ToLower()))
+                {
+                    button.Enabled = true;
+                }
+                else button.Enabled = false;
+            }
+        }
+
         private void Editor_FormClosed(object sender, FormClosedEventArgs e)
         {
             selectorPanel.Visible = true;
+            searchBox.Visible = true;
         }
 
         // top panel shit

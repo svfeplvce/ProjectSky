@@ -4287,16 +4287,16 @@
     {
       "devName": "WAZA_SAIKOBUREIDO",
       "id": 875,
-      "name": "Pound",
-      "type": 0,
-      "power": 40
+      "name": "Psyblade",
+      "type": 13,
+      "power": 80
     },
     {
       "devName": "WAZA_HAIDOROSUTIIMU",
       "id": 876,
-      "name": "Pound",
-      "type": 0,
-      "power": 40
+      "name": "Hydro Steam",
+      "type": 10,
+      "power": 80
     },
     {
       "devName": "WAZA_KATASUTOROFII",

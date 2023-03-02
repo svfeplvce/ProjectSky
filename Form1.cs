@@ -143,8 +143,7 @@ namespace Sky
             editor.Show();
             Hide();
             */
-
-            MessageBox.Show("Move editor is not finished yet... Coming soon.");
+            MessageBox.Show("Move editor is coming soon...");
         }
 
         private void Editor_FormClosed(object sender, FormClosedEventArgs e)
