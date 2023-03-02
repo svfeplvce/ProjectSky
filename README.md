@@ -1,5 +1,6 @@
 ﻿# PROJECT SKY
 ## Your one-stop-shop for all your Pokemon Scarlet and Violet modding needs (mostly (kinda))
+### (basically an alternative to PKNX for SV specifically)
 
 ## HOW TO USE:
 1. Open Sky.exe.
@@ -13,10 +14,10 @@
 1. Edit Pokemon base stats, EV yields, XP growth rate, abilities, typing, gender ratios, held items, and whether it's in the game or not (don't do that last one if you don't know what you're doing)
 2. Edit Pokemon evolutions
 3. Edit Pokemon learnsets
+4. Edit trainer teams and stats
 
 ## COMING SOON:
-1. Trainer editor
-2. Move stat editor
+1. Move stat editor
 
 
 # If you are looking for a save editing tool, use PKHeX. 

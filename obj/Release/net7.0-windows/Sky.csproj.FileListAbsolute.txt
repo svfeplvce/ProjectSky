@@ -27,3 +27,4 @@ C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.genruntimecon
 C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\ref\Sky.dll
 C:\Users\foxna\Documents\SVEdit\Sky\bin\Release\net7.0-windows\DevZH.FlatBuffers.dll
 C:\Users\foxna\Documents\SVEdit\Sky\bin\Release\net7.0-windows\Google.FlatBuffers.dll
+C:\Users\foxna\Documents\SVEdit\Sky\obj\Release\net7.0-windows\Sky.SubForms.MoveEditor.resources
