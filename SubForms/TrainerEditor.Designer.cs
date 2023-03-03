@@ -28155,6 +28155,7 @@
             this.ppUpFour5.Size = new System.Drawing.Size(52, 26);
             this.ppUpFour5.TabIndex = 42;
             this.ppUpFour5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ppUpFour5.ValueChanged += new System.EventHandler(this.ppChanged);
             // 
             // ppUpThree5
             // 
@@ -28173,6 +28174,7 @@
             this.ppUpThree5.Size = new System.Drawing.Size(52, 26);
             this.ppUpThree5.TabIndex = 41;
             this.ppUpThree5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ppUpThree5.ValueChanged += new System.EventHandler(this.ppChanged);
             // 
             // ppUpTwo5
             // 
@@ -28191,6 +28193,7 @@
             this.ppUpTwo5.Size = new System.Drawing.Size(52, 26);
             this.ppUpTwo5.TabIndex = 40;
             this.ppUpTwo5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ppUpTwo5.ValueChanged += new System.EventHandler(this.ppChanged);
             // 
             // ppUpOne5
             // 
@@ -28209,6 +28212,7 @@
             this.ppUpOne5.Size = new System.Drawing.Size(52, 26);
             this.ppUpOne5.TabIndex = 39;
             this.ppUpOne5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ppUpOne5.ValueChanged += new System.EventHandler(this.ppChanged);
             // 
             // manualButton5
             // 
@@ -28220,6 +28224,7 @@
             this.manualButton5.TabIndex = 39;
             this.manualButton5.Text = "Manual?";
             this.manualButton5.UseVisualStyleBackColor = false;
+            this.manualButton5.CheckedChanged += new System.EventHandler(this.manualButton_CheckedChanged);
             // 
             // moveFour5
             // 
@@ -28866,6 +28871,7 @@
             this.moveFour5.Name = "moveFour5";
             this.moveFour5.Size = new System.Drawing.Size(161, 23);
             this.moveFour5.TabIndex = 10;
+            this.moveFour5.SelectedIndexChanged += new System.EventHandler(this.moveChanged);
             // 
             // moveThree5
             // 
@@ -29512,6 +29518,7 @@
             this.moveThree5.Name = "moveThree5";
             this.moveThree5.Size = new System.Drawing.Size(161, 23);
             this.moveThree5.TabIndex = 9;
+            this.moveThree5.SelectedIndexChanged += new System.EventHandler(this.moveChanged);
             // 
             // moveTwo5
             // 
@@ -30158,6 +30165,7 @@
             this.moveTwo5.Name = "moveTwo5";
             this.moveTwo5.Size = new System.Drawing.Size(161, 23);
             this.moveTwo5.TabIndex = 8;
+            this.moveTwo5.SelectedIndexChanged += new System.EventHandler(this.moveChanged);
             // 
             // moveOne5
             // 
@@ -30804,6 +30812,7 @@
             this.moveOne5.Name = "moveOne5";
             this.moveOne5.Size = new System.Drawing.Size(161, 23);
             this.moveOne5.TabIndex = 7;
+            this.moveOne5.SelectedIndexChanged += new System.EventHandler(this.moveChanged);
             // 
             // label89
             // 
