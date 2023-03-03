@@ -1398,7 +1398,7 @@ namespace Sky.SubForms
                 }
                 else if (currentPage == 1)
                 {
-                    box = manualButton1;
+                    box = manualButton2;
 
                     if (box.Checked)
                     {
