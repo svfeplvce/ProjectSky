@@ -35,8 +35,12 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.moveBox = new Sky.Core.FlatComboBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.wazaFlags = new System.Windows.Forms.CheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
@@ -48,7 +52,7 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(690, 30);
+            this.topPanel.Size = new System.Drawing.Size(805, 30);
             this.topPanel.TabIndex = 2;
             // 
             // pictureBox1
@@ -68,7 +72,7 @@
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.minimizeButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.minimizeButton.Location = new System.Drawing.Point(630, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(745, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(30, 30);
             this.minimizeButton.TabIndex = 1;
@@ -83,7 +87,7 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("dripicons-v2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exitButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.exitButton.Location = new System.Drawing.Point(660, 0);
+            this.exitButton.Location = new System.Drawing.Point(775, 0);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(30, 30);
             this.exitButton.TabIndex = 0;
@@ -731,7 +735,7 @@
             "Gigaton Hammer",
             "Comeuppance",
             "Aqua Cutter"});
-            this.moveBox.Location = new System.Drawing.Point(539, 36);
+            this.moveBox.Location = new System.Drawing.Point(654, 36);
             this.moveBox.Name = "moveBox";
             this.moveBox.Size = new System.Drawing.Size(139, 23);
             this.moveBox.TabIndex = 3;
@@ -740,18 +744,77 @@
             // 
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.siticonePanel1.BorderRadius = 10;
+            this.siticonePanel1.Controls.Add(this.label2);
+            this.siticonePanel1.Controls.Add(this.label1);
+            this.siticonePanel1.Controls.Add(this.wazaFlags);
             this.siticonePanel1.ForeColor = System.Drawing.SystemColors.Control;
             this.siticonePanel1.Location = new System.Drawing.Point(12, 65);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(666, 340);
+            this.siticonePanel1.Size = new System.Drawing.Size(781, 428);
             this.siticonePanel1.TabIndex = 4;
+            // 
+            // wazaFlags
+            // 
+            this.wazaFlags.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.wazaFlags.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.wazaFlags.ForeColor = System.Drawing.SystemColors.Window;
+            this.wazaFlags.FormattingEnabled = true;
+            this.wazaFlags.Items.AddRange(new object[] {
+            "Is in the game?",
+            "Affected by protect?",
+            "Can be mirrored?",
+            "Makes contact?",
+            "Selectable by metronome?",
+            "Is a punch move?",
+            "No effectiveness?",
+            "Can be boosted by charge?",
+            "Can\'t be used by sleep talk?",
+            "Can make instruct fail?",
+            "Affected by snatch?",
+            "Is a dance move?",
+            "Is a slicing move?",
+            "Can hit Bounce/Sky Attack?",
+            "Is a wind move?",
+            "Is reflectable?",
+            "Ignores substitute?",
+            "Swaps enemy Pokemon?",
+            "No assist?",
+            "Can make copy cat fail?",
+            "Affected by gravity?",
+            "Can fail in sky battle?",
+            "Is a bite move?",
+            "Is a sound move?"});
+            this.wazaFlags.Location = new System.Drawing.Point(10, 39);
+            this.wazaFlags.Name = "wazaFlags";
+            this.wazaFlags.Size = new System.Drawing.Size(200, 378);
+            this.wazaFlags.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Revamped", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(68, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Flags";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Revamped", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(469, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Stats";
             // 
             // MoveEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(690, 417);
+            this.ClientSize = new System.Drawing.Size(805, 505);
             this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.moveBox);
             this.Controls.Add(this.topPanel);
@@ -762,6 +825,8 @@
             this.Text = "PROJECT SKY";
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.siticonePanel1.ResumeLayout(false);
+            this.siticonePanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -774,5 +839,8 @@
         private Button exitButton;
         private Core.FlatComboBox moveBox;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
+        private Label label1;
+        private CheckedListBox wazaFlags;
+        private Label label2;
     }
 }
