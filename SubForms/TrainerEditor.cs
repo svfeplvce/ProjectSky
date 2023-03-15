@@ -272,10 +272,11 @@ namespace Sky.SubForms
             if (mon1.gemType != "DEFAULT" && mon1.gemType != null)
             {
                 teraTypeBox1.Enabled = true;
-                teraTypeBox1.SelectedItem = typeToGemName.First(x => x.Value == mon1.gemType);
+                teraTypeBox1.SelectedItem = typeToGemName.First(x => x.Value == mon1.gemType).Key;
                 defaultGemBox1.Checked = false;
             } else
             {
+                teraTypeBox1.SelectedIndex = 0;
                 teraTypeBox1.Enabled = false;
                 defaultGemBox1.Checked = true;
             }
@@ -379,11 +380,12 @@ namespace Sky.SubForms
                 if (mon2.gemType != "DEFAULT" && mon2.gemType != null)
                 {
                     teraTypeBox2.Enabled = true;
-                    teraTypeBox2.SelectedItem = typeToGemName.First(x => x.Value == mon2.gemType);
+                    teraTypeBox2.SelectedItem = typeToGemName.First(x => x.Value == mon2.gemType).Key;
                     defaultGemBox2.Checked = false;
                 }
                 else
                 {
+                    teraTypeBox2.SelectedIndex = 0;
                     teraTypeBox2.Enabled = false;
                     defaultGemBox2.Checked = true;
                 }
@@ -488,12 +490,13 @@ namespace Sky.SubForms
                 if (mon3.gemType != "DEFAULT" && mon3.gemType != null)
                 {
                     teraTypeBox3.Enabled = true;
-                    teraTypeBox3.SelectedItem = typeToGemName.First(x => x.Value == mon3.gemType);
+                    teraTypeBox3.SelectedItem = typeToGemName.First(x => x.Value == mon3.gemType).Key;
                     defaultGemBox3.Checked = false;
                 }
                 else
                 {
                     teraTypeBox3.Enabled = false;
+                    teraTypeBox3.SelectedIndex = 0;
                     defaultGemBox3.Checked = true;
                 }
 
@@ -597,12 +600,13 @@ namespace Sky.SubForms
                 if (mon4.gemType != "DEFAULT" && mon4.gemType != null)
                 {
                     teraTypeBox4.Enabled = true;
-                    teraTypeBox4.SelectedItem = typeToGemName.First(x => x.Value == mon4.gemType);
+                    teraTypeBox4.SelectedItem = typeToGemName.First(x => x.Value == mon4.gemType).Key;
                     defaultGemBox4.Checked = false;
                 }
                 else
                 {
                     teraTypeBox4.Enabled = false;
+                    teraTypeBox4.SelectedIndex = 0;
                     defaultGemBox4.Checked = true;
                 }
 
@@ -706,11 +710,12 @@ namespace Sky.SubForms
                 if (mon5.gemType != "DEFAULT" && mon5.gemType != null)
                 {
                     teraTypeBox5.Enabled = true;
-                    teraTypeBox5.SelectedItem = typeToGemName.First(x => x.Value == mon5.gemType);
+                    teraTypeBox5.SelectedItem = typeToGemName.First(x => x.Value == mon5.gemType).Key;
                     defaultGemBox5.Checked = false;
                 }
                 else
                 {
+                    teraTypeBox5.SelectedIndex = 0;
                     teraTypeBox5.Enabled = false;
                     defaultGemBox5.Checked = true;
                 }
@@ -815,11 +820,12 @@ namespace Sky.SubForms
                 if (mon6.gemType != "DEFAULT" && mon6.gemType != null)
                 {
                     teraTypeBox6.Enabled = true;
-                    teraTypeBox6.SelectedItem = typeToGemName.First(x => x.Value == mon6.gemType);
+                    teraTypeBox6.SelectedItem = typeToGemName.First(x => x.Value == mon6.gemType).Key;
                     defaultGemBox6.Checked = false;
                 }
                 else
                 {
+                    teraTypeBox6.SelectedIndex = 0;
                     teraTypeBox6.Enabled = false;
                     defaultGemBox6.Checked = true;
                 }

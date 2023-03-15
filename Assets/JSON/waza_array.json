@@ -2093,7 +2093,7 @@
       "move_id": "WAZA_HAKAIKOUSEN",
       "can_use_move": true,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -3970,7 +3970,7 @@
       "move_id": "WAZA_ZIBAKU",
       "can_use_move": true,
       "category": 1,
-      "power": -56,
+      "power": 200,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -4295,7 +4295,7 @@
     {
       "move_id": "WAZA_ROKETTOZUTUKI",
       "category": 1,
-      "power": -126,
+      "power": 130,
       "accuracy": 100,
       "pp": 10,
       "inflict": {
@@ -4486,7 +4486,7 @@
       "can_use_move": true,
       "type": 1,
       "category": 1,
-      "power": -126,
+      "power": 130,
       "accuracy": 90,
       "pp": 10,
       "inflict": {
@@ -4720,7 +4720,7 @@
       "can_use_move": true,
       "type": 2,
       "category": 1,
-      "power": -116,
+      "power": 140,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -5044,7 +5044,7 @@
       "move_id": "WAZA_DAIBAKUHATU",
       "can_use_move": true,
       "category": 1,
-      "power": -6,
+      "power": 250,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -8665,7 +8665,7 @@
       "can_use_move": true,
       "type": 1,
       "category": 1,
-      "power": -106,
+      "power": 150,
       "accuracy": 100,
       "pp": 20,
       "priority": -3,
@@ -9312,7 +9312,7 @@
       "can_use_move": true,
       "type": 9,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -10058,7 +10058,7 @@
       "can_use_move": true,
       "type": 9,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -10091,7 +10091,7 @@
       "can_use_move": true,
       "type": 10,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -10326,7 +10326,7 @@
       "type": 9,
       "quality": 7,
       "category": 2,
-      "power": -126,
+      "power": 130,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -10586,7 +10586,7 @@
       "can_use_move": true,
       "type": 10,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -11081,7 +11081,7 @@
       "can_use_move": true,
       "type": 11,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -11583,7 +11583,7 @@
       "type": 8,
       "quality": 13,
       "category": 2,
-      "power": -116,
+      "power": 140,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -11613,7 +11613,7 @@
       "type": 13,
       "quality": 7,
       "category": 2,
-      "power": -116,
+      "power": 140,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -12680,7 +12680,7 @@
       "move_id": "WAZA_TOTTEOKI",
       "can_use_move": true,
       "category": 1,
-      "power": -116,
+      "power": 140,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -13656,7 +13656,7 @@
       "move_id": "WAZA_GIGAINPAKUTO",
       "can_use_move": true,
       "category": 1,
-      "power": -106,
+      "power": 150,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -14260,7 +14260,7 @@
       "type": 15,
       "quality": 7,
       "category": 2,
-      "power": -126,
+      "power": 130,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -14361,7 +14361,7 @@
       "type": 11,
       "quality": 7,
       "category": 2,
-      "power": -126,
+      "power": 130,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -14424,7 +14424,7 @@
       "move_id": "WAZA_GANSEKIHOU",
       "type": 5,
       "category": 1,
-      "power": -106,
+      "power": 150,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -15019,7 +15019,7 @@
       "can_use_move": true,
       "type": 5,
       "category": 1,
-      "power": -106,
+      "power": 150,
       "accuracy": 80,
       "pp": 5,
       "inflict": {
@@ -15087,7 +15087,7 @@
       "can_use_move": true,
       "type": 15,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -18057,7 +18057,7 @@
       "type": 12,
       "quality": 4,
       "category": 1,
-      "power": -126,
+      "power": 130,
       "accuracy": 85,
       "pp": 5,
       "inflict": {
@@ -18089,7 +18089,7 @@
       "type": 9,
       "quality": 4,
       "category": 2,
-      "power": -126,
+      "power": 130,
       "accuracy": 85,
       "pp": 5,
       "inflict": {
@@ -18154,7 +18154,7 @@
       "type": 14,
       "quality": 4,
       "category": 1,
-      "power": -116,
+      "power": 140,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -18187,7 +18187,7 @@
       "type": 14,
       "quality": 4,
       "category": 2,
-      "power": -116,
+      "power": 140,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -18289,7 +18289,7 @@
       "type": 9,
       "quality": 7,
       "category": 1,
-      "power": -76,
+      "power": 180,
       "accuracy": 95,
       "pp": 5,
       "inflict": {
@@ -18308,7 +18308,7 @@
         "fstat2_state": -1,
         "fstat3_stage": 100,
         "fstat1_percent": 4,
-        "fstat2_percent": -1,
+        "fstat2_percent": 255,
         "fstat3_percent": 100
       },
       "affinity": "Attack",
@@ -19232,7 +19232,7 @@
       "move_id": "WAZA_BAKUONPA",
       "can_use_move": true,
       "category": 2,
-      "power": -116,
+      "power": 140,
       "accuracy": 100,
       "pp": 10,
       "inflict": {
@@ -19676,7 +19676,7 @@
         "fstat2_state": -1,
         "fstat3_stage": 100,
         "fstat1_percent": 5,
-        "fstat2_percent": -1,
+        "fstat2_percent": 255,
         "fstat3_percent": 100
       },
       "flag_protect": true,
@@ -20242,7 +20242,7 @@
       "move_id": "WAZA_HAMETUNOHIKARI",
       "type": 17,
       "category": 2,
-      "power": -116,
+      "power": 140,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -21335,7 +21335,7 @@
       "move_id": "WAZA_HISSATUNOPIKATYUUTO",
       "type": 12,
       "category": 1,
-      "power": -46,
+      "power": 210,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -22115,7 +22115,7 @@
       "can_use_move": true,
       "type": 9,
       "category": 2,
-      "power": -126,
+      "power": 130,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -22540,7 +22540,7 @@
       "move_id": "WAZA_SYADOOAROOZUSUTORAIKU",
       "type": 7,
       "category": 1,
-      "power": -76,
+      "power": 180,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -22566,7 +22566,7 @@
       "move_id": "WAZA_HAIPAADAAKUKURASSYAA",
       "type": 16,
       "category": 1,
-      "power": -76,
+      "power": 180,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -22593,7 +22593,7 @@
       "move_id": "WAZA_WADATUMINOSINFONIA",
       "type": 10,
       "category": 2,
-      "power": -61,
+      "power": 195,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -22646,7 +22646,7 @@
       "move_id": "WAZA_SITISEIDAKKONTAI",
       "type": 7,
       "category": 1,
-      "power": -61,
+      "power": 195,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -22674,7 +22674,7 @@
       "type": 12,
       "quality": 4,
       "category": 2,
-      "power": -81,
+      "power": 175,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -22700,7 +22700,7 @@
     {
       "move_id": "WAZA_HONKIWODASUKOUGEKI",
       "category": 1,
-      "power": -46,
+      "power": 210,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -22753,7 +22753,7 @@
       "move_id": "WAZA_ORIZINZUSUUPAANOVHA",
       "type": 13,
       "category": 2,
-      "power": -71,
+      "power": 185,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -22780,7 +22780,7 @@
       "move_id": "WAZA_TORAPPUSHERU",
       "type": 9,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 100,
       "pp": 5,
       "priority": -3,
@@ -22817,7 +22817,7 @@
       "type": 17,
       "quality": 7,
       "category": 2,
-      "power": -126,
+      "power": 130,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -23013,7 +23013,7 @@
       "move_id": "WAZA_PURIZUMUREEZAA",
       "type": 13,
       "category": 2,
-      "power": -96,
+      "power": 160,
       "accuracy": 100,
       "pp": 10,
       "inflict": {
@@ -23259,7 +23259,7 @@
       "move_id": "WAZA_1000MANBORUTO",
       "type": 12,
       "category": 2,
-      "power": -61,
+      "power": 195,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -23286,7 +23286,7 @@
       "move_id": "WAZA_BIKKURIHEDDO",
       "type": 9,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -23374,7 +23374,7 @@
       "move_id": "WAZA_TENKOGASUMETUBOUNOHIKARI",
       "type": 13,
       "category": 2,
-      "power": -56,
+      "power": 200,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -23401,7 +23401,7 @@
       "move_id": "WAZA_SANSYAINSUMASSYAA",
       "type": 8,
       "category": 1,
-      "power": -56,
+      "power": 200,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -23429,7 +23429,7 @@
       "move_id": "WAZA_MUUNRAITOBURASUTAA",
       "type": 7,
       "category": 2,
-      "power": -56,
+      "power": 200,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -23456,7 +23456,7 @@
       "move_id": "WAZA_POKABOKAHURENDOTAIMU",
       "type": 17,
       "category": 1,
-      "power": -66,
+      "power": 190,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -23484,7 +23484,7 @@
       "move_id": "WAZA_RAZIARUEZZISUTOOMU",
       "type": 5,
       "category": 1,
-      "power": -66,
+      "power": 190,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -23512,7 +23512,7 @@
       "type": 15,
       "quality": 7,
       "category": 2,
-      "power": -71,
+      "power": 185,
       "accuracy": 101,
       "pp": 1,
       "inflict": {
@@ -25529,7 +25529,7 @@
       "move_id": "WAZA_SUTAAASARUTO",
       "type": 1,
       "category": 1,
-      "power": -106,
+      "power": 150,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -25560,7 +25560,7 @@
       "move_id": "WAZA_MUGENDAIBIIMU",
       "type": 15,
       "category": 2,
-      "power": -96,
+      "power": 160,
       "accuracy": 90,
       "pp": 5,
       "inflict": {
@@ -25591,7 +25591,7 @@
       "can_use_move": true,
       "type": 8,
       "category": 2,
-      "power": -116,
+      "power": 140,
       "accuracy": 95,
       "pp": 5,
       "inflict": {
@@ -25653,7 +25653,7 @@
       "can_use_move": true,
       "type": 8,
       "category": 1,
-      "power": -126,
+      "power": 130,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -26368,7 +26368,7 @@
       "can_use_move": true,
       "type": 15,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
@@ -26856,7 +26856,7 @@
       "can_use_move": true,
       "type": 11,
       "category": 2,
-      "power": -106,
+      "power": 150,
       "accuracy": 95,
       "pp": 5,
       "inflict": {
@@ -28750,7 +28750,7 @@
       "can_use_move": true,
       "type": 8,
       "category": 1,
-      "power": -96,
+      "power": 160,
       "accuracy": 100,
       "pp": 5,
       "inflict": {
