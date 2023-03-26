@@ -281,7 +281,7 @@ namespace Sky.SubForms
                 defaultGemBox1.Checked = true;
             }
 
-            shinyBox1.Checked = mon1.rareType == "NO_RARE" ? false : true;
+            shinyBox1.Checked = mon1.rareType == "NO_RARE" || mon1.rareType == "DEFAULT" ? false : true;
 
             if (mon1.tokusei == "RANDOM_12") abilityBox1.SelectedIndex = 0;
             if (mon1.tokusei == "SET_1") abilityBox1.SelectedIndex = 1;
@@ -390,7 +390,7 @@ namespace Sky.SubForms
                     defaultGemBox2.Checked = true;
                 }
 
-                shinyBox2.Checked = mon2.rareType == "NO_RARE" ? false : true;
+                shinyBox2.Checked = mon2.rareType == "NO_RARE" || mon2.rareType == "DEFAULT" ? false : true;
 
                 if (mon2.tokusei == "RANDOM_12") abilityBox2.SelectedIndex = 0;
                 if (mon2.tokusei == "SET_1") abilityBox2.SelectedIndex = 1;
@@ -500,7 +500,7 @@ namespace Sky.SubForms
                     defaultGemBox3.Checked = true;
                 }
 
-                shinyBox3.Checked = mon3.rareType == "NO_RARE" ? false : true;
+                shinyBox3.Checked = mon3.rareType == "NO_RARE" || mon3.rareType == "DEFAULT" ? false : true;
 
                 if (mon3.tokusei == "RANDOM_12") abilityBox3.SelectedIndex = 0;
                 if (mon3.tokusei == "SET_1") abilityBox3.SelectedIndex = 1;
@@ -610,7 +610,7 @@ namespace Sky.SubForms
                     defaultGemBox4.Checked = true;
                 }
 
-                shinyBox4.Checked = mon4.rareType == "NO_RARE" ? false : true;
+                shinyBox4.Checked = mon4.rareType == "NO_RARE" || mon4.rareType == "DEFAULT" ? false : true;
 
                 if (mon4.tokusei == "RANDOM_12") abilityBox4.SelectedIndex = 0;
                 if (mon4.tokusei == "SET_1") abilityBox4.SelectedIndex = 1;
@@ -720,7 +720,7 @@ namespace Sky.SubForms
                     defaultGemBox5.Checked = true;
                 }
 
-                shinyBox5.Checked = mon5.rareType == "NO_RARE" ? false : true;
+                shinyBox5.Checked = mon5.rareType == "NO_RARE" || mon5.rareType == "DEFAULT" ? false : true;
 
                 if (mon5.tokusei == "RANDOM_12") abilityBox5.SelectedIndex = 0;
                 if (mon5.tokusei == "SET_1") abilityBox5.SelectedIndex = 1;
@@ -830,7 +830,7 @@ namespace Sky.SubForms
                     defaultGemBox6.Checked = true;
                 }
 
-                shinyBox6.Checked = mon6.rareType == "NO_RARE" ? false : true;
+                shinyBox6.Checked = mon6.rareType == "NO_RARE" || mon6.rareType == "DEFAULT" ? false : true;
 
                 if (mon6.tokusei == "RANDOM_12") abilityBox6.SelectedIndex = 0;
                 if (mon6.tokusei == "SET_1") abilityBox6.SelectedIndex = 1;
