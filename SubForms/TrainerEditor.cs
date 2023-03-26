@@ -1595,6 +1595,20 @@ namespace Sky.SubForms
             }
         }
 
+        private void teraTypeChanged(object sender, EventArgs e)
+        {
+            if (initialised)
+            {
+                var currentPage = siticoneTabControl1.SelectedIndex;
+                if (currentPage == 0) currentTrainer.Data.poke1.gemType = typeToGemName.First(x => x.Key == teraTypeBox1.SelectedItem).Value;
+                else if (currentPage == 1) currentTrainer.Data.poke2.gemType = typeToGemName.First(x => x.Key == teraTypeBox2.SelectedItem).Value;
+                else if (currentPage == 2) currentTrainer.Data.poke3.gemType = typeToGemName.First(x => x.Key == teraTypeBox3.SelectedItem).Value;
+                else if (currentPage == 3) currentTrainer.Data.poke4.gemType = typeToGemName.First(x => x.Key == teraTypeBox4.SelectedItem).Value;
+                else if (currentPage == 4) currentTrainer.Data.poke5.gemType = typeToGemName.First(x => x.Key == teraTypeBox5.SelectedItem).Value;
+                else currentTrainer.Data.poke6.gemType = typeToGemName.First(x => x.Key == teraTypeBox6.SelectedItem).Value;
+            }
+        }
+
         private void defaultGemBox_CheckedChanged(object sender, EventArgs e)
         {
             if (initialised)
@@ -1672,20 +1686,6 @@ namespace Sky.SubForms
                         teraTypeBox6.Enabled = true;
                     }
                 }
-            }
-        }
-
-        private void teraTypeChanged(object sender, EventArgs e)
-        {
-            if (initialised)
-            {
-                var currentPage = siticoneTabControl1.SelectedIndex;
-                if (currentPage == 0) currentTrainer.Data.poke1.gemType = typeToGemName.First(x => x.Key == teraTypeBox1.SelectedItem).Value;
-                else if (currentPage == 0) currentTrainer.Data.poke2.gemType = typeToGemName.First(x => x.Key == teraTypeBox2.SelectedItem).Value;
-                else if (currentPage == 0) currentTrainer.Data.poke3.gemType = typeToGemName.First(x => x.Key == teraTypeBox3.SelectedItem).Value;
-                else if (currentPage == 0) currentTrainer.Data.poke4.gemType = typeToGemName.First(x => x.Key == teraTypeBox4.SelectedItem).Value;
-                else if (currentPage == 0) currentTrainer.Data.poke5.gemType = typeToGemName.First(x => x.Key == teraTypeBox5.SelectedItem).Value;
-                else currentTrainer.Data.poke6.gemType = typeToGemName.First(x => x.Key == teraTypeBox6.SelectedItem).Value;
             }
         }
 
