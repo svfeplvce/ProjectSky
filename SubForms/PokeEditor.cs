@@ -708,6 +708,7 @@ namespace Sky.SubForms
             var newPersonalData = _currentSpecies.EntryInfo;
             var newPokeData = _currentSpecies.PokeDataInfo;
 
+            /*
             if (!isForm)
             {
                 var totalForms = _personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.species.species).Count();
@@ -722,6 +723,9 @@ namespace Sky.SubForms
             {
                 _personal.entry[_currentSpecies.Index] = newPersonalData;
             }
+            */
+
+            _personal.entry[_currentSpecies.Index] = newPersonalData;
 
             if (_pdata.values.Exists(x => x.devid == _currentSpecies.DevID))
             {

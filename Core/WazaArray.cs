@@ -17,7 +17,7 @@ namespace Sky.Core
             public int turn3 { get; set; }
         }
 
-        public class WazaArray
+        public class Wazas
         {
             public List<Waza> waza { get; set; }
         }
