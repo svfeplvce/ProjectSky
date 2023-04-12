@@ -35,9 +35,11 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.moveBox = new Sky.Core.FlatComboBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.wazaFlags = new System.Windows.Forms.CheckedListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.wazaFlags = new System.Windows.Forms.CheckedListBox();
+            this.typeBox1 = new Sky.Core.FlatComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.siticonePanel1.SuspendLayout();
@@ -744,6 +746,8 @@
             // 
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.siticonePanel1.BorderRadius = 10;
+            this.siticonePanel1.Controls.Add(this.label3);
+            this.siticonePanel1.Controls.Add(this.typeBox1);
             this.siticonePanel1.Controls.Add(this.label2);
             this.siticonePanel1.Controls.Add(this.label1);
             this.siticonePanel1.Controls.Add(this.wazaFlags);
@@ -752,6 +756,26 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(781, 428);
             this.siticonePanel1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Revamped", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(469, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Stats";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Revamped", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(68, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Flags";
             // 
             // wazaFlags
             // 
@@ -789,25 +813,30 @@
             this.wazaFlags.Size = new System.Drawing.Size(200, 378);
             this.wazaFlags.TabIndex = 0;
             // 
-            // label1
+            // typeBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Revamped", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(68, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Flags";
+            this.typeBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.typeBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.typeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.typeBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.typeBox1.FormattingEnabled = true;
+            this.typeBox1.Items.AddRange(new object[] {
+            "Physical",
+            "Special",
+            "Status"});
+            this.typeBox1.Location = new System.Drawing.Point(297, 66);
+            this.typeBox1.Name = "typeBox1";
+            this.typeBox1.Size = new System.Drawing.Size(119, 23);
+            this.typeBox1.TabIndex = 6;
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Revamped", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(469, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Stats";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(236, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 15);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Category";
             // 
             // MoveEditor
             // 
@@ -842,5 +871,7 @@
         private Label label1;
         private CheckedListBox wazaFlags;
         private Label label2;
+        private Label label3;
+        private Core.FlatComboBox typeBox1;
     }
 }

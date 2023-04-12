@@ -332,16 +332,8 @@ namespace Sky.SubForms
                         evoGrid.Rows[i].Cells[2].ReadOnly = true;
                     }
                     evoGrid.Rows[i].Cells[3].Value = _form.speciesNames[_currentSpecies.EntryInfo.evo_data[i].species];
-                    if (_personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.evo_data[i].species).Count() > 0)
-                    {
-                        evoGrid.Rows[i].Cells[4].ReadOnly = false;
-                        (evoGrid.Rows[i].Cells[4] as DataGridViewComboBoxCell).DataSource = Enumerable.Range(0, _personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.evo_data[i].species).Count() - 1).ToList();
-                    }
-                    else
-                    {
-                        evoGrid.Rows[i].Cells[4].ReadOnly = true;
-                        evoGrid.Rows[i].Cells[4].Value = 0;
-                    }
+                    (evoGrid.Rows[i].Cells[4] as DataGridViewComboBoxCell).DataSource = Enumerable.Range(0, 25).ToList().ConvertAll(x => x.ToString());
+                    (evoGrid.Rows[i].Cells[4] as DataGridViewComboBoxCell).Value = _currentSpecies.EntryInfo.evo_data[i].form.ToString();
                 }
             }
 
@@ -636,7 +628,7 @@ namespace Sky.SubForms
                     if (_personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.evo_data[e.RowIndex].species).Count() > 0)
                     {
                         evoGrid.Rows[e.RowIndex].Cells[4].ReadOnly = false;
-                        (evoGrid.Rows[e.RowIndex].Cells[4] as DataGridViewComboBoxCell).DataSource = Enumerable.Range(0, _personal.entry.Where(x => x.species.species == _currentSpecies.EntryInfo.evo_data[e.RowIndex].species).Count() - 1).ToList().ConvertAll(x => x.ToString());
+                        (evoGrid.Rows[e.RowIndex].Cells[4] as DataGridViewComboBoxCell).DataSource = Enumerable.Range(0, 25).ToList().ConvertAll(x => x.ToString());
                     }
                     else
                     {
@@ -687,7 +679,7 @@ namespace Sky.SubForms
                         }
                         var level = (!evoMethods.First(y => y.MethodID == method).UsesLevel || row.Cells[2].Value == null) ? 0 : int.Parse(row.Cells[2].Value.ToString());
                         var species = row.Cells[3].Value == null ? 0 : _form.speciesNames.IndexOf(row.Cells[3].Value.ToString());
-                        var form = row.Cells[4].Value == null ? 0 : (int)row.Cells[4].Value;
+                        var form = row.Cells[4].Value == null ? 0 : int.Parse(row.Cells[4].Value.ToString());
                         _currentSpecies.EntryInfo.evo_data.Add(new Personal.EvoDatum { condition = method, parameter = arg, level = level, species = species, form = form });
                     }
                 }
