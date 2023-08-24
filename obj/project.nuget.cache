@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xa3ens1vwdCWUyFotemTr+w+Nkjr+yvNUk/X26WkIAhXNVKTgfK48l+FPUZaeJosj+e7U8ISA1rrpTkiU9CNRQ==",
+  "dgSpecHash": "KaGhYQU0jrbN38OktvPTTBbh8OWp325r23NgoX6iP+LofyKiTgnt2HjmzNMOG4woOXuCjE6WywcMh/nC3Ky8wQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj",
+  "projectFilePath": "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\Sky.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\foxna\\.nuget\\packages\\cliwrap\\3.6.0\\cliwrap.3.6.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\cliwrap\\3.6.4\\cliwrap.3.6.4.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\devzh.flatbuffers\\1.4.0\\devzh.flatbuffers.1.4.0.nupkg.sha512",
-    "C:\\Users\\foxna\\.nuget\\packages\\google.flatbuffers\\23.1.4\\google.flatbuffers.23.1.4.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\google.flatbuffers\\23.5.26\\google.flatbuffers.23.5.26.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework\\1.2.0.3\\metroframework.1.2.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework.design\\1.2.0.3\\metroframework.design.1.2.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\metroframework.fonts\\1.2.0.3\\metroframework.fonts.1.2.0.3.nupkg.sha512",
@@ -23,7 +23,7 @@
     "C:\\Users\\foxna\\.nuget\\packages\\system.runtime.interopservices\\4.1.0\\system.runtime.interopservices.4.1.0.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\foxna\\.nuget\\packages\\system.text.json\\7.0.1\\system.text.json.7.0.1.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512"
   ],
   "logs": [

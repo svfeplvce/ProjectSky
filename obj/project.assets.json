@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0-windows7.0": {
-      "CliWrap/3.6.0": {
+      "CliWrap/3.6.4": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.0/CliWrap.dll": {
@@ -34,7 +34,7 @@
           }
         }
       },
-      "Google.FlatBuffers/23.1.4": {
+      "Google.FlatBuffers/23.5.26": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/Google.FlatBuffers.dll": {}
@@ -243,7 +243,7 @@
           }
         }
       },
-      "System.Text.Json/7.0.1": {
+      "System.Text.Json/7.0.3": {
         "type": "package",
         "dependencies": {
           "System.Text.Encodings.Web": "7.0.0"
@@ -278,15 +278,14 @@
     }
   },
   "libraries": {
-    "CliWrap/3.6.0": {
-      "sha512": "AY6LvRZOEYuAiuaWPLnIDddJUnpiPpiSvfoPwweEXI1orRNnsAwf6sOv9Tt0J4GFrlwejFF/INuR57iEKIh7bw==",
+    "CliWrap/3.6.4": {
+      "sha512": "KVGVZlR0GWgN3Xr88oZMSzYu38TXIogwLz588e6wku3mIfg6lPchxpYWtZSZfurpTY63ANF61xWp8EZF3jkN4g==",
       "type": "package",
-      "path": "cliwrap/3.6.0",
+      "path": "cliwrap/3.6.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Readme.md",
-        "cliwrap.3.6.0.nupkg.sha512",
+        "cliwrap.3.6.4.nupkg.sha512",
         "cliwrap.nuspec",
         "favicon.png",
         "lib/net462/CliWrap.dll",
@@ -316,16 +315,16 @@
         "lib/netstandard1.1/DevZH.FlatBuffers.xml"
       ]
     },
-    "Google.FlatBuffers/23.1.4": {
-      "sha512": "N1LKakdOvk93eKi25DDM9sVgiZIDyon6XyAjDZctmRVdgxXMHXT/RzjvYFeRGjcLLalVdj1Etz22YxC7z44SRA==",
+    "Google.FlatBuffers/23.5.26": {
+      "sha512": "pd/qgndhZl3B421wiffK09MvZ3c7sS2ZNusjzBJudpaJXGM9Gqfe2fYugYNAkN7c48BLo1E0Q4jefkOsaz1dfQ==",
       "type": "package",
-      "path": "google.flatbuffers/23.1.4",
+      "path": "google.flatbuffers/23.5.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.txt",
+        "LICENSE",
         "flatbuffers.png",
-        "google.flatbuffers.23.1.4.nupkg.sha512",
+        "google.flatbuffers.23.5.26.nupkg.sha512",
         "google.flatbuffers.nuspec",
         "lib/net46/Google.FlatBuffers.dll",
         "lib/netstandard2.0/Google.FlatBuffers.dll",
@@ -1049,10 +1048,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/7.0.1": {
-      "sha512": "OtDEmCCiNl8JAduFKZ/r0Sw6XZNHwIicUYy/mXgMDGeOsZLshH37qi3oPRzFYiryVktiMoQLByMGPtRCEMYbeQ==",
+    "System.Text.Json/7.0.3": {
+      "sha512": "AyjhwXN1zTFeIibHimfJn6eAsZ7rTBib79JQpzg8WAuR/HKDu9JGNHTuu3nbbXQ/bgI+U4z6HtZmCHNXB1QXrQ==",
       "type": "package",
-      "path": "system.text.json/7.0.1",
+      "path": "system.text.json/7.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1115,7 +1114,7 @@
         "lib/net7.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.7.0.1.nupkg.sha512",
+        "system.text.json.7.0.3.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1191,12 +1190,12 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "CliWrap >= 3.6.0",
+      "CliWrap >= 3.6.4",
       "DevZH.FlatBuffers >= 1.4.0",
-      "Google.FlatBuffers >= 23.1.4",
+      "Google.FlatBuffers >= 23.5.26",
       "MetroFramework >= 1.2.0.3",
       "Siticone.Desktop.UI >= 2.1.1",
-      "System.Text.Json >= 7.0.1"
+      "System.Text.Json >= 7.0.3"
     ]
   },
   "packageFolders": {
@@ -1206,11 +1205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj",
+      "projectUniqueName": "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\Sky.csproj",
       "projectName": "Sky",
-      "projectPath": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj",
+      "projectPath": "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\Sky.csproj",
       "packagesPath": "C:\\Users\\foxna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\obj\\",
+      "outputPath": "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1225,6 +1224,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1245,7 +1245,7 @@
         "dependencies": {
           "CliWrap": {
             "target": "Package",
-            "version": "[3.6.0, )"
+            "version": "[3.6.4, )"
           },
           "DevZH.FlatBuffers": {
             "target": "Package",
@@ -1253,7 +1253,7 @@
           },
           "Google.FlatBuffers": {
             "target": "Package",
-            "version": "[23.1.4, )"
+            "version": "[23.5.26, )"
           },
           "MetroFramework": {
             "target": "Package",
@@ -1265,7 +1265,7 @@
           },
           "System.Text.Json": {
             "target": "Package",
-            "version": "[7.0.1, )"
+            "version": "[7.0.3, )"
           }
         },
         "imports": [
@@ -1287,7 +1287,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj": {}
+    "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\Sky.csproj": {}
   },
   "projects": {
-    "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj": {
+    "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\Sky.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj",
+        "projectUniqueName": "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\Sky.csproj",
         "projectName": "Sky",
-        "projectPath": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\Sky.csproj",
+        "projectPath": "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\Sky.csproj",
         "packagesPath": "C:\\Users\\foxna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\foxna\\Documents\\SVEdit\\Sky\\obj\\",
+        "outputPath": "C:\\Users\\foxna\\programs\\SVEdit\\Sky\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,7 +47,7 @@
           "dependencies": {
             "CliWrap": {
               "target": "Package",
-              "version": "[3.6.0, )"
+              "version": "[3.6.4, )"
             },
             "DevZH.FlatBuffers": {
               "target": "Package",
@@ -54,7 +55,7 @@
             },
             "Google.FlatBuffers": {
               "target": "Package",
-              "version": "[23.1.4, )"
+              "version": "[23.5.26, )"
             },
             "MetroFramework": {
               "target": "Package",
@@ -66,7 +67,7 @@
             },
             "System.Text.Json": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.3, )"
             }
           },
           "imports": [
@@ -88,7 +89,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

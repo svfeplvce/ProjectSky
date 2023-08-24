@@ -6,6 +6,8 @@ using Sky.SubForms;
 using System.Reflection;
 using System.Text.Json;
 using System.Drawing.Text;
+using static Sky.Core.TrainerDevID;
+using CliWrap;
 
 namespace Sky
 {
@@ -13,6 +15,15 @@ namespace Sky
     {
         private bool mouseDown;
         private Point lastLocation;
+        private Core.Trainer.TrainerArray trainerOrig;
+        private Core.Trainer.TrainerArray trainerNew;
+        private Personal.PersonalArray personalOrig;
+        private Personal.PersonalArray personalNew;
+        private PokeData.DataArray pdataOrig;
+        private PokeData.DataArray pdataNew;
+        private Plib.PlibArray plibOrig;
+        private Plib.PlibArray plibNew;
+        private List<string> update = new List<string> { };
 
         public readonly string exeDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         public static Config config;
@@ -39,6 +50,7 @@ namespace Sky
             exitButton.Font = new Font(pfc.Families[2], 12, FontStyle.Regular);
 
             InitConfig();
+            CheckBins();
         }
 
         private void AddFontFromResource(PrivateFontCollection fonts, string fontResourceName)
@@ -86,6 +98,151 @@ namespace Sky
                 outDir = config.outPath;
                 var configJson = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true, DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull });
                 File.WriteAllText(configDir, configJson);
+            }
+        }
+
+        private void CheckBins()
+        {
+            var newTrDataExists = File.Exists(Path.Combine(config.outPath, "trdata_array.json"));
+            var newPersonalExists = File.Exists(Path.Combine(config.outPath, "personal_array.json"));
+            var newPDataExists = File.Exists(Path.Combine(config.outPath, "pokedata_array.json"));
+
+            if (newTrDataExists)
+            {
+                update.Add("trdata");
+            }
+
+            if (newPersonalExists)
+            {
+                update.Add("personal");
+            }
+
+            if (newPDataExists)
+            {
+                update.Add("pdata");
+            }
+
+            if (update.Count >= 1)
+            {
+                UpdateBins();
+            }
+        }
+
+        private async void UpdateBins()
+        {
+            var trdataOrigFile = assembly.GetManifestResourceStream("Sky.Assets.JSON.trdata_array.json");
+            FileStream trdataNewFile = null;
+
+            if (update.Contains("trdata"))
+            {
+                File.Copy(Path.Combine(outDir, "trdata_array.json"), Path.Combine(outDir, "trdata_array_2.json"));
+                trdataNewFile = File.Open(Path.Combine(config.outPath, "trdata_array_2.json"), FileMode.Open);
+            }
+
+            var personalOrigFile = assembly.GetManifestResourceStream("Sky.Assets.JSON.personal_array.json");
+            FileStream personalNewFile = null;
+
+            if (update.Contains("personal"))
+            {
+                File.Copy(Path.Combine(outDir, "personal_array.json"), Path.Combine(outDir, "personal_array_2.json"));
+                personalNewFile = File.Open(Path.Combine(config.outPath, "personal_array_2.json"), FileMode.Open);
+            }
+
+            var pdataOrigFile = assembly.GetManifestResourceStream("Sky.Assets.JSON.pokedata_array.json");
+            FileStream pdataNewFile = null;
+
+            if (update.Contains("pdata"))
+            {
+                File.Copy(Path.Combine(outDir, "pokedata_array.json"), Path.Combine(outDir, "pokedata_array_2.json"));
+                pdataNewFile = File.Open(Path.Combine(config.outPath, "pokedata_array_2.json"), FileMode.Open);
+            }
+
+            using (var personalReader = new StreamReader(personalOrigFile))
+            using (var pdataReader = new StreamReader(pdataOrigFile))
+            using (var trdataReader = new StreamReader(trdataOrigFile))
+            {
+
+                foreach (var x in update)
+                {
+                    if (x == "trdata")
+                    {
+                        using (var trdataNewReader = new StreamReader(trdataNewFile))
+                        {
+                            var trdataOrigJson = trdataReader.ReadToEnd();
+                            var trdataNewJson = trdataNewReader.ReadToEnd();
+
+                            trainerOrig = JsonSerializer.Deserialize<Core.Trainer.TrainerArray>(trdataOrigJson);
+                            trainerNew = JsonSerializer.Deserialize<Core.Trainer.TrainerArray>(trdataNewJson);
+
+                            for (var i = 0; i < trainerOrig.values.Count; i++)
+                            {
+                                if (trainerNew.values[i] == null)
+                                {
+                                    trainerNew.values[i] = trainerOrig.values[i];
+
+                                    var path = Path.Combine(outDir, "trdata_array.json");
+
+                                    var json = JsonSerializer.Serialize(trainerNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+
+                                    await File.WriteAllTextAsync(path, json);
+                                }
+                            }
+                        }
+                        File.Delete(Path.Combine(outDir, "trdata_array_2.json"));
+                    }
+                    else if (x == "personal")
+                    {
+                        using (var personalNewReader = new StreamReader(personalNewFile))
+                        {
+                            var personalOrigJson = personalReader.ReadToEnd();
+                            var personalNewJson = personalNewReader.ReadToEnd();
+
+                            personalOrig = JsonSerializer.Deserialize<Personal.PersonalArray>(personalOrigJson);
+                            personalNew = JsonSerializer.Deserialize<Personal.PersonalArray>(personalNewJson);
+
+                            for (var i = 0; i < personalOrig.entry.Count; i++)
+                            {
+                                if (personalNew.entry[i] == null || personalOrig.entry[i].species.species == 987 && personalNew.entry[i].type_1 == 12 || personalOrig.entry[i].species.species == 980 && personalNew.entry[i].type_1 == 12)
+                                {
+                                    personalNew.entry[i] = personalOrig.entry[i];
+
+                                    var path = Path.Combine(outDir, "personal_array.json");
+
+                                    var json = JsonSerializer.Serialize(personalNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+
+                                    await File.WriteAllTextAsync(path, json);
+                                }
+                            }
+                        }
+                        File.Delete(Path.Combine(outDir, "personal_array_2.json"));
+                    }
+                    else if (x == "pdata")
+                    {
+                        using (var pdataNewReader = new StreamReader(pdataNewFile))
+                        {
+                            var pdataOrigJson = pdataReader.ReadToEnd();
+                            var pdataNewJson = pdataNewReader.ReadToEnd();
+
+                            pdataOrig = JsonSerializer.Deserialize<PokeData.DataArray>(pdataOrigJson);
+                            pdataNew = JsonSerializer.Deserialize<PokeData.DataArray>(pdataNewJson);
+
+                            for (var i = 0; i < pdataOrig.values.Count; i++)
+                            {
+                                if (pdataNew.values[i] == null)
+                                {
+                                    pdataNew.values[i] = pdataOrig.values[i];
+
+                                    var path = Path.Combine(outDir, "pokedata_array.json");
+
+                                    var json = JsonSerializer.Serialize(pdataNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+
+                                    await File.WriteAllTextAsync(path, json);
+                                }
+                            }
+                        }
+                        File.Delete(Path.Combine(outDir, "pokedata_array_2.json"));
+                    }
+                }
             }
         }
 
