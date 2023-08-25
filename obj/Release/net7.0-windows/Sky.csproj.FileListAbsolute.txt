@@ -59,3 +59,9 @@ C:\Users\foxna\programs\SVEdit\Sky\obj\Release\net7.0-windows\refint\Sky.dll
 C:\Users\foxna\programs\SVEdit\Sky\obj\Release\net7.0-windows\Sky.pdb
 C:\Users\foxna\programs\SVEdit\Sky\obj\Release\net7.0-windows\Sky.genruntimeconfig.cache
 C:\Users\foxna\programs\SVEdit\Sky\obj\Release\net7.0-windows\ref\Sky.dll
+C:\Users\foxna\programs\SVEdit\Sky\bin\Release\net7.0-windows\Updater.deps.json
+C:\Users\foxna\programs\SVEdit\Sky\bin\Release\net7.0-windows\Updater.runtimeconfig.json
+C:\Users\foxna\programs\SVEdit\Sky\bin\Release\net7.0-windows\Updater.exe
+C:\Users\foxna\programs\SVEdit\Sky\bin\Release\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\foxna\programs\SVEdit\Sky\bin\Release\net7.0-windows\Updater.dll
+C:\Users\foxna\programs\SVEdit\Sky\bin\Release\net7.0-windows\Updater.pdb

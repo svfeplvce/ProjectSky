@@ -8,6 +8,13 @@ using System.Text.Json;
 using System.Drawing.Text;
 using static Sky.Core.TrainerDevID;
 using CliWrap;
+using System.Text.Json.Serialization;
+using System.Text.Json.Nodes;
+using Newtonsoft.Json;
+using System.Net;
+using System.ComponentModel;
+using CliWrap.Buffered;
+using System.Diagnostics;
 
 namespace Sky
 {
@@ -50,7 +57,45 @@ namespace Sky
             exitButton.Font = new Font(pfc.Families[2], 12, FontStyle.Regular);
 
             InitConfig();
+            CheckUpdate();
             CheckBins();
+        }
+
+        private async void CheckUpdate()
+        {
+            var currentVersion = "1.1.5";
+            
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "http://developer.github.com/v3/#user-agent-required");
+                var result = await client.GetAsync("https://api.github.com/repos/svfeplvce/ProjectSky/releases/latest");
+                var response = await result.Content.ReadAsStringAsync();
+                var content = JsonConvert.DeserializeObject<Dictionary<string,object>>(response);
+                var newVersion = content["name"].ToString();
+                bool curIsNew = currentVersion == newVersion;
+
+                if (!curIsNew)
+                {
+                    var box = MessageBox.Show($"New update found (version {newVersion}). Update?", "Update Found", MessageBoxButtons.YesNo);
+                    if (box == DialogResult.Yes)
+                    {
+                        var downloadUrl = $"https://github.com/svfeplvce/ProjectSky/releases/download/v{newVersion}/ProjectSky_{newVersion}.zip";
+                        await DownloadUpdate(downloadUrl);
+                        Process.Start("Updater.exe");
+                        Close();
+                    }
+                }
+            }
+        }
+
+        private async Task DownloadUpdate(string Url)
+        {
+            using (WebClient wc = new WebClient())
+            {
+                await wc.DownloadFileTaskAsync(
+                    new Uri(Url),
+                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "new.zip"));
+            }
         }
 
         private void AddFontFromResource(PrivateFontCollection fonts, string fontResourceName)
@@ -79,7 +124,7 @@ namespace Sky
                 using (var r = new StreamReader(configDir))
                 {
                     var conf = r.ReadToEnd();
-                    config = JsonSerializer.Deserialize<Config>(conf);
+                    config = System.Text.Json.JsonSerializer.Deserialize<Config>(conf);
                     outDir = config.outPath;
                 }
             } else
@@ -96,7 +141,7 @@ namespace Sky
                     }
                 }
                 outDir = config.outPath;
-                var configJson = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true, DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull });
+                var configJson = System.Text.Json.JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true, DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull });
                 File.WriteAllText(configDir, configJson);
             }
         }
@@ -171,8 +216,8 @@ namespace Sky
                             var trdataOrigJson = trdataReader.ReadToEnd();
                             var trdataNewJson = trdataNewReader.ReadToEnd();
 
-                            trainerOrig = JsonSerializer.Deserialize<Core.Trainer.TrainerArray>(trdataOrigJson);
-                            trainerNew = JsonSerializer.Deserialize<Core.Trainer.TrainerArray>(trdataNewJson);
+                            trainerOrig = System.Text.Json.JsonSerializer.Deserialize<Core.Trainer.TrainerArray>(trdataOrigJson);
+                            trainerNew = System.Text.Json.JsonSerializer.Deserialize<Core.Trainer.TrainerArray>(trdataNewJson);
 
                             for (var i = 0; i < trainerOrig.values.Count; i++)
                             {
@@ -182,7 +227,7 @@ namespace Sky
 
                                     var path = Path.Combine(outDir, "trdata_array.json");
 
-                                    var json = JsonSerializer.Serialize(trainerNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+                                    var json = System.Text.Json.JsonSerializer.Serialize(trainerNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
 
                                     await File.WriteAllTextAsync(path, json);
                                 }
@@ -197,8 +242,8 @@ namespace Sky
                             var personalOrigJson = personalReader.ReadToEnd();
                             var personalNewJson = personalNewReader.ReadToEnd();
 
-                            personalOrig = JsonSerializer.Deserialize<Personal.PersonalArray>(personalOrigJson);
-                            personalNew = JsonSerializer.Deserialize<Personal.PersonalArray>(personalNewJson);
+                            personalOrig = System.Text.Json.JsonSerializer.Deserialize<Personal.PersonalArray>(personalOrigJson);
+                            personalNew = System.Text.Json.JsonSerializer.Deserialize<Personal.PersonalArray>(personalNewJson);
 
                             for (var i = 0; i < personalOrig.entry.Count; i++)
                             {
@@ -208,7 +253,7 @@ namespace Sky
 
                                     var path = Path.Combine(outDir, "personal_array.json");
 
-                                    var json = JsonSerializer.Serialize(personalNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+                                    var json = System.Text.Json.JsonSerializer.Serialize(personalNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
 
                                     await File.WriteAllTextAsync(path, json);
                                 }
@@ -223,8 +268,8 @@ namespace Sky
                             var pdataOrigJson = pdataReader.ReadToEnd();
                             var pdataNewJson = pdataNewReader.ReadToEnd();
 
-                            pdataOrig = JsonSerializer.Deserialize<PokeData.DataArray>(pdataOrigJson);
-                            pdataNew = JsonSerializer.Deserialize<PokeData.DataArray>(pdataNewJson);
+                            pdataOrig = System.Text.Json.JsonSerializer.Deserialize<PokeData.DataArray>(pdataOrigJson);
+                            pdataNew = System.Text.Json.JsonSerializer.Deserialize<PokeData.DataArray>(pdataNewJson);
 
                             for (var i = 0; i < pdataOrig.values.Count; i++)
                             {
@@ -234,7 +279,7 @@ namespace Sky
 
                                     var path = Path.Combine(outDir, "pokedata_array.json");
 
-                                    var json = JsonSerializer.Serialize(pdataNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+                                    var json = System.Text.Json.JsonSerializer.Serialize(pdataNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
 
                                     await File.WriteAllTextAsync(path, json);
                                 }

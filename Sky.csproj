@@ -43,6 +43,7 @@
     <PackageReference Include="DevZH.FlatBuffers" Version="1.4.0" />
     <PackageReference Include="Google.FlatBuffers" Version="23.5.26" />
     <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Siticone.Desktop.UI" Version="2.1.1" />
     <PackageReference Include="System.Text.Json" Version="7.0.3" />
   </ItemGroup>
@@ -52,6 +53,10 @@
     <EmbeddedResource Include="Assets\Fonts\BankGothic.ttf" />
     <EmbeddedResource Include="Assets\Fonts\DripIcons.ttf" />
     <EmbeddedResource Include="Assets\Fonts\Montserrat.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Updater\Updater.csproj" />
   </ItemGroup>
 
 </Project>
