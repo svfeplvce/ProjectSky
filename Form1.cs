@@ -64,27 +64,33 @@ namespace Sky
         private async void CheckUpdate()
         {
             var currentVersion = "1.1.5";
-            
-            using (var client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "http://developer.github.com/v3/#user-agent-required");
-                var result = await client.GetAsync("https://api.github.com/repos/svfeplvce/ProjectSky/releases/latest");
-                var response = await result.Content.ReadAsStringAsync();
-                var content = JsonConvert.DeserializeObject<Dictionary<string,object>>(response);
-                var newVersion = content["name"].ToString();
-                bool curIsNew = currentVersion == newVersion;
 
-                if (!curIsNew)
+            try
+            {
+                using (var client = new HttpClient())
                 {
-                    var box = MessageBox.Show($"New update found (version {newVersion}). Update?", "Update Found", MessageBoxButtons.YesNo);
-                    if (box == DialogResult.Yes)
+                    client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "http://developer.github.com/v3/#user-agent-required");
+                    var result = await client.GetAsync("https://api.github.com/repos/svfeplvce/ProjectSky/releases/latest");
+                    var response = await result.Content.ReadAsStringAsync();
+                    var content = JsonConvert.DeserializeObject<Dictionary<string, object>>(response);
+                    var newVersion = content["name"].ToString();
+                    bool curIsNew = currentVersion == newVersion;
+
+                    if (!curIsNew)
                     {
-                        var downloadUrl = $"https://github.com/svfeplvce/ProjectSky/releases/download/v{newVersion}/ProjectSky_{newVersion}.zip";
-                        await DownloadUpdate(downloadUrl);
-                        Process.Start("Updater.exe");
-                        Close();
+                        var box = MessageBox.Show($"New update found (version {newVersion}). Update?", "Update Found", MessageBoxButtons.YesNo);
+                        if (box == DialogResult.Yes)
+                        {
+                            var downloadUrl = $"https://github.com/svfeplvce/ProjectSky/releases/download/v{newVersion}/ProjectSky_{newVersion}.zip";
+                            await DownloadUpdate(downloadUrl);
+                            Process.Start("Updater.exe");
+                            Close();
+                        }
                     }
                 }
+            } catch
+            {
+                return;
             }
         }
 
