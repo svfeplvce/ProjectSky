@@ -63,7 +63,7 @@ namespace Sky
 
         private async void CheckUpdate()
         {
-            var currentVersion = "1.1.5";
+            var currentVersion = "1.1.6";
 
             try
             {
