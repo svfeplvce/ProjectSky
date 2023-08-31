@@ -1,0 +1,45 @@
+﻿<Application x:Class="ProjectSky.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ProjectSky"
+             xmlns:viewModel="clr-namespace:ProjectSky.ViewModels"
+             xmlns:view="clr-namespace:ProjectSky.Views">
+    <Application.Resources>
+     
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="Styles/ComboBoxStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <FontFamily x:Key="DripIcons">/ProjectSky;component/Assets/Fonts/#dripicons-v2</FontFamily>
+            <FontFamily x:Key="BoldFont">/ProjectSky;component/Assets/Fonts/#Akira Expanded</FontFamily>
+            <FontFamily x:Key="Gill">/ProjectSky;component/Assets/Fonts/#Gill Sans</FontFamily>
+            <FontFamily x:Key="GillBold">/ProjectSky;component/Assets/Fonts/#Gill Sans Bold</FontFamily>
+
+            <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type TypeName=viewModel:SelectorViewModel}">
+                <view:SelectorView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type TypeName=viewModel:PokeEditorViewModel}">
+                <view:PokeEditorView/>
+            </DataTemplate>
+            
+            <!--
+            <DataTemplate DataType="{x:Type TypeName=viewModel:TrainerViewModel}">
+                <view:TrainerView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type TypeName=viewModel:MoveViewModel}">
+                <view:MoveView/>
+            </DataTemplate>-->
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,2156 @@
+{
+  "trainers": [
+    {
+      "dev_id": "00_test_data",
+      "name": "Test Trainer"
+    },
+    {
+      "dev_id": "area01_trainer_cleaning",
+      "name": "Ruben"
+    },
+    {
+      "dev_id": "area01_trainer_deliverer",
+      "name": "Iker"
+    },
+    {
+      "dev_id": "area01_trainer_karate",
+      "name": "Alejandro"
+    },
+    {
+      "dev_id": "area01_trainer_mountain",
+      "name": "Lucia"
+    },
+    {
+      "dev_id": "area01_trainer_mountain_1",
+      "name": "Paula"
+    },
+    {
+      "dev_id": "area01_trainer_sch_boy",
+      "name": "Axel"
+    },
+    {
+      "dev_id": "area01_trainer_sch_girl",
+      "name": "Carlota"
+    },
+    {
+      "dev_id": "area01_trainer_sch_infant_f",
+      "name": "Zahira"
+    },
+    {
+      "dev_id": "area01_trainer_sch_infant_m",
+      "name": "Pere"
+    },
+    {
+      "dev_id": "area01_trainer_tanpan",
+      "name": "Elian"
+    },
+    {
+      "dev_id": "area01_trainer_tanpan_1",
+      "name": "Luka"
+    },
+    {
+      "dev_id": "area01_trainer_waiter",
+      "name": "Waiter"
+    },
+    {
+      "dev_id": "area01_trainer_waitress",
+      "name": "Waitress"
+    },
+    {
+      "dev_id": "area01_trainer_worker",
+      "name": "Alberto"
+    },
+    {
+      "dev_id": "area15_trainer_sch_young_f_1",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area03_trainer_sch_boy",
+      "name": "Jaxon"
+    },
+    {
+      "dev_id": "area03_trainer_taxidriver",
+      "name": "Paco"
+    },
+    {
+      "dev_id": "area04_trainer_backpacker",
+      "name": "Alex"
+    },
+    {
+      "dev_id": "area04_trainer_businessman",
+      "name": "David"
+    },
+    {
+      "dev_id": "area04_trainer_businessman_1",
+      "name": "Sergio"
+    },
+    {
+      "dev_id": "area04_trainer_chef",
+      "name": "Angelines"
+    },
+    {
+      "dev_id": "area04_trainer_deliverer",
+      "name": "Angel"
+    },
+    {
+      "dev_id": "area04_trainer_deliverer_1",
+      "name": "Deliverer"
+    },
+    {
+      "dev_id": "area04_trainer_karate",
+      "name": "Karate"
+    },
+    {
+      "dev_id": "area04_trainer_mania",
+      "name": "Simon"
+    },
+    {
+      "dev_id": "area04_trainer_sch_boy",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area04_trainer_sch_girl",
+      "name": "Noa"
+    },
+    {
+      "dev_id": "area04_trainer_sch_infant_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area04_trainer_sch_infant_m",
+      "name": "Alessandro"
+    },
+    {
+      "dev_id": "area04_trainer_sch_middle_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area04_trainer_sch_middle_f_1",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area04_trainer_sch_middle_m",
+      "name": "Raul"
+    },
+    {
+      "dev_id": "area04_trainer_sch_middle_m_1",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area04_trainer_sch_senior_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area04_trainer_sch_senior_m",
+      "name": "Manuel"
+    },
+    {
+      "dev_id": "area04_trainer_sch_young_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area04_trainer_sch_young_m",
+      "name": "Carlos"
+    },
+    {
+      "dev_id": "area04_trainer_tanpan",
+      "name": "Roi"
+    },
+    {
+      "dev_id": "area04_trainer_tanpan_1",
+      "name": "Aday"
+    },
+    {
+      "dev_id": "area04_trainer_waiter",
+      "name": "Waiter"
+    },
+    {
+      "dev_id": "area04_trainer_waitress",
+      "name": "Alba"
+    },
+    {
+      "dev_id": "area05_trainer_backpacker",
+      "name": "Jaime"
+    },
+    {
+      "dev_id": "area05_trainer_backpacker_1",
+      "name": "Backpacker"
+    },
+    {
+      "dev_id": "area05_trainer_deliverer",
+      "name": "Deliverer"
+    },
+    {
+      "dev_id": "area05_trainer_deliverer_1",
+      "name": "Deliverer"
+    },
+    {
+      "dev_id": "area05_trainer_karate",
+      "name": "Iago"
+    },
+    {
+      "dev_id": "area05_trainer_karate_1",
+      "name": "Karate"
+    },
+    {
+      "dev_id": "area05_trainer_karate_2",
+      "name": "Armando"
+    },
+    {
+      "dev_id": "area05_trainer_mania",
+      "name": "Matias"
+    },
+    {
+      "dev_id": "area05_trainer_mountain",
+      "name": "Carla"
+    },
+    {
+      "dev_id": "area05_trainer_mountain_1",
+      "name": "Mountain"
+    },
+    {
+      "dev_id": "area05_trainer_mountain_2",
+      "name": "Mountain"
+    },
+    {
+      "dev_id": "area05_trainer_sch_boy",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area05_trainer_sch_girl",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area05_trainer_sch_infant_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area05_trainer_sch_infant_m",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area05_trainer_sch_middle_f",
+      "name": "Patricia"
+    },
+    {
+      "dev_id": "area05_trainer_sch_middle_m",
+      "name": "Pascal"
+    },
+    {
+      "dev_id": "area05_trainer_sch_young_f",
+      "name": "Isona"
+    },
+    {
+      "dev_id": "area05_trainer_sch_young_f_1",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area05_trainer_sch_young_m",
+      "name": "Marc"
+    },
+    {
+      "dev_id": "area05_trainer_sch_young_m_1",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area05_trainer_tanpan",
+      "name": "Julen"
+    },
+    {
+      "dev_id": "area05_trainer_tanpan_2",
+      "name": "Unnamed Trainer"
+    },
+    {
+      "dev_id": "area06_trainer_backpacker",
+      "name": "Pau"
+    },
+    {
+      "dev_id": "area06_trainer_backpacker_1",
+      "name": "Aitor"
+    },
+    {
+      "dev_id": "area06_trainer_deliverer",
+      "name": "Joel"
+    },
+    {
+      "dev_id": "area06_trainer_deliverer_1",
+      "name": "Izan"
+    },
+    {
+      "dev_id": "area06_trainer_dragontamer",
+      "name": "Tamara"
+    },
+    {
+      "dev_id": "area06_trainer_dragontamer_1",
+      "name": "Dragon Tamer"
+    },
+    {
+      "dev_id": "area06_trainer_karate",
+      "name": "Jacobo"
+    },
+    {
+      "dev_id": "area06_trainer_mountain",
+      "name": "Rocio"
+    },
+    {
+      "dev_id": "area06_trainer_mountain_1",
+      "name": "Daniela"
+    },
+    {
+      "dev_id": "area06_trainer_researcher",
+      "name": "Domingo"
+    },
+    {
+      "dev_id": "area06_trainer_sch_boy",
+      "name": "Andres"
+    },
+    {
+      "dev_id": "area06_trainer_sch_boy_1",
+      "name": "Alexis"
+    },
+    {
+      "dev_id": "area06_trainer_sch_girl",
+      "name": "Eloisa"
+    },
+    {
+      "dev_id": "area06_trainer_sch_infant_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area06_trainer_sch_infant_m",
+      "name": "Paul"
+    },
+    {
+      "dev_id": "area06_trainer_sch_young_f",
+      "name": "Yolanda"
+    },
+    {
+      "dev_id": "area06_trainer_sch_young_m",
+      "name": "Alan"
+    },
+    {
+      "dev_id": "area06_trainer_tanpan",
+      "name": "Adan"
+    },
+    {
+      "dev_id": "area06_trainer_worker",
+      "name": "Worker"
+    },
+    {
+      "dev_id": "area06_trainer_worker_1",
+      "name": "Eric"
+    },
+    {
+      "dev_id": "area07_trainer_cleaning",
+      "name": "Ricard"
+    },
+    {
+      "dev_id": "area07_trainer_deliverer",
+      "name": "Deliverer"
+    },
+    {
+      "dev_id": "area07_trainer_karate",
+      "name": "Antoni"
+    },
+    {
+      "dev_id": "area07_trainer_karate_1",
+      "name": "Roman"
+    },
+    {
+      "dev_id": "area07_trainer_mania",
+      "name": "Federico"
+    },
+    {
+      "dev_id": "area07_trainer_mania_1",
+      "name": "Iban"
+    },
+    {
+      "dev_id": "area07_trainer_model",
+      "name": "Ainhoa"
+    },
+    {
+      "dev_id": "area07_trainer_mountain",
+      "name": "Mountain"
+    },
+    {
+      "dev_id": "area07_trainer_mountain_1",
+      "name": "Marina"
+    },
+    {
+      "dev_id": "area07_trainer_mountain_2",
+      "name": "Nerea"
+    },
+    {
+      "dev_id": "area07_trainer_sch_boy_1",
+      "name": "Schoolboy"
+    },
+    {
+      "dev_id": "area07_trainer_sch_child_f",
+      "name": "Elia"
+    },
+    {
+      "dev_id": "area07_trainer_sch_child_m",
+      "name": "Alain"
+    },
+    {
+      "dev_id": "area07_trainer_sch_girl",
+      "name": "Schoolgirl"
+    },
+    {
+      "dev_id": "area07_trainer_sch_girl_1",
+      "name": "Vega"
+    },
+    {
+      "dev_id": "area07_trainer_sch_young_f",
+      "name": "Lorena"
+    },
+    {
+      "dev_id": "area07_trainer_sch_young_f_1",
+      "name": "Adriana"
+    },
+    {
+      "dev_id": "area07_trainer_sch_young_m",
+      "name": "Rodrigo"
+    },
+    {
+      "dev_id": "area07_trainer_waiter",
+      "name": "Waiter"
+    },
+    {
+      "dev_id": "area07_trainer_waitress",
+      "name": "Solia"
+    },
+    {
+      "dev_id": "area07_trainer_worker",
+      "name": "Marius"
+    },
+    {
+      "dev_id": "area08_trainer_artist",
+      "name": "Laura"
+    },
+    {
+      "dev_id": "area08_trainer_artist_1",
+      "name": "Irene"
+    },
+    {
+      "dev_id": "area08_trainer_backpacker",
+      "name": "Samuel"
+    },
+    {
+      "dev_id": "area08_trainer_businessman",
+      "name": "Severino"
+    },
+    {
+      "dev_id": "area08_trainer_businessman_1",
+      "name": "Adrian"
+    },
+    {
+      "dev_id": "area08_trainer_karate",
+      "name": "Karate"
+    },
+    {
+      "dev_id": "area08_trainer_mania",
+      "name": "Arnau"
+    },
+    {
+      "dev_id": "area08_trainer_model",
+      "name": "Andrea"
+    },
+    {
+      "dev_id": "area08_trainer_musician",
+      "name": "Noelia"
+    },
+    {
+      "dev_id": "area08_trainer_musician_1",
+      "name": "Alecia"
+    },
+    {
+      "dev_id": "area08_trainer_sch_boy",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area08_trainer_sch_boy_1",
+      "name": "Rayan"
+    },
+    {
+      "dev_id": "area08_trainer_sch_girl",
+      "name": "Martina"
+    },
+    {
+      "dev_id": "area08_trainer_sch_girl_1",
+      "name": "Nora"
+    },
+    {
+      "dev_id": "area08_trainer_sch_infant_f",
+      "name": "Amaia"
+    },
+    {
+      "dev_id": "area08_trainer_sch_infant_m",
+      "name": "Benjamin"
+    },
+    {
+      "dev_id": "area08_trainer_sch_middle_f",
+      "name": "Cristina"
+    },
+    {
+      "dev_id": "area08_trainer_sch_middle_m",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area08_trainer_sch_young_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area08_trainer_sch_young_f_1",
+      "name": "Clara"
+    },
+    {
+      "dev_id": "area08_trainer_sch_young_m",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area08_trainer_sch_young_m_1",
+      "name": "Miguel"
+    },
+    {
+      "dev_id": "area08_trainer_tanpan",
+      "name": "Unnamed Trainer"
+    },
+    {
+      "dev_id": "area08_trainer_tanpan_1",
+      "name": "Unnamed Trainer"
+    },
+    {
+      "dev_id": "area09_trainer_artist",
+      "name": "Artist"
+    },
+    {
+      "dev_id": "area09_trainer_backpacker_2",
+      "name": "Asier"
+    },
+    {
+      "dev_id": "area09_trainer_backpacker_3",
+      "name": "Mateo"
+    },
+    {
+      "dev_id": "area09_trainer_backpacker_4",
+      "name": "Kevin"
+    },
+    {
+      "dev_id": "area09_trainer_deliverer_2",
+      "name": "Ahmed"
+    },
+    {
+      "dev_id": "area09_trainer_deliverer_3",
+      "name": "Adam"
+    },
+    {
+      "dev_id": "area09_trainer_dragontamer",
+      "name": "Alejandra"
+    },
+    {
+      "dev_id": "area09_trainer_karate_3",
+      "name": "Esteban"
+    },
+    {
+      "dev_id": "area09_trainer_karate_4",
+      "name": "Jon"
+    },
+    {
+      "dev_id": "area09_trainer_mania_1",
+      "name": "PokeManiac"
+    },
+    {
+      "dev_id": "area09_trainer_model",
+      "name": "Candina"
+    },
+    {
+      "dev_id": "area09_trainer_mountain_3",
+      "name": "Mountain"
+    },
+    {
+      "dev_id": "area09_trainer_musician",
+      "name": "Mireia"
+    },
+    {
+      "dev_id": "area09_trainer_researcher",
+      "name": "Felipe"
+    },
+    {
+      "dev_id": "area09_trainer_researcher_1",
+      "name": "Nicolas"
+    },
+    {
+      "dev_id": "area09_trainer_sch_boy_1",
+      "name": "Schoolboy"
+    },
+    {
+      "dev_id": "area09_trainer_sch_boy_2",
+      "name": "Leo"
+    },
+    {
+      "dev_id": "area09_trainer_sch_girl_1",
+      "name": "Maya"
+    },
+    {
+      "dev_id": "area09_trainer_sch_girl_2",
+      "name": "Maren"
+    },
+    {
+      "dev_id": "area09_trainer_sch_infant_f_1",
+      "name": "Schoolgirl"
+    },
+    {
+      "dev_id": "area09_trainer_sch_infant_f_2",
+      "name": "Yasmin"
+    },
+    {
+      "dev_id": "area09_trainer_sch_infant_m_1",
+      "name": "Neizan"
+    },
+    {
+      "dev_id": "area09_trainer_sch_middle_f_1",
+      "name": "Elena"
+    },
+    {
+      "dev_id": "area09_trainer_sch_middle_f_2",
+      "name": "Nuria"
+    },
+    {
+      "dev_id": "area09_trainer_sch_middle_m_1",
+      "name": "Schoolboy"
+    },
+    {
+      "dev_id": "area09_trainer_sch_middle_m_2",
+      "name": "Alfredo"
+    },
+    {
+      "dev_id": "area09_trainer_sch_middle_m_3",
+      "name": "Schoolboy"
+    },
+    {
+      "dev_id": "area09_trainer_sch_senior_f",
+      "name": "Schoolgirl"
+    },
+    {
+      "dev_id": "area09_trainer_sch_senior_f_1",
+      "name": "Isabel"
+    },
+    {
+      "dev_id": "area09_trainer_sch_senior_m",
+      "name": "Schoolboy"
+    },
+    {
+      "dev_id": "area09_trainer_sch_senior_m_1",
+      "name": "Enrique"
+    },
+    {
+      "dev_id": "area09_trainer_sch_young_f_2",
+      "name": "Aroa"
+    },
+    {
+      "dev_id": "area09_trainer_sch_young_m_2",
+      "name": "Yeray"
+    },
+    {
+      "dev_id": "area09_trainer_tanpan_1",
+      "name": "Tristan"
+    },
+    {
+      "dev_id": "area09_trainer_tanpan_3",
+      "name": "Hernan"
+    },
+    {
+      "dev_id": "area09_trainer_taxidriver",
+      "name": "Oriol"
+    },
+    {
+      "dev_id": "area10_trainer_artist",
+      "name": "Unnamed Artist"
+    },
+    {
+      "dev_id": "area10_trainer_backpacker",
+      "name": "Unnamed Backpacker"
+    },
+    {
+      "dev_id": "area10_trainer_backpacker_1",
+      "name": "Unnamed Backpacker"
+    },
+    {
+      "dev_id": "area10_trainer_businessman",
+      "name": "Unnamed Businessman"
+    },
+    {
+      "dev_id": "area10_trainer_deliverer",
+      "name": "Unnamed Deliverer"
+    },
+    {
+      "dev_id": "area10_trainer_dragontamer",
+      "name": "Unnamed Dragon Tamer"
+    },
+    {
+      "dev_id": "area10_trainer_karate",
+      "name": "Fabio"
+    },
+    {
+      "dev_id": "area10_trainer_karate_1",
+      "name": "Elias"
+    },
+    {
+      "dev_id": "area10_trainer_mania",
+      "name": "Gregorio"
+    },
+    {
+      "dev_id": "area10_trainer_mania_1",
+      "name": "Unnamed PokeManiac"
+    },
+    {
+      "dev_id": "area10_trainer_musician",
+      "name": "Claudia"
+    },
+    {
+      "dev_id": "area10_trainer_researcher",
+      "name": "Unnamed Researcher"
+    },
+    {
+      "dev_id": "area10_trainer_researcher_1",
+      "name": "Renardo"
+    },
+    {
+      "dev_id": "area10_trainer_sch_middle_f",
+      "name": "Raquel"
+    },
+    {
+      "dev_id": "area10_trainer_sch_middle_m",
+      "name": "Luis"
+    },
+    {
+      "dev_id": "area10_trainer_sch_young_f",
+      "name": "Belen"
+    },
+    {
+      "dev_id": "area10_trainer_sch_young_m",
+      "name": "Ismael"
+    },
+    {
+      "dev_id": "area10_trainer_tanpan",
+      "name": "Beltran"
+    },
+    {
+      "dev_id": "area11_trainer_chef",
+      "name": "Valentina"
+    },
+    {
+      "dev_id": "area11_trainer_deliverer",
+      "name": "Joaquin"
+    },
+    {
+      "dev_id": "area11_trainer_dragontamer",
+      "name": "Virginia"
+    },
+    {
+      "dev_id": "area11_trainer_mania",
+      "name": "Mikel"
+    },
+    {
+      "dev_id": "area11_trainer_mountain",
+      "name": "Fatima"
+    },
+    {
+      "dev_id": "area11_trainer_researcher",
+      "name": "Juan"
+    },
+    {
+      "dev_id": "area11_trainer_sch_child_m",
+      "name": "Yassin"
+    },
+    {
+      "dev_id": "area11_trainer_sch_infant_f",
+      "name": "Aurora"
+    },
+    {
+      "dev_id": "area11_trainer_sch_young_f",
+      "name": "Abril"
+    },
+    {
+      "dev_id": "area11_trainer_sch_young_m",
+      "name": "Ricardo"
+    },
+    {
+      "dev_id": "area11_trainer_sch_young_m_1",
+      "name": "Leandro"
+    },
+    {
+      "dev_id": "area11_trainer_waiter",
+      "name": "Jan"
+    },
+    {
+      "dev_id": "area11_trainer_waitress",
+      "name": "Aina"
+    },
+    {
+      "dev_id": "area12_trainer_businessman",
+      "name": "Ivan"
+    },
+    {
+      "dev_id": "area12_trainer_businessman_1",
+      "name": "Daniel"
+    },
+    {
+      "dev_id": "area12_trainer_cleaning",
+      "name": "Tomas"
+    },
+    {
+      "dev_id": "area12_trainer_deliverer",
+      "name": "Alfonso"
+    },
+    {
+      "dev_id": "area12_trainer_model",
+      "name": "Salma"
+    },
+    {
+      "dev_id": "area12_trainer_mountain",
+      "name": "Mar"
+    },
+    {
+      "dev_id": "area12_trainer_mountain_1",
+      "name": "Estela"
+    },
+    {
+      "dev_id": "area12_trainer_musician",
+      "name": "Sheila"
+    },
+    {
+      "dev_id": "area12_trainer_researcher",
+      "name": "Isaac"
+    },
+    {
+      "dev_id": "area12_trainer_sch_girl",
+      "name": "Coral"
+    },
+    {
+      "dev_id": "area12_trainer_sch_middle_m",
+      "name": "Emilio"
+    },
+    {
+      "dev_id": "area12_trainer_sch_senior_f",
+      "name": "Maria"
+    },
+    {
+      "dev_id": "area12_trainer_sch_senior_m",
+      "name": "Vicente"
+    },
+    {
+      "dev_id": "area12_trainer_waiter",
+      "name": "Ander"
+    },
+    {
+      "dev_id": "area12_trainer_waitress",
+      "name": "Elsa"
+    },
+    {
+      "dev_id": "area13_trainer_deliverer",
+      "name": "Pol"
+    },
+    {
+      "dev_id": "area13_trainer_sch_boy",
+      "name": "Unai"
+    },
+    {
+      "dev_id": "area13_trainer_sch_girl",
+      "name": "Malak"
+    },
+    {
+      "dev_id": "area14_trainer_backpacker",
+      "name": "Unnamed Backpacker"
+    },
+    {
+      "dev_id": "area14_trainer_backpacker_1",
+      "name": "Lander"
+    },
+    {
+      "dev_id": "area14_trainer_dragontamer",
+      "name": "Eva"
+    },
+    {
+      "dev_id": "area14_trainer_dragontamer_1",
+      "name": "Marta"
+    },
+    {
+      "dev_id": "area14_trainer_karate",
+      "name": "Herminio"
+    },
+    {
+      "dev_id": "area14_trainer_karate_1",
+      "name": "Unnamed Karate"
+    },
+    {
+      "dev_id": "area14_trainer_mania",
+      "name": "Dario"
+    },
+    {
+      "dev_id": "area14_trainer_mania_1",
+      "name": "Unnamed PokeManiac"
+    },
+    {
+      "dev_id": "area14_trainer_mountain",
+      "name": "Angela"
+    },
+    {
+      "dev_id": "area14_trainer_mountain_1",
+      "name": "Celia"
+    },
+    {
+      "dev_id": "area14_trainer_musician",
+      "name": "Unnamed Musician"
+    },
+    {
+      "dev_id": "area14_trainer_musician_1",
+      "name": "Lidia"
+    },
+    {
+      "dev_id": "area14_trainer_sch_infant_f",
+      "name": "Lea"
+    },
+    {
+      "dev_id": "area14_trainer_sch_infant_m",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area14_trainer_sch_middle_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area14_trainer_sch_middle_f_1",
+      "name": "Veronica"
+    },
+    {
+      "dev_id": "area14_trainer_sch_middle_m",
+      "name": "Ernesto"
+    },
+    {
+      "dev_id": "area14_trainer_sch_middle_m_1",
+      "name": "Lorenzo"
+    },
+    {
+      "dev_id": "area14_trainer_sch_senior_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area14_trainer_sch_senior_m",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area14_trainer_sch_young_f",
+      "name": "Esther"
+    },
+    {
+      "dev_id": "area14_trainer_sch_young_f_1",
+      "name": "Aitana"
+    },
+    {
+      "dev_id": "area14_trainer_sch_young_f_2",
+      "name": "Judith"
+    },
+    {
+      "dev_id": "area14_trainer_sch_young_m",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area14_trainer_sch_young_m_1",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area14_trainer_sch_young_m_2",
+      "name": "Gerard"
+    },
+    {
+      "dev_id": "area14_trainer_worker",
+      "name": "Unnamed Worker"
+    },
+    {
+      "dev_id": "area14_trainer_worker_1",
+      "name": "Oliver"
+    },
+    {
+      "dev_id": "area14_trainer_worker_2",
+      "name": "Efren"
+    },
+    {
+      "dev_id": "area14_trainer_worker_3",
+      "name": "Unnamed Worker"
+    },
+    {
+      "dev_id": "area14_trainer_worker_4",
+      "name": "Cristobal"
+    },
+    {
+      "dev_id": "area15_trainer_backpacker",
+      "name": "Unnamed Backpacker"
+    },
+    {
+      "dev_id": "area15_trainer_backpacker_1",
+      "name": "Unnamed Backpacker"
+    },
+    {
+      "dev_id": "area15_trainer_businessman",
+      "name": "Unnamed Businessman"
+    },
+    {
+      "dev_id": "area15_trainer_businessman_1",
+      "name": "Mario"
+    },
+    {
+      "dev_id": "area15_trainer_chef",
+      "name": "Eleonor"
+    },
+    {
+      "dev_id": "area15_trainer_cleaning",
+      "name": "Salvador"
+    },
+    {
+      "dev_id": "area15_trainer_dragontamer",
+      "name": "Unnamed Dragon Tamer"
+    },
+    {
+      "dev_id": "area15_trainer_dragontamer_1",
+      "name": "Laia"
+    },
+    {
+      "dev_id": "area15_trainer_sch_infant_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area15_trainer_sch_infant_m",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area15_trainer_worker",
+      "name": "Unnamed Worker"
+    },
+    {
+      "dev_id": "area15_trainer_sch_middle_m",
+      "name": "Xavier"
+    },
+    {
+      "dev_id": "area15_trainer_sch_senior_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area15_trainer_sch_senior_f_1",
+      "name": "Mercedes"
+    },
+    {
+      "dev_id": "area15_trainer_sch_senior_m",
+      "name": "Unnamed Schoolboy"
+    },
+    {
+      "dev_id": "area15_trainer_sch_senior_m_1",
+      "name": "Jorge"
+    },
+    {
+      "dev_id": "area15_trainer_sch_young_f",
+      "name": "Unnamed Schoolgirl"
+    },
+    {
+      "dev_id": "area15_trainer_sch_young_f_1",
+      "name": "Petra"
+    },
+    {
+      "dev_id": "area15_trainer_sch_young_m",
+      "name": "Valentin"
+    },
+    {
+      "dev_id": "area15_trainer_sch_young_m_1",
+      "name": "Felix"
+    },
+    {
+      "dev_id": "area15_trainer_taxidriver",
+      "name": "Unnamed Taxi Driver"
+    },
+    {
+      "dev_id": "area15_trainer_taxidriver_1",
+      "name": "Pablo"
+    },
+    {
+      "dev_id": "area15_trainer_waiter",
+      "name": "Saul"
+    },
+    {
+      "dev_id": "area15_trainer_waitress",
+      "name": "Isabella"
+    },
+    {
+      "dev_id": "area15_trainer_worker",
+      "name": "Abel"
+    },
+    {
+      "dev_id": "area15_trainer_worker_1",
+      "name": "Javier"
+    },
+    {
+      "dev_id": "area16_trainer_backpacker",
+      "name": "Jonathan"
+    },
+    {
+      "dev_id": "area16_trainer_backpacker_1",
+      "name": "Arturo"
+    },
+    {
+      "dev_id": "area16_trainer_businessman",
+      "name": "Cristian"
+    },
+    {
+      "dev_id": "area16_trainer_dragontamer_1",
+      "name": "Rebeca"
+    },
+    {
+      "dev_id": "area16_trainer_sch_infant_f",
+      "name": "Lina"
+    },
+    {
+      "dev_id": "area16_trainer_sch_infant_m",
+      "name": "Anas"
+    },
+    {
+      "dev_id": "area16_trainer_sch_middle_f",
+      "name": "Monica"
+    },
+    {
+      "dev_id": "area16_trainer_sch_senior_f",
+      "name": "Rosario"
+    },
+    {
+      "dev_id": "area16_trainer_sch_senior_m",
+      "name": "Ramon"
+    },
+    {
+      "dev_id": "area16_trainer_sch_young_f",
+      "name": "Beatriz"
+    },
+    {
+      "dev_id": "area16_trainer_taxidriver",
+      "name": "Omar"
+    },
+    {
+      "dev_id": "area17_trainer_artist",
+      "name": "Carolina"
+    },
+    {
+      "dev_id": "area17_trainer_artist_1",
+      "name": "Tania"
+    },
+    {
+      "dev_id": "area17_trainer_deliverer",
+      "name": "Andre"
+    },
+    {
+      "dev_id": "area17_trainer_deliverer_1",
+      "name": "Martin"
+    },
+    {
+      "dev_id": "area17_trainer_dragontamer",
+      "name": "Luisa"
+    },
+    {
+      "dev_id": "area17_trainer_dragontamer_1",
+      "name": "Anna"
+    },
+    {
+      "dev_id": "area17_trainer_karate",
+      "name": "Sayid"
+    },
+    {
+      "dev_id": "area17_trainer_karate_1",
+      "name": "Roger"
+    },
+    {
+      "dev_id": "area17_trainer_mania",
+      "name": "Youssef"
+    },
+    {
+      "dev_id": "area17_trainer_mountain_1",
+      "name": "Helena"
+    },
+    {
+      "dev_id": "area17_trainer_mountain_2",
+      "name": "Leire"
+    },
+    {
+      "dev_id": "area17_trainer_mountain_3",
+      "name": "Nancy"
+    },
+    {
+      "dev_id": "area17_trainer_musician",
+      "name": "Sara"
+    },
+    {
+      "dev_id": "area17_trainer_musician_1",
+      "name": "Julia"
+    },
+    {
+      "dev_id": "area17_trainer_sch_boy",
+      "name": "Teo"
+    },
+    {
+      "dev_id": "area17_trainer_sch_boy_1",
+      "name": "Max"
+    },
+    {
+      "dev_id": "area17_trainer_sch_child_f",
+      "name": "Triana"
+    },
+    {
+      "dev_id": "area17_trainer_sch_child_m",
+      "name": "Mark"
+    },
+    {
+      "dev_id": "area17_trainer_sch_child_m_1",
+      "name": "Denis"
+    },
+    {
+      "dev_id": "area17_trainer_sch_girl",
+      "name": "Alma"
+    },
+    {
+      "dev_id": "area17_trainer_sch_girl_1",
+      "name": "Jana"
+    },
+    {
+      "dev_id": "area17_trainer_sch_middle_f",
+      "name": "Sandra"
+    },
+    {
+      "dev_id": "area17_trainer_sch_middle_f_1",
+      "name": "Silvia"
+    },
+    {
+      "dev_id": "area17_trainer_sch_middle_m",
+      "name": "Mihai"
+    },
+    {
+      "dev_id": "area17_trainer_sch_middle_m_1",
+      "name": "Abraham"
+    },
+    {
+      "dev_id": "area18_trainer_chef",
+      "name": "Irma"
+    },
+    {
+      "dev_id": "area18_trainer_dragontamer",
+      "name": "Leticia"
+    },
+    {
+      "dev_id": "area18_trainer_model",
+      "name": "Yaiza"
+    },
+    {
+      "dev_id": "area18_trainer_mountain",
+      "name": "Luna"
+    },
+    {
+      "dev_id": "area18_trainer_sch_middle_f",
+      "name": "Natalia"
+    },
+    {
+      "dev_id": "area18_trainer_sch_senior_f",
+      "name": "Dolores"
+    },
+    {
+      "dev_id": "area18_trainer_sch_senior_m",
+      "name": "Jose"
+    },
+    {
+      "dev_id": "area18_trainer_sch_young_m",
+      "name": "Aimar"
+    },
+    {
+      "dev_id": "area18_trainer_taxidriver",
+      "name": "Oscar"
+    },
+    {
+      "dev_id": "area19_trainer_backpacker",
+      "name": "Nil"
+    },
+    {
+      "dev_id": "area19_trainer_backpacker_1",
+      "name": "Markel"
+    },
+    {
+      "dev_id": "area19_trainer_deliverer",
+      "name": "Xabier"
+    },
+    {
+      "dev_id": "area19_trainer_deliverer_1",
+      "name": "Edgar"
+    },
+    {
+      "dev_id": "area19_trainer_dragontamer",
+      "name": "Elisabet"
+    },
+    {
+      "dev_id": "area19_trainer_karate",
+      "name": "Sebastian"
+    },
+    {
+      "dev_id": "area19_trainer_karate_1",
+      "name": "Marcos"
+    },
+    {
+      "dev_id": "area19_trainer_mountain",
+      "name": "Manuela"
+    },
+    {
+      "dev_id": "area19_trainer_researcher",
+      "name": "Roberto"
+    },
+    {
+      "dev_id": "area19_trainer_researcher_1",
+      "name": "Ignacio"
+    },
+    {
+      "dev_id": "area19_trainer_sch_middle_m",
+      "name": "Eduardo"
+    },
+    {
+      "dev_id": "area19_trainer_sch_young_f",
+      "name": "Valeria"
+    },
+    {
+      "dev_id": "area19_trainer_sch_young_m",
+      "name": "Vidal"
+    },
+    {
+      "dev_id": "area20_trainer_artist",
+      "name": "Desiree"
+    },
+    {
+      "dev_id": "area20_trainer_mania",
+      "name": "Jordi"
+    },
+    {
+      "dev_id": "area20_trainer_musician",
+      "name": "Tatiana"
+    },
+    {
+      "dev_id": "area20_trainer_ol",
+      "name": "Ester"
+    },
+    {
+      "dev_id": "area20_trainer_sch_young_f",
+      "name": "Jimena"
+    },
+    {
+      "dev_id": "area20_trainer_sch_young_m",
+      "name": "Stefan"
+    },
+    {
+      "dev_id": "area21_trainer_backpacker",
+      "name": "Julio"
+    },
+    {
+      "dev_id": "area21_trainer_dragontamer",
+      "name": "Paloma"
+    },
+    {
+      "dev_id": "area21_trainer_dragontamer_1",
+      "name": "Gema"
+    },
+    {
+      "dev_id": "area21_trainer_dragontamer_2",
+      "name": "Diana"
+    },
+    {
+      "dev_id": "area21_trainer_mania",
+      "name": "Guillermo"
+    },
+    {
+      "dev_id": "area21_trainer_mountain",
+      "name": "Yanira"
+    },
+    {
+      "dev_id": "area21_trainer_ol",
+      "name": "Susana"
+    },
+    {
+      "dev_id": "area21_trainer_sch_boy",
+      "name": "Aleix"
+    },
+    {
+      "dev_id": "area21_trainer_sch_girl",
+      "name": "Naia"
+    },
+    {
+      "dev_id": "area21_trainer_sch_senior_m",
+      "name": "Pedro"
+    },
+    {
+      "dev_id": "area21_trainer_sch_young_f",
+      "name": "Victoria"
+    },
+    {
+      "dev_id": "area22_trainer_artist",
+      "name": "Blanca"
+    },
+    {
+      "dev_id": "area22_trainer_chef",
+      "name": "Lola"
+    },
+    {
+      "dev_id": "area22_trainer_karate",
+      "name": "Fernando"
+    },
+    {
+      "dev_id": "area22_trainer_model",
+      "name": "Alexia"
+    },
+    {
+      "dev_id": "area22_trainer_sch_child_m",
+      "name": "Ali"
+    },
+    {
+      "dev_id": "area22_trainer_sch_senior_f",
+      "name": "Ana Maria"
+    },
+    {
+      "dev_id": "area24_trainer_model",
+      "name": "Naiara"
+    },
+    {
+      "dev_id": "area25_trainer_mania",
+      "name": "Jaume"
+    },
+    {
+      "dev_id": "area26_trainer_businessman",
+      "name": "Yago"
+    },
+    {
+      "dev_id": "botan_01",
+      "name": "Penny"
+    },
+    {
+      "dev_id": "botan_02",
+      "name": "Penny"
+    },
+    {
+      "dev_id": "botan_multi",
+      "name": "Penny"
+    },
+    {
+      "dev_id": "chairperson_01",
+      "name": "Geeta"
+    },
+    {
+      "dev_id": "chairperson_02",
+      "name": "Geeta"
+    },
+    {
+      "dev_id": "chairperson_03",
+      "name": "Geeta"
+    },
+    {
+      "dev_id": "clavel_01",
+      "name": "Clavell"
+    },
+    {
+      "dev_id": "clavel_01_hono",
+      "name": "Clavell"
+    },
+    {
+      "dev_id": "clavel_01_kusa",
+      "name": "Clavell"
+    },
+    {
+      "dev_id": "clavel_01_mizu",
+      "name": "Clavell"
+    },
+    {
+      "dev_id": "clavel_02_hono",
+      "name": "Clavell"
+    },
+    {
+      "dev_id": "clavel_02_kusa",
+      "name": "Clavell"
+    },
+    {
+      "dev_id": "clavel_02_mizu",
+      "name": "Clavell"
+    },
+    {
+      "dev_id": "dan_aku_01",
+      "name": "Grunt"
+    },
+    {
+      "dev_id": "dan_aku_boss_01",
+      "name": "Giacomo"
+    },
+    {
+      "dev_id": "dan_aku_boss_02",
+      "name": "Giacomo"
+    },
+    {
+      "dev_id": "dan_doku_01",
+      "name": "Youssef"
+    },
+    {
+      "dev_id": "dan_doku_boss_01",
+      "name": "Atticus"
+    },
+    {
+      "dev_id": "dan_doku_boss_02",
+      "name": "Atticus"
+    },
+    {
+      "dev_id": "dan_fairy_boss_01",
+      "name": "Ortega"
+    },
+    {
+      "dev_id": "dan_fairy_boss_02",
+      "name": "Ortega"
+    },
+    {
+      "dev_id": "dan_fairy_butler_01",
+      "name": "Harrington"
+    },
+    {
+      "dev_id": "dan_hono_01",
+      "name": "Grunt"
+    },
+    {
+      "dev_id": "dan_hono_boss_01",
+      "name": "Mela"
+    },
+    {
+      "dev_id": "dan_hono_boss_02",
+      "name": "Mela"
+    },
+    {
+      "dev_id": "dan_kakutou_01",
+      "name": "Carmen"
+    },
+    {
+      "dev_id": "dan_kakutou_boss_01",
+      "name": "Eri"
+    },
+    {
+      "dev_id": "dan_kakutou_boss_02",
+      "name": "Eri"
+    },
+    {
+      "dev_id": "dan_tr_01",
+      "name": "Grunt"
+    },
+    {
+      "dev_id": "dan_tr_02",
+      "name": "Grunt"
+    },
+    {
+      "dev_id": "e4_dragon_01",
+      "name": "Hassel"
+    },
+    {
+      "dev_id": "e4_dragon_02",
+      "name": "Hassel"
+    },
+    {
+      "dev_id": "e4_hagane_01",
+      "name": "Poppy"
+    },
+    {
+      "dev_id": "e4_hikou_01",
+      "name": "Larry"
+    },
+    {
+      "dev_id": "e4_jimen_01",
+      "name": "Rika"
+    },
+    {
+      "dev_id": "gym_denki_01",
+      "name": "Marti"
+    },
+    {
+      "dev_id": "gym_denki_02",
+      "name": "Michael"
+    },
+    {
+      "dev_id": "gym_denki_03",
+      "name": "Alonso"
+    },
+    {
+      "dev_id": "gym_denki_04",
+      "name": "Diego"
+    },
+    {
+      "dev_id": "gym_denki_leader_01",
+      "name": "Iono"
+    },
+    {
+      "dev_id": "gym_denki_leader_02",
+      "name": "Iono"
+    },
+    {
+      "dev_id": "gym_esper_01",
+      "name": "Emily"
+    },
+    {
+      "dev_id": "gym_esper_02",
+      "name": "Rafael"
+    },
+    {
+      "dev_id": "gym_esper_leader_01",
+      "name": "Tulip"
+    },
+    {
+      "dev_id": "gym_esper_leader_02",
+      "name": "Tulip"
+    },
+    {
+      "dev_id": "gym_ghost_01",
+      "name": "Tas"
+    },
+    {
+      "dev_id": "gym_ghost_02",
+      "name": "Lani"
+    },
+    {
+      "dev_id": "gym_ghost_03",
+      "name": "MC Sledge"
+    },
+    {
+      "dev_id": "gym_ghost_leader_01",
+      "name": "Ryme"
+    },
+    {
+      "dev_id": "gym_ghost_leader_02",
+      "name": "Ryme"
+    },
+    {
+      "dev_id": "gym_koori_leader_01",
+      "name": "Grusha"
+    },
+    {
+      "dev_id": "gym_koori_leader_02",
+      "name": "Grusha"
+    },
+    {
+      "dev_id": "gym_kusa_leader_01",
+      "name": "Brassius"
+    },
+    {
+      "dev_id": "gym_kusa_leader_02",
+      "name": "Brassius"
+    },
+    {
+      "dev_id": "gym_mizu_01",
+      "name": "Hugo"
+    },
+    {
+      "dev_id": "gym_mizu_leader_01",
+      "name": "Kofu"
+    },
+    {
+      "dev_id": "gym_mizu_leader_02",
+      "name": "Kofu"
+    },
+    {
+      "dev_id": "gym_mushi_01",
+      "name": "Esmeralda"
+    },
+    {
+      "dev_id": "gym_mushi_02",
+      "name": "Antonio"
+    },
+    {
+      "dev_id": "gym_mushi_03",
+      "name": "Unnamed Gym Trainer"
+    },
+    {
+      "dev_id": "gym_mushi_leader_01",
+      "name": "Katy"
+    },
+    {
+      "dev_id": "gym_mushi_leader_02",
+      "name": "Katy"
+    },
+    {
+      "dev_id": "gym_normal_01",
+      "name": "Santiago"
+    },
+    {
+      "dev_id": "gym_normal_02",
+      "name": "Gisela"
+    },
+    {
+      "dev_id": "gym_normal_03",
+      "name": "Adara"
+    },
+    {
+      "dev_id": "gym_normal_leader_01",
+      "name": "Larry"
+    },
+    {
+      "dev_id": "gym_normal_leader_02",
+      "name": "Larry"
+    },
+    {
+      "dev_id": "kihada_01",
+      "name": "Dendra"
+    },
+    {
+      "dev_id": "kihada_02",
+      "name": "Denra"
+    },
+    {
+      "dev_id": "mimoza_01",
+      "name": "Miriam"
+    },
+    {
+      "dev_id": "pepper_00",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_01",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_02",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_03",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_multi",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_nusi_01",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_nusi_02",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_nusi_03",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_nusi_04",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "pepper_nusi_05",
+      "name": "Arven"
+    },
+    {
+      "dev_id": "professor_A_01",
+      "name": "AI Sada"
+    },
+    {
+      "dev_id": "professor_A_02",
+      "name": "AI Sada"
+    },
+    {
+      "dev_id": "professor_B_01",
+      "name": "AI Turo"
+    },
+    {
+      "dev_id": "professor_B_02",
+      "name": "AI Turo"
+    },
+    {
+      "dev_id": "raid_assist_NPC_1",
+      "name": "Austin"
+    },
+    {
+      "dev_id": "raid_assist_NPC_2",
+      "name": "Ava"
+    },
+    {
+      "dev_id": "raid_assist_NPC_3",
+      "name": "Logan"
+    },
+    {
+      "dev_id": "raid_assist_NPC_4",
+      "name": "Hailey"
+    },
+    {
+      "dev_id": "raid_assist_NPC_5",
+      "name": "Evan"
+    },
+    {
+      "dev_id": "raid_assist_NPC_6",
+      "name": "Charlotte"
+    },
+    {
+      "dev_id": "raid_assist_NPC_7",
+      "name": "Kylie"
+    },
+    {
+      "dev_id": "raid_assist_NPC_8",
+      "name": "Hunter"
+    },
+    {
+      "dev_id": "raid_assist_NPC_9",
+      "name": "Gianna"
+    },
+    {
+      "dev_id": "raid_assist_NPC_10",
+      "name": "Eli"
+    },
+    {
+      "dev_id": "raid_assist_NPC_11",
+      "name": "Henry"
+    },
+    {
+      "dev_id": "raid_assist_NPC_12",
+      "name": "Chase"
+    },
+    {
+      "dev_id": "raid_assist_NPC_13",
+      "name": "Claire"
+    },
+    {
+      "dev_id": "raid_assist_NPC_14",
+      "name": "Brooklyn"
+    },
+    {
+      "dev_id": "raid_assist_NPC_15",
+      "name": "Zoe"
+    },
+    {
+      "dev_id": "raid_assist_NPC_16",
+      "name": "Samantha"
+    },
+    {
+      "dev_id": "raid_assist_NPC_17",
+      "name": "Austin"
+    },
+    {
+      "dev_id": "raid_assist_NPC_18",
+      "name": "Ava"
+    },
+    {
+      "dev_id": "raid_assist_NPC_19",
+      "name": "Logan"
+    },
+    {
+      "dev_id": "raid_assist_NPC_20",
+      "name": "Hailey"
+    },
+    {
+      "dev_id": "raid_assist_NPC_21",
+      "name": "Evan"
+    },
+    {
+      "dev_id": "raid_assist_NPC_22",
+      "name": "Charlotte"
+    },
+    {
+      "dev_id": "raid_assist_NPC_23",
+      "name": "Kylie"
+    },
+    {
+      "dev_id": "raid_assist_NPC_24",
+      "name": "Hunter"
+    },
+    {
+      "dev_id": "raid_assist_NPC_25",
+      "name": "Gianna"
+    },
+    {
+      "dev_id": "raid_assist_NPC_26",
+      "name": "Eli"
+    },
+    {
+      "dev_id": "raid_assist_NPC_27",
+      "name": "Henry"
+    },
+    {
+      "dev_id": "raid_assist_NPC_28",
+      "name": "Chase"
+    },
+    {
+      "dev_id": "raid_assist_NPC_29",
+      "name": "Claire"
+    },
+    {
+      "dev_id": "raid_assist_NPC_30",
+      "name": "Brooklyn"
+    },
+    {
+      "dev_id": "raid_assist_NPC_31",
+      "name": "Zoe"
+    },
+    {
+      "dev_id": "raid_assist_NPC_32",
+      "name": "Samantha"
+    },
+    {
+      "dev_id": "raid_assist_NPC_33",
+      "name": "Dylan"
+    },
+    {
+      "dev_id": "raid_assist_NPC_34",
+      "name": "Luke"
+    },
+    {
+      "dev_id": "raid_assist_NPC_35",
+      "name": "Austin"
+    },
+    {
+      "dev_id": "raid_assist_NPC_36",
+      "name": "Ava"
+    },
+    {
+      "dev_id": "raid_assist_NPC_37",
+      "name": "Logan"
+    },
+    {
+      "dev_id": "raid_assist_NPC_38",
+      "name": "Hailey"
+    },
+    {
+      "dev_id": "raid_assist_NPC_39",
+      "name": "Evan"
+    },
+    {
+      "dev_id": "raid_assist_NPC_40",
+      "name": "Charlotte"
+    },
+    {
+      "dev_id": "raid_assist_NPC_41",
+      "name": "Kylie"
+    },
+    {
+      "dev_id": "raid_assist_NPC_42",
+      "name": "Hunter"
+    },
+    {
+      "dev_id": "raid_assist_NPC_43",
+      "name": "Gianna"
+    },
+    {
+      "dev_id": "raid_assist_NPC_44",
+      "name": "Eli"
+    },
+    {
+      "dev_id": "raid_assist_NPC_45",
+      "name": "Henry"
+    },
+    {
+      "dev_id": "raid_assist_NPC_46",
+      "name": "Chase"
+    },
+    {
+      "dev_id": "raid_assist_NPC_47",
+      "name": "Claire"
+    },
+    {
+      "dev_id": "raid_assist_NPC_48",
+      "name": "Brooklyn"
+    },
+    {
+      "dev_id": "raid_assist_NPC_49",
+      "name": "Zoe"
+    },
+    {
+      "dev_id": "raid_assist_NPC_50",
+      "name": "Samantha"
+    },
+    {
+      "dev_id": "raid_assist_NPC_51",
+      "name": "Dylan"
+    },
+    {
+      "dev_id": "raid_assist_NPC_52",
+      "name": "Luke"
+    },
+    {
+      "dev_id": "rehoru_01",
+      "name": "Raifort"
+    },
+    {
+      "dev_id": "richf_01",
+      "name": "O'Nare"
+    },
+    {
+      "dev_id": "rival_01",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_01_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_01_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_01_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_02",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_02_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_02_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_02_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_03",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_03_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_03_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_03_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_04_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_04_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_04_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_05",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_05_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_05_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_05_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_06",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_06_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_06_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_06_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_07_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_07_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_07_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_08_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_08_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_08_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_multi_hono",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_multi_kusa",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "rival_multi_mizu",
+      "name": "Nemona"
+    },
+    {
+      "dev_id": "sawaro_01",
+      "name": "Saguaro"
+    },
+    {
+      "dev_id": "seizi_01",
+      "name": "Salvatore"
+    },
+    {
+      "dev_id": "strong_01",
+      "name": "Unnamed Trainer"
+    },
+    {
+      "dev_id": "taimu_01",
+      "name": "Tyme"
+    },
+    {
+      "dev_id": "00_test_data",
+      "name": "Test"
+    },
+    {
+      "dev_id": "test2",
+      "name": "Test"
+    },
+    {
+      "dev_id": "test3",
+      "name": "Test"
+    },
+    {
+      "dev_id": "test_raid_assist_NPC_1",
+      "name": "Test Raid"
+    },
+    {
+      "dev_id": "00_test_data",
+      "name": "Test"
+    },
+    {
+      "dev_id": "00_test_data",
+      "name": "Test"
+    },
+    {
+      "dev_id": "zinia_01",
+      "name": "Jacq"
+    },
+    {
+      "dev_id": "zinia_02",
+      "name": "Jacq"
+    }
+  ]
+}
