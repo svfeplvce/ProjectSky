@@ -45,6 +45,14 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "dependencies": {
+            "CliWrap": {
+              "target": "Package",
+              "version": "[3.6.4, )"
+            },
+            "HandyControls": {
+              "target": "Package",
+              "version": "[3.4.5, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"

@@ -1,4 +1,5 @@
 ﻿using ProjectSky.Core;
+using ProjectSky.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,8 @@ using System.Threading.Tasks;
 public interface INavigationService
 {
     ViewModel CurrentView { get; }
+    bool CanGoBack { get; }
+    bool IsEditor { get; }
     void NavigateTo<T>() where T : ViewModel;
     void NavigateTo<T>(object parameter) where T : ViewModel;
     object GetParameter<T>() where T : ViewModel;
@@ -21,6 +24,8 @@ namespace ProjectSky.Services
         private readonly Func<Type, ViewModel> _viewModelFactory;
         private readonly Dictionary<Type, object> _parameters = new Dictionary<Type, object>();
         private ViewModel _currentView;
+        private bool _canGoBack;
+        private bool _isEditor;
 
         public event EventHandler<Type> NavigatedToViewModel;
 
@@ -30,6 +35,26 @@ namespace ProjectSky.Services
             private set
             {
                 _currentView = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool CanGoBack
+        {
+            get => _canGoBack;
+            private set
+            {
+                _canGoBack = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsEditor
+        {
+            get => _isEditor;
+            private set
+            {
+                _isEditor = value;
                 OnPropertyChanged();
             }
         }
@@ -48,6 +73,9 @@ namespace ProjectSky.Services
         {
             ViewModel viewModel = _viewModelFactory.Invoke(typeof(TViewModel));
             CurrentView = viewModel;
+            bool test = viewModel.GetType() != typeof(HomeViewModel);
+            if (test) CanGoBack = true; else CanGoBack = false;
+            if (viewModel.GetType() == typeof(PokeEditorViewModel)) IsEditor = true; else IsEditor = false;
             _parameters[typeof(TViewModel)] = parameter;
             NavigatedToViewModel?.Invoke(this, typeof(TViewModel));
         }

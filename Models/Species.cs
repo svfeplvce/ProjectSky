@@ -8,7 +8,6 @@ namespace ProjectSky.Models
 {
     public class Species
     {
-        public string Name { get; set; }
         public string DevID { get; set; }
         public int Index { get; set; }
         public Personal.Entry EntryInfo { get; set; }

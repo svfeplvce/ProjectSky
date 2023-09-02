@@ -35,3 +35,5 @@ C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Debug\net7.0-windows\Views\Se
 C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Debug\net7.0-windows\Views\SelectorView.baml
 C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Debug\net7.0-windows\Views\PokeEditorView.g.cs
 C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Debug\net7.0-windows\Views\PokeEditorView.baml
+C:\Users\foxna\programs\PROJECT SKY\ProjectSky\bin\Debug\net7.0-windows\HandyControl.dll
+C:\Users\foxna\programs\PROJECT SKY\ProjectSky\bin\Debug\net7.0-windows\CliWrap.dll

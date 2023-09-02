@@ -16,8 +16,8 @@
 
         </Grid.RowDefinitions>
 
-        <Label Content="WELCOME TO PROJECT SKY!" FontFamily="{StaticResource GillBold}" Foreground="White" FontSize="50" HorizontalAlignment="Center" Margin="0 100 0 0" FontWeight="Bold"/>
-        <Label Content="Select one of the options below to get started." FontFamily="{StaticResource Gill}" Foreground="White" FontSize="23" HorizontalAlignment="Center" Margin="0 185 0 0"/>
+        <TextBlock Text="WELCOME TO PROJECT SKY!" FontFamily="{StaticResource GillBold}" Foreground="White" FontSize="50" HorizontalAlignment="Center" Margin="0 100 0 0" FontWeight="Bold"/>
+        <TextBlock Text="Select one of the options below to get started." FontFamily="{StaticResource Gill}" Foreground="White" FontSize="23" HorizontalAlignment="Center" Margin="0 185 0 0"/>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">
 

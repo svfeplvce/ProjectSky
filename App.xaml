@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ProjectSky"
              xmlns:viewModel="clr-namespace:ProjectSky.ViewModels"
-             xmlns:view="clr-namespace:ProjectSky.Views">
+             xmlns:view="clr-namespace:ProjectSky.Views"
+             xmlns:hc="https://handyorg.github.io/handycontrol">
     <Application.Resources>
      
         <ResourceDictionary>
@@ -11,12 +12,14 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
                 <ResourceDictionary Source="Styles/ComboBoxStyles.xaml"/>
+                <hc:ThemeResources RequestedTheme="Dark"/>
+                <hc:Theme/>
             </ResourceDictionary.MergedDictionaries>
 
-            <FontFamily x:Key="DripIcons">/ProjectSky;component/Assets/Fonts/#dripicons-v2</FontFamily>
-            <FontFamily x:Key="BoldFont">/ProjectSky;component/Assets/Fonts/#Akira Expanded</FontFamily>
-            <FontFamily x:Key="Gill">/ProjectSky;component/Assets/Fonts/#Gill Sans</FontFamily>
-            <FontFamily x:Key="GillBold">/ProjectSky;component/Assets/Fonts/#Gill Sans Bold</FontFamily>
+            <FontFamily x:Key="DripIcons">pack://application:,,,/ProjectSky;component/Assets/Fonts/#dripicons-v2</FontFamily>
+            <FontFamily x:Key="BoldFont">pack://application:,,,/ProjectSky;component/Assets/Fonts/#Akira Expanded</FontFamily>
+            <FontFamily x:Key="Gill">pack://application:,,,/ProjectSky;component/Assets/Fonts/#Gill Sans</FontFamily>
+            <FontFamily x:Key="GillBold">pack://application:,,,/ProjectSky;component/Assets/Fonts/#Gill Sans Bold</FontFamily>
 
             <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
                 <view:HomeView/>

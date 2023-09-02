@@ -14,7 +14,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ItemsControl Grid.Row="1" ItemsSource="{Binding ImageButtons}">
+        <TextBox Grid.Row="0" Background="#202020" Foreground="White" FontSize="25" TextAlignment="Center" BorderBrush="{x:Null}" FontFamily="{StaticResource Gill}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="30" Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding FilteredButtons}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel IsItemsHost="True"/>

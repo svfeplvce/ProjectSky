@@ -37,26 +37,6 @@ namespace ProjectSky.ViewModels
             CloseCommand = new RelayCommand(o => { CloseWindow(o); }, o => true);
             MinimiseCommand = new RelayCommand(o => { MinimiseWindow(o); }, o => true);
             ChangeOutConfCommand = new RelayCommand(o => { ChangeUpdateConf(o); }, o => true);
-
-            // init the config.json file if one does not exist
-            var configLocation = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "config.json");
-            if (!File.Exists(configLocation))
-            {
-                configVals = new Config();
-                var configJson = JsonSerializer.Serialize(configVals, new JsonSerializerOptions { WriteIndented = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull });
-                File.WriteAllText(configLocation, configJson);
-            } else
-            {
-                using (var r = new StreamReader(configLocation))
-                {
-                    var conf = r.ReadToEnd();
-                    configVals = JsonSerializer.Deserialize<Config>(conf);
-                }
-            }
-
-            // combobox shenanigans
-            if (configVals.autoUpdate) UpdateConf = "Automatically Update";
-            else UpdateConf = "Don't Automatically Update";
         }
 
         public void UpdateConfChanged(object sender, EventArgs e)

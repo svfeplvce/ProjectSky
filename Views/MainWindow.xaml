@@ -12,6 +12,9 @@
         Background="Transparent"
         Icon="pack://application:,,,/ProjectSky;component/Assets/Images/icon.png"
         >
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
     
     <Border Background="#000"
             CornerRadius="15 15 0 0"
@@ -42,23 +45,27 @@
                 <Button Grid.Column="0" Style="{StaticResource CtxHoverButtonStyle}" Foreground="White" Command="{Binding DropdownCommand}" FontFamily="{StaticResource DripIcons}" Content="T" Click="Button_Click">
                     <Button.ContextMenu>
                         <ContextMenu>
+                            <ContextMenu.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel/>
+                                </ItemsPanelTemplate>
+                            </ContextMenu.ItemsPanel>
                             <MenuItem Header="Edit Config" Command="{Binding SelectMenuItemCommand}" CommandParameter="Edit Config"/>
+                            <MenuItem Header="Save" Command="{Binding SelectMenuItemCommand}" CommandParameter="Save" Visibility="{Binding NavigationService.IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            <MenuItem Header="Reset" Command="{Binding SelectMenuItemCommand}" CommandParameter="Reset" Visibility="{Binding NavigationService.IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                             <MenuItem Header="Minimise" Command="{Binding SelectMenuItemCommand}" CommandParameter="Minimise"/>
                             <MenuItem Header="Close" Command="{Binding SelectMenuItemCommand}" CommandParameter="Close"/>
                         </ContextMenu>
                     </Button.ContextMenu>
                 </Button>
+                <Button Grid.Column="1" Style="{StaticResource MinimiseHoverButtonStyle}" Foreground="White" Command="{Binding GoBackCommand}" FontFamily="{StaticResource DripIcons}" Content="l" Visibility="{Binding NavigationService.CanGoBack, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                 <Button Grid.Column="3" Style="{StaticResource MinimiseHoverButtonStyle}" Foreground="White" Command="{Binding MinimiseCommand}" FontFamily="{StaticResource DripIcons}" Content="&#xe024;"/>
                 <Button Grid.Column="4" Style="{StaticResource CloseHoverButtonStyle}" Foreground="White" Command="{Binding CloseCommand}" FontFamily="{StaticResource DripIcons}" Content="9"/>
                 <Image Source="pack://application:,,,/ProjectSky;component/Assets/Images/sky_logo.png" Height="30" Grid.Column="2"/>
             
             </Grid>
 
-            <ContentControl Grid.Row="1" Content="{Binding NavigationService.CurrentView}">
-
-                
-
-            </ContentControl>
+            <ContentControl Grid.Row="1" Content="{Binding NavigationService.CurrentView}"/>
 
         </Grid>
         
