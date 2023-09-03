@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Xml.Linq;
 
 namespace ProjectSky.ViewModels
@@ -44,17 +45,42 @@ namespace ProjectSky.ViewModels
         private PokeData.DataArray _pdataOrig;
         private PokeData.DataArray _pdataNew;
 
-
-        private Core.RelayCommand toggleCheckBoxCommand;
+        private Core.RelayCommand _toggleCheckBoxCommand;
         public Core.RelayCommand ToggleCheckBoxCommand
         {
             get
             {
-                if (toggleCheckBoxCommand == null)
+                if (_toggleCheckBoxCommand == null)
                 {
-                    toggleCheckBoxCommand = new Core.RelayCommand(o => { ToggleCheckBox(o); }, o => true);
+                    _toggleCheckBoxCommand = new Core.RelayCommand(o => { ToggleCheckBox(o); }, o => true);
                 }
-                return toggleCheckBoxCommand;
+                return _toggleCheckBoxCommand;
+            }
+        }
+
+        private Core.RelayCommand _addMoveCommand;
+        public Core.RelayCommand AddMoveCommand
+        {
+            get
+            {
+                if (_addMoveCommand == null)
+                {
+                    _addMoveCommand = new Core.RelayCommand(o => { AddMove(); }, o => true);
+                }
+                return _addMoveCommand;
+            }
+        }
+
+        private Core.RelayCommand _removeMoveCommand;
+        public Core.RelayCommand RemoveMoveCommand
+        {
+            get
+            {
+                if (_removeMoveCommand == null)
+                {
+                    _removeMoveCommand = new Core.RelayCommand(o => { RemoveMove(); }, o => true);
+                }
+                return _removeMoveCommand;
             }
         }
 
@@ -133,7 +159,13 @@ namespace ProjectSky.ViewModels
         private Species _currentSpecies;
 
         public Species CurrentSpecies {
-            get => _currentSpecies;
+            get { 
+                if (!IsLoaded)
+                {
+                    return null;
+                }
+                else return _currentSpecies;
+            }
             set
             {
                 _currentSpecies = value;
@@ -144,6 +176,12 @@ namespace ProjectSky.ViewModels
         public PokeEditorViewModel(INavigationService navService)
         {
             NavigationService = navService;
+            var configLocation = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "config.json");
+            using (var r = new StreamReader(configLocation))
+            {
+                var conf = r.ReadToEnd();
+                configVals = JsonSerializer.Deserialize<Config>(conf);
+            }
             NavigationService.NavigatedToViewModel += OnNavigatedToViewModel;
         }
 
@@ -181,6 +219,16 @@ namespace ProjectSky.ViewModels
                 OnPropertyChanged();
             }
         }
+        private ObservableCollection<MenuItem> _movesMenuItems = new ObservableCollection<MenuItem>();
+        public ObservableCollection<MenuItem> MovesMenuItems
+        {
+            get => _movesMenuItems;
+            set
+            {
+                _movesMenuItems = value;
+                OnPropertyChanged();
+            }
+        }
         private Dictionary<int, int> PlibItems = new Dictionary<int, int> { };
         private readonly List<string> alolaForms = new List<string> { "Rattata", "Raticate", "Raichu", "Sandshrew", "Sandslash", "Vulpix", "Ninetales", "Diglett", "Dugtrio", "Meowth", "Persian", "Geodude", "Graveler", "Golem", "Grimer", "Muk", "Exeggutor", "Marowak" };
         private readonly List<string> galarForms = new List<string> { "Meowth", "Ponyta", "Rapidash", "Weezing", "Corsola", "Zigzagoon", "Linoone", "Darumaka", "Darmanitan", "Yamask", "Stunfisk", "Slowpoke", "Slowbro", "Slowking", "Articuno", "Zapdos", "Moltres" };
@@ -190,6 +238,7 @@ namespace ProjectSky.ViewModels
         private readonly List<string> miscForms = new List<string> { "Dialga", "Palkia", "Giratina", "Kyogre", "Groudon" };
         private PokeDevID.DevID PokeDevID;
         private ItemDevID.DevID ItemDevID;
+        private Config configVals;
         private bool _isLoaded = false;
         public bool IsLoaded
         {
@@ -227,11 +276,13 @@ namespace ProjectSky.ViewModels
         {
             if (viewModelType == typeof(PokeEditorViewModel))
             {
+                IsLoaded = false;
                 PlibItems.Clear();
                 AbilitiesMenuItems.Clear();
                 ItemsMenuItems.Clear();
                 evoArgs.Clear();
                 TMMenuItems.Clear();
+                MovesMenuItems.Clear();
                 SelectorParamsToSend parameter = (SelectorParamsToSend)NavigationService.GetParameter<PokeEditorViewModel>();
                 PokeIndex = parameter.PokeNum;
                 PokeName = parameter.PokeName;
@@ -291,10 +342,13 @@ namespace ProjectSky.ViewModels
             {
                 FillItemList();
                 FillAbilitiesList();
+                FillMoveList();
                 FillTMList();
             });
 
             IsLoaded = true;
+
+            OnPropertyChanged(nameof(CurrentSpecies));
 
             List<int> ints = Enumerable.Range(0, 1000).ToList();
 
@@ -303,7 +357,6 @@ namespace ProjectSky.ViewModels
             evoArgs.Add("Species", SpeciesNames);
             evoArgs.Add("Type", new List<string> { "Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon", "Dark", "Fairy" });
             evoArgs.Add("Misc", ints.ConvertAll(x => x.ToString()));
-            FillFields();
         }
 
         private async Task FillItemList()
@@ -361,13 +414,23 @@ namespace ProjectSky.ViewModels
             }
         }
 
+        private async Task FillMoveList()
+        {
+            foreach (var x in Moves)
+            {
+                var menuItem = new MenuItem();
+                menuItem.Header = x;
+                MovesMenuItems.Add(menuItem);
+            }
+        }
+
         private async Task FillTMList()
         {
             for (var x = 0; x < tmList.Count; x++)
             {
                 var menuItem = new CheckBoxItemViewModel();
                 menuItem.Value = tmList[x];
-                if (CurrentSpecies.EntryInfo.tm_moves.Contains(Moves.IndexOf(tmList[x])))
+                if (_currentSpecies.EntryInfo.tm_moves.Contains(Moves.IndexOf(tmList[x])))
                 {
                     menuItem.IsChecked = true;
                 }
@@ -376,10 +439,31 @@ namespace ProjectSky.ViewModels
                 TMMenuItems.Add(menuItem);
             }
         }
-
-        private void FillFields()
+        
+        private void AddMove()
         {
+            CurrentSpecies.EntryInfo.levelup_moves.Add(new Personal.LevelupMove { level = 1, move = 1 });
+        }
 
+        private void RemoveMove()
+        {
+            if (CurrentSpecies.EntryInfo.levelup_moves.Count != 1)
+            {
+                CurrentSpecies.EntryInfo.levelup_moves.RemoveAt(CurrentSpecies.EntryInfo.levelup_moves.Count - 1);
+            }
+        }
+        
+        private void AddEvo()
+        {
+            CurrentSpecies.EntryInfo.evo_data.Add(new Personal.EvoDatum { level = 1, condition = 1, form = 0, species = 1 });
+        }
+
+        private void RemoveEvo()
+        {
+            if (CurrentSpecies.EntryInfo.evo_data.Count != 1)
+            {
+                CurrentSpecies.EntryInfo.evo_data.RemoveAt(CurrentSpecies.EntryInfo.evo_data.Count - 1);
+            }
         }
 
         private void ToggleCheckBox(object cb)
@@ -403,9 +487,8 @@ namespace ProjectSky.ViewModels
                 if (results == MessageBoxResult.Yes)
                 {
                     Save();
-                    IsLoaded = false;
-                    PokeParamsToSend paramsToSend = new PokeParamsToSend { GoingBack = true, Personal = _personalNew, Plib = _plibNew, PokeData = _pdataNew };
-                    NavigationService.NavigateTo<SelectorViewModel>(paramsToSend);
+                    Personal.PersonalArray sendPersonal = new Personal.PersonalArray();
+                    NavigationService.NavigateTo<SelectorViewModel>();
                 }
                 else return;
             } catch (Exception ex) {
@@ -413,7 +496,7 @@ namespace ProjectSky.ViewModels
             }
         }
 
-        public void Save()
+        public async void Save()
         {
             try
             {
@@ -428,6 +511,20 @@ namespace ProjectSky.ViewModels
                     var entry = _pdataNew.values.First(x => x.devid == CurrentSpecies.DevID);
                     entry = CurrentSpecies.PokeDataInfo;
                 }
+
+                var personalPath = Path.Combine(configVals.outPath, "personal_array.json");
+                var pdataPath = Path.Combine(configVals.outPath, "pokedata_array.json");
+                var plibPath = Path.Combine(configVals.outPath, "plib_item_conversion_array.json");
+
+                var personalJson = JsonSerializer.Serialize(_personalNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+                var pdataJson = JsonSerializer.Serialize(_pdataNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+                var plibJson = JsonSerializer.Serialize(_plibNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+
+                await File.WriteAllTextAsync(personalPath, personalJson);
+                await File.WriteAllTextAsync(pdataPath, pdataJson);
+                await File.WriteAllTextAsync(plibPath, plibJson);
+
+                MessageBox.Show("Saved!\n\nTo create the zip file that can be used in Trinity Mod Loader, just click the back button on the selector screen! You can also continue to edit Pokemon until you are ready.", "Save Success");
             } catch (Exception ex)
             {
                 Console.WriteLine(ex);

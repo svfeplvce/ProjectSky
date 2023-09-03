@@ -1,0 +1,353 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0-windows7.0": {
+      "CliWrap/3.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HandyControls/3.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HandyControl.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HandyControl.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Ookii.Dialogs.Wpf/5.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/Ookii.Dialogs.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Ookii.Dialogs.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "CliWrap/3.6.4": {
+      "sha512": "KVGVZlR0GWgN3Xr88oZMSzYu38TXIogwLz588e6wku3mIfg6lPchxpYWtZSZfurpTY63ANF61xWp8EZF3jkN4g==",
+      "type": "package",
+      "path": "cliwrap/3.6.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cliwrap.3.6.4.nupkg.sha512",
+        "cliwrap.nuspec",
+        "favicon.png",
+        "lib/net462/CliWrap.dll",
+        "lib/net462/CliWrap.xml",
+        "lib/netcoreapp3.0/CliWrap.dll",
+        "lib/netcoreapp3.0/CliWrap.xml",
+        "lib/netstandard2.0/CliWrap.dll",
+        "lib/netstandard2.0/CliWrap.xml",
+        "lib/netstandard2.1/CliWrap.dll",
+        "lib/netstandard2.1/CliWrap.xml"
+      ]
+    },
+    "HandyControls/3.4.5": {
+      "sha512": "hzia27R7D4zBXjisASbkWTEGgaKkgDS+iB1IAB7pjvx7JVa/FFVs2X1DgAQrSuuk9hdu9JMFUzop06uqmP9zqw==",
+      "type": "package",
+      "path": "handycontrols/3.4.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "docs/readme.md",
+        "handycontrols.3.4.5.nupkg.sha512",
+        "handycontrols.nuspec",
+        "icon.png",
+        "lib/net40/HandyControl.dll",
+        "lib/net40/HandyControl.pdb",
+        "lib/net45/HandyControl.dll",
+        "lib/net45/HandyControl.pdb",
+        "lib/net45/HandyControl.xml",
+        "lib/net451/HandyControl.dll",
+        "lib/net451/HandyControl.pdb",
+        "lib/net451/HandyControl.xml",
+        "lib/net452/HandyControl.dll",
+        "lib/net452/HandyControl.pdb",
+        "lib/net452/HandyControl.xml",
+        "lib/net46/HandyControl.dll",
+        "lib/net46/HandyControl.pdb",
+        "lib/net46/HandyControl.xml",
+        "lib/net461/HandyControl.dll",
+        "lib/net461/HandyControl.pdb",
+        "lib/net461/HandyControl.xml",
+        "lib/net462/HandyControl.dll",
+        "lib/net462/HandyControl.pdb",
+        "lib/net462/HandyControl.xml",
+        "lib/net47/HandyControl.dll",
+        "lib/net47/HandyControl.pdb",
+        "lib/net47/HandyControl.xml",
+        "lib/net471/HandyControl.dll",
+        "lib/net471/HandyControl.pdb",
+        "lib/net471/HandyControl.xml",
+        "lib/net472/HandyControl.dll",
+        "lib/net472/HandyControl.pdb",
+        "lib/net472/HandyControl.xml",
+        "lib/net48/HandyControl.dll",
+        "lib/net48/HandyControl.pdb",
+        "lib/net48/HandyControl.xml",
+        "lib/net481/HandyControl.dll",
+        "lib/net481/HandyControl.pdb",
+        "lib/net481/HandyControl.xml",
+        "lib/net5.0/HandyControl.deps.json",
+        "lib/net5.0/HandyControl.dll",
+        "lib/net5.0/HandyControl.pdb",
+        "lib/net5.0/HandyControl.xml",
+        "lib/net6.0/HandyControl.deps.json",
+        "lib/net6.0/HandyControl.dll",
+        "lib/net6.0/HandyControl.pdb",
+        "lib/net6.0/HandyControl.xml",
+        "lib/net7.0/HandyControl.deps.json",
+        "lib/net7.0/HandyControl.dll",
+        "lib/net7.0/HandyControl.pdb",
+        "lib/net7.0/HandyControl.xml",
+        "lib/netcoreapp3.0/HandyControl.deps.json",
+        "lib/netcoreapp3.0/HandyControl.dll",
+        "lib/netcoreapp3.0/HandyControl.pdb",
+        "lib/netcoreapp3.0/HandyControl.xml",
+        "lib/netcoreapp3.1/HandyControl.deps.json",
+        "lib/netcoreapp3.1/HandyControl.dll",
+        "lib/netcoreapp3.1/HandyControl.pdb",
+        "lib/netcoreapp3.1/HandyControl.xml",
+        "readme.txt",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/7.0.0": {
+      "sha512": "elNeOmkeX3eDVG6pYVeV82p29hr+UKDaBhrZyWvWLw/EVZSYEkZlQdkp0V39k/Xehs2Qa0mvoCvkVj3eQxNQ1Q==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+      "sha512": "h3j/QfmFN4S0w4C2A6X7arXij/M/OVw3uQHSOFxnND4DyAzO1F9eMX7Eti7lU/OkSthEE0WzRsfT/Dmx86jzCw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Ookii.Dialogs.Wpf/5.0.1": {
+      "sha512": "iZNnZwqTpK0cfR0vkotncP1c025/PHlIdzc7iEKBYwhVv1V0zXp9/RT/O0kMhsmlwXqRxxbE4pdhfinbJXtjPg==",
+      "type": "package",
+      "path": "ookii.dialogs.wpf/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/icon.png",
+        "lib/net462/Ookii.Dialogs.Wpf.dll",
+        "lib/net462/Ookii.Dialogs.Wpf.pdb",
+        "lib/net462/Ookii.Dialogs.Wpf.xml",
+        "lib/net5.0-windows7.0/Ookii.Dialogs.Wpf.dll",
+        "lib/net5.0-windows7.0/Ookii.Dialogs.Wpf.pdb",
+        "lib/net5.0-windows7.0/Ookii.Dialogs.Wpf.xml",
+        "lib/net6.0-windows7.0/Ookii.Dialogs.Wpf.dll",
+        "lib/net6.0-windows7.0/Ookii.Dialogs.Wpf.pdb",
+        "lib/net6.0-windows7.0/Ookii.Dialogs.Wpf.xml",
+        "lib/netcoreapp3.1/Ookii.Dialogs.Wpf.dll",
+        "lib/netcoreapp3.1/Ookii.Dialogs.Wpf.pdb",
+        "lib/netcoreapp3.1/Ookii.Dialogs.Wpf.xml",
+        "ookii.dialogs.wpf.5.0.1.nupkg.sha512",
+        "ookii.dialogs.wpf.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0-windows7.0": [
+      "CliWrap >= 3.6.4",
+      "HandyControls >= 3.4.5",
+      "Microsoft.Extensions.DependencyInjection >= 7.0.0",
+      "Ookii.Dialogs.Wpf >= 5.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\foxna\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\foxna\\programs\\PROJECT SKY\\ProjectSky\\ProjectSky.csproj",
+      "projectName": "ProjectSky",
+      "projectPath": "C:\\Users\\foxna\\programs\\PROJECT SKY\\ProjectSky\\ProjectSky.csproj",
+      "packagesPath": "C:\\Users\\foxna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\foxna\\programs\\PROJECT SKY\\ProjectSky\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\foxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0-windows7.0": {
+        "targetAlias": "net7.0-windows",
+        "dependencies": {
+          "CliWrap": {
+            "target": "Package",
+            "version": "[3.6.4, )"
+          },
+          "HandyControls": {
+            "target": "Package",
+            "version": "[3.4.5, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "Ookii.Dialogs.Wpf": {
+            "target": "Package",
+            "version": "[5.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,7 +1,10 @@
-﻿using System;
+﻿using ProjectSky.Core;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ProjectSky.Models
@@ -32,7 +35,7 @@ namespace ProjectSky.Models
             public int form_everstone { get; set; }
         }
 
-        public class Entry
+        public class Entry : ViewModel
         {
             public Species species { get; set; }
             public bool is_present { get; set; }
@@ -54,11 +57,30 @@ namespace ProjectSky.Models
             public bool unk_flag { get; set; }
             public EvYield ev_yield { get; set; }
             public BaseStats base_stats { get; set; }
-            public List<EvoDatum> evo_data { get; set; }
+            [JsonIgnore]
+            private ObservableCollection<EvoDatum> _evo_data;
+            public ObservableCollection<EvoDatum> evo_data
+            {
+                get => _evo_data;
+                set
+                {
+                    _evo_data = value;
+                    OnPropertyChanged();
+                }
+            }
             public List<int> tm_moves { get; set; }
             public List<int> egg_moves { get; set; }
             public List<object> reminder_moves { get; set; }
-            public List<LevelupMove> levelup_moves { get; set; }
+            [JsonIgnore]
+            private ObservableCollection<LevelupMove> _levelup_moves;
+            public ObservableCollection<LevelupMove> levelup_moves {
+                get => _levelup_moves;
+                set
+                {
+                    _levelup_moves = value;
+                    OnPropertyChanged();
+                }
+            }
             public Dex dex { get; set; }
         }
 
@@ -90,9 +112,19 @@ namespace ProjectSky.Models
             public int ratio { get; set; }
         }
 
-        public class LevelupMove
+        public class LevelupMove : ViewModel
         {
-            public int move { get; set; }
+            [JsonIgnore]
+            private int _move;
+            public int move
+            {
+                get => _move;
+                set
+                {
+                    _move = value;
+                    OnPropertyChanged();
+                }
+            }
             public int level { get; set; }
         }
 

@@ -44,37 +44,10 @@ namespace ProjectSky.ViewModels
         }
 
         private Personal.PersonalArray _personal;
-        public Personal.PersonalArray Personal
-        {
-            get => _personal;
-            private set
-            {
-                _personal = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private Plib.PlibArray _plib;
-        public Plib.PlibArray Plib
-        {
-            get => _plib;
-            private set
-            {
-                _plib = value;
-                OnPropertyChanged();
-            }
-        }
 
         private PokeData.DataArray _pdata;
-        public PokeData.DataArray Pdata
-        {
-            get => _pdata;
-            private set
-            {
-                _pdata = value;
-                OnPropertyChanged();
-            }
-        }
+
+        private Plib.PlibArray _plib;
 
         public ItemDevID.DevID ItemDevID;
         public PokeDevID.DevID PokeDevID;
@@ -96,6 +69,7 @@ namespace ProjectSky.ViewModels
             }
         }
         public ObservableCollection<ButtonModel> FilteredButtons { get; set; }
+        private Config configVals;
 
         public SelectorViewModel(INavigationService navService)
         {
@@ -110,15 +84,11 @@ namespace ProjectSky.ViewModels
             }
             FillButtonList();
         }
-        private Config configVals;
 
         private void OnNavigatedToViewModel(object sender, Type viewModelType)
         {
             if (viewModelType == typeof(SelectorViewModel))
             {
-                var parameter = NavigationService.GetParameter<SelectorViewModel>();
-                if (parameter == null) ComingBack = false; else ComingBack = true;
-                paramsFromThing = (PokeParamsToSend)parameter;
                 InstantiateArrays();
             }
         }
@@ -143,7 +113,7 @@ namespace ProjectSky.ViewModels
                     tb.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255,255,255,255));
                     panel.Children.Add(tb);
                     int currentNum = num;
-                    ImageButtons.Add(new ButtonModel(panel, new RelayCommand(o => { NavigationService.NavigateTo<PokeEditorViewModel>(new SelectorParamsToSend { PokeNum = currentNum, Personal = Personal, Plib = Plib, PokeData = Pdata, PokeName = buttonNames[currentNum - 1] }); }, o => true)));
+                    ImageButtons.Add(new ButtonModel(panel, new RelayCommand(o => { NavigationService.NavigateTo<PokeEditorViewModel>(new SelectorParamsToSend { PokeNum = currentNum, Personal = _personal, Plib = _plib, PokeData = _pdata, PokeName = buttonNames[currentNum - 1] }); }, o => true)));
                 }
                 catch
                 {
@@ -155,28 +125,20 @@ namespace ProjectSky.ViewModels
 
         private void InstantiateArrays()
         {
-            if (ComingBack)
+            var personalFile = File.Exists(Path.Combine(configVals.outPath, "personal_array.json")) ? File.Open(Path.Combine(configVals.outPath, "personal_array.json"), FileMode.Open) : Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/JSON/personal_array.json")).Stream;
+            var plibFile = File.Exists(Path.Combine(configVals.outPath, "plib_item_conversion_array.json")) ? File.Open(Path.Combine(configVals.outPath, "plib_item_conversion_array.json"), FileMode.Open) : Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/JSON/plib_item_conversion_array.json")).Stream;
+            var pokeDataFile = File.Exists(Path.Combine(configVals.outPath, "pokedata_array.json")) ? File.Open(Path.Combine(configVals.outPath, "pokedata_array.json"), FileMode.Open) : Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/JSON/pokedata_array.json")).Stream;
+            using (var personalReader = new StreamReader(personalFile))
+            using (var plibReader = new StreamReader(plibFile))
+            using (var pdataReader = new StreamReader(pokeDataFile))
             {
-                Personal = paramsFromThing.Personal;
-                Pdata = paramsFromThing.PokeData;
-                Plib = paramsFromThing.Plib;
-            } else
-            {
-                var personalFile = File.Exists(Path.Combine(configVals.outPath, "personal_array.json")) ? File.Open(Path.Combine(configVals.outPath, "personal_array.json"), FileMode.Open) : Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/JSON/personal_array.json")).Stream;
-                var plibFile = File.Exists(Path.Combine(configVals.outPath, "plib_item_conversion_array.json")) ? File.Open(Path.Combine(configVals.outPath, "plib_item_conversion_array.json"), FileMode.Open) : Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/JSON/plib_item_conversion_array.json")).Stream;
-                var pokeDataFile = File.Exists(Path.Combine(configVals.outPath, "pokedata_array.json")) ? File.Open(Path.Combine(configVals.outPath, "pokedata_array.json"), FileMode.Open) : Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/JSON/pokedata_array.json")).Stream;
-                using (var personalReader = new StreamReader(personalFile))
-                using (var plibReader = new StreamReader(plibFile))
-                using (var pdataReader = new StreamReader(pokeDataFile))
-                {
-                    var personalJson = personalReader.ReadToEnd();
-                    var plibJson = plibReader.ReadToEnd();
-                    var pdataJson = pdataReader.ReadToEnd();
+                var personalJson = personalReader.ReadToEnd();
+                var plibJson = plibReader.ReadToEnd();
+                var pdataJson = pdataReader.ReadToEnd();
 
-                    Personal = JsonSerializer.Deserialize<Personal.PersonalArray>(personalJson);
-                    Plib = JsonSerializer.Deserialize<Plib.PlibArray>(plibJson);
-                    Pdata = JsonSerializer.Deserialize<PokeData.DataArray>(pdataJson);
-                }
+                _personal = JsonSerializer.Deserialize<Personal.PersonalArray>(personalJson);
+                _plib = JsonSerializer.Deserialize<Plib.PlibArray>(plibJson);
+                _pdata = JsonSerializer.Deserialize<PokeData.DataArray>(pdataJson);
             }
         }
 
@@ -195,18 +157,6 @@ namespace ProjectSky.ViewModels
 
         public async void Exit()
         {
-            var personalPath = Path.Combine(configVals.outPath, "personal_array.json");
-            var pdataPath = Path.Combine(configVals.outPath, "pokedata_array.json");
-            var plibPath = Path.Combine(configVals.outPath, "plib_item_conversion_array.json");
-
-            var personalJson = JsonSerializer.Serialize(_personal, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
-            var pdataJson = JsonSerializer.Serialize(_pdata, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
-            var plibJson = JsonSerializer.Serialize(_plib, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
-
-            await File.WriteAllTextAsync(personalPath, personalJson);
-            await File.WriteAllTextAsync(pdataPath, pdataJson);
-            await File.WriteAllTextAsync(plibPath, plibJson);
-
             // create bins
 
             var flatcExe = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/flatc.exe")).Stream;
