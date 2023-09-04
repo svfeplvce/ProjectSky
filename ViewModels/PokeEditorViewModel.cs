@@ -40,7 +40,7 @@ namespace ProjectSky.ViewModels
 
         private Personal.PersonalArray _personalOrig;
         private Personal.PersonalArray _personalNew;
-        private Plib.PlibArray _plibOrig;
+        public Plib.PlibArray _plibOrig { get; set; }
         private Plib.PlibArray _plibNew;
         private PokeData.DataArray _pdataOrig;
         private PokeData.DataArray _pdataNew;
@@ -413,6 +413,20 @@ namespace ProjectSky.ViewModels
             {
                 CurrentSpecies.EntryInfo.evo_data.RemoveAt(CurrentSpecies.EntryInfo.evo_data.Count - 1);
             }
+        }
+
+        public void EditPlib(int item)
+        {
+            var editedEntry = _plibNew.values.FirstOrDefault(x => x.itemID == 0);
+            if (editedEntry != null)
+            {
+                var checkIfInPlib = _plibNew.values.Where(x => x.itemID == item).Count() > 0;
+                if (!checkIfInPlib)
+                {
+                    editedEntry.itemID = item;
+                }
+            }
+            else MessageBox.Show("No more entries available in Plib. Please set the item to something else.");
         }
 
         private void ToggleCheckBox(object cb)

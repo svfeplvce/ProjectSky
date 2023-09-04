@@ -14,6 +14,7 @@
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <core:MethodArgType x:Key="MethodArgType"/>
+        <core:ItemToPlib x:Key="ItemToPlib"/>
         <vm:EvoViewModel x:Key="EvoViewModel"/>
     </UserControl.Resources>
 
@@ -413,14 +414,30 @@
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                                                 <ComboBox x:Name="ConditionComboBox" ItemsSource="{Binding Source={StaticResource EvoViewModel}, Path=EvoMethods}" DisplayMemberPath="Method" SelectedValuePath="MethodID" SelectedValue="{Binding condition}" Width="190" Margin="0 0 5 0"/>
-                                                <ComboBox SelectedValue="{Binding parameter}" Width="190" Margin="0 0 5 0">
+                                                <hc:ComboBox Width="190" Margin="0 0 5 0" SelectionChanged="ComboBox_SelectionChanged">
                                                     <ComboBox.ItemsSource>
-                                                        <MultiBinding Converter="{StaticResource MethodArgType}">
+                                                        <MultiBinding Converter="{StaticResource MethodArgType}" ValidatesOnDataErrors="True">
                                                             <Binding ElementName="ConditionComboBox" Path="SelectedValue" />
                                                             <Binding Source="{StaticResource EvoViewModel}" Path="EvoMethods" />
+                                                            <Binding Source="{StaticResource EvoViewModel}" Path="EvoArgs" />
+                                                            <MultiBinding.ValidationRules>
+                                                                <core:ValidationRules/>
+                                                            </MultiBinding.ValidationRules>
                                                         </MultiBinding>
                                                     </ComboBox.ItemsSource>
-                                                </ComboBox>
+                                                    <ComboBox.SelectedIndex>
+                                                        <MultiBinding Converter="{StaticResource ItemToPlib}" ValidatesOnDataErrors="True">
+                                                            <Binding Path="parameter"/>
+                                                            <Binding ElementName="ConditionComboBox" Path="SelectedValue" />
+                                                            <Binding Source="{StaticResource EvoViewModel}" Path="EvoMethods" />
+                                                            <Binding Source="{StaticResource EvoViewModel}" Path="EvoArgs"/>
+                                                            <Binding Path="DataContext._plibOrig" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PokeEditorView}}" />
+                                                            <MultiBinding.ValidationRules>
+                                                                <core:ValidationRules/>
+                                                            </MultiBinding.ValidationRules>
+                                                        </MultiBinding>
+                                                    </ComboBox.SelectedIndex>
+                                                </hc:ComboBox>
                                                 <hc:NumericUpDown Value="{Binding level}" Visibility="{Binding SelectedItem.UsesLevel, ElementName=ConditionComboBox, Converter={StaticResource BooleanToVisibilityConverter}}" Width="190" Margin="0 0 5 0"/>
                                                 <ComboBox ItemsSource="{Binding Source={StaticResource EvoViewModel}, Path=SpeciesNames}" SelectedIndex="{Binding species}" Width="190" Margin="0 0 5 0"/>
                                                 <hc:NumericUpDown Value="{Binding form}" Width="190" Minimum="0" Maximum="25"/>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectSky.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace ProjectSky.Views
         public PokeEditorView()
         {
             InitializeComponent();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ComboBox combobox && DataContext is PokeEditorViewModel vm)
+            {
+                if (e.AddedItems.Count > 0 && e.AddedItems[0] is string selectedArgType && vm.Items.Contains(selectedArgType))
+                {
+                    vm.EditPlib(vm.Items.IndexOf(selectedArgType));
+                }
+            }
         }
     }
 }
