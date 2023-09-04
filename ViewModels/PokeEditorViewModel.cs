@@ -7,6 +7,7 @@ using ProjectSky.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Printing;
@@ -24,7 +25,7 @@ using System.Xml.Linq;
 namespace ProjectSky.ViewModels
 {
 
-    public class PokeEditorViewModel : ViewModel
+    public class PokeEditorViewModel : ViewModel, IDataErrorInfo
     {
         private INavigationService _navigationService;
         public INavigationService NavigationService
@@ -229,6 +230,10 @@ namespace ProjectSky.ViewModels
                 OnPropertyChanged();
             }
         }
+
+        public string Error => "";
+
+        public string this[string columnName] => "";
 
         private void OnNavigatedToViewModel(object sender, Type viewModelType)
         {

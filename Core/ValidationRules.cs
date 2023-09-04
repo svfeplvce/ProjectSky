@@ -14,7 +14,7 @@ namespace ProjectSky.Core
         {
             if (value == null || !IsValid(value.ToString()))
             {
-                return new ValidationResult(false, "");
+                return new ValidationResult(false, null);
             }
 
             return ValidationResult.ValidResult;

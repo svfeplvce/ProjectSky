@@ -427,7 +427,11 @@
                                                     </ComboBox.ItemsSource>
                                                     <ComboBox.SelectedIndex>
                                                         <MultiBinding Converter="{StaticResource ItemToPlib}" ValidatesOnDataErrors="True">
-                                                            <Binding Path="parameter"/>
+                                                            <Binding Path="parameter" ValidatesOnDataErrors="True">
+                                                                <Binding.ValidationRules>
+                                                                    <core:ValidationRules/>
+                                                                </Binding.ValidationRules>
+                                                            </Binding>
                                                             <Binding ElementName="ConditionComboBox" Path="SelectedValue" />
                                                             <Binding Source="{StaticResource EvoViewModel}" Path="EvoMethods" />
                                                             <Binding Source="{StaticResource EvoViewModel}" Path="EvoArgs"/>
