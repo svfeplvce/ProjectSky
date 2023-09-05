@@ -75,7 +75,7 @@ namespace ProjectSky.Services
             CurrentView = viewModel;
             bool test = viewModel.GetType() != typeof(HomeViewModel);
             if (test) CanGoBack = true; else CanGoBack = false;
-            if (viewModel.GetType() == typeof(PokeEditorViewModel)) IsEditor = true; else IsEditor = false;
+            if (viewModel.GetType() == typeof(PokeEditorViewModel) || viewModel.GetType() == typeof(MoveViewModel) || viewModel.GetType() == typeof(TrainerViewModel)) IsEditor = true; else IsEditor = false;
             _parameters[typeof(TViewModel)] = parameter;
             NavigatedToViewModel?.Invoke(this, typeof(TViewModel));
         }

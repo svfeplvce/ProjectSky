@@ -21,11 +21,15 @@ namespace ProjectSky.ViewModels
         }
 
         public RelayCommand NavigateSelectCommand { get; set; }
+        public RelayCommand NavigateTrainerCommand { get; set; }
+        public RelayCommand NavigateMoveCommand { get; set; }
 
         public HomeViewModel(INavigationService navService)
         {
             NavigationService = navService;
             NavigateSelectCommand = new RelayCommand(o => { NavigationService.NavigateTo<SelectorViewModel>(); }, o => true);
+            NavigateTrainerCommand = new RelayCommand(o => { NavigationService.NavigateTo<TrainerViewModel>(); }, o => true);
+            NavigateMoveCommand = new RelayCommand(o => { NavigationService.NavigateTo<MoveViewModel>(); }, o => true);
         }
 
     }

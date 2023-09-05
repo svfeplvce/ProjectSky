@@ -30,6 +30,8 @@ namespace ProjectSky
             services.AddSingleton<HomeViewModel>();
             services.AddSingleton<SelectorViewModel>();
             services.AddSingleton<PokeEditorViewModel>();
+            services.AddSingleton<TrainerViewModel>();
+            services.AddSingleton<MoveViewModel>();
             services.AddSingleton<INavigationService, NavigationService>();
 
             services.AddSingleton<Func<Type, ViewModel>>(serviceProvider => viewModelType => (ViewModel)serviceProvider.GetRequiredService(viewModelType));

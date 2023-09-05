@@ -13,10 +13,16 @@
     <Compile Update="Views\HomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\MoveView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\PokeEditorView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\SelectorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TrainerView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -36,10 +42,16 @@
     <Page Update="Views\Config.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\MoveView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\PokeEditorView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SelectorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TrainerView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

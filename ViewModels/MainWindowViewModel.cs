@@ -255,6 +255,14 @@ namespace ProjectSky.ViewModels
                 var editor = (PokeEditorViewModel)current;
                 editor.Exit();
             }
+            if (current.GetType() == typeof(MoveViewModel))
+            {
+                var editor = (MoveViewModel)current;
+            }
+            if (current.GetType() == typeof(TrainerViewModel))
+            {
+                var editor = (TrainerViewModel)current;
+            }
         }
 
         private void SelectMenuItem(object menuItem)

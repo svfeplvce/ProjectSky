@@ -22,8 +22,8 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal">
 
             <Button Content="POKEMON" Width="300" Height="200" BorderBrush="{x:Null}" Foreground="White" Margin="16,0,16,0" FontFamily="{StaticResource Gill}" FontSize="25" Style="{StaticResource MainButtonsHoverButtonStyle}" Command="{Binding NavigateSelectCommand}"/>
-            <Button Content="MOVES" Width="300" Height="200" BorderBrush="{x:Null}" Foreground="White" Margin="16,0,16,0" FontFamily="{StaticResource Gill}" FontSize="25" Style="{StaticResource MainButtonsHoverButtonStyle}"/>
-            <Button Content="TRAINERS" Width="300" Height="200" BorderBrush="{x:Null}" Foreground="White" Margin="16,0,16,0" FontFamily="{StaticResource Gill}" FontSize="25" Style="{StaticResource MainButtonsHoverButtonStyle}"/>
+            <Button Content="MOVES" Width="300" Height="200" BorderBrush="{x:Null}" Foreground="White" Margin="16,0,16,0" FontFamily="{StaticResource Gill}" FontSize="25" Style="{StaticResource MainButtonsHoverButtonStyle}" Command="{Binding NavigateMoveCommand}"/>
+            <Button Content="TRAINERS" Width="300" Height="200" BorderBrush="{x:Null}" Foreground="White" Margin="16,0,16,0" FontFamily="{StaticResource Gill}" FontSize="25" Style="{StaticResource MainButtonsHoverButtonStyle}" Command="{Binding NavigateTrainerCommand}"/>
 
         </StackPanel>
 

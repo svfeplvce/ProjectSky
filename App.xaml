@@ -33,14 +33,13 @@
                 <view:PokeEditorView/>
             </DataTemplate>
             
-            <!--
             <DataTemplate DataType="{x:Type TypeName=viewModel:TrainerViewModel}">
                 <view:TrainerView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type TypeName=viewModel:MoveViewModel}">
                 <view:MoveView/>
-            </DataTemplate>-->
+            </DataTemplate>
 
         </ResourceDictionary>
 
