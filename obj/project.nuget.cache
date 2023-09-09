@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LryCzikXZ8XmU8LYzjqxu3qrNLi7pAF4spRGfleBqUaK25LWhmr2E24gGb5xlpH3asIgB/wLJbDjahzujwThVw==",
+  "dgSpecHash": "LbCxGsBMDZe10EqAG+Sj8kcxbeoEb7/TvCraRO2XQci8g8GNM75415S51vLypTj3epzXHu+6Ex3UZ0idLBzXUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\foxna\\programs\\PROJECT SKY\\ProjectSky\\ProjectSky.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\foxna\\.nuget\\packages\\handycontrols\\3.4.5\\handycontrols.3.4.5.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\foxna\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\foxna\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.1\\ookii.dialogs.wpf.5.0.1.nupkg.sha512"
   ],
   "logs": []

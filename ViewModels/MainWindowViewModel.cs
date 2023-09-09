@@ -15,6 +15,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using ProjectSky.Models;
+using System.Diagnostics;
+using System.Net.Http.Json;
+using System.Net.Http;
+using System.Windows.Forms;
+using Newtonsoft.Json;
+using Application = System.Windows.Application;
+using MessageBox = System.Windows.MessageBox;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace ProjectSky.ViewModels
 {
@@ -83,6 +91,7 @@ namespace ProjectSky.ViewModels
                     configVals = JsonSerializer.Deserialize<Models.Config>(conf);
                 }
             }
+            CheckUpdate();
             SetProperties();
             CheckBins();
         }
@@ -349,6 +358,42 @@ namespace ProjectSky.ViewModels
                         break;
                 }
                 IsDropdownOpen = false;
+            }
+        }
+
+        private async void CheckUpdate()
+        {
+            var currentVersion = "2.0.0";
+
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "http://developer.github.com/v3/#user-agent-required");
+                    var result = await client.GetAsync("https://api.github.com/repos/svfeplvce/ProjectSky/releases/latest");
+                    var response = await result.Content.ReadAsStringAsync();
+                    var content = JsonConvert.DeserializeObject<Dictionary<string, object>>(response);
+                    var newVersion = content["name"].ToString();
+                    bool curIsNew = currentVersion == newVersion;
+
+                    if (!curIsNew && !configVals.autoUpdate)
+                    {
+                        var box = MessageBox.Show($"New update found (version {newVersion}). Update?", "Update Found", MessageBoxButton.YesNo);
+                        if (box == MessageBoxResult.Yes)
+                        {
+                            Process.Start("Updater.exe");
+                            Application.Current.MainWindow.Close();
+                        }
+                    } else if (!curIsNew && configVals.autoUpdate)
+                    {
+                        Process.Start("Updater.exe");
+                        Application.Current.MainWindow.Close();
+                    }
+                }
+            }
+            catch
+            {
+                return;
             }
         }
     }

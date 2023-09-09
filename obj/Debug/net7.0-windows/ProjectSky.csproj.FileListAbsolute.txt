@@ -41,3 +41,9 @@ C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Debug\net7.0-windows\Views\Mo
 C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Debug\net7.0-windows\Views\TrainerView.g.cs
 C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Debug\net7.0-windows\Views\MoveView.baml
 C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Debug\net7.0-windows\Views\TrainerView.baml
+C:\Users\foxna\programs\PROJECT SKY\ProjectSky\bin\Debug\net7.0-windows\Updater.deps.json
+C:\Users\foxna\programs\PROJECT SKY\ProjectSky\bin\Debug\net7.0-windows\Updater.runtimeconfig.json
+C:\Users\foxna\programs\PROJECT SKY\ProjectSky\bin\Debug\net7.0-windows\Updater.exe
+C:\Users\foxna\programs\PROJECT SKY\ProjectSky\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\foxna\programs\PROJECT SKY\ProjectSky\bin\Debug\net7.0-windows\Updater.dll
+C:\Users\foxna\programs\PROJECT SKY\ProjectSky\bin\Debug\net7.0-windows\Updater.pdb
