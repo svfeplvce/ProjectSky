@@ -76,7 +76,7 @@ namespace ProjectSky.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProjectSky;component/views/pokeeditorview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProjectSky;V1.0.0.0;component/views/pokeeditorview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\PokeEditorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
