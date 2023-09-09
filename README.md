@@ -1,5 +1,5 @@
 # WELCOME TO PROJECT SKY!
-### VERSION 2.0.0
+## VERSION 2.0.0
 
 ### HOW TO USE:
 1. Open ProjectSky.exe
