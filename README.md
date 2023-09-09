@@ -31,6 +31,9 @@ Go to the issues section of the ProjectSky Github page (at github.com/svfeplvce/
 
 ### SPECIAL THANKS TO:
 aria-zivar
+
 The Pokemon Switch modding Discord
+
 ChatGPT (a life saver for a dummy like me)
+
 You
