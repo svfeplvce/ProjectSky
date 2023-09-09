@@ -17,8 +17,11 @@ namespace ProjectSky.Models
             get => _name;
             set
             {
-                _name = value;
-                OnPropertyChanged();
+                if (_name != value)
+                {
+                    _name = value;
+                    OnPropertyChanged();
+                }
             }
         }
         [JsonIgnore]
@@ -28,8 +31,11 @@ namespace ProjectSky.Models
             get => _devID;
             set
             {
-                _devID = value;
-                OnPropertyChanged();
+                if (_devID != value)
+                {
+                    _devID = value;
+                    OnPropertyChanged();
+                }
             }
         }
         [JsonIgnore]
@@ -39,8 +45,11 @@ namespace ProjectSky.Models
             get => _data;
             set
             {
-                _data = value;
-                OnPropertyChanged();
+                if (_data != value)
+                {
+                    _data = value;
+                    OnPropertyChanged();
+                }
             }
         }
     }

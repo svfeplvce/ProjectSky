@@ -4,9 +4,57 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjectSky.Views"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:vm="clr-namespace:ProjectSky.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             Height="518" Width="998"
+             d:DesignHeight="518" d:DesignWidth="998">
+    <Grid Background="#252525">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <hc:ComboBox Grid.Row="0" HorizontalAlignment="Right" Width="250" Height="25" ItemsSource="{Binding MvDevID.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedItem="{Binding Selected, Mode=TwoWay}">
+            <ComboBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel/>
+                </ItemsPanelTemplate>
+            </ComboBox.ItemsPanel>
+        </hc:ComboBox>
+
+        <Border Grid.Row="1" Background="#202020" CornerRadius="5" Margin="5">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Flags" FontSize="30" Foreground="White" FontFamily="{StaticResource Gill}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="Stats" FontSize="30" Foreground="White" FontFamily="{StaticResource Gill}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <ScrollViewer Grid.Row="1" Grid.Column="0" Background="#202020" Margin="5">
+                    <StackPanel Orientation="Vertical">
+                        <ItemsControl ItemsSource="{Binding FlagMenuItems}" >
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type vm:FlagBoxItemViewModel}">
+                                    <CheckBox Content="{Binding Value}" IsChecked="{Binding IsChecked}" Command="{Binding Path=DataContext.ToggleCheckBoxCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MoveView}}}" CommandParameter="{Binding}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Grid>
             
+        </Border>
+        
     </Grid>
 </UserControl>

@@ -455,7 +455,6 @@ namespace ProjectSky.ViewModels
                 if (results == MessageBoxResult.Yes)
                 {
                     Save();
-                    Personal.PersonalArray sendPersonal = new Personal.PersonalArray();
                     NavigationService.NavigateTo<SelectorViewModel>();
                 }
                 else return;
@@ -501,9 +500,20 @@ namespace ProjectSky.ViewModels
 
         public void Reset()
         {
-            _personalNew = _personalOrig;
-            _plibNew = _plibOrig;
-            _pdataNew = _pdataOrig;
+            try
+            {
+                var results = MessageBox.Show("Are you sure you want to reset? All progress will be lost.", "CAUTION: RESET", MessageBoxButton.YesNo);
+                if (results == MessageBoxResult.Yes)
+                {
+                    _personalNew = _personalOrig;
+                    _plibNew = _plibOrig;
+                    _pdataNew = _pdataOrig;
+                }
+                else return;
+            } catch (Exception ex)
+            {
+                Console.WriteLine("woops");
+            }
         }
     }
 }

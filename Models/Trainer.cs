@@ -1,13 +1,17 @@
-﻿using System;
+﻿using ProjectSky.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ProjectSky.Models
 {
     public class Trainer
     {
+
         public class EffortValue
         {
             public int hp { get; set; }
@@ -18,9 +22,33 @@ namespace ProjectSky.Models
             public int agi { get; set; }
         }
 
-        public class Poke1
+        public class Poke1 : ViewModel
         {
-            public string devId { get; set; }
+            [JsonIgnore]
+            private string _devId;
+            public string devId
+            {
+                get => _devId;
+                set
+                {
+                    _devId = value;
+                    var PkDevID = (PokeDevID.DevID)Application.Current.Properties["pkdevid"];
+                    sprite = new Uri($"pack://application:,,,/ProjectSky;component/Assets/Sprites/{PkDevID.values.FirstOrDefault(x => x.devName == _devId).name}.png");
+                    OnPropertyChanged();
+                }
+            }
+            [JsonIgnore]
+            private Uri _sprite;
+            [JsonIgnore]
+            public Uri sprite
+            {
+                get => _sprite;
+                set
+                {
+                    _sprite = value;
+                    OnPropertyChanged();
+                }
+            }
             public int formId { get; set; }
             public string sex { get; set; }
             public string item { get; set; }
@@ -43,9 +71,33 @@ namespace ProjectSky.Models
             public int scaleValue { get; set; }
         }
 
-        public class Poke2
+        public class Poke2 : ViewModel
         {
-            public string devId { get; set; }
+            [JsonIgnore]
+            private string _devId;
+            public string devId
+            {
+                get => _devId;
+                set
+                {
+                    _devId = value;
+                    var PkDevID = (PokeDevID.DevID)Application.Current.Properties["pkdevid"];
+                    sprite = new Uri($"pack://application:,,,/ProjectSky;component/Assets/Sprites/{PkDevID.values.FirstOrDefault(x => x.devName == _devId).name}.png");
+                    OnPropertyChanged();
+                }
+            }
+            [JsonIgnore]
+            private Uri _sprite;
+            [JsonIgnore]
+            public Uri sprite
+            {
+                get => _sprite;
+                set
+                {
+                    _sprite = value;
+                    OnPropertyChanged();
+                }
+            }
             public int formId { get; set; }
             public string sex { get; set; }
             public string item { get; set; }
@@ -68,9 +120,33 @@ namespace ProjectSky.Models
             public int scaleValue { get; set; }
         }
 
-        public class Poke3
+        public class Poke3 : ViewModel
         {
-            public string devId { get; set; }
+            [JsonIgnore]
+            private string _devId;
+            public string devId
+            {
+                get => _devId;
+                set
+                {
+                    _devId = value;
+                    var PkDevID = (PokeDevID.DevID)Application.Current.Properties["pkdevid"];
+                    sprite = new Uri($"pack://application:,,,/ProjectSky;component/Assets/Sprites/{PkDevID.values.FirstOrDefault(x => x.devName == _devId).name}.png");
+                    OnPropertyChanged();
+                }
+            }
+            [JsonIgnore]
+            private Uri _sprite;
+            [JsonIgnore]
+            public Uri sprite
+            {
+                get => _sprite;
+                set
+                {
+                    _sprite = value;
+                    OnPropertyChanged();
+                }
+            }
             public int formId { get; set; }
             public string sex { get; set; }
             public string item { get; set; }
@@ -93,9 +169,33 @@ namespace ProjectSky.Models
             public int scaleValue { get; set; }
         }
 
-        public class Poke4
+        public class Poke4 : ViewModel
         {
-            public string devId { get; set; }
+            [JsonIgnore]
+            private string _devId;
+            public string devId
+            {
+                get => _devId;
+                set
+                {
+                    _devId = value;
+                    var PkDevID = (PokeDevID.DevID)Application.Current.Properties["pkdevid"];
+                    sprite = new Uri($"pack://application:,,,/ProjectSky;component/Assets/Sprites/{PkDevID.values.FirstOrDefault(x => x.devName == _devId).name}.png");
+                    OnPropertyChanged();
+                }
+            }
+            [JsonIgnore]
+            private Uri _sprite;
+            [JsonIgnore]
+            public Uri sprite
+            {
+                get => _sprite;
+                set
+                {
+                    _sprite = value;
+                    OnPropertyChanged();
+                }
+            }
             public int formId { get; set; }
             public string sex { get; set; }
             public string item { get; set; }
@@ -118,9 +218,33 @@ namespace ProjectSky.Models
             public int scaleValue { get; set; }
         }
 
-        public class Poke5
+        public class Poke5 : ViewModel
         {
-            public string devId { get; set; }
+            [JsonIgnore]
+            private string _devId;
+            public string devId
+            {
+                get => _devId;
+                set
+                {
+                    _devId = value;
+                    var PkDevID = (PokeDevID.DevID)Application.Current.Properties["pkdevid"];
+                    sprite = new Uri($"pack://application:,,,/ProjectSky;component/Assets/Sprites/{PkDevID.values.FirstOrDefault(x => x.devName == _devId).name}.png");
+                    OnPropertyChanged();
+                }
+            }
+            [JsonIgnore]
+            private Uri _sprite;
+            [JsonIgnore]
+            public Uri sprite
+            {
+                get => _sprite;
+                set
+                {
+                    _sprite = value;
+                    OnPropertyChanged();
+                }
+            }
             public int formId { get; set; }
             public string sex { get; set; }
             public string item { get; set; }
@@ -143,9 +267,33 @@ namespace ProjectSky.Models
             public int scaleValue { get; set; }
         }
 
-        public class Poke6
+        public class Poke6 : ViewModel
         {
-            public string devId { get; set; }
+            [JsonIgnore]
+            private string _devId;
+            public string devId
+            {
+                get => _devId;
+                set
+                {
+                    _devId = value;
+                    var PkDevID = (PokeDevID.DevID)Application.Current.Properties["pkdevid"];
+                    sprite = new Uri($"pack://application:,,,/ProjectSky;component/Assets/Sprites/{PkDevID.values.FirstOrDefault(x => x.devName == _devId).name}.png");
+                    OnPropertyChanged();
+                }
+            }
+            [JsonIgnore]
+            private Uri _sprite;
+            [JsonIgnore]
+            public Uri sprite
+            {
+                get => _sprite;
+                set
+                {
+                    _sprite = value;
+                    OnPropertyChanged();
+                }
+            }
             public int formId { get; set; }
             public string sex { get; set; }
             public string item { get; set; }

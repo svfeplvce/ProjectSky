@@ -158,54 +158,56 @@ namespace ProjectSky.ViewModels
         public async void Exit()
         {
             // create bins
-
-            var flatcExe = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/flatc.exe")).Stream;
-            var personalFBS = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/personal_array.fbs")).Stream;
-            var plibBFBS = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/plib_item_conversion_array.bfbs")).Stream;
-            var pdataBFBS = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/pokedata_array.bfbs")).Stream;
-
-            var tempExePath = Path.Combine(configVals.outPath, "flatc.exe");
-            var personalFBSPath = Path.Combine(configVals.outPath, "personal_array.fbs");
-            var plibBFBSPath = Path.Combine(configVals.outPath, "plib_item_conversion_array.bfbs");
-            var pdataBFBSPath = Path.Combine(configVals.outPath, "pokedata_array.bfbs");
-
-            byte[] exebytes = new byte[(int)flatcExe.Length];
-            byte[] pbytes = new byte[(int)personalFBS.Length];
-            byte[] plbytes = new byte[(int)plibBFBS.Length];
-            byte[] pdbytes = new byte[(int)pdataBFBS.Length];
-
-            flatcExe.Read(exebytes, 0, exebytes.Length);
-            personalFBS.Read(pbytes, 0, pbytes.Length);
-            plibBFBS.Read(plbytes, 0, plbytes.Length);
-            pdataBFBS.Read(pdbytes, 0, pdbytes.Length);
-
-            File.WriteAllBytesAsync(tempExePath, exebytes);
-            File.WriteAllBytesAsync(personalFBSPath, pbytes);
-            File.WriteAllBytesAsync(plibBFBSPath, plbytes);
-            File.WriteAllBytesAsync(pdataBFBSPath, pdbytes);
-
-            var pcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/avalon/data/ -b personal_array.fbs personal_array.json").WithWorkingDirectory(configVals.outPath);
-            var plcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/world/data/battle/plib_item_conversion/ -b plib_item_conversion_array.bfbs plib_item_conversion_array.json").WithWorkingDirectory(configVals.outPath);
-            var pdcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/world/data/encount/pokedata/pokedata/ -b pokedata_array.bfbs pokedata_array.json").WithWorkingDirectory(configVals.outPath);
-
-            await pcmd.ExecuteBufferedAsync();
-            await plcmd.ExecuteBufferedAsync();
-            await pdcmd.ExecuteBufferedAsync();
-
-            File.Delete(tempExePath);
-            File.Delete(personalFBSPath);
-            File.Delete(plibBFBSPath);
-            File.Delete(pdataBFBSPath);
-
-            var zipDirectories = Path.Combine(configVals.outPath, "romfs/");
-            var zipPath = Path.Combine(configVals.outPath, "project_sky_pokemon_mod.zip");
-
-            if (File.Exists(zipPath))
+            if (File.Exists(Path.Combine(configVals.outPath, "personal_array.json")))
             {
-                File.Delete(zipPath);
-            }
+                var flatcExe = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/flatc.exe")).Stream;
+                var personalFBS = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/personal_array.fbs")).Stream;
+                var plibBFBS = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/plib_item_conversion_array.bfbs")).Stream;
+                var pdataBFBS = Application.GetResourceStream(new Uri($"pack://application:,,,/Assets/Flatc/pokedata_array.bfbs")).Stream;
 
-            ZipFile.CreateFromDirectory(zipDirectories, zipPath);
+                var tempExePath = Path.Combine(configVals.outPath, "flatc.exe");
+                var personalFBSPath = Path.Combine(configVals.outPath, "personal_array.fbs");
+                var plibBFBSPath = Path.Combine(configVals.outPath, "plib_item_conversion_array.bfbs");
+                var pdataBFBSPath = Path.Combine(configVals.outPath, "pokedata_array.bfbs");
+
+                byte[] exebytes = new byte[(int)flatcExe.Length];
+                byte[] pbytes = new byte[(int)personalFBS.Length];
+                byte[] plbytes = new byte[(int)plibBFBS.Length];
+                byte[] pdbytes = new byte[(int)pdataBFBS.Length];
+
+                flatcExe.Read(exebytes, 0, exebytes.Length);
+                personalFBS.Read(pbytes, 0, pbytes.Length);
+                plibBFBS.Read(plbytes, 0, plbytes.Length);
+                pdataBFBS.Read(pdbytes, 0, pdbytes.Length);
+
+                File.WriteAllBytesAsync(tempExePath, exebytes);
+                File.WriteAllBytesAsync(personalFBSPath, pbytes);
+                File.WriteAllBytesAsync(plibBFBSPath, plbytes);
+                File.WriteAllBytesAsync(pdataBFBSPath, pdbytes);
+
+                var pcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/avalon/data/ -b personal_array.fbs personal_array.json").WithWorkingDirectory(configVals.outPath);
+                var plcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/world/data/battle/plib_item_conversion/ -b plib_item_conversion_array.bfbs plib_item_conversion_array.json").WithWorkingDirectory(configVals.outPath);
+                var pdcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/world/data/encount/pokedata/pokedata/ -b pokedata_array.bfbs pokedata_array.json").WithWorkingDirectory(configVals.outPath);
+
+                await pcmd.ExecuteBufferedAsync();
+                await plcmd.ExecuteBufferedAsync();
+                await pdcmd.ExecuteBufferedAsync();
+
+                File.Delete(tempExePath);
+                File.Delete(personalFBSPath);
+                File.Delete(plibBFBSPath);
+                File.Delete(pdataBFBSPath);
+
+                var zipDirectories = Path.Combine(configVals.outPath, "romfs/");
+                var zipPath = Path.Combine(configVals.outPath, "project_sky_pokemon_mod.zip");
+
+                if (File.Exists(zipPath))
+                {
+                    File.Delete(zipPath);
+                }
+
+                ZipFile.CreateFromDirectory(zipDirectories, zipPath);
+            }
         }
     }
 }

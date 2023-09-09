@@ -19,7 +19,7 @@ namespace ProjectSky.Models
 
         public class Wazas
         {
-            public List<Waza> waza { get; set; }
+            public List<Waza> table { get; set; }
         }
 
         public class StatAmps

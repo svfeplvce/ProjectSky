@@ -2,3394 +2,4242 @@
   "items": [
     {
       "devName": "ITEMID_NONE",
+      "name": "None",
       "id": 0
     },
     {
       "devName": "ITEMID_MASUTAABOORU",
+      "name": "Master Ball",
       "id": 1
     },
     {
       "devName": "ITEMID_HAIPAABOORU",
+      "name": "Ultra Ball",
       "id": 2
     },
     {
       "devName": "ITEMID_SUUPAABOORU",
+      "name": "Great Ball",
       "id": 3
     },
     {
       "devName": "ITEMID_MONSUTAABOORU",
+      "name": "Pok\u00E9 Ball",
       "id": 4
     },
     {
       "devName": "ITEMID_SAFARIBOORU",
+      "name": "Safari Ball",
       "id": 5
     },
     {
       "devName": "ITEMID_NETTOBOORU",
+      "name": "Net Ball",
       "id": 6
     },
     {
       "devName": "ITEMID_DAIBUBOORU",
+      "name": "Dive Ball",
       "id": 7
     },
     {
       "devName": "ITEMID_NESUTOBOORU",
+      "name": "Nest Ball",
       "id": 8
     },
     {
       "devName": "ITEMID_RIPIITOBOORU",
+      "name": "Repeat Ball",
       "id": 9
     },
     {
       "devName": "ITEMID_TAIMAABOORU",
+      "name": "Timer Ball",
       "id": 10
     },
     {
       "devName": "ITEMID_GOOZYASUBOORU",
+      "name": "Luxury Ball",
       "id": 11
     },
     {
       "devName": "ITEMID_PUREMIABOORU",
+      "name": "Premier Ball",
       "id": 12
     },
     {
       "devName": "ITEMID_DAAKUBOORU",
+      "name": "Dusk Ball",
       "id": 13
     },
     {
       "devName": "ITEMID_HIIRUBOORU",
+      "name": "Heal Ball",
       "id": 14
     },
     {
       "devName": "ITEMID_KUIKKUBOORU",
+      "name": "Quick Ball",
       "id": 15
     },
     {
       "devName": "ITEMID_KIZUGUSURI",
+      "name": "Potion",
       "id": 17
     },
     {
       "devName": "ITEMID_DOKUKESI",
+      "name": "Antidote",
       "id": 18
     },
     {
       "devName": "ITEMID_YAKEDONAOSI",
+      "name": "Burn Heal",
       "id": 19
     },
     {
       "devName": "ITEMID_KOORINAOSI",
+      "name": "Ice Heal",
       "id": 20
     },
     {
       "devName": "ITEMID_NEMUKEZAMASI",
+      "name": "Awakening",
       "id": 21
     },
     {
       "devName": "ITEMID_MAHINAOSI",
+      "name": "Paralyze Heal",
       "id": 22
     },
     {
       "devName": "ITEMID_KAIHUKUNOKUSURI",
+      "name": "Full Restore",
       "id": 23
     },
     {
       "devName": "ITEMID_MANTANNOKUSURI",
+      "name": "Max Potion",
       "id": 24
     },
     {
       "devName": "ITEMID_SUGOIKIZUGUSURI",
+      "name": "Hyper Potion",
       "id": 25
     },
     {
       "devName": "ITEMID_IIKIZUGUSURI",
+      "name": "Super Potion",
       "id": 26
     },
     {
       "devName": "ITEMID_NANDEMONAOSI",
+      "name": "Full Heal",
       "id": 27
     },
     {
       "devName": "ITEMID_GENKINOKAKERA",
+      "name": "Revive",
       "id": 28
     },
     {
       "devName": "ITEMID_GENKINOKATAMARI",
+      "name": "Max Revive",
       "id": 29
     },
     {
       "devName": "ITEMID_OISIIMIZU",
+      "name": "Fresh Water",
       "id": 30
     },
     {
       "devName": "ITEMID_SAIKOSOODA",
+      "name": "Soda Pop",
       "id": 31
     },
     {
       "devName": "ITEMID_MIKKUSUORE",
+      "name": "Lemonade",
       "id": 32
     },
     {
       "devName": "ITEMID_MOOMOOMIRUKU",
+      "name": "Moomoo Milk",
       "id": 33
     },
     {
       "devName": "ITEMID_TIKARANOKONA",
+      "name": "Energy Powder",
       "id": 34
     },
     {
       "devName": "ITEMID_TIKARANONEKKO",
+      "name": "Energy Root",
       "id": 35
     },
     {
       "devName": "ITEMID_BANNOUGONA",
+      "name": "Heal Powder",
       "id": 36
     },
     {
       "devName": "ITEMID_HUKKATUSOU",
+      "name": "Revival Herb",
       "id": 37
     },
     {
       "devName": "ITEMID_PIIPIIEIDO",
+      "name": "Ether",
       "id": 38
     },
     {
       "devName": "ITEMID_PIIPIIRIKABAA",
+      "name": "Max Ether",
       "id": 39
     },
     {
       "devName": "ITEMID_PIIPIIEIDAA",
+      "name": "Elixir",
       "id": 40
     },
     {
       "devName": "ITEMID_PIIPIIMAKKUSU",
+      "name": "Max Elixir",
       "id": 41
     },
     {
       "devName": "ITEMID_MAKKUSUAPPU",
+      "name": "HP Up",
       "id": 45
     },
     {
       "devName": "ITEMID_TAURIN",
+      "name": "Protein",
       "id": 46
     },
     {
       "devName": "ITEMID_BUROMUHEKISIN",
+      "name": "Iron",
       "id": 47
     },
     {
       "devName": "ITEMID_INDOMETASIN",
+      "name": "Carbos",
       "id": 48
     },
     {
       "devName": "ITEMID_RIZOTIUMU",
+      "name": "Calcium",
       "id": 49
     },
     {
       "devName": "ITEMID_HUSIGINAAME",
+      "name": "Rare Candy",
       "id": 50
     },
     {
       "devName": "ITEMID_POINTOAPPU",
+      "name": "PP Up",
       "id": 51
     },
     {
       "devName": "ITEMID_KITOSAN",
+      "name": "Zinc",
       "id": 52
     },
     {
       "devName": "ITEMID_POINTOMAKKUSU",
+      "name": "PP Max",
       "id": 53
     },
     {
       "devName": "ITEMID_EFEKUTOGAADO",
+      "name": "Guard Spec.",
       "id": 55
     },
     {
       "devName": "ITEMID_KURITHIKATTO",
+      "name": "Dire Hit",
       "id": 56
     },
     {
       "devName": "ITEMID_PURASUPAWAA",
+      "name": "X Attack",
       "id": 57
     },
     {
       "devName": "ITEMID_DHIFENDAA",
+      "name": "X Defense",
       "id": 58
     },
     {
       "devName": "ITEMID_SUPIIDAA",
+      "name": "X Speed",
       "id": 59
     },
     {
       "devName": "ITEMID_YOKUATAARU",
+      "name": "X Accuracy",
       "id": 60
     },
     {
       "devName": "ITEMID_SUPESYARUAPPU",
+      "name": "X Sp. Atk",
       "id": 61
     },
     {
       "devName": "ITEMID_SUPESYARUGAADO",
+      "name": "X Sp. Def",
       "id": 62
     },
     {
       "devName": "ITEMID_PIPPININGYOU",
+      "name": "Pok\u00E9 Doll",
       "id": 63
     },
     {
       "devName": "ITEMID_TAIYOUNOISI",
+      "name": "Sun Stone",
       "id": 80
     },
     {
       "devName": "ITEMID_TUKINOISI",
+      "name": "Moon Stone",
       "id": 81
     },
     {
       "devName": "ITEMID_HONOONOISI",
+      "name": "Fire Stone",
       "id": 82
     },
     {
       "devName": "ITEMID_KAMINARINOISI",
+      "name": "Thunder Stone",
       "id": 83
     },
     {
       "devName": "ITEMID_MIZUNOISI",
+      "name": "Water Stone",
       "id": 84
     },
     {
       "devName": "ITEMID_RIIHUNOISI",
+      "name": "Leaf Stone",
       "id": 85
     },
     {
       "devName": "ITEMID_TIISANAKINOKO",
+      "name": "Tiny Mushroom",
       "id": 86
     },
     {
       "devName": "ITEMID_OOKINAKINOKO",
+      "name": "Big Mushroom",
       "id": 87
     },
     {
       "devName": "ITEMID_SINZYU",
+      "name": "Pearl",
       "id": 88
     },
     {
       "devName": "ITEMID_OOKINASINZYU",
+      "name": "Big Pearl",
       "id": 89
     },
     {
       "devName": "ITEMID_HOSINOSUNA",
+      "name": "Stardust",
       "id": 90
     },
     {
       "devName": "ITEMID_HOSINOKAKERA",
+      "name": "Star Piece",
       "id": 91
     },
     {
       "devName": "ITEMID_KINNOTAMA",
+      "name": "Nugget",
       "id": 92
     },
     {
       "devName": "ITEMID_AMAIMITU",
+      "name": "Honey",
       "id": 94
     },
     {
       "devName": "ITEMID_KITYOUNAHONE",
+      "name": "Rare Bone",
       "id": 106
     },
     {
       "devName": "ITEMID_HIKARINOISI",
+      "name": "Shiny Stone",
       "id": 107
     },
     {
       "devName": "ITEMID_YAMINOISI",
+      "name": "Dusk Stone",
       "id": 108
     },
     {
       "devName": "ITEMID_MEZAMEISI",
+      "name": "Dawn Stone",
       "id": 109
     },
     {
       "devName": "ITEMID_MANMARUISI",
+      "name": "Oval Stone",
       "id": 110
     },
     {
       "devName": "ITEMID_HAKKINDAMA",
+      "name": "Griseous Orb",
       "id": 112
     },
     {
       "devName": "ITEMID_KONGOUDAMA",
+      "name": "Adamant Orb",
       "id": 135
     },
     {
       "devName": "ITEMID_SIRATAMA",
+      "name": "Lustrous Orb",
       "id": 136
     },
     {
       "devName": "ITEMID_KURABONOMI",
+      "name": "Cheri Berry",
       "id": 149
     },
     {
       "devName": "ITEMID_KAGONOMI",
+      "name": "Chesto Berry",
       "id": 150
     },
     {
       "devName": "ITEMID_MOMONNOMI",
+      "name": "Pecha Berry",
       "id": 151
     },
     {
       "devName": "ITEMID_TIIGONOMI",
+      "name": "Rawst Berry",
       "id": 152
     },
     {
       "devName": "ITEMID_NANASINOMI",
+      "name": "Aspear Berry",
       "id": 153
     },
     {
       "devName": "ITEMID_HIMERINOMI",
+      "name": "Leppa Berry",
       "id": 154
     },
     {
       "devName": "ITEMID_ORENNOMI",
+      "name": "Oran Berry",
       "id": 155
     },
     {
       "devName": "ITEMID_KIINOMI",
+      "name": "Persim Berry",
       "id": 156
     },
     {
       "devName": "ITEMID_RAMUNOMI",
+      "name": "Lum Berry",
       "id": 157
     },
     {
       "devName": "ITEMID_OBONNOMI",
+      "name": "Sitrus Berry",
       "id": 158
     },
     {
       "devName": "ITEMID_FIRANOMI",
+      "name": "Figy Berry",
       "id": 159
     },
     {
       "devName": "ITEMID_UINOMI",
+      "name": "Wiki Berry",
       "id": 160
     },
     {
       "devName": "ITEMID_MAGONOMI",
+      "name": "Mago Berry",
       "id": 161
     },
     {
       "devName": "ITEMID_BANZINOMI",
+      "name": "Aguav Berry",
       "id": 162
     },
     {
       "devName": "ITEMID_IANOMI",
+      "name": "Iapapa Berry",
       "id": 163
     },
     {
       "devName": "ITEMID_ZAROKUNOMI",
+      "name": "Pomeg Berry",
       "id": 169
     },
     {
       "devName": "ITEMID_NEKOBUNOMI",
+      "name": "Kelpsy Berry",
       "id": 170
     },
     {
       "devName": "ITEMID_TAPORUNOMI",
+      "name": "Qualot Berry",
       "id": 171
     },
     {
       "devName": "ITEMID_ROMENOMI",
+      "name": "Hondew Berry",
       "id": 172
     },
     {
       "devName": "ITEMID_UBUNOMI",
+      "name": "Grepa Berry",
       "id": 173
     },
     {
       "devName": "ITEMID_MATOMANOMI",
+      "name": "Tamato Berry",
       "id": 174
     },
     {
       "devName": "ITEMID_OKKANOMI",
+      "name": "Occa Berry",
       "id": 184
     },
     {
       "devName": "ITEMID_ITOKENOMI",
+      "name": "Passho Berry",
       "id": 185
     },
     {
       "devName": "ITEMID_SOKUNONOMI",
+      "name": "Wacan Berry",
       "id": 186
     },
     {
       "devName": "ITEMID_RINDONOMI",
+      "name": "Rindo Berry",
       "id": 187
     },
     {
       "devName": "ITEMID_YATHENOMI",
+      "name": "Yache Berry",
       "id": 188
     },
     {
       "devName": "ITEMID_YOPUNOMI",
+      "name": "Chople Berry",
       "id": 189
     },
     {
       "devName": "ITEMID_BIAANOMI",
+      "name": "Kebia Berry",
       "id": 190
     },
     {
       "devName": "ITEMID_SYUKANOMI",
+      "name": "Shuca Berry",
       "id": 191
     },
     {
       "devName": "ITEMID_BAKOUNOMI",
+      "name": "Coba Berry",
       "id": 192
     },
     {
       "devName": "ITEMID_UTANNOMI",
+      "name": "Payapa Berry",
       "id": 193
     },
     {
       "devName": "ITEMID_TANGANOMI",
+      "name": "Tanga Berry",
       "id": 194
     },
     {
       "devName": "ITEMID_YOROGINOMI",
+      "name": "Charti Berry",
       "id": 195
     },
     {
       "devName": "ITEMID_KASIBUNOMI",
+      "name": "Kasib Berry",
       "id": 196
     },
     {
       "devName": "ITEMID_HABANNOMI",
+      "name": "Haban Berry",
       "id": 197
     },
     {
       "devName": "ITEMID_NAMONOMI",
+      "name": "Colbur Berry",
       "id": 198
     },
     {
       "devName": "ITEMID_RIRIBANOMI",
+      "name": "Babiri Berry",
       "id": 199
     },
     {
       "devName": "ITEMID_HOZUNOMI",
+      "name": "Chilan Berry",
       "id": 200
     },
     {
       "devName": "ITEMID_TIIRANOMI",
+      "name": "Liechi Berry",
       "id": 201
     },
     {
       "devName": "ITEMID_RYUGANOMI",
+      "name": "Ganlon Berry",
       "id": 202
     },
     {
       "devName": "ITEMID_KAMURANOMI",
+      "name": "Salac Berry",
       "id": 203
     },
     {
       "devName": "ITEMID_YATAPINOMI",
+      "name": "Petaya Berry",
       "id": 204
     },
     {
       "devName": "ITEMID_ZUANOMI",
+      "name": "Apicot Berry",
       "id": 205
     },
     {
       "devName": "ITEMID_SANNOMI",
+      "name": "Lansat Berry",
       "id": 206
     },
     {
       "devName": "ITEMID_SUTAANOMI",
+      "name": "Starf Berry",
       "id": 207
     },
     {
       "devName": "ITEMID_NAZONOMI",
+      "name": "Enigma Berry",
       "id": 208
     },
     {
       "devName": "ITEMID_MIKURUNOMI",
+      "name": "Micle Berry",
       "id": 209
     },
     {
       "devName": "ITEMID_IBANNOMI",
+      "name": "Custap Berry",
       "id": 210
     },
     {
       "devName": "ITEMID_ZYAPONOMI",
+      "name": "Jaboca Berry",
       "id": 211
     },
     {
       "devName": "ITEMID_RENBUNOMI",
+      "name": "Rowap Berry",
       "id": 212
     },
     {
       "devName": "ITEMID_HIKARINOKONA",
+      "name": "Bright Powder",
       "id": 213
     },
     {
       "devName": "ITEMID_SIROIHAABU",
+      "name": "White Herb",
       "id": 214
     },
     {
       "devName": "ITEMID_SENSEINOTUME",
+      "name": "Quick Claw",
       "id": 217
     },
     {
       "devName": "ITEMID_YASURAGINOSUZU",
+      "name": "Soothe Bell",
       "id": 218
     },
     {
       "devName": "ITEMID_MENTARUHAABU",
+      "name": "Mental Herb",
       "id": 219
     },
     {
       "devName": "ITEMID_KODAWARIHATIMAKI",
+      "name": "Choice Band",
       "id": 220
     },
     {
       "devName": "ITEMID_OUZYANOSIRUSI",
+      "name": "King\u2019s Rock",
       "id": 221
     },
     {
       "devName": "ITEMID_GINNOKONA",
+      "name": "Silver Powder",
       "id": 222
     },
     {
       "devName": "ITEMID_OMAMORIKOBAN",
+      "name": "Amulet Coin",
       "id": 223
     },
     {
       "devName": "ITEMID_KEMURIDAMA",
+      "name": "Smoke Ball",
       "id": 228
     },
     {
       "devName": "ITEMID_KAWARAZUNOISI",
+      "name": "Everstone",
       "id": 229
     },
     {
       "devName": "ITEMID_KIAINOHATIMAKI",
+      "name": "Focus Band",
       "id": 230
     },
     {
       "devName": "ITEMID_SIAWASETAMAGO",
+      "name": "Lucky Egg",
       "id": 231
     },
     {
       "devName": "ITEMID_PINTORENZU",
+      "name": "Scope Lens",
       "id": 232
     },
     {
       "devName": "ITEMID_METARUKOOTO",
+      "name": "Metal Coat",
       "id": 233
     },
     {
       "devName": "ITEMID_TABENOKOSI",
+      "name": "Leftovers",
       "id": 234
     },
     {
       "devName": "ITEMID_DENKIDAMA",
+      "name": "Light Ball",
       "id": 236
     },
     {
       "devName": "ITEMID_YAWARAKAISUNA",
+      "name": "Soft Sand",
       "id": 237
     },
     {
       "devName": "ITEMID_KATAIISI",
+      "name": "Hard Stone",
       "id": 238
     },
     {
       "devName": "ITEMID_KISEKINOTANE",
+      "name": "Miracle Seed",
       "id": 239
     },
     {
       "devName": "ITEMID_KUROIMEGANE",
+      "name": "Black Glasses",
       "id": 240
     },
     {
       "devName": "ITEMID_KUROOBI",
+      "name": "Black Belt",
       "id": 241
     },
     {
       "devName": "ITEMID_ZISYAKU",
+      "name": "Magnet",
       "id": 242
     },
     {
       "devName": "ITEMID_SINPINOSIZUKU",
+      "name": "Mystic Water",
       "id": 243
     },
     {
       "devName": "ITEMID_SURUDOIKUTIBASI",
+      "name": "Sharp Beak",
       "id": 244
     },
     {
       "devName": "ITEMID_DOKUBARI",
+      "name": "Poison Barb",
       "id": 245
     },
     {
       "devName": "ITEMID_TOKENAIKOORI",
+      "name": "Never-Melt Ice",
       "id": 246
     },
     {
       "devName": "ITEMID_NOROINOOHUDA",
+      "name": "Spell Tag",
       "id": 247
     },
     {
       "devName": "ITEMID_MAGATTASUPUUN",
+      "name": "Twisted Spoon",
       "id": 248
     },
     {
       "devName": "ITEMID_MOKUTAN",
+      "name": "Charcoal",
       "id": 249
     },
     {
       "devName": "ITEMID_RYUUNOKIBA",
+      "name": "Dragon Fang",
       "id": 250
     },
     {
       "devName": "ITEMID_SIRUKUNOSUKAAHU",
+      "name": "Silk Scarf",
       "id": 251
     },
     {
       "devName": "ITEMID_KAIGARANOSUZU",
+      "name": "Shell Bell",
       "id": 253
     },
     {
       "devName": "ITEMID_KOUKAKURENZU",
+      "name": "Wide Lens",
       "id": 265
     },
     {
       "devName": "ITEMID_TIKARANOHATIMAKI",
+      "name": "Muscle Band",
       "id": 266
     },
     {
       "devName": "ITEMID_MONOSIRIMEGANE",
+      "name": "Wise Glasses",
       "id": 267
     },
     {
       "devName": "ITEMID_TATUZINNOOBI",
+      "name": "Expert Belt",
       "id": 268
     },
     {
       "devName": "ITEMID_HIKARINONENDO",
+      "name": "Light Clay",
       "id": 269
     },
     {
       "devName": "ITEMID_INOTINOTAMA",
+      "name": "Life Orb",
       "id": 270
     },
     {
       "devName": "ITEMID_PAWAHURUHAABU",
+      "name": "Power Herb",
       "id": 271
     },
     {
       "devName": "ITEMID_DOKUDOKUDAMA",
+      "name": "Toxic Orb",
       "id": 272
     },
     {
       "devName": "ITEMID_KAENDAMA",
+      "name": "Flame Orb",
       "id": 273
     },
     {
       "devName": "ITEMID_KIAINOTASUKI",
+      "name": "Focus Sash",
       "id": 275
     },
     {
       "devName": "ITEMID_FOOKASURENZU",
+      "name": "Zoom Lens",
       "id": 276
     },
     {
       "devName": "ITEMID_METORONOOMU",
+      "name": "Metronome",
       "id": 277
     },
     {
       "devName": "ITEMID_KUROITEKKYUU",
+      "name": "Iron Ball",
       "id": 278
     },
     {
       "devName": "ITEMID_KOUKOUNOSIPPO",
+      "name": "Lagging Tail",
       "id": 279
     },
     {
       "devName": "ITEMID_AKAIITO",
+      "name": "Destiny Knot",
       "id": 280
     },
     {
       "devName": "ITEMID_KUROIHEDORO",
+      "name": "Black Sludge",
       "id": 281
     },
     {
       "devName": "ITEMID_TUMETAIIWA",
+      "name": "Icy Rock",
       "id": 282
     },
     {
       "devName": "ITEMID_SARASARAIWA",
+      "name": "Smooth Rock",
       "id": 283
     },
     {
       "devName": "ITEMID_ATUIIWA",
+      "name": "Heat Rock",
       "id": 284
     },
     {
       "devName": "ITEMID_SIMETTAIWA",
+      "name": "Damp Rock",
       "id": 285
     },
     {
       "devName": "ITEMID_NEBARINOKAGIDUME",
+      "name": "Grip Claw",
       "id": 286
     },
     {
       "devName": "ITEMID_KODAWARISUKAAHU",
+      "name": "Choice Scarf",
       "id": 287
     },
     {
       "devName": "ITEMID_KUTTUKIBARI",
+      "name": "Sticky Barb",
       "id": 288
     },
     {
       "devName": "ITEMID_PAWAARISUTO",
+      "name": "Power Bracer",
       "id": 289
     },
     {
       "devName": "ITEMID_PAWAABERUTO",
+      "name": "Power Belt",
       "id": 290
     },
     {
       "devName": "ITEMID_PAWAARENZU",
+      "name": "Power Lens",
       "id": 291
     },
     {
       "devName": "ITEMID_PAWAABANDO",
+      "name": "Power Band",
       "id": 292
     },
     {
       "devName": "ITEMID_PAWAAANKURU",
+      "name": "Power Anklet",
       "id": 293
     },
     {
       "devName": "ITEMID_PAWAAUEITO",
+      "name": "Power Weight",
       "id": 294
     },
     {
       "devName": "ITEMID_KIREINANUKEGARA",
+      "name": "Shed Shell",
       "id": 295
     },
     {
       "devName": "ITEMID_OOKINANEKKO",
+      "name": "Big Root",
       "id": 296
     },
     {
       "devName": "ITEMID_KODAWARIMEGANE",
+      "name": "Choice Specs",
       "id": 297
     },
     {
       "devName": "ITEMID_HINOTAMAPUREETO",
+      "name": "Flame Plate",
       "id": 298
     },
     {
       "devName": "ITEMID_SIZUKUPUREETO",
+      "name": "Splash Plate",
       "id": 299
     },
     {
       "devName": "ITEMID_IKAZUTIPUREETO",
+      "name": "Zap Plate",
       "id": 300
     },
     {
       "devName": "ITEMID_MIDORINOPUREETO",
+      "name": "Meadow Plate",
       "id": 301
     },
     {
       "devName": "ITEMID_TURARANOPUREETO",
+      "name": "Icicle Plate",
       "id": 302
     },
     {
       "devName": "ITEMID_KOBUSINOPUREETO",
+      "name": "Fist Plate",
       "id": 303
     },
     {
       "devName": "ITEMID_MOUDOKUPUREETO",
+      "name": "Toxic Plate",
       "id": 304
     },
     {
       "devName": "ITEMID_DAITINOPUREETO",
+      "name": "Earth Plate",
       "id": 305
     },
     {
       "devName": "ITEMID_AOZORAPUREETO",
+      "name": "Sky Plate",
       "id": 306
     },
     {
       "devName": "ITEMID_HUSIGINOPUREETO",
+      "name": "Mind Plate",
       "id": 307
     },
     {
       "devName": "ITEMID_TAMAMUSIPUREETO",
+      "name": "Insect Plate",
       "id": 308
     },
     {
       "devName": "ITEMID_GANSEKIPUREETO",
+      "name": "Stone Plate",
       "id": 309
     },
     {
       "devName": "ITEMID_MONONOKEPUREETO",
+      "name": "Spooky Plate",
       "id": 310
     },
     {
       "devName": "ITEMID_RYUUNOPUREETO",
+      "name": "Draco Plate",
       "id": 311
     },
     {
       "devName": "ITEMID_KOWAMOTEPUREETO",
+      "name": "Dread Plate",
       "id": 312
     },
     {
       "devName": "ITEMID_KOUTETUPUREETO",
+      "name": "Iron Plate",
       "id": 313
     },
     {
       "devName": "ITEMID_SURUDOITUME",
+      "name": "Razor Claw",
       "id": 326
     },
     {
       "devName": "ITEMID_WAZAMASIN01",
+      "name": "TM001",
       "id": 328
     },
     {
       "devName": "ITEMID_WAZAMASIN02",
+      "name": "TM002",
       "id": 329
     },
     {
       "devName": "ITEMID_WAZAMASIN03",
+      "name": "TM003",
       "id": 330
     },
     {
       "devName": "ITEMID_WAZAMASIN04",
+      "name": "TM004",
       "id": 331
     },
     {
       "devName": "ITEMID_WAZAMASIN05",
+      "name": "TM005",
       "id": 332
     },
     {
       "devName": "ITEMID_WAZAMASIN06",
+      "name": "TM006",
       "id": 333
     },
     {
       "devName": "ITEMID_WAZAMASIN07",
+      "name": "TM007",
       "id": 334
     },
     {
       "devName": "ITEMID_WAZAMASIN08",
+      "name": "TM008",
       "id": 335
     },
     {
       "devName": "ITEMID_WAZAMASIN09",
+      "name": "TM009",
       "id": 336
     },
     {
       "devName": "ITEMID_WAZAMASIN10",
+      "name": "TM010",
       "id": 337
     },
     {
       "devName": "ITEMID_WAZAMASIN11",
+      "name": "TM011",
       "id": 338
     },
     {
       "devName": "ITEMID_WAZAMASIN12",
+      "name": "TM012",
       "id": 339
     },
     {
       "devName": "ITEMID_WAZAMASIN13",
+      "name": "TM013",
       "id": 340
     },
     {
       "devName": "ITEMID_WAZAMASIN14",
+      "name": "TM014",
       "id": 341
     },
     {
       "devName": "ITEMID_WAZAMASIN15",
+      "name": "TM015",
       "id": 342
     },
     {
       "devName": "ITEMID_WAZAMASIN16",
+      "name": "TM016",
       "id": 343
     },
     {
       "devName": "ITEMID_WAZAMASIN17",
+      "name": "TM017",
       "id": 344
     },
     {
       "devName": "ITEMID_WAZAMASIN18",
+      "name": "TM018",
       "id": 345
     },
     {
       "devName": "ITEMID_WAZAMASIN19",
+      "name": "TM019",
       "id": 346
     },
     {
       "devName": "ITEMID_WAZAMASIN20",
+      "name": "TM020",
       "id": 347
     },
     {
       "devName": "ITEMID_WAZAMASIN21",
+      "name": "TM021",
       "id": 348
     },
     {
       "devName": "ITEMID_WAZAMASIN22",
+      "name": "TM022",
       "id": 349
     },
     {
       "devName": "ITEMID_WAZAMASIN23",
+      "name": "TM023",
       "id": 350
     },
     {
       "devName": "ITEMID_WAZAMASIN24",
+      "name": "TM024",
       "id": 351
     },
     {
       "devName": "ITEMID_WAZAMASIN25",
+      "name": "TM025",
       "id": 352
     },
     {
       "devName": "ITEMID_WAZAMASIN26",
+      "name": "TM026",
       "id": 353
     },
     {
       "devName": "ITEMID_WAZAMASIN27",
+      "name": "TM027",
       "id": 354
     },
     {
       "devName": "ITEMID_WAZAMASIN28",
+      "name": "TM028",
       "id": 355
     },
     {
       "devName": "ITEMID_WAZAMASIN29",
+      "name": "TM029",
       "id": 356
     },
     {
       "devName": "ITEMID_WAZAMASIN30",
+      "name": "TM030",
       "id": 357
     },
     {
       "devName": "ITEMID_WAZAMASIN31",
+      "name": "TM031",
       "id": 358
     },
     {
       "devName": "ITEMID_WAZAMASIN32",
+      "name": "TM032",
       "id": 359
     },
     {
       "devName": "ITEMID_WAZAMASIN33",
+      "name": "TM033",
       "id": 360
     },
     {
       "devName": "ITEMID_WAZAMASIN34",
+      "name": "TM034",
       "id": 361
     },
     {
       "devName": "ITEMID_WAZAMASIN35",
+      "name": "TM035",
       "id": 362
     },
     {
       "devName": "ITEMID_WAZAMASIN36",
+      "name": "TM036",
       "id": 363
     },
     {
       "devName": "ITEMID_WAZAMASIN37",
+      "name": "TM037",
       "id": 364
     },
     {
       "devName": "ITEMID_WAZAMASIN38",
+      "name": "TM038",
       "id": 365
     },
     {
       "devName": "ITEMID_WAZAMASIN39",
+      "name": "TM039",
       "id": 366
     },
     {
       "devName": "ITEMID_WAZAMASIN40",
+      "name": "TM040",
       "id": 367
     },
     {
       "devName": "ITEMID_WAZAMASIN41",
+      "name": "TM041",
       "id": 368
     },
     {
       "devName": "ITEMID_WAZAMASIN42",
+      "name": "TM042",
       "id": 369
     },
     {
       "devName": "ITEMID_WAZAMASIN43",
+      "name": "TM043",
       "id": 370
     },
     {
       "devName": "ITEMID_WAZAMASIN44",
+      "name": "TM044",
       "id": 371
     },
     {
       "devName": "ITEMID_WAZAMASIN45",
+      "name": "TM045",
       "id": 372
     },
     {
       "devName": "ITEMID_WAZAMASIN46",
+      "name": "TM046",
       "id": 373
     },
     {
       "devName": "ITEMID_WAZAMASIN47",
+      "name": "TM047",
       "id": 374
     },
     {
       "devName": "ITEMID_WAZAMASIN48",
+      "name": "TM048",
       "id": 375
     },
     {
       "devName": "ITEMID_WAZAMASIN49",
+      "name": "TM049",
       "id": 376
     },
     {
       "devName": "ITEMID_WAZAMASIN50",
+      "name": "TM050",
       "id": 377
     },
     {
       "devName": "ITEMID_WAZAMASIN51",
+      "name": "TM051",
       "id": 378
     },
     {
       "devName": "ITEMID_WAZAMASIN52",
+      "name": "TM052",
       "id": 379
     },
     {
       "devName": "ITEMID_WAZAMASIN53",
+      "name": "TM053",
       "id": 380
     },
     {
       "devName": "ITEMID_WAZAMASIN54",
+      "name": "TM054",
       "id": 381
     },
     {
       "devName": "ITEMID_WAZAMASIN55",
+      "name": "TM055",
       "id": 382
     },
     {
       "devName": "ITEMID_WAZAMASIN56",
+      "name": "TM056",
       "id": 383
     },
     {
       "devName": "ITEMID_WAZAMASIN57",
+      "name": "TM057",
       "id": 384
     },
     {
       "devName": "ITEMID_WAZAMASIN58",
+      "name": "TM058",
       "id": 385
     },
     {
       "devName": "ITEMID_WAZAMASIN59",
+      "name": "TM059",
       "id": 386
     },
     {
       "devName": "ITEMID_WAZAMASIN60",
+      "name": "TM060",
       "id": 387
     },
     {
       "devName": "ITEMID_WAZAMASIN61",
+      "name": "TM061",
       "id": 388
     },
     {
       "devName": "ITEMID_WAZAMASIN62",
+      "name": "TM062",
       "id": 389
     },
     {
       "devName": "ITEMID_WAZAMASIN63",
+      "name": "TM063",
       "id": 390
     },
     {
       "devName": "ITEMID_WAZAMASIN64",
+      "name": "TM064",
       "id": 391
     },
     {
       "devName": "ITEMID_WAZAMASIN65",
+      "name": "TM065",
       "id": 392
     },
     {
       "devName": "ITEMID_WAZAMASIN66",
+      "name": "TM066",
       "id": 393
     },
     {
       "devName": "ITEMID_WAZAMASIN67",
+      "name": "TM067",
       "id": 394
     },
     {
       "devName": "ITEMID_WAZAMASIN68",
+      "name": "TM068",
       "id": 395
     },
     {
       "devName": "ITEMID_WAZAMASIN69",
+      "name": "TM069",
       "id": 396
     },
     {
       "devName": "ITEMID_WAZAMASIN70",
+      "name": "TM070",
       "id": 397
     },
     {
       "devName": "ITEMID_WAZAMASIN71",
+      "name": "TM071",
       "id": 398
     },
     {
       "devName": "ITEMID_WAZAMASIN72",
+      "name": "TM072",
       "id": 399
     },
     {
       "devName": "ITEMID_WAZAMASIN73",
+      "name": "TM073",
       "id": 400
     },
     {
       "devName": "ITEMID_WAZAMASIN74",
+      "name": "TM074",
       "id": 401
     },
     {
       "devName": "ITEMID_WAZAMASIN75",
+      "name": "TM075",
       "id": 402
     },
     {
       "devName": "ITEMID_WAZAMASIN76",
+      "name": "TM076",
       "id": 403
     },
     {
       "devName": "ITEMID_WAZAMASIN77",
+      "name": "TM077",
       "id": 404
     },
     {
       "devName": "ITEMID_WAZAMASIN78",
+      "name": "TM078",
       "id": 405
     },
     {
       "devName": "ITEMID_WAZAMASIN79",
+      "name": "TM079",
       "id": 406
     },
     {
       "devName": "ITEMID_WAZAMASIN80",
+      "name": "TM080",
       "id": 407
     },
     {
       "devName": "ITEMID_WAZAMASIN81",
+      "name": "TM081",
       "id": 408
     },
     {
       "devName": "ITEMID_WAZAMASIN82",
+      "name": "TM082",
       "id": 409
     },
     {
       "devName": "ITEMID_WAZAMASIN83",
+      "name": "TM083",
       "id": 410
     },
     {
       "devName": "ITEMID_WAZAMASIN84",
+      "name": "TM084",
       "id": 411
     },
     {
       "devName": "ITEMID_WAZAMASIN85",
+      "name": "TM085",
       "id": 412
     },
     {
       "devName": "ITEMID_WAZAMASIN86",
+      "name": "TM086",
       "id": 413
     },
     {
       "devName": "ITEMID_WAZAMASIN87",
+      "name": "TM087",
       "id": 414
     },
     {
       "devName": "ITEMID_WAZAMASIN88",
+      "name": "TM088",
       "id": 415
     },
     {
       "devName": "ITEMID_WAZAMASIN89",
+      "name": "TM089",
       "id": 416
     },
     {
       "devName": "ITEMID_WAZAMASIN90",
+      "name": "TM090",
       "id": 417
     },
     {
       "devName": "ITEMID_WAZAMASIN91",
+      "name": "TM091",
       "id": 418
     },
     {
       "devName": "ITEMID_WAZAMASIN92",
+      "name": "TM092",
       "id": 419
     },
     {
       "devName": "ITEMID_SUPIIDOBOORU",
+      "name": "Fast Ball",
       "id": 492
     },
     {
       "devName": "ITEMID_REBERUBOORU",
+      "name": "Level Ball",
       "id": 493
     },
     {
       "devName": "ITEMID_RUAABOORU",
+      "name": "Lure Ball",
       "id": 494
     },
     {
       "devName": "ITEMID_HEBIIBOORU",
+      "name": "Heavy Ball",
       "id": 495
     },
     {
       "devName": "ITEMID_RABURABUBOORU",
+      "name": "Love Ball",
       "id": 496
     },
     {
       "devName": "ITEMID_HURENDOBOORU",
+      "name": "Friend Ball",
       "id": 497
     },
     {
       "devName": "ITEMID_MUUNBOORU",
+      "name": "Moon Ball",
       "id": 498
     },
     {
       "devName": "ITEMID_KONPEBOORU",
+      "name": "Sport Ball",
       "id": 499
     },
     {
       "devName": "ITEMID_SINKANOKISEKI",
+      "name": "Eviolite",
       "id": 538
     },
     {
       "devName": "ITEMID_KARUISI",
+      "name": "Float Stone",
       "id": 539
     },
     {
       "devName": "ITEMID_GOTUGOTUMETTO",
+      "name": "Rocky Helmet",
       "id": 540
     },
     {
       "devName": "ITEMID_HUUSEN",
+      "name": "Air Balloon",
       "id": 541
     },
     {
       "devName": "ITEMID_REDDOKAADO",
+      "name": "Red Card",
       "id": 542
     },
     {
       "devName": "ITEMID_NERAINOMATO",
+      "name": "Ring Target",
       "id": 543
     },
     {
       "devName": "ITEMID_SIMETUKEBANDO",
+      "name": "Binding Band",
       "id": 544
     },
     {
       "devName": "ITEMID_KYUUKON",
+      "name": "Absorb Bulb",
       "id": 545
     },
     {
       "devName": "ITEMID_ZYUUDENTI",
+      "name": "Cell Battery",
       "id": 546
     },
     {
       "devName": "ITEMID_DASSYUTUBOTAN",
+      "name": "Eject Button",
       "id": 547
     },
     {
       "devName": "ITEMID_NOOMARUZYUERU",
+      "name": "Normal Gem",
       "id": 564
     },
     {
       "devName": "ITEMID_TAIRYOKUNOHANE",
+      "name": "Health Feather",
       "id": 565
     },
     {
       "devName": "ITEMID_KINRYOKUNOHANE",
+      "name": "Muscle Feather",
       "id": 566
     },
     {
       "devName": "ITEMID_TEIKOUNOHANE",
+      "name": "Resist Feather",
       "id": 567
     },
     {
       "devName": "ITEMID_TIRYOKUNOHANE",
+      "name": "Genius Feather",
       "id": 568
     },
     {
       "devName": "ITEMID_SEISINNOHANE",
+      "name": "Clever Feather",
       "id": 569
     },
     {
       "devName": "ITEMID_SYUNPATUNOHANE",
+      "name": "Swift Feather",
       "id": 570
     },
     {
       "devName": "ITEMID_KIREINAHANE",
+      "name": "Pretty Feather",
       "id": 571
     },
     {
       "devName": "ITEMID_DORIIMUBOORU",
+      "name": "Dream Ball",
       "id": 576
     },
     {
       "devName": "ITEMID_KAORUKINOKO",
+      "name": "Balm Mushroom",
       "id": 580
     },
     {
       "devName": "ITEMID_DEKAIKINNOTAMA",
+      "name": "Big Nugget",
       "id": 581
     },
     {
       "devName": "ITEMID_ODANGOSINZYU",
+      "name": "Pearl String",
       "id": 582
     },
     {
       "devName": "ITEMID_SUISEINOKAKERA",
+      "name": "Comet Shard",
       "id": 583
     },
     {
       "devName": "ITEMID_WAZAMASIN93",
+      "name": "TM093",
       "id": 618
     },
     {
       "devName": "ITEMID_WAZAMASIN94",
+      "name": "TM094",
       "id": 619
     },
     {
       "devName": "ITEMID_WAZAMASIN95",
+      "name": "TM095",
       "id": 620
     },
     {
       "devName": "ITEMID_HIKARUOMAMORI",
+      "name": "Shiny Charm",
       "id": 632
     },
     {
       "devName": "ITEMID_UTUSIKAGAMI",
+      "name": "Reveal Glass",
       "id": 638
     },
     {
       "devName": "ITEMID_ZYAKUTENHOKEN",
+      "name": "Weakness Policy",
       "id": 639
     },
     {
       "devName": "ITEMID_TOTUGEKITYOKKI",
+      "name": "Assault Vest",
       "id": 640
     },
     {
       "devName": "ITEMID_SEIREIPUREETO",
+      "name": "Pixie Plate",
       "id": 644
     },
     {
       "devName": "ITEMID_TOKUSEIKAPUSERU",
+      "name": "Ability Capsule",
       "id": 645
     },
     {
       "devName": "ITEMID_HIKARIGOKE",
+      "name": "Luminous Moss",
       "id": 648
     },
     {
       "devName": "ITEMID_YUKIDAMA",
+      "name": "Snowball",
       "id": 649
     },
     {
       "devName": "ITEMID_BOUZINGOOGURU",
+      "name": "Safety Goggles",
       "id": 650
     },
     {
       "devName": "ITEMID_ROZERUNOMI",
+      "name": "Roseli Berry",
       "id": 686
     },
     {
       "devName": "ITEMID_AKKINOMI",
+      "name": "Kee Berry",
       "id": 687
     },
     {
       "devName": "ITEMID_TARAPUNOMI",
+      "name": "Maranga Berry",
       "id": 688
     },
     {
       "devName": "ITEMID_WAZAMASIN96",
+      "name": "TM096",
       "id": 690
     },
     {
       "devName": "ITEMID_WAZAMASIN97",
+      "name": "TM097",
       "id": 691
     },
     {
       "devName": "ITEMID_WAZAMASIN98",
+      "name": "TM098",
       "id": 692
     },
     {
       "devName": "ITEMID_WAZAMASIN99",
+      "name": "TM099",
       "id": 693
     },
     {
       "devName": "ITEMID_TANKENKOKOROE",
+      "name": "Adventure Guide",
       "id": 703
     },
     {
       "devName": "ITEMID_IMASIMENOTUBO",
+      "name": "Prison Bottle",
       "id": 765
     },
     {
       "devName": "ITEMID_GINNOOUKAN",
+      "name": "Bottle Cap",
       "id": 795
     },
     {
       "devName": "ITEMID_KINNOOUKAN",
+      "name": "Gold Bottle Cap",
       "id": 796
     },
     {
       "devName": "ITEMID_BIBIRIDAMA",
+      "name": "Adrenaline Orb",
       "id": 846
     },
     {
       "devName": "ITEMID_KOORINOISI",
+      "name": "Ice Stone",
       "id": 849
     },
     {
       "devName": "ITEMID_URUTORABOORU",
+      "name": "Beast Ball",
       "id": 851
     },
     {
       "devName": "ITEMID_KURENAINOMITU",
+      "name": "Red Nectar",
       "id": 853
     },
     {
       "devName": "ITEMID_YAMABUKINOMITU",
+      "name": "Yellow Nectar",
       "id": 854
     },
     {
       "devName": "ITEMID_USUMOMONOMITU",
+      "name": "Pink Nectar",
       "id": 855
     },
     {
       "devName": "ITEMID_MURASAKINOMITU",
+      "name": "Purple Nectar",
       "id": 856
     },
     {
       "devName": "ITEMID_GURANDOKOOTO",
+      "name": "Terrain Extender",
       "id": 879
     },
     {
       "devName": "ITEMID_BOUGOPATTO",
+      "name": "Protective Pads",
       "id": 880
     },
     {
       "devName": "ITEMID_EREKISIIDO",
+      "name": "Electric Seed",
       "id": 881
     },
     {
       "devName": "ITEMID_SAIKOSIIDO",
+      "name": "Psychic Seed",
       "id": 882
     },
     {
       "devName": "ITEMID_MISUTOSIIDO",
+      "name": "Misty Seed",
       "id": 883
     },
     {
       "devName": "ITEMID_GURASUSIIDO",
+      "name": "Grassy Seed",
       "id": 884
     },
     {
       "devName": "ITEMID_KUTITATURUGI",
+      "name": "Rusted Sword",
       "id": 1103
     },
     {
       "devName": "ITEMID_KUTITATATE",
+      "name": "Rusted Shield",
       "id": 1104
     },
     {
       "devName": "ITEMID_AMAAIRINGO",
+      "name": "Sweet Apple",
       "id": 1116
     },
     {
       "devName": "ITEMID_SUPPAIRINGO",
+      "name": "Tart Apple",
       "id": 1117
     },
     {
       "devName": "ITEMID_NODOAME",
+      "name": "Throat Spray",
       "id": 1118
     },
     {
       "devName": "ITEMID_DASSYUTUPAKKU",
+      "name": "Eject Pack",
       "id": 1119
     },
     {
       "devName": "ITEMID_ATUZOKOBUUTU",
+      "name": "Heavy-Duty Boots",
       "id": 1120
     },
     {
       "devName": "ITEMID_KARABURIHOKEN",
+      "name": "Blunder Policy",
       "id": 1121
     },
     {
       "devName": "ITEMID_RUUMUSAABISU",
+      "name": "Room Service",
       "id": 1122
     },
     {
       "devName": "ITEMID_BANNOUGASA",
+      "name": "Utility Umbrella",
       "id": 1123
     },
     {
       "devName": "ITEMID_KEIKENTIAME_1",
+      "name": "Exp. Candy XS",
       "id": 1124
     },
     {
       "devName": "ITEMID_KEIKENTIAME_2",
+      "name": "Exp. Candy S",
       "id": 1125
     },
     {
       "devName": "ITEMID_KEIKENTIAME_3",
+      "name": "Exp. Candy M",
       "id": 1126
     },
     {
       "devName": "ITEMID_KEIKENTIAME_4",
+      "name": "Exp. Candy L",
       "id": 1127
     },
     {
       "devName": "ITEMID_KEIKENTIAME_5",
+      "name": "Exp. Candy XL",
       "id": 1128
     },
     {
       "devName": "ITEMID_SAMISIGARIMINTO",
+      "name": "Lonely Mint",
       "id": 1231
     },
     {
       "devName": "ITEMID_IZIPPARIMINTO",
+      "name": "Adamant Mint",
       "id": 1232
     },
     {
       "devName": "ITEMID_YANTYAMINTO",
+      "name": "Naughty Mint",
       "id": 1233
     },
     {
       "devName": "ITEMID_YUKANMINTO",
+      "name": "Brave Mint",
       "id": 1234
     },
     {
       "devName": "ITEMID_ZUBUTOIMINTO",
+      "name": "Bold Mint",
       "id": 1235
     },
     {
       "devName": "ITEMID_WANPAKUMINTO",
+      "name": "Impish Mint",
       "id": 1236
     },
     {
       "devName": "ITEMID_NOUTENKIMINTO",
+      "name": "Lax Mint",
       "id": 1237
     },
     {
       "devName": "ITEMID_NONKIMINTO",
+      "name": "Relaxed Mint",
       "id": 1238
     },
     {
       "devName": "ITEMID_HIKAEMEMINTO",
+      "name": "Modest Mint",
       "id": 1239
     },
     {
       "devName": "ITEMID_OTTORIMINTO",
+      "name": "Mild Mint",
       "id": 1240
     },
     {
       "devName": "ITEMID_UKKARIMINTO",
+      "name": "Rash Mint",
       "id": 1241
     },
     {
       "devName": "ITEMID_REISEIMINTO",
+      "name": "Quiet Mint",
       "id": 1242
     },
     {
       "devName": "ITEMID_ODAYAKAMINTO",
+      "name": "Calm Mint",
       "id": 1243
     },
     {
       "devName": "ITEMID_OTONASIIMINTO",
+      "name": "Gentle Mint",
       "id": 1244
     },
     {
       "devName": "ITEMID_SINTYOUMINTO",
+      "name": "Careful Mint",
       "id": 1245
     },
     {
       "devName": "ITEMID_NAMAIKIMINTO",
+      "name": "Sassy Mint",
       "id": 1246
     },
     {
       "devName": "ITEMID_OKUBYOUMINTO",
+      "name": "Timid Mint",
       "id": 1247
     },
     {
       "devName": "ITEMID_SEKKTIMINTO",
+      "name": "Hasty Mint",
       "id": 1248
     },
     {
       "devName": "ITEMID_YOUKIMINTO",
+      "name": "Jolly Mint",
       "id": 1249
     },
     {
       "devName": "ITEMID_MUJYAKIMINTO",
+      "name": "Naive Mint",
       "id": 1250
     },
     {
       "devName": "ITEMID_MAZIMEMINTO",
+      "name": "Serious Mint",
       "id": 1251
     },
     {
       "devName": "ITEMID_WARETAPOTTO",
+      "name": "Cracked Pot",
       "id": 1253
     },
     {
       "devName": "ITEMID_KAKETAPOTTO",
+      "name": "Chipped Pot",
       "id": 1254
     },
     {
       "devName": "ITEMID_ROTOMUNOKATAROGU",
+      "name": "Rotom Catalog",
       "id": 1278
     },
     {
       "devName": "ITEMID_GARANATUBURESU",
+      "name": "Galarica Cuff",
       "id": 1582
     },
     {
       "devName": "ITEMID_KIDUNANODADUNA",
+      "name": "Reins of Unity",
       "id": 1590
     },
     {
       "devName": "ITEMID_KIDUNANODADUNA_KAIZYO",
+      "name": "Reins of Unity",
       "id": 1591
     },
     {
       "devName": "ITEMID_GARANATURIISU",
+      "name": "Galarica Wreath",
       "id": 1592
     },
     {
       "devName": "ITEMID_TOKUSEIPATTI",
+      "name": "Ability Patch",
       "id": 1606
     },
     {
       "devName": "ITEMID_DAIKONGOUDAMA",
+      "name": "Adamant Crystal",
       "id": 1777
     },
     {
       "devName": "ITEMID_DAISIRATAMA",
+      "name": "Lustrous Globe",
       "id": 1778
     },
     {
       "devName": "ITEMID_DAIHAKKINDAMA",
+      "name": "Griseous Core",
       "id": 1779
     },
     {
       "devName": "ITEMID_SUMAHOROTOMU",
+      "name": "Rotom Phone",
       "id": 1829
     },
     {
       "devName": "ITEMID_SANDOUICCHI",
+      "name": "Sandwich",
       "id": 1830
     },
     {
       "devName": "ITEMID_DENSETSUBOORUA",
+      "name": "Koraidon\u2019s Pok\u00E9 Ball",
       "id": 1831
     },
     {
       "devName": "ITEMID_DENSETSUBOORUB",
+      "name": "Miraidon\u2019s Pok\u00E9 Ball",
       "id": 1832
     },
     {
       "devName": "ITEMID_TAKARABOORU",
+      "name": "Tera Orb",
       "id": 1833
     },
     {
       "devName": "ITEMID_GENSYOA",
+      "name": "Scarlet Book",
       "id": 1834
     },
     {
       "devName": "ITEMID_GENSYOB",
+      "name": "Violet Book",
       "id": 1835
     },
     {
       "devName": "ITEMID_HIROTTASAIFU",
+      "name": "Kofu\u2019s Wallet",
       "id": 1836
     },
     {
       "devName": "ITEMID_CHIISANATAKENOKO",
+      "name": "Tiny Bamboo Shoot",
       "id": 1842
     },
     {
       "devName": "ITEMID_OOKINATAKENOKO",
+      "name": "Big Bamboo Shoot",
       "id": 1843
     },
     {
       "devName": "ITEMID_AKUNOKAKEJIKU",
+      "name": "Scroll of Darkness",
       "id": 1857
     },
     {
       "devName": "ITEMID_MIZUNOKAKEJIKU",
+      "name": "Scroll of Waters",
       "id": 1858
     },
     {
       "devName": "ITEMID_NOROINOYOROI",
+      "name": "Malicious Armor",
       "id": 1861
     },
     {
       "devName": "ITEMID_CHENJAA1",
+      "name": "Normal Tera Shard",
       "id": 1862
     },
     {
       "devName": "ITEMID_CHENJAA2",
+      "name": "Fire Tera Shard",
       "id": 1863
     },
     {
       "devName": "ITEMID_CHENJAA3",
+      "name": "Water Tera Shard",
       "id": 1864
     },
     {
       "devName": "ITEMID_CHENJAA4",
+      "name": "Electric Tera Shard",
       "id": 1865
     },
     {
       "devName": "ITEMID_CHENJAA5",
+      "name": "Grass Tera Shard",
       "id": 1866
     },
     {
       "devName": "ITEMID_CHENJAA6",
+      "name": "Ice Tera Shard",
       "id": 1867
     },
     {
       "devName": "ITEMID_CHENJAA7",
+      "name": "Fighting Tera Shard",
       "id": 1868
     },
     {
       "devName": "ITEMID_CHENJAA8",
+      "name": "Poison Tera Shard",
       "id": 1869
     },
     {
       "devName": "ITEMID_CHENJAA9",
+      "name": "Ground Tera Shard",
       "id": 1870
     },
     {
       "devName": "ITEMID_CHENJAA10",
+      "name": "Flying Tera Shard",
       "id": 1871
     },
     {
       "devName": "ITEMID_CHENJAA11",
+      "name": "Psychic Tera Shard",
       "id": 1872
     },
     {
       "devName": "ITEMID_CHENJAA12",
+      "name": "Bug Tera Shard",
       "id": 1873
     },
     {
       "devName": "ITEMID_CHENJAA13",
+      "name": "Rock Tera Shard",
       "id": 1874
     },
     {
       "devName": "ITEMID_CHENJAA14",
+      "name": "Ghost Tera Shard",
       "id": 1875
     },
     {
       "devName": "ITEMID_CHENJAA15",
+      "name": "Dragon Tera Shard",
       "id": 1876
     },
     {
       "devName": "ITEMID_CHENJAA16",
+      "name": "Dark Tera Shard",
       "id": 1877
     },
     {
       "devName": "ITEMID_CHENJAA17",
+      "name": "Steel Tera Shard",
       "id": 1878
     },
     {
       "devName": "ITEMID_CHENJAA18",
+      "name": "Fairy Tera Shard",
       "id": 1879
     },
     {
       "devName": "ITEMID_BUUSUTOENAJII",
+      "name": "Booster Energy",
       "id": 1880
     },
     {
       "devName": "ITEMID_SENTOUBAFFA1",
+      "name": "Ability Shield",
       "id": 1881
     },
     {
       "devName": "ITEMID_SENTOUBAFFA2",
+      "name": "Clear Amulet",
       "id": 1882
     },
     {
       "devName": "ITEMID_SENTOUBAFFA3",
+      "name": "Mirror Herb",
       "id": 1883
     },
     {
       "devName": "ITEMID_SENTOUBAFFA4",
+      "name": "Punching Glove",
       "id": 1884
     },
     {
       "devName": "ITEMID_SENTOUBAFFA5",
+      "name": "Covert Cloak",
       "id": 1885
     },
     {
       "devName": "ITEMID_SENTOUBAFFA6",
+      "name": "Loaded Dice",
       "id": 1886
     },
     {
       "devName": "ITEMID_MAYONEEZU",
+      "name": "Mayonnaise",
       "id": 1889
     },
     {
       "devName": "ITEMID_KECHAPPU",
+      "name": "Ketchup",
       "id": 1890
     },
     {
       "devName": "ITEMID_MASUTAADO",
+      "name": "Mustard",
       "id": 1891
     },
     {
       "devName": "ITEMID_BATAA",
+      "name": "Butter",
       "id": 1892
     },
     {
       "devName": "ITEMID_PIINATTSUBATAA",
+      "name": "Peanut Butter",
       "id": 1893
     },
     {
       "devName": "ITEMID_CHIRISOOSU",
+      "name": "Chili Sauce",
       "id": 1894
     },
     {
       "devName": "ITEMID_SORUTO",
+      "name": "Salt",
       "id": 1895
     },
     {
       "devName": "ITEMID_PEPPAA",
+      "name": "Pepper",
       "id": 1896
     },
     {
       "devName": "ITEMID_YOOGURUTO",
+      "name": "Yogurt",
       "id": 1897
     },
     {
       "devName": "ITEMID_HOIPPUKURIIMU",
+      "name": "Whipped Cream",
       "id": 1898
     },
     {
       "devName": "ITEMID_KURIIMUCHIIZU",
+      "name": "Cream Cheese",
       "id": 1899
     },
     {
       "devName": "ITEMID_BERIIJAMU",
+      "name": "Jam",
       "id": 1900
     },
     {
       "devName": "ITEMID_MAAMAREEDO",
+      "name": "Marmalade",
       "id": 1901
     },
     {
       "devName": "ITEMID_ORIIBUOIRU",
+      "name": "Olive Oil",
       "id": 1902
     },
     {
       "devName": "ITEMID_BINEGAA",
+      "name": "Vinegar",
       "id": 1903
     },
     {
       "devName": "ITEMID_TAKARASUPAISU1",
+      "name": "Sweet Herba Mystica",
       "id": 1904
     },
     {
       "devName": "ITEMID_TAKARASUPAISU2",
+      "name": "Salty Herba Mystica",
       "id": 1905
     },
     {
       "devName": "ITEMID_TAKARASUPAISU3",
+      "name": "Sour Herba Mystica",
       "id": 1906
     },
     {
       "devName": "ITEMID_TAKARASUPAISU4",
+      "name": "Bitter Herba Mystica",
       "id": 1907
     },
     {
       "devName": "ITEMID_TAKARASUPAISU5",
+      "name": "Spicy Herba Mystica",
       "id": 1908
     },
     {
       "devName": "ITEMID_RETASUPAKKU",
+      "name": "Lettuce",
       "id": 1909
     },
     {
       "devName": "ITEMID_TOMATOSURAISU",
+      "name": "Tomato",
       "id": 1910
     },
     {
       "devName": "ITEMID_KATTOMINITOMATO",
+      "name": "Cherry Tomatoes",
       "id": 1911
     },
     {
       "devName": "ITEMID_KYUURISURAISU",
+      "name": "Cucumber",
       "id": 1912
     },
     {
       "devName": "ITEMID_PIKURUSUSURAISU",
+      "name": "Pickle",
       "id": 1913
     },
     {
       "devName": "ITEMID_TAMANEGISURAISU",
+      "name": "Onion",
       "id": 1914
     },
     {
       "devName": "ITEMID_REDDOAARII",
+      "name": "Red Onion",
       "id": 1915
     },
     {
       "devName": "ITEMID_PIIMANSURAISU",
+      "name": "Green Bell Pepper",
       "id": 1916
     },
     {
       "devName": "ITEMID_AKAPAPURIKASURAISU",
+      "name": "Red Bell Pepper",
       "id": 1917
     },
     {
       "devName": "ITEMID_KIPAPURIKASURAISU",
+      "name": "Yellow Bell Pepper",
       "id": 1918
     },
     {
       "devName": "ITEMID_ABOKADO",
+      "name": "Avocado",
       "id": 1919
     },
     {
       "devName": "ITEMID_YAKIBEEKON",
+      "name": "Bacon",
       "id": 1920
     },
     {
       "devName": "ITEMID_HAMUSURAISU",
+      "name": "Ham",
       "id": 1921
     },
     {
       "devName": "ITEMID_NAMAHAMU",
+      "name": "Prosciutto",
       "id": 1922
     },
     {
       "devName": "ITEMID_YAKICHORISOO",
+      "name": "Chorizo",
       "id": 1923
     },
     {
       "devName": "ITEMID_BOIRUSOOSEEJI",
+      "name": "Herbed Sausage",
       "id": 1924
     },
     {
       "devName": "ITEMID_HANBAAGU",
+      "name": "Hamburger",
       "id": 1925
     },
     {
       "devName": "ITEMID_KANISUTIKKU",
+      "name": "Klawf Stick",
       "id": 1926
     },
     {
       "devName": "ITEMID_SUMOOKUKIRIMI",
+      "name": "Smoked Fillet",
       "id": 1927
     },
     {
       "devName": "ITEMID_KIRIMIFURAI",
+      "name": "Fried Fillet",
       "id": 1928
     },
     {
       "devName": "ITEMID_SURAISUEGGU",
+      "name": "Egg",
       "id": 1929
     },
     {
       "devName": "ITEMID_TORUTIIJA",
+      "name": "Potato Tortilla",
       "id": 1930
     },
     {
       "devName": "ITEMID_TOOFU",
+      "name": "Tofu",
       "id": 1931
     },
     {
       "devName": "ITEMID_RAISU",
+      "name": "Rice",
       "id": 1932
     },
     {
       "devName": "ITEMID_NUUDORU",
+      "name": "Noodles",
       "id": 1933
     },
     {
       "devName": "ITEMID_POTETOSARADA",
+      "name": "Potato Salad",
       "id": 1934
     },
     {
       "devName": "ITEMID_SURAISUCHIIZU",
+      "name": "Cheese",
       "id": 1935
     },
     {
       "devName": "ITEMID_BANANASURAISU",
+      "name": "Banana",
       "id": 1936
     },
     {
       "devName": "ITEMID_ICHIGOSURAISU",
+      "name": "Strawberry",
       "id": 1937
     },
     {
       "devName": "ITEMID_WAGIRIRINGO",
+      "name": "Apple",
       "id": 1938
     },
     {
       "devName": "ITEMID_WAGIRIKIUI",
+      "name": "Kiwi",
       "id": 1939
     },
     {
       "devName": "ITEMID_KATTOPAIN",
+      "name": "Pineapple",
       "id": 1940
     },
     {
       "devName": "ITEMID_HARAPEENYO",
+      "name": "Jalape\u00F1o",
       "id": 1941
     },
     {
       "devName": "ITEMID_HOOSURADISSHU",
+      "name": "Horseradish",
       "id": 1942
     },
     {
       "devName": "ITEMID_KAREEPAUDAA",
+      "name": "Curry Powder",
       "id": 1943
     },
     {
       "devName": "ITEMID_WASABISOOSU",
+      "name": "Wasabi",
       "id": 1944
     },
     {
       "devName": "ITEMID_KURESON",
+      "name": "Watercress",
       "id": 1945
     },
     {
       "devName": "ITEMID_BAJIRU",
+      "name": "Basil",
       "id": 1946
     },
     {
       "devName": "ITEMID_SOZAI01",
+      "name": "Venonat Fang",
       "id": 1956
     },
     {
       "devName": "ITEMID_SOZAI02",
+      "name": "Diglett Dirt",
       "id": 1957
     },
     {
       "devName": "ITEMID_SOZAI03",
+      "name": "Meowth Fur",
       "id": 1958
     },
     {
       "devName": "ITEMID_SOZAI04",
+      "name": "Psyduck Down",
       "id": 1959
     },
     {
       "devName": "ITEMID_SOZAI05",
+      "name": "Mankey Fur",
       "id": 1960
     },
     {
       "devName": "ITEMID_SOZAI06",
+      "name": "Growlithe Fur",
       "id": 1961
     },
     {
       "devName": "ITEMID_SOZAI07",
+      "name": "Slowpoke Claw",
       "id": 1962
     },
     {
       "devName": "ITEMID_SOZAI08",
+      "name": "Magnemite Screw",
       "id": 1963
     },
     {
       "devName": "ITEMID_SOZAI09",
+      "name": "Grimer Toxin",
       "id": 1964
     },
     {
       "devName": "ITEMID_SOZAI10",
+      "name": "Shellder Pearl",
       "id": 1965
     },
     {
       "devName": "ITEMID_SOZAI11",
+      "name": "Gastly Gas",
       "id": 1966
     },
     {
       "devName": "ITEMID_SOZAI12",
+      "name": "Drowzee Fur",
       "id": 1967
     },
     {
       "devName": "ITEMID_SOZAI13",
+      "name": "Voltorb Sparks",
       "id": 1968
     },
     {
       "devName": "ITEMID_SOZAI14",
+      "name": "Scyther Claw",
       "id": 1969
     },
     {
       "devName": "ITEMID_SOZAI15",
+      "name": "Tauros Hair",
       "id": 1970
     },
     {
       "devName": "ITEMID_SOZAI16",
+      "name": "Magikarp Scales",
       "id": 1971
     },
     {
       "devName": "ITEMID_SOZAI17",
+      "name": "Ditto Goo",
       "id": 1972
     },
     {
       "devName": "ITEMID_SOZAI18",
+      "name": "Eevee Fur",
       "id": 1973
     },
     {
       "devName": "ITEMID_SOZAI19",
+      "name": "Dratini Scales",
       "id": 1974
     },
     {
       "devName": "ITEMID_SOZAI20",
+      "name": "Pichu Fur",
       "id": 1975
     },
     {
       "devName": "ITEMID_SOZAI21",
+      "name": "Igglybuff Fluff",
       "id": 1976
     },
     {
       "devName": "ITEMID_SOZAI22",
+      "name": "Mareep Wool",
       "id": 1977
     },
     {
       "devName": "ITEMID_SOZAI23",
+      "name": "Hoppip Leaf",
       "id": 1978
     },
     {
       "devName": "ITEMID_SOZAI24",
+      "name": "Sunkern Leaf",
       "id": 1979
     },
     {
       "devName": "ITEMID_SOZAI25",
+      "name": "Murkrow Bauble",
       "id": 1980
     },
     {
       "devName": "ITEMID_SOZAI26",
+      "name": "Misdreavus Tears",
       "id": 1981
     },
     {
       "devName": "ITEMID_SOZAI27",
+      "name": "Girafarig Fur",
       "id": 1982
     },
     {
       "devName": "ITEMID_SOZAI28",
+      "name": "Pineco Husk",
       "id": 1983
     },
     {
       "devName": "ITEMID_SOZAI29",
+      "name": "Dunsparce Scales",
       "id": 1984
     },
     {
       "devName": "ITEMID_SOZAI30",
+      "name": "Qwilfish Spines",
       "id": 1985
     },
     {
       "devName": "ITEMID_SOZAI31",
+      "name": "Heracross Claw",
       "id": 1986
     },
     {
       "devName": "ITEMID_SOZAI32",
+      "name": "Sneasel Claw",
       "id": 1987
     },
     {
       "devName": "ITEMID_SOZAI33",
+      "name": "Teddiursa Claw",
       "id": 1988
     },
     {
       "devName": "ITEMID_SOZAI34",
+      "name": "Delibird Parcel",
       "id": 1989
     },
     {
       "devName": "ITEMID_SOZAI35",
+      "name": "Houndour Fang",
       "id": 1990
     },
     {
       "devName": "ITEMID_SOZAI36",
+      "name": "Phanpy Nail",
       "id": 1991
     },
     {
       "devName": "ITEMID_SOZAI37",
+      "name": "Stantler Hair",
       "id": 1992
     },
     {
       "devName": "ITEMID_SOZAI38",
+      "name": "Larvitar Claw",
       "id": 1993
     },
     {
       "devName": "ITEMID_SOZAI39",
+      "name": "Wingull Feather",
       "id": 1994
     },
     {
       "devName": "ITEMID_SOZAI40",
+      "name": "Ralts Dust",
       "id": 1995
     },
     {
       "devName": "ITEMID_SOZAI41",
+      "name": "Surskit Syrup",
       "id": 1996
     },
     {
       "devName": "ITEMID_SOZAI42",
+      "name": "Shroomish Spores",
       "id": 1997
     },
     {
       "devName": "ITEMID_SOZAI43",
+      "name": "Slakoth Fur",
       "id": 1998
     },
     {
       "devName": "ITEMID_SOZAI44",
+      "name": "Makuhita Sweat",
       "id": 1999
     },
     {
       "devName": "ITEMID_SOZAI45",
+      "name": "Azurill Fur",
       "id": 2000
     },
     {
       "devName": "ITEMID_SOZAI46",
+      "name": "Sableye Gem",
       "id": 2001
     },
     {
       "devName": "ITEMID_SOZAI47",
+      "name": "Meditite Sweat",
       "id": 2002
     },
     {
       "devName": "ITEMID_SOZAI48",
+      "name": "Gulpin Mucus",
       "id": 2003
     },
     {
       "devName": "ITEMID_SOZAI49",
+      "name": "Numel Lava",
       "id": 2004
     },
     {
       "devName": "ITEMID_SOZAI50",
+      "name": "Torkoal Coal",
       "id": 2005
     },
     {
       "devName": "ITEMID_SOZAI51",
+      "name": "Spoink Pearl",
       "id": 2006
     },
     {
       "devName": "ITEMID_SOZAI52",
+      "name": "Cacnea Needle",
       "id": 2007
     },
     {
       "devName": "ITEMID_SOZAI53",
+      "name": "Swablu Fluff",
       "id": 2008
     },
     {
       "devName": "ITEMID_SOZAI54",
+      "name": "Zangoose Claw",
       "id": 2009
     },
     {
       "devName": "ITEMID_SOZAI55",
+      "name": "Seviper Fang",
       "id": 2010
     },
     {
       "devName": "ITEMID_SOZAI56",
+      "name": "Barboach Slime",
       "id": 2011
     },
     {
       "devName": "ITEMID_SOZAI57",
+      "name": "Shuppet Scrap",
       "id": 2012
     },
     {
       "devName": "ITEMID_SOZAI58",
+      "name": "Tropius Leaf",
       "id": 2013
     },
     {
       "devName": "ITEMID_SOZAI59",
+      "name": "Snorunt Fur",
       "id": 2014
     },
     {
       "devName": "ITEMID_SOZAI60",
+      "name": "Luvdisc Scales",
       "id": 2015
     },
     {
       "devName": "ITEMID_SOZAI61",
+      "name": "Bagon Scales",
       "id": 2016
     },
     {
       "devName": "ITEMID_SOZAI62",
+      "name": "Starly Feather",
       "id": 2017
     },
     {
       "devName": "ITEMID_SOZAI63",
+      "name": "Kricketot Shell",
       "id": 2018
     },
     {
       "devName": "ITEMID_SOZAI64",
+      "name": "Shinx Fang",
       "id": 2019
     },
     {
       "devName": "ITEMID_SOZAI65",
+      "name": "Combee Honey",
       "id": 2020
     },
     {
       "devName": "ITEMID_SOZAI66",
+      "name": "Pachirisu Fur",
       "id": 2021
     },
     {
       "devName": "ITEMID_SOZAI67",
+      "name": "Buizel Fur",
       "id": 2022
     },
     {
       "devName": "ITEMID_SOZAI68",
+      "name": "Shellos Mucus",
       "id": 2023
     },
     {
       "devName": "ITEMID_SOZAI69",
+      "name": "Drifloon Gas",
       "id": 2024
     },
     {
       "devName": "ITEMID_SOZAI70",
+      "name": "Stunky Fur",
       "id": 2025
     },
     {
       "devName": "ITEMID_SOZAI71",
+      "name": "Bronzor Fragment",
       "id": 2026
     },
     {
       "devName": "ITEMID_SOZAI72",
+      "name": "Bonsly Tears",
       "id": 2027
     },
     {
       "devName": "ITEMID_SOZAI73",
+      "name": "Happiny Dust",
       "id": 2028
     },
     {
       "devName": "ITEMID_SOZAI74",
+      "name": "Spiritomb Fragment",
       "id": 2029
     },
     {
       "devName": "ITEMID_SOZAI75",
+      "name": "Gible Scales",
       "id": 2030
     },
     {
       "devName": "ITEMID_SOZAI76",
+      "name": "Riolu Fur",
       "id": 2031
     },
     {
       "devName": "ITEMID_SOZAI77",
+      "name": "Hippopotas Sand",
       "id": 2032
     },
     {
       "devName": "ITEMID_SOZAI78",
+      "name": "Croagunk Poison",
       "id": 2033
     },
     {
       "devName": "ITEMID_SOZAI79",
+      "name": "Finneon Scales",
       "id": 2034
     },
     {
       "devName": "ITEMID_SOZAI80",
+      "name": "Snover Berries",
       "id": 2035
     },
     {
       "devName": "ITEMID_SOZAI81",
+      "name": "Rotom Sparks",
       "id": 2036
     },
     {
       "devName": "ITEMID_SOZAI82",
+      "name": "Petilil Leaf",
       "id": 2037
     },
     {
       "devName": "ITEMID_SOZAI83",
+      "name": "Basculin Fang",
       "id": 2038
     },
     {
       "devName": "ITEMID_SOZAI84",
+      "name": "Sandile Claw",
       "id": 2039
     },
     {
       "devName": "ITEMID_SOZAI85",
+      "name": "Zorua Fur",
       "id": 2040
     },
     {
       "devName": "ITEMID_SOZAI86",
+      "name": "Gothita Eyelash",
       "id": 2041
     },
     {
       "devName": "ITEMID_SOZAI87",
+      "name": "Deerling Hair",
       "id": 2042
     },
     {
       "devName": "ITEMID_SOZAI88",
+      "name": "Foongus Spores",
       "id": 2043
     },
     {
       "devName": "ITEMID_SOZAI89",
+      "name": "Alomomola Mucus",
       "id": 2044
     },
     {
       "devName": "ITEMID_SOZAI90",
+      "name": "Tynamo Slime",
       "id": 2045
     },
     {
       "devName": "ITEMID_SOZAI91",
+      "name": "Axew Scales",
       "id": 2046
     },
     {
       "devName": "ITEMID_SOZAI92",
+      "name": "Cubchoo Fur",
       "id": 2047
     },
     {
       "devName": "ITEMID_SOZAI93",
+      "name": "Cryogonal Ice",
       "id": 2048
     },
     {
       "devName": "ITEMID_SOZAI94",
+      "name": "Pawniard Blade",
       "id": 2049
     },
     {
       "devName": "ITEMID_SOZAI95",
+      "name": "Rufflet Feather",
       "id": 2050
     },
     {
       "devName": "ITEMID_SOZAI96",
+      "name": "Deino Scales",
       "id": 2051
     },
     {
       "devName": "ITEMID_SOZAI97",
+      "name": "Larvesta Fuzz",
       "id": 2052
     },
     {
       "devName": "ITEMID_SOZAI98",
+      "name": "Fletchling Feather",
       "id": 2053
     },
     {
       "devName": "ITEMID_SOZAI99",
+      "name": "Scatterbug Powder",
       "id": 2054
     },
     {
       "devName": "ITEMID_SOZAI100",
+      "name": "Litleo Tuft",
       "id": 2055
     },
     {
       "devName": "ITEMID_SOZAI101",
+      "name": "Flab\u00E9b\u00E9 Pollen",
       "id": 2056
     },
     {
       "devName": "ITEMID_SOZAI102",
+      "name": "Skiddo Leaf",
       "id": 2057
     },
     {
       "devName": "ITEMID_SOZAI103",
+      "name": "Skrelp Kelp",
       "id": 2058
     },
     {
       "devName": "ITEMID_SOZAI104",
+      "name": "Clauncher Claw",
       "id": 2059
     },
     {
       "devName": "ITEMID_SOZAI105",
+      "name": "Hawlucha Down",
       "id": 2060
     },
     {
       "devName": "ITEMID_SOZAI106",
+      "name": "Dedenne Fur",
       "id": 2061
     },
     {
       "devName": "ITEMID_SOZAI107",
+      "name": "Goomy Goo",
       "id": 2062
     },
     {
       "devName": "ITEMID_SOZAI108",
+      "name": "Klefki Key",
       "id": 2063
     },
     {
       "devName": "ITEMID_SOZAI109",
+      "name": "Bergmite Ice",
       "id": 2064
     },
     {
       "devName": "ITEMID_SOZAI110",
+      "name": "Noibat Fur",
       "id": 2065
     },
     {
       "devName": "ITEMID_SOZAI111",
+      "name": "Yungoos Fur",
       "id": 2066
     },
     {
       "devName": "ITEMID_SOZAI112",
+      "name": "Crabrawler Shell",
       "id": 2067
     },
     {
       "devName": "ITEMID_SOZAI113",
+      "name": "Oricorio Feather",
       "id": 2068
     },
     {
       "devName": "ITEMID_SOZAI114",
+      "name": "Rockruff Rock",
       "id": 2069
     },
     {
       "devName": "ITEMID_SOZAI115",
+      "name": "Mareanie Spike",
       "id": 2070
     },
     {
       "devName": "ITEMID_SOZAI116",
+      "name": "Mudbray Mud",
       "id": 2071
     },
     {
       "devName": "ITEMID_SOZAI117",
+      "name": "Fomantis Leaf",
       "id": 2072
     },
     {
       "devName": "ITEMID_SOZAI118",
+      "name": "Salandit Gas",
       "id": 2073
     },
     {
       "devName": "ITEMID_SOZAI119",
+      "name": "Bounsweet Sweat",
       "id": 2074
     },
     {
       "devName": "ITEMID_SOZAI120",
+      "name": "Oranguru Fur",
       "id": 2075
     },
     {
       "devName": "ITEMID_SOZAI121",
+      "name": "Passimian Fur",
       "id": 2076
     },
     {
       "devName": "ITEMID_SOZAI122",
+      "name": "Sandygast Sand",
       "id": 2077
     },
     {
       "devName": "ITEMID_SOZAI123",
+      "name": "Komala Claw",
       "id": 2078
     },
     {
       "devName": "ITEMID_SOZAI124",
+      "name": "Mimikyu Scrap",
       "id": 2079
     },
     {
       "devName": "ITEMID_SOZAI125",
+      "name": "Bruxish Tooth",
       "id": 2080
     },
     {
       "devName": "ITEMID_SOZAI126",
+      "name": "Chewtle Claw",
       "id": 2081
     },
     {
       "devName": "ITEMID_SOZAI127",
+      "name": "Skwovet Fur",
       "id": 2082
     },
     {
       "devName": "ITEMID_SOZAI128",
+      "name": "Arrokuda Scales",
       "id": 2083
     },
     {
       "devName": "ITEMID_SOZAI129",
+      "name": "Rookidee Feather",
       "id": 2084
     },
     {
       "devName": "ITEMID_SOZAI130",
+      "name": "Toxel Sparks",
       "id": 2085
     },
     {
       "devName": "ITEMID_SOZAI131",
+      "name": "Falinks Sweat",
       "id": 2086
     },
     {
       "devName": "ITEMID_SOZAI132",
+      "name": "Cufant Tarnish",
       "id": 2087
     },
     {
       "devName": "ITEMID_SOZAI133",
+      "name": "Rolycoly Coal",
       "id": 2088
     },
     {
       "devName": "ITEMID_SOZAI134",
+      "name": "Silicobra Sand",
       "id": 2089
     },
     {
       "devName": "ITEMID_SOZAI135",
+      "name": "Indeedee Fur",
       "id": 2090
     },
     {
       "devName": "ITEMID_SOZAI136",
+      "name": "Pincurchin Spines",
       "id": 2091
     },
     {
       "devName": "ITEMID_SOZAI137",
+      "name": "Snom Thread",
       "id": 2092
     },
     {
       "devName": "ITEMID_SOZAI138",
+      "name": "Impidimp Hair",
       "id": 2093
     },
     {
       "devName": "ITEMID_SOZAI139",
+      "name": "Applin Juice",
       "id": 2094
     },
     {
       "devName": "ITEMID_SOZAI140",
+      "name": "Sinistea Chip",
       "id": 2095
     },
     {
       "devName": "ITEMID_SOZAI141",
+      "name": "Hatenna Dust",
       "id": 2096
     },
     {
       "devName": "ITEMID_SOZAI142",
+      "name": "Stonjourner Stone",
       "id": 2097
     },
     {
       "devName": "ITEMID_SOZAI143",
+      "name": "Eiscue Down",
       "id": 2098
     },
     {
       "devName": "ITEMID_SOZAI144",
+      "name": "Dreepy Powder",
       "id": 2099
     },
     {
       "devName": "ITEMID_SOZAI148",
+      "name": "Lechonk Hair",
       "id": 2103
     },
     {
       "devName": "ITEMID_SOZAI149",
+      "name": "Tarountula Thread",
       "id": 2104
     },
     {
       "devName": "ITEMID_SOZAI150",
+      "name": "Nymble Claw",
       "id": 2105
     },
     {
       "devName": "ITEMID_SOZAI151",
+      "name": "Rellor Mud",
       "id": 2106
     },
     {
       "devName": "ITEMID_SOZAI152",
+      "name": "Greavard Wax",
       "id": 2107
     },
     {
       "devName": "ITEMID_SOZAI153",
+      "name": "Flittle Down",
       "id": 2108
     },
     {
       "devName": "ITEMID_SOZAI154",
+      "name": "Wiglett Sand",
       "id": 2109
     },
     {
       "devName": "ITEMID_SOZAI155",
+      "name": "Dondozo Whisker",
       "id": 2110
     },
     {
       "devName": "ITEMID_SOZAI156",
+      "name": "Veluza Fillet",
       "id": 2111
     },
     {
       "devName": "ITEMID_SOZAI157",
+      "name": "Finizen Mucus",
       "id": 2112
     },
     {
       "devName": "ITEMID_SOZAI158",
+      "name": "Smoliv Oil",
       "id": 2113
     },
     {
       "devName": "ITEMID_SOZAI159",
+      "name": "Capsakid Seed",
       "id": 2114
     },
     {
       "devName": "ITEMID_SOZAI160",
+      "name": "Tadbulb Mucus",
       "id": 2115
     },
     {
       "devName": "ITEMID_SOZAI161",
+      "name": "Varoom Fume",
       "id": 2116
     },
     {
       "devName": "ITEMID_SOZAI162",
+      "name": "Orthworm Tarnish",
       "id": 2117
     },
     {
       "devName": "ITEMID_SOZAI163",
+      "name": "Tandemaus Fur",
       "id": 2118
     },
     {
       "devName": "ITEMID_SOZAI164",
+      "name": "Cetoddle Grease",
       "id": 2119
     },
     {
       "devName": "ITEMID_SOZAI165",
+      "name": "Frigibax Scales",
       "id": 2120
     },
     {
       "devName": "ITEMID_SOZAI166",
+      "name": "Tatsugiri Scales",
       "id": 2121
     },
     {
       "devName": "ITEMID_SOZAI167",
+      "name": "Cyclizar Scales",
       "id": 2122
     },
     {
       "devName": "ITEMID_SOZAI168",
+      "name": "Pawmi Fur",
       "id": 2123
     },
     {
       "devName": "ITEMID_SOZAI171",
+      "name": "Wattrel Feather",
       "id": 2126
     },
     {
       "devName": "ITEMID_SOZAI172",
+      "name": "Bombirdier Feather",
       "id": 2127
     },
     {
       "devName": "ITEMID_SOZAI173",
+      "name": "Squawkabilly Feather",
       "id": 2128
     },
     {
       "devName": "ITEMID_SOZAI174",
+      "name": "Flamigo Down",
       "id": 2129
     },
     {
       "devName": "ITEMID_SOZAI175",
+      "name": "Klawf Claw",
       "id": 2130
     },
     {
       "devName": "ITEMID_SOZAI176",
+      "name": "Nacli Salt",
       "id": 2131
     },
     {
       "devName": "ITEMID_SOZAI177",
+      "name": "Glimmet Crystal",
       "id": 2132
     },
     {
       "devName": "ITEMID_SOZAI178",
+      "name": "Shroodle Ink",
       "id": 2133
     },
     {
       "devName": "ITEMID_SOZAI179",
+      "name": "Fidough Fur",
       "id": 2134
     },
     {
       "devName": "ITEMID_SOZAI180",
+      "name": "Maschiff Fang",
       "id": 2135
     },
     {
       "devName": "ITEMID_SOZAI181",
+      "name": "Bramblin Twig",
       "id": 2136
     },
     {
       "devName": "ITEMID_SOZAI182",
+      "name": "Gimmighoul Coin",
       "id": 2137
     },
     {
       "devName": "ITEMID_SOZAI201",
+      "name": "Tinkatink Hair",
       "id": 2156
     },
     {
       "devName": "ITEMID_SOZAI202",
+      "name": "Charcadet Soot",
       "id": 2157
     },
     {
       "devName": "ITEMID_SOZAI203",
+      "name": "Toedscool Flaps",
       "id": 2158
     },
     {
       "devName": "ITEMID_SOZAI204",
+      "name": "Wooper Slime",
       "id": 2159
     },
     {
       "devName": "ITEMID_WAZAMASIN100",
+      "name": "TM100",
       "id": 2160
     },
     {
       "devName": "ITEMID_WAZAMASIN101",
+      "name": "TM101",
       "id": 2161
     },
     {
       "devName": "ITEMID_WAZAMASIN102",
+      "name": "TM102",
       "id": 2162
     },
     {
       "devName": "ITEMID_WAZAMASIN103",
+      "name": "TM103",
       "id": 2163
     },
     {
       "devName": "ITEMID_WAZAMASIN104",
+      "name": "TM104",
       "id": 2164
     },
     {
       "devName": "ITEMID_WAZAMASIN105",
+      "name": "TM105",
       "id": 2165
     },
     {
       "devName": "ITEMID_WAZAMASIN106",
+      "name": "TM106",
       "id": 2166
     },
     {
       "devName": "ITEMID_WAZAMASIN107",
+      "name": "TM107",
       "id": 2167
     },
     {
       "devName": "ITEMID_WAZAMASIN108",
+      "name": "TM108",
       "id": 2168
     },
     {
       "devName": "ITEMID_WAZAMASIN109",
+      "name": "TM109",
       "id": 2169
     },
     {
       "devName": "ITEMID_WAZAMASIN110",
+      "name": "TM110",
       "id": 2170
     },
     {
       "devName": "ITEMID_WAZAMASIN111",
+      "name": "TM111",
       "id": 2171
     },
     {
       "devName": "ITEMID_WAZAMASIN112",
+      "name": "TM112",
       "id": 2172
     },
     {
       "devName": "ITEMID_WAZAMASIN113",
+      "name": "TM113",
       "id": 2173
     },
     {
       "devName": "ITEMID_WAZAMASIN114",
+      "name": "TM114",
       "id": 2174
     },
     {
       "devName": "ITEMID_WAZAMASIN115",
+      "name": "TM115",
       "id": 2175
     },
     {
       "devName": "ITEMID_WAZAMASIN116",
+      "name": "TM116",
       "id": 2176
     },
     {
       "devName": "ITEMID_WAZAMASIN117",
+      "name": "TM117",
       "id": 2177
     },
     {
       "devName": "ITEMID_WAZAMASIN118",
+      "name": "TM118",
       "id": 2178
     },
     {
       "devName": "ITEMID_WAZAMASIN119",
+      "name": "TM119",
       "id": 2179
     },
     {
       "devName": "ITEMID_WAZAMASIN120",
+      "name": "TM120",
       "id": 2180
     },
     {
       "devName": "ITEMID_WAZAMASIN121",
+      "name": "TM121",
       "id": 2181
     },
     {
       "devName": "ITEMID_WAZAMASIN122",
+      "name": "TM122",
       "id": 2182
     },
     {
       "devName": "ITEMID_WAZAMASIN123",
+      "name": "TM123",
       "id": 2183
     },
     {
       "devName": "ITEMID_WAZAMASIN124",
+      "name": "TM124",
       "id": 2184
     },
     {
       "devName": "ITEMID_WAZAMASIN125",
+      "name": "TM125",
       "id": 2185
     },
     {
       "devName": "ITEMID_WAZAMASIN126",
+      "name": "TM126",
       "id": 2186
     },
     {
       "devName": "ITEMID_WAZAMASIN127",
+      "name": "TM127",
       "id": 2187
     },
     {
       "devName": "ITEMID_WAZAMASIN128",
+      "name": "TM128",
       "id": 2188
     },
     {
       "devName": "ITEMID_WAZAMASIN129",
+      "name": "TM129",
       "id": 2189
     },
     {
       "devName": "ITEMID_WAZAMASIN130",
+      "name": "TM130",
       "id": 2190
     },
     {
       "devName": "ITEMID_WAZAMASIN131",
+      "name": "TM131",
       "id": 2191
     },
     {
       "devName": "ITEMID_WAZAMASIN132",
+      "name": "TM132",
       "id": 2192
     },
     {
       "devName": "ITEMID_WAZAMASIN133",
+      "name": "TM133",
       "id": 2193
     },
     {
       "devName": "ITEMID_WAZAMASIN134",
+      "name": "TM134",
       "id": 2194
     },
     {
       "devName": "ITEMID_WAZAMASIN135",
+      "name": "TM135",
       "id": 2195
     },
     {
       "devName": "ITEMID_WAZAMASIN136",
+      "name": "TM136",
       "id": 2196
     },
     {
       "devName": "ITEMID_WAZAMASIN137",
+      "name": "TM137",
       "id": 2197
     },
     {
       "devName": "ITEMID_WAZAMASIN138",
+      "name": "TM138",
       "id": 2198
     },
     {
       "devName": "ITEMID_WAZAMASIN139",
+      "name": "TM139",
       "id": 2199
     },
     {
       "devName": "ITEMID_WAZAMASIN140",
+      "name": "TM140",
       "id": 2200
     },
     {
       "devName": "ITEMID_WAZAMASIN141",
+      "name": "TM141",
       "id": 2201
     },
     {
       "devName": "ITEMID_WAZAMASIN142",
+      "name": "TM142",
       "id": 2202
     },
     {
       "devName": "ITEMID_WAZAMASIN143",
+      "name": "TM143",
       "id": 2203
     },
     {
       "devName": "ITEMID_WAZAMASIN144",
+      "name": "TM144",
       "id": 2204
     },
     {
       "devName": "ITEMID_WAZAMASIN145",
+      "name": "TM145",
       "id": 2205
     },
     {
       "devName": "ITEMID_WAZAMASIN146",
+      "name": "TM146",
       "id": 2206
     },
     {
       "devName": "ITEMID_WAZAMASIN147",
+      "name": "TM147",
       "id": 2207
     },
     {
       "devName": "ITEMID_WAZAMASIN148",
+      "name": "TM148",
       "id": 2208
     },
     {
       "devName": "ITEMID_WAZAMASIN149",
+      "name": "TM149",
       "id": 2209
     },
     {
       "devName": "ITEMID_WAZAMASIN150",
+      "name": "TM150",
       "id": 2210
     },
     {
       "devName": "ITEMID_WAZAMASIN151",
+      "name": "TM151",
       "id": 2211
     },
     {
       "devName": "ITEMID_WAZAMASIN152",
+      "name": "TM152",
       "id": 2212
     },
     {
       "devName": "ITEMID_WAZAMASIN153",
+      "name": "TM153",
       "id": 2213
     },
     {
       "devName": "ITEMID_WAZAMASIN154",
+      "name": "TM154",
       "id": 2214
     },
     {
       "devName": "ITEMID_WAZAMASIN155",
+      "name": "TM155",
       "id": 2215
     },
     {
       "devName": "ITEMID_WAZAMASIN156",
+      "name": "TM156",
       "id": 2216
     },
     {
       "devName": "ITEMID_WAZAMASIN157",
+      "name": "TM157",
       "id": 2217
     },
     {
       "devName": "ITEMID_WAZAMASIN158",
+      "name": "TM158",
       "id": 2218
     },
     {
       "devName": "ITEMID_WAZAMASIN159",
+      "name": "TM159",
       "id": 2219
     },
     {
       "devName": "ITEMID_WAZAMASIN160",
+      "name": "TM160",
       "id": 2220
     },
     {
       "devName": "ITEMID_WAZAMASIN161",
+      "name": "TM161",
       "id": 2221
     },
     {
       "devName": "ITEMID_WAZAMASIN162",
+      "name": "TM162",
       "id": 2222
     },
     {
       "devName": "ITEMID_WAZAMASIN163",
+      "name": "TM163",
       "id": 2223
     },
     {
       "devName": "ITEMID_WAZAMASIN164",
+      "name": "TM164",
       "id": 2224
     },
     {
       "devName": "ITEMID_WAZAMASIN165",
+      "name": "TM165",
       "id": 2225
     },
     {
       "devName": "ITEMID_WAZAMASIN166",
+      "name": "TM166",
       "id": 2226
     },
     {
       "devName": "ITEMID_WAZAMASIN167",
+      "name": "TM167",
       "id": 2227
     },
     {
       "devName": "ITEMID_WAZAMASIN168",
+      "name": "TM168",
       "id": 2228
     },
     {
       "devName": "ITEMID_WAZAMASIN169",
+      "name": "TM169",
       "id": 2229
     },
     {
       "devName": "ITEMID_WAZAMASIN170",
+      "name": "TM170",
       "id": 2230
     },
     {
       "devName": "ITEMID_WAZAMASIN171",
+      "name": "TM171",
       "id": 2231
     },
     {
       "devName": "ITEMID_PIKUNIKKUSETTO",
+      "name": "Picnic Set",
       "id": 2311
     },
     {
       "devName": "ITEMID_SUITOU1",
+      "name": "Academy Bottle",
       "id": 2313
     },
     {
       "devName": "ITEMID_SUITOU2",
+      "name": "Academy Bottle",
       "id": 2314
     },
     {
       "devName": "ITEMID_SUITOU3",
+      "name": "Polka-Dot Bottle",
       "id": 2315
     },
     {
       "devName": "ITEMID_SUITOU4",
+      "name": "Striped Bottle",
       "id": 2316
     },
     {
       "devName": "ITEMID_SUITOU5",
+      "name": "Diamond Bottle",
       "id": 2317
     },
     {
       "devName": "ITEMID_KOPPU1",
+      "name": "Academy Cup",
       "id": 2318
     },
     {
       "devName": "ITEMID_KOPPU2",
+      "name": "Academy Cup",
       "id": 2319
     },
     {
       "devName": "ITEMID_KOPPU3",
+      "name": "Striped Cup",
       "id": 2320
     },
     {
       "devName": "ITEMID_KOPPU4",
+      "name": "Polka-Dot Cup",
       "id": 2321
     },
     {
       "devName": "ITEMID_KOPPU5",
+      "name": "Flower Pattern Cup",
       "id": 2322
     },
     {
       "devName": "ITEMID_TEEBURUKABAA1",
+      "name": "Academy Tablecloth",
       "id": 2323
     },
     {
       "devName": "ITEMID_TEEBURUKABAA2",
+      "name": "Academy Tablecloth",
       "id": 2324
     },
     {
       "devName": "ITEMID_TEEBURUKABAA3",
+      "name": "Whimsical Tablecloth",
       "id": 2325
     },
     {
       "devName": "ITEMID_TEEBURUKABAA4",
+      "name": "Leafy Tablecloth",
       "id": 2326
     },
     {
       "devName": "ITEMID_TEEBURUKABAA5",
+      "name": "Spooky Tablecloth",
       "id": 2327
     },
     {
       "devName": "ITEMID_PIKUNIKKUBOORU1",
+      "name": "Academy Ball",
       "id": 2329
     },
     {
       "devName": "ITEMID_PIKUNIKKUBOORU2",
+      "name": "Academy Ball",
       "id": 2330
     },
     {
       "devName": "ITEMID_PIKUNIKKUBOORU3",
+      "name": "Marill Ball",
       "id": 2331
     },
     {
       "devName": "ITEMID_PIKUNIKKUBOORU4",
+      "name": "Yarn Ball",
       "id": 2332
     },
     {
       "devName": "ITEMID_PIKUNIKKUBOORU5",
+      "name": "Cyber Ball",
       "id": 2333
     },
     {
       "devName": "ITEMID_RANCHIPIKKU1",
+      "name": "Gold Pick",
       "id": 2334
     },
     {
       "devName": "ITEMID_RANCHIPIKKU2",
+      "name": "Silver Pick",
       "id": 2335
     },
     {
       "devName": "ITEMID_RANCHIPIKKU3",
+      "name": "Red-Flag Pick",
       "id": 2336
     },
     {
       "devName": "ITEMID_RANCHIPIKKU4",
+      "name": "Blue-Flag Pick",
       "id": 2337
     },
     {
       "devName": "ITEMID_RANCHIPIKKU5",
+      "name": "Pika-Pika Pick",
       "id": 2338
     },
     {
       "devName": "ITEMID_RANCHIPIKKU6",
+      "name": "Winking Pika Pick",
       "id": 2339
     },
     {
       "devName": "ITEMID_RANCHIPIKKU7",
+      "name": "Vee-Vee Pick",
       "id": 2340
     },
     {
       "devName": "ITEMID_RANCHIPIKKU8",
+      "name": "Smiling Vee Pick",
       "id": 2341
     },
     {
       "devName": "ITEMID_RANCHIPIKKU9",
+      "name": "Blue Pok\u00E9 Ball Pick",
       "id": 2342
     },
     {
       "devName": "ITEMID_IWAINOYOROI",
+      "name": "Auspicious Armor",
       "id": 2344
     },
     {
       "devName": "ITEMID_KASIRANOAKASI",
+      "name": "Leader\u2019s Crest",
       "id": 2345
     },
     {
       "devName": "ITEMID_SUITOU6",
+      "name": "Pink Bottle",
       "id": 2348
     },
     {
       "devName": "ITEMID_SUITOU7",
+      "name": "Blue Bottle",
       "id": 2349
     },
     {
       "devName": "ITEMID_SUITOU8",
+      "name": "Yellow Bottle",
       "id": 2350
     },
     {
       "devName": "ITEMID_SUITOU9",
+      "name": "Steel Bottle (R)",
       "id": 2351
     },
     {
       "devName": "ITEMID_SUITOU10",
+      "name": "Steel Bottle (Y)",
       "id": 2352
     },
     {
       "devName": "ITEMID_SUITOU11",
+      "name": "Steel Bottle (B)",
       "id": 2353
     },
     {
       "devName": "ITEMID_SUITOU12",
+      "name": "Silver Bottle",
       "id": 2354
     },
     {
       "devName": "ITEMID_KOPPU6",
+      "name": "Barred Cup",
       "id": 2355
     },
     {
       "devName": "ITEMID_KOPPU7",
+      "name": "Diamond Pattern Cup",
       "id": 2356
     },
     {
       "devName": "ITEMID_KOPPU8",
+      "name": "Fire Pattern Cup",
       "id": 2357
     },
     {
       "devName": "ITEMID_KOPPU9",
+      "name": "Pink Cup",
       "id": 2358
     },
     {
       "devName": "ITEMID_KOPPU10",
+      "name": "Blue Cup",
       "id": 2359
     },
     {
       "devName": "ITEMID_KOPPU11",
+      "name": "Yellow Cup",
       "id": 2360
     },
     {
       "devName": "ITEMID_KOPPU12",
+      "name": "Pikachu Cup",
       "id": 2361
     },
     {
       "devName": "ITEMID_KOPPU13",
+      "name": "Eevee Cup",
       "id": 2362
     },
     {
       "devName": "ITEMID_KOPPU14",
+      "name": "Slowpoke Cup",
       "id": 2363
     },
     {
       "devName": "ITEMID_KOPPU15",
+      "name": "Silver Cup",
       "id": 2364
     },
     {
       "devName": "ITEMID_PIKUNIKKUBOORU6",
+      "name": "Exercise Ball",
       "id": 2365
     },
     {
       "devName": "ITEMID_TEEBURUKABAA6",
+      "name": "Plaid Tablecloth (Y)",
       "id": 2366
     },
     {
       "devName": "ITEMID_TEEBURUKABAA7",
+      "name": "Plaid Tablecloth (B)",
       "id": 2367
     },
     {
       "devName": "ITEMID_TEEBURUKABAA8",
+      "name": "Plaid Tablecloth (R)",
       "id": 2368
     },
     {
       "devName": "ITEMID_TEEBURUKABAA9",
+      "name": "B\u0026W Grass Tablecloth",
       "id": 2369
     },
     {
       "devName": "ITEMID_TEEBURUKABAA10",
+      "name": "Battle Tablecloth",
       "id": 2370
     },
     {
       "devName": "ITEMID_TEEBURUKABAA11",
+      "name": "Monstrous Tablecloth",
       "id": 2371
     },
     {
       "devName": "ITEMID_TEEBURUKABAA12",
+      "name": "Striped Tablecloth",
       "id": 2372
     },
     {
       "devName": "ITEMID_TEEBURUKABAA13",
+      "name": "Diamond Tablecloth",
       "id": 2373
     },
     {
       "devName": "ITEMID_TEEBURUKABAA14",
+      "name": "Polka-Dot Tablecloth",
       "id": 2374
     },
     {
       "devName": "ITEMID_TEEBURUKABAA15",
+      "name": "Lilac Tablecloth",
       "id": 2375
     },
     {
       "devName": "ITEMID_TEEBURUKABAA16",
+      "name": "Mint Tablecloth",
       "id": 2376
     },
     {
       "devName": "ITEMID_TEEBURUKABAA17",
+      "name": "Peach Tablecloth",
       "id": 2377
     },
     {
       "devName": "ITEMID_TEEBURUKABAA18",
+      "name": "Yellow Tablecloth",
       "id": 2378
     },
     {
       "devName": "ITEMID_TEEBURUKABAA19",
+      "name": "Blue Tablecloth",
       "id": 2379
     },
     {
       "devName": "ITEMID_TEEBURUKABAA20",
+      "name": "Pink Tablecloth",
       "id": 2380
     },
     {
       "devName": "ITEMID_SUITOU13",
+      "name": "Gold Bottle",
       "id": 2381
     },
     {
       "devName": "ITEMID_SUITOU14",
+      "name": "Bronze Bottle",
       "id": 2382
     },
     {
       "devName": "ITEMID_KOPPU16",
+      "name": "Gold Cup",
       "id": 2383
     },
     {
       "devName": "ITEMID_KOPPU17",
+      "name": "Bronze Cup",
       "id": 2384
     },
     {
       "devName": "ITEMID_RANCHIPIKKU10",
+      "name": "Green Pok\u00E9 Ball Pick",
       "id": 2385
     },
     {
       "devName": "ITEMID_RANCHIPIKKU11",
+      "name": "Red Pok\u00E9 Ball Pick",
       "id": 2386
     },
     {
       "devName": "ITEMID_RANCHIPIKKU12",
+      "name": "Party Sparkler Pick",
       "id": 2387
     },
     {
       "devName": "ITEMID_RANCHIPIKKU13",
+      "name": "Heroic Sword Pick",
       "id": 2388
     },
     {
       "devName": "ITEMID_RANCHIPIKKU14",
+      "name": "Magical Star Pick",
       "id": 2389
     },
     {
       "devName": "ITEMID_RANCHIPIKKU15",
+      "name": "Magical Heart Pick",
       "id": 2390
     },
     {
       "devName": "ITEMID_RANCHIPIKKU16",
+      "name": "Parasol Pick",
       "id": 2391
     },
     {
       "devName": "ITEMID_RANCHIPIKKU17",
+      "name": "Blue-Sky Flower Pick",
       "id": 2392
     },
     {
       "devName": "ITEMID_RANCHIPIKKU18",
+      "name": "Sunset Flower Pick",
       "id": 2393
     },
     {
       "devName": "ITEMID_RANCHIPIKKU19",
+      "name": "Sunrise Flower Pick",
       "id": 2394
     },
     {
       "devName": "ITEMID_SARA2",
+      "name": "Green Dish",
       "id": 2396
     }
   ]

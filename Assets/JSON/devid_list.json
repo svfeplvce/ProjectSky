@@ -3,5056 +3,6067 @@
     {
       "devName": "DEV_NULL",
       "id": 0,
+      "name": "Egg",
       "forms": 1
     },
     {
       "devName": "DEV_HUSIGIDANE",
       "id": 1,
+      "name": "Bulbasaur",
       "forms": 1
     },
     {
       "devName": "DEV_HUSIGISOU",
       "id": 2,
+      "name": "Ivysaur",
       "forms": 1
     },
     {
       "devName": "DEV_HUSIGIBANA",
       "id": 3,
+      "name": "Venusaur",
       "forms": 1
     },
     {
       "devName": "DEV_HITOKAGE",
       "id": 4,
+      "name": "Charmander",
       "forms": 1
     },
     {
       "devName": "DEV_RIZAADO",
       "id": 5,
+      "name": "Charmeleon",
       "forms": 1
     },
     {
       "devName": "DEV_RIZAADON",
       "id": 6,
+      "name": "Charizard",
       "forms": 1
     },
     {
       "devName": "DEV_ZENIGAME",
       "id": 7,
+      "name": "Squirtle",
       "forms": 1
     },
     {
       "devName": "DEV_KAMEERU",
       "id": 8,
+      "name": "Wartortle",
       "forms": 1
     },
     {
       "devName": "DEV_KAMEKKUSU",
       "id": 9,
+      "name": "Blastoise",
       "forms": 1
     },
     {
       "devName": "DEV_KYATAPII",
       "id": 10,
+      "name": "Caterpie",
       "forms": 1
     },
     {
       "devName": "DEV_TORANSERU",
       "id": 11,
+      "name": "Metapod",
       "forms": 1
     },
     {
       "devName": "DEV_BATAHURII",
       "id": 12,
+      "name": "Butterfree",
       "forms": 1
     },
     {
       "devName": "DEV_BIIDORU",
       "id": 13,
+      "name": "Weedle",
       "forms": 1
     },
     {
       "devName": "DEV_KOKUUN",
       "id": 14,
+      "name": "Kakuna",
       "forms": 1
     },
     {
       "devName": "DEV_SUPIAA",
       "id": 15,
+      "name": "Beedrill",
       "forms": 1
     },
     {
       "devName": "DEV_POPPO",
       "id": 16,
+      "name": "Pidgey",
       "forms": 1
     },
     {
       "devName": "DEV_PIZYON",
       "id": 17,
+      "name": "Pidgeotto",
       "forms": 1
     },
     {
       "devName": "DEV_PIZYOTTO",
       "id": 18,
+      "name": "Pidgeot",
       "forms": 1
     },
     {
       "devName": "DEV_KORATTA",
       "id": 19,
+      "name": "Rattata",
       "forms": 1
     },
     {
       "devName": "DEV_RATTA",
       "id": 20,
+      "name": "Raticate",
       "forms": 1
     },
     {
       "devName": "DEV_ONISUZUME",
       "id": 21,
+      "name": "Spearow",
       "forms": 1
     },
     {
       "devName": "DEV_ONIDORIRU",
       "id": 22,
+      "name": "Fearow",
       "forms": 1
     },
     {
       "devName": "DEV_AABO",
       "id": 23,
+      "name": "Ekans",
       "forms": 1
     },
     {
       "devName": "DEV_AABOKKU",
       "id": 24,
+      "name": "Arbok",
       "forms": 1
     },
     {
       "devName": "DEV_PIKATYUU",
       "id": 25,
+      "name": "Pikachu",
       "forms": 9
     },
     {
       "devName": "DEV_RAITYUU",
       "id": 26,
+      "name": "Raichu",
       "forms": 2
     },
     {
       "devName": "DEV_SANDO",
       "id": 27,
+      "name": "Sandshrew",
       "forms": 1
     },
     {
       "devName": "DEV_SANDOPAN",
       "id": 28,
+      "name": "Sandslash",
       "forms": 1
     },
     {
       "devName": "DEV_NIDORAN_F",
       "id": 29,
+      "name": "Nidoran\u2640",
       "forms": 1
     },
     {
       "devName": "DEV_NIDORIINA",
       "id": 30,
+      "name": "Nidorina",
       "forms": 1
     },
     {
       "devName": "DEV_NIDOKUIN",
       "id": 31,
+      "name": "Nidoqueen",
       "forms": 1
     },
     {
       "devName": "DEV_NIDORAN_M",
       "id": 32,
+      "name": "Nidoran\u2642",
       "forms": 1
     },
     {
       "devName": "DEV_NIDORIINO",
       "id": 33,
+      "name": "Nidorino",
       "forms": 1
     },
     {
       "devName": "DEV_NIDOKINGU",
       "id": 34,
+      "name": "Nidoking",
       "forms": 1
     },
     {
       "devName": "DEV_PIPPI",
       "id": 35,
+      "name": "Clefairy",
       "forms": 1
     },
     {
       "devName": "DEV_PIKUSII",
       "id": 36,
+      "name": "Clefable",
       "forms": 1
     },
     {
       "devName": "DEV_ROKON",
       "id": 37,
+      "name": "Vulpix",
       "forms": 1
     },
     {
       "devName": "DEV_KYUUKON",
       "id": 38,
+      "name": "Ninetales",
       "forms": 1
     },
     {
       "devName": "DEV_PURIN",
       "id": 39,
+      "name": "Jigglypuff",
       "forms": 1
     },
     {
       "devName": "DEV_PUKURIN",
       "id": 40,
+      "name": "Wigglytuff",
       "forms": 1
     },
     {
       "devName": "DEV_ZUBATTO",
       "id": 41,
+      "name": "Zubat",
       "forms": 1
     },
     {
       "devName": "DEV_GORUBATTO",
       "id": 42,
+      "name": "Golbat",
       "forms": 1
     },
     {
       "devName": "DEV_NAZONOKUSA",
       "id": 43,
+      "name": "Oddish",
       "forms": 1
     },
     {
       "devName": "DEV_KUSAIHANA",
       "id": 44,
+      "name": "Gloom",
       "forms": 1
     },
     {
       "devName": "DEV_RAHURESIA",
       "id": 45,
+      "name": "Vileplume",
       "forms": 1
     },
     {
       "devName": "DEV_PARASU",
       "id": 46,
+      "name": "Paras",
       "forms": 1
     },
     {
       "devName": "DEV_PARASEKUTO",
       "id": 47,
+      "name": "Parasect",
       "forms": 1
     },
     {
       "devName": "DEV_KONPAN",
       "id": 48,
+      "name": "Venonat",
       "forms": 1
     },
     {
       "devName": "DEV_MORUFON",
       "id": 49,
+      "name": "Venomoth",
       "forms": 1
     },
     {
       "devName": "DEV_DHIGUDA",
       "id": 50,
+      "name": "Diglett",
       "forms": 2
     },
     {
       "devName": "DEV_DAGUTORIO",
       "id": 51,
+      "name": "Dugtrio",
       "forms": 2
     },
     {
       "devName": "DEV_NYAASU",
       "id": 52,
+      "name": "Meowth",
       "forms": 3
     },
     {
       "devName": "DEV_PERUSIAN",
       "id": 53,
+      "name": "Persian",
       "forms": 2
     },
     {
       "devName": "DEV_KODAKKU",
       "id": 54,
+      "name": "Psyduck",
       "forms": 1
     },
     {
       "devName": "DEV_GORUDAKKU",
       "id": 55,
+      "name": "Golduck",
       "forms": 1
     },
     {
       "devName": "DEV_MANKII",
       "id": 56,
+      "name": "Mankey",
       "forms": 1
     },
     {
       "devName": "DEV_OKORIZARU",
       "id": 57,
+      "name": "Primeape",
       "forms": 1
     },
     {
       "devName": "DEV_GAADHI",
       "id": 58,
+      "name": "Growlithe",
       "forms": 2
     },
     {
       "devName": "DEV_UINDHI",
       "id": 59,
+      "name": "Arcanine",
       "forms": 2
     },
     {
       "devName": "DEV_NYOROMO",
       "id": 60,
+      "name": "Poliwag",
       "forms": 1
     },
     {
       "devName": "DEV_NYOROZO",
       "id": 61,
+      "name": "Poliwhirl",
       "forms": 1
     },
     {
       "devName": "DEV_NYOROBON",
       "id": 62,
+      "name": "Poliwrath",
       "forms": 1
     },
     {
       "devName": "DEV_KEESHI",
       "id": 63,
+      "name": "Abra",
       "forms": 1
     },
     {
       "devName": "DEV_YUNGERAA",
       "id": 64,
+      "name": "Kadabra",
       "forms": 1
     },
     {
       "devName": "DEV_HUUDHIN",
       "id": 65,
+      "name": "Alakazam",
       "forms": 1
     },
     {
       "devName": "DEV_WANRIKII",
       "id": 66,
+      "name": "Machop",
       "forms": 1
     },
     {
       "devName": "DEV_GOORIKII",
       "id": 67,
+      "name": "Machoke",
       "forms": 1
     },
     {
       "devName": "DEV_KAIRIKII",
       "id": 68,
+      "name": "Machamp",
       "forms": 1
     },
     {
       "devName": "DEV_MADATUBOMI",
       "id": 69,
+      "name": "Bellsprout",
       "forms": 1
     },
     {
       "devName": "DEV_UTUDON",
       "id": 70,
+      "name": "Weepinbell",
       "forms": 1
     },
     {
       "devName": "DEV_UTUBOTTO",
       "id": 71,
+      "name": "Victreebel",
       "forms": 1
     },
     {
       "devName": "DEV_MENOKURAGE",
       "id": 72,
+      "name": "Tentacool",
       "forms": 1
     },
     {
       "devName": "DEV_DOKUKURAGE",
       "id": 73,
+      "name": "Tentacruel",
       "forms": 1
     },
     {
       "devName": "DEV_ISITUBUTE",
       "id": 74,
+      "name": "Geodude",
       "forms": 1
     },
     {
       "devName": "DEV_GOROON",
       "id": 75,
+      "name": "Graveler",
       "forms": 1
     },
     {
       "devName": "DEV_GOROONYA",
       "id": 76,
+      "name": "Golem",
       "forms": 1
     },
     {
       "devName": "DEV_PONIITA",
       "id": 77,
+      "name": "Ponyta",
       "forms": 1
     },
     {
       "devName": "DEV_GYAROPPU",
       "id": 78,
+      "name": "Rapidash",
       "forms": 1
     },
     {
       "devName": "DEV_YADON",
       "id": 79,
+      "name": "Slowpoke",
       "forms": 2
     },
     {
       "devName": "DEV_YADORAN",
       "id": 80,
+      "name": "Slowbro",
       "forms": 2
     },
     {
       "devName": "DEV_KOIRU",
       "id": 81,
+      "name": "Magnemite",
       "forms": 1
     },
     {
       "devName": "DEV_REAKOIRU",
       "id": 82,
+      "name": "Magneton",
       "forms": 1
     },
     {
       "devName": "DEV_KAMONEGI",
       "id": 83,
+      "name": "Farfetch\u2019d",
       "forms": 1
     },
     {
       "devName": "DEV_DOODOO",
       "id": 84,
+      "name": "Doduo",
       "forms": 1
     },
     {
       "devName": "DEV_DOODORIO",
       "id": 85,
+      "name": "Dodrio",
       "forms": 1
     },
     {
       "devName": "DEV_PAUWAU",
       "id": 86,
+      "name": "Seel",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUGON",
       "id": 87,
+      "name": "Dewgong",
       "forms": 1
     },
     {
       "devName": "DEV_BETOBETAA",
       "id": 88,
+      "name": "Grimer",
       "forms": 2
     },
     {
       "devName": "DEV_BETOBETON",
       "id": 89,
+      "name": "Muk",
       "forms": 2
     },
     {
       "devName": "DEV_SHERUDAA",
       "id": 90,
+      "name": "Shellder",
       "forms": 1
     },
     {
       "devName": "DEV_PARUSHEN",
       "id": 91,
+      "name": "Cloyster",
       "forms": 1
     },
     {
       "devName": "DEV_GOOSU",
       "id": 92,
+      "name": "Gastly",
       "forms": 1
     },
     {
       "devName": "DEV_GOOSUTO",
       "id": 93,
+      "name": "Haunter",
       "forms": 1
     },
     {
       "devName": "DEV_GENGAA",
       "id": 94,
+      "name": "Gengar",
       "forms": 1
     },
     {
       "devName": "DEV_IWAAKU",
       "id": 95,
+      "name": "Onix",
       "forms": 1
     },
     {
       "devName": "DEV_SURIIPU",
       "id": 96,
+      "name": "Drowzee",
       "forms": 1
     },
     {
       "devName": "DEV_SURIIPAA",
       "id": 97,
+      "name": "Hypno",
       "forms": 1
     },
     {
       "devName": "DEV_KURABU",
       "id": 98,
+      "name": "Krabby",
       "forms": 1
     },
     {
       "devName": "DEV_KINGURAA",
       "id": 99,
+      "name": "Kingler",
       "forms": 1
     },
     {
       "devName": "DEV_BIRIRIDAMA",
       "id": 100,
+      "name": "Voltorb",
       "forms": 2
     },
     {
       "devName": "DEV_MARUMAIN",
       "id": 101,
+      "name": "Electrode",
       "forms": 2
     },
     {
       "devName": "DEV_TAMATAMA",
       "id": 102,
+      "name": "Exeggcute",
       "forms": 1
     },
     {
       "devName": "DEV_NASSII",
       "id": 103,
+      "name": "Exeggutor",
       "forms": 1
     },
     {
       "devName": "DEV_KARAKARA",
       "id": 104,
+      "name": "Cubone",
       "forms": 1
     },
     {
       "devName": "DEV_GARAGARA",
       "id": 105,
+      "name": "Marowak",
       "forms": 1
     },
     {
       "devName": "DEV_SAWAMURAA",
       "id": 106,
+      "name": "Hitmonlee",
       "forms": 1
     },
     {
       "devName": "DEV_EBIWARAA",
       "id": 107,
+      "name": "Hitmonchan",
       "forms": 1
     },
     {
       "devName": "DEV_BERORINGA",
       "id": 108,
+      "name": "Lickitung",
       "forms": 1
     },
     {
       "devName": "DEV_DOGAASU",
       "id": 109,
+      "name": "Koffing",
       "forms": 1
     },
     {
       "devName": "DEV_MATADOGASU",
       "id": 110,
+      "name": "Weezing",
       "forms": 1
     },
     {
       "devName": "DEV_SAIHOON",
       "id": 111,
+      "name": "Rhyhorn",
       "forms": 1
     },
     {
       "devName": "DEV_SAIDON",
       "id": 112,
+      "name": "Rhydon",
       "forms": 1
     },
     {
       "devName": "DEV_RAKKII",
       "id": 113,
+      "name": "Chansey",
       "forms": 1
     },
     {
       "devName": "DEV_MONZYARA",
       "id": 114,
+      "name": "Tangela",
       "forms": 1
     },
     {
       "devName": "DEV_GARUURA",
       "id": 115,
+      "name": "Kangaskhan",
       "forms": 1
     },
     {
       "devName": "DEV_TATTUU",
       "id": 116,
+      "name": "Horsea",
       "forms": 1
     },
     {
       "devName": "DEV_SIIDORA",
       "id": 117,
+      "name": "Seadra",
       "forms": 1
     },
     {
       "devName": "DEV_TOSAKINTO",
       "id": 118,
+      "name": "Goldeen",
       "forms": 1
     },
     {
       "devName": "DEV_AZUMAOU",
       "id": 119,
+      "name": "Seaking",
       "forms": 1
     },
     {
       "devName": "DEV_HITODEMAN",
       "id": 120,
+      "name": "Staryu",
       "forms": 1
     },
     {
       "devName": "DEV_SUTAAMII",
       "id": 121,
+      "name": "Starmie",
       "forms": 1
     },
     {
       "devName": "DEV_BARIYAADO",
       "id": 122,
+      "name": "Mr. Mime",
       "forms": 1
     },
     {
       "devName": "DEV_SUTORAIKU",
       "id": 123,
+      "name": "Scyther",
       "forms": 1
     },
     {
       "devName": "DEV_RUUZYURA",
       "id": 124,
+      "name": "Jynx",
       "forms": 1
     },
     {
       "devName": "DEV_EREBUU",
       "id": 125,
+      "name": "Electabuzz",
       "forms": 1
     },
     {
       "devName": "DEV_BUUBAA",
       "id": 126,
+      "name": "Magmar",
       "forms": 1
     },
     {
       "devName": "DEV_KAIROSU",
       "id": 127,
+      "name": "Pinsir",
       "forms": 1
     },
     {
       "devName": "DEV_KENTAROSU",
       "id": 128,
+      "name": "Tauros",
       "forms": 4
     },
     {
       "devName": "DEV_KOIKINGU",
       "id": 129,
+      "name": "Magikarp",
       "forms": 1
     },
     {
       "devName": "DEV_GYARADOSU",
       "id": 130,
+      "name": "Gyarados",
       "forms": 1
     },
     {
       "devName": "DEV_RAPURASU",
       "id": 131,
+      "name": "Lapras",
       "forms": 1
     },
     {
       "devName": "DEV_METAMON",
       "id": 132,
+      "name": "Ditto",
       "forms": 1
     },
     {
       "devName": "DEV_IIBUI",
       "id": 133,
+      "name": "Eevee",
       "forms": 1
     },
     {
       "devName": "DEV_SYAWAAZU",
       "id": 134,
+      "name": "Vaporeon",
       "forms": 1
     },
     {
       "devName": "DEV_SANDAASU",
       "id": 135,
+      "name": "Jolteon",
       "forms": 1
     },
     {
       "devName": "DEV_BUUSUTAA",
       "id": 136,
+      "name": "Flareon",
       "forms": 1
     },
     {
       "devName": "DEV_PORIGON",
       "id": 137,
+      "name": "Porygon",
       "forms": 1
     },
     {
       "devName": "DEV_OMUNAITO",
       "id": 138,
+      "name": "Omanyte",
       "forms": 1
     },
     {
       "devName": "DEV_OMUSUTAA",
       "id": 139,
+      "name": "Omastar",
       "forms": 1
     },
     {
       "devName": "DEV_KABUTO",
       "id": 140,
+      "name": "Kabuto",
       "forms": 1
     },
     {
       "devName": "DEV_KABUTOPUSU",
       "id": 141,
+      "name": "Kabutops",
       "forms": 1
     },
     {
       "devName": "DEV_PUTERA",
       "id": 142,
+      "name": "Aerodactyl",
       "forms": 1
     },
     {
       "devName": "DEV_KABIGON",
       "id": 143,
+      "name": "Snorlax",
       "forms": 1
     },
     {
       "devName": "DEV_HURIIZAA",
       "id": 144,
+      "name": "Articuno",
       "forms": 2
     },
     {
       "devName": "DEV_SANDAA",
       "id": 145,
+      "name": "Zapdos",
       "forms": 2
     },
     {
       "devName": "DEV_FAIYAA",
       "id": 146,
+      "name": "Moltres",
       "forms": 2
     },
     {
       "devName": "DEV_MINIRYUU",
       "id": 147,
+      "name": "Dratini",
       "forms": 1
     },
     {
       "devName": "DEV_HAKURYUU",
       "id": 148,
+      "name": "Dragonair",
       "forms": 1
     },
     {
       "devName": "DEV_KAIRYUU",
       "id": 149,
+      "name": "Dragonite",
       "forms": 1
     },
     {
       "devName": "DEV_MYUUTUU",
       "id": 150,
+      "name": "Mewtwo",
       "forms": 1
     },
     {
       "devName": "DEV_MYUU",
       "id": 151,
+      "name": "Mew",
       "forms": 1
     },
     {
       "devName": "DEV_TIKORIITA",
       "id": 152,
+      "name": "Chikorita",
       "forms": 1
     },
     {
       "devName": "DEV_BEIRIIHU",
       "id": 153,
+      "name": "Bayleef",
       "forms": 1
     },
     {
       "devName": "DEV_MEGANIUMU",
       "id": 154,
+      "name": "Meganium",
       "forms": 1
     },
     {
       "devName": "DEV_HINOARASI",
       "id": 155,
+      "name": "Cyndaquil",
       "forms": 1
     },
     {
       "devName": "DEV_MAGUMARASI",
       "id": 156,
+      "name": "Quilava",
       "forms": 1
     },
     {
       "devName": "DEV_BAKUHUUN",
       "id": 157,
+      "name": "Typhlosion",
       "forms": 2
     },
     {
       "devName": "DEV_WANINOKO",
       "id": 158,
+      "name": "Totodile",
       "forms": 1
     },
     {
       "devName": "DEV_ARIGEITU",
       "id": 159,
+      "name": "Croconaw",
       "forms": 1
     },
     {
       "devName": "DEV_OODAIRU",
       "id": 160,
+      "name": "Feraligatr",
       "forms": 1
     },
     {
       "devName": "DEV_OTATI",
       "id": 161,
+      "name": "Sentret",
       "forms": 1
     },
     {
       "devName": "DEV_OOTATI",
       "id": 162,
+      "name": "Furret",
       "forms": 1
     },
     {
       "devName": "DEV_HOOHOO",
       "id": 163,
+      "name": "Hoothoot",
       "forms": 1
     },
     {
       "devName": "DEV_YORUNOZUKU",
       "id": 164,
+      "name": "Noctowl",
       "forms": 1
     },
     {
       "devName": "DEV_REDHIBA",
       "id": 165,
+      "name": "Ledyba",
       "forms": 1
     },
     {
       "devName": "DEV_REDHIAN",
       "id": 166,
+      "name": "Ledian",
       "forms": 1
     },
     {
       "devName": "DEV_ITOMARU",
       "id": 167,
+      "name": "Spinarak",
       "forms": 1
     },
     {
       "devName": "DEV_ARIADOSU",
       "id": 168,
+      "name": "Ariados",
       "forms": 1
     },
     {
       "devName": "DEV_KUROBATTO",
       "id": 169,
+      "name": "Crobat",
       "forms": 1
     },
     {
       "devName": "DEV_TYONTII",
       "id": 170,
+      "name": "Chinchou",
       "forms": 1
     },
     {
       "devName": "DEV_RANTAAN",
       "id": 171,
+      "name": "Lanturn",
       "forms": 1
     },
     {
       "devName": "DEV_PITYUU",
       "id": 172,
+      "name": "Pichu",
       "forms": 1
     },
     {
       "devName": "DEV_PHI",
       "id": 173,
+      "name": "Cleffa",
       "forms": 1
     },
     {
       "devName": "DEV_PUPURIN",
       "id": 174,
+      "name": "Igglybuff",
       "forms": 1
     },
     {
       "devName": "DEV_TOGEPII",
       "id": 175,
+      "name": "Togepi",
       "forms": 1
     },
     {
       "devName": "DEV_TOGETIKKU",
       "id": 176,
+      "name": "Togetic",
       "forms": 1
     },
     {
       "devName": "DEV_NEITHI",
       "id": 177,
+      "name": "Natu",
       "forms": 1
     },
     {
       "devName": "DEV_NEITHIO",
       "id": 178,
+      "name": "Xatu",
       "forms": 1
     },
     {
       "devName": "DEV_MERIIPU",
       "id": 179,
+      "name": "Mareep",
       "forms": 1
     },
     {
       "devName": "DEV_MOKOKO",
       "id": 180,
+      "name": "Flaaffy",
       "forms": 1
     },
     {
       "devName": "DEV_DENRYUU",
       "id": 181,
+      "name": "Ampharos",
       "forms": 1
     },
     {
       "devName": "DEV_KIREIHANA",
       "id": 182,
+      "name": "Bellossom",
       "forms": 1
     },
     {
       "devName": "DEV_MARIRU",
       "id": 183,
+      "name": "Marill",
       "forms": 1
     },
     {
       "devName": "DEV_MARIRURI",
       "id": 184,
+      "name": "Azumarill",
       "forms": 1
     },
     {
       "devName": "DEV_USOKKII",
       "id": 185,
+      "name": "Sudowoodo",
       "forms": 1
     },
     {
       "devName": "DEV_NYOROTONO",
       "id": 186,
+      "name": "Politoed",
       "forms": 1
     },
     {
       "devName": "DEV_HANEKKO",
       "id": 187,
+      "name": "Hoppip",
       "forms": 1
     },
     {
       "devName": "DEV_POPOKKO",
       "id": 188,
+      "name": "Skiploom",
       "forms": 1
     },
     {
       "devName": "DEV_WATAKKO",
       "id": 189,
+      "name": "Jumpluff",
       "forms": 1
     },
     {
       "devName": "DEV_EIPAMU",
       "id": 190,
+      "name": "Aipom",
       "forms": 1
     },
     {
       "devName": "DEV_HIMANATTU",
       "id": 191,
+      "name": "Sunkern",
       "forms": 1
     },
     {
       "devName": "DEV_KIMAWARI",
       "id": 192,
+      "name": "Sunflora",
       "forms": 1
     },
     {
       "devName": "DEV_YANYANMA",
       "id": 193,
+      "name": "Yanma",
       "forms": 1
     },
     {
       "devName": "DEV_UPAA",
       "id": 194,
+      "name": "Wooper",
       "forms": 2
     },
     {
       "devName": "DEV_NUOO",
       "id": 195,
+      "name": "Quagsire",
       "forms": 1
     },
     {
       "devName": "DEV_EEFI",
       "id": 196,
+      "name": "Espeon",
       "forms": 1
     },
     {
       "devName": "DEV_BURAKKII",
       "id": 197,
+      "name": "Umbreon",
       "forms": 1
     },
     {
       "devName": "DEV_YAMIKARASU",
       "id": 198,
+      "name": "Murkrow",
       "forms": 1
     },
     {
       "devName": "DEV_YADOKINGU",
       "id": 199,
+      "name": "Slowking",
       "forms": 2
     },
     {
       "devName": "DEV_MUUMA",
       "id": 200,
+      "name": "Misdreavus",
       "forms": 1
     },
     {
       "devName": "DEV_ANNOON",
       "id": 201,
+      "name": "Unown",
       "forms": 1
     },
     {
       "devName": "DEV_SOONANSU",
       "id": 202,
+      "name": "Wobbuffet",
       "forms": 1
     },
     {
       "devName": "DEV_KIRINRIKI",
       "id": 203,
+      "name": "Girafarig",
       "forms": 1
     },
     {
       "devName": "DEV_KUNUGIDAMA",
       "id": 204,
+      "name": "Pineco",
       "forms": 1
     },
     {
       "devName": "DEV_FORETOSU",
       "id": 205,
+      "name": "Forretress",
       "forms": 1
     },
     {
       "devName": "DEV_NOKOTTI",
       "id": 206,
+      "name": "Dunsparce",
       "forms": 1
     },
     {
       "devName": "DEV_GURAIGAA",
       "id": 207,
+      "name": "Gligar",
       "forms": 1
     },
     {
       "devName": "DEV_HAGANEERU",
       "id": 208,
+      "name": "Steelix",
       "forms": 1
     },
     {
       "devName": "DEV_BURUU",
       "id": 209,
+      "name": "Snubbull",
       "forms": 1
     },
     {
       "devName": "DEV_GURANBURU",
       "id": 210,
+      "name": "Granbull",
       "forms": 1
     },
     {
       "devName": "DEV_HARIISEN",
       "id": 211,
+      "name": "Qwilfish",
       "forms": 2
     },
     {
       "devName": "DEV_HASSAMU",
       "id": 212,
+      "name": "Scizor",
       "forms": 1
     },
     {
       "devName": "DEV_TUBOTUBO",
       "id": 213,
+      "name": "Shuckle",
       "forms": 1
     },
     {
       "devName": "DEV_HERAKUROSU",
       "id": 214,
+      "name": "Heracross",
       "forms": 1
     },
     {
       "devName": "DEV_NYUURA",
       "id": 215,
+      "name": "Sneasel",
       "forms": 2
     },
     {
       "devName": "DEV_HIMEGUMA",
       "id": 216,
+      "name": "Teddiursa",
       "forms": 1
     },
     {
       "devName": "DEV_RINGUMA",
       "id": 217,
+      "name": "Ursaring",
       "forms": 1
     },
     {
       "devName": "DEV_MAGUMAGGU",
       "id": 218,
+      "name": "Slugma",
       "forms": 1
     },
     {
       "devName": "DEV_MAGUKARUGO",
       "id": 219,
+      "name": "Magcargo",
       "forms": 1
     },
     {
       "devName": "DEV_URIMUU",
       "id": 220,
+      "name": "Swinub",
       "forms": 1
     },
     {
       "devName": "DEV_INOMUU",
       "id": 221,
+      "name": "Piloswine",
       "forms": 1
     },
     {
       "devName": "DEV_SANIIGO",
       "id": 222,
+      "name": "Corsola",
       "forms": 1
     },
     {
       "devName": "DEV_TEPPOUO",
       "id": 223,
+      "name": "Remoraid",
       "forms": 1
     },
     {
       "devName": "DEV_OKUTAN",
       "id": 224,
+      "name": "Octillery",
       "forms": 1
     },
     {
       "devName": "DEV_DERIBAADO",
       "id": 225,
+      "name": "Delibird",
       "forms": 1
     },
     {
       "devName": "DEV_MANTAIN",
       "id": 226,
+      "name": "Mantine",
       "forms": 1
     },
     {
       "devName": "DEV_EAAMUDO",
       "id": 227,
+      "name": "Skarmory",
       "forms": 1
     },
     {
       "devName": "DEV_DERUBIRU",
       "id": 228,
+      "name": "Houndour",
       "forms": 1
     },
     {
       "devName": "DEV_HERUGAA",
       "id": 229,
+      "name": "Houndoom",
       "forms": 1
     },
     {
       "devName": "DEV_KINGUDORA",
       "id": 230,
+      "name": "Kingdra",
       "forms": 1
     },
     {
       "devName": "DEV_GOMAZOU",
       "id": 231,
+      "name": "Phanpy",
       "forms": 1
     },
     {
       "devName": "DEV_DONFAN",
       "id": 232,
+      "name": "Donphan",
       "forms": 1
     },
     {
       "devName": "DEV_PORIGON2",
       "id": 233,
+      "name": "Porygon2",
       "forms": 1
     },
     {
       "devName": "DEV_ODOSISI",
       "id": 234,
+      "name": "Stantler",
       "forms": 1
     },
     {
       "devName": "DEV_DOOBURU",
       "id": 235,
+      "name": "Smeargle",
       "forms": 1
     },
     {
       "devName": "DEV_BARUKII",
       "id": 236,
+      "name": "Tyrogue",
       "forms": 1
     },
     {
       "devName": "DEV_KAPOERAA",
       "id": 237,
+      "name": "Hitmontop",
       "forms": 1
     },
     {
       "devName": "DEV_MUTYUURU",
       "id": 238,
+      "name": "Smoochum",
       "forms": 1
     },
     {
       "devName": "DEV_EREKIDDO",
       "id": 239,
+      "name": "Elekid",
       "forms": 1
     },
     {
       "devName": "DEV_BUBHI",
       "id": 240,
+      "name": "Magby",
       "forms": 1
     },
     {
       "devName": "DEV_MIRUTANKU",
       "id": 241,
+      "name": "Miltank",
       "forms": 1
     },
     {
       "devName": "DEV_HAPINASU",
       "id": 242,
+      "name": "Blissey",
       "forms": 1
     },
     {
       "devName": "DEV_RAIKOU",
       "id": 243,
+      "name": "Raikou",
       "forms": 1
     },
     {
       "devName": "DEV_ENTEI",
       "id": 244,
+      "name": "Entei",
       "forms": 1
     },
     {
       "devName": "DEV_SUIKUN",
       "id": 245,
+      "name": "Suicune",
       "forms": 1
     },
     {
       "devName": "DEV_YOOGIRASU",
       "id": 246,
+      "name": "Larvitar",
       "forms": 1
     },
     {
       "devName": "DEV_SANAGIRASU",
       "id": 247,
+      "name": "Pupitar",
       "forms": 1
     },
     {
       "devName": "DEV_BANGIRASU",
       "id": 248,
+      "name": "Tyranitar",
       "forms": 1
     },
     {
       "devName": "DEV_RUGIA",
       "id": 249,
+      "name": "Lugia",
       "forms": 1
     },
     {
       "devName": "DEV_HOUOU",
       "id": 250,
+      "name": "Ho-Oh",
       "forms": 1
     },
     {
       "devName": "DEV_SEREBHI",
       "id": 251,
+      "name": "Celebi",
       "forms": 1
     },
     {
       "devName": "DEV_KIMORI",
       "id": 252,
+      "name": "Treecko",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUPUTORU",
       "id": 253,
+      "name": "Grovyle",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUKAIN",
       "id": 254,
+      "name": "Sceptile",
       "forms": 1
     },
     {
       "devName": "DEV_ATYAMO",
       "id": 255,
+      "name": "Torchic",
       "forms": 1
     },
     {
       "devName": "DEV_WAKASYAMO",
       "id": 256,
+      "name": "Combusken",
       "forms": 1
     },
     {
       "devName": "DEV_BASYAAMO",
       "id": 257,
+      "name": "Blaziken",
       "forms": 1
     },
     {
       "devName": "DEV_MIZUGOROU",
       "id": 258,
+      "name": "Mudkip",
       "forms": 1
     },
     {
       "devName": "DEV_NUMAKUROO",
       "id": 259,
+      "name": "Marshtomp",
       "forms": 1
     },
     {
       "devName": "DEV_RAGURAAZI",
       "id": 260,
+      "name": "Swampert",
       "forms": 1
     },
     {
       "devName": "DEV_POTIENA",
       "id": 261,
+      "name": "Poochyena",
       "forms": 1
     },
     {
       "devName": "DEV_GURAENA",
       "id": 262,
+      "name": "Mightyena",
       "forms": 1
     },
     {
       "devName": "DEV_ZIGUZAGUMA",
       "id": 263,
+      "name": "Zigzagoon",
       "forms": 1
     },
     {
       "devName": "DEV_MASSUGUMA",
       "id": 264,
+      "name": "Linoone",
       "forms": 1
     },
     {
       "devName": "DEV_KEMUSSO",
       "id": 265,
+      "name": "Wurmple",
       "forms": 1
     },
     {
       "devName": "DEV_KARASARISU",
       "id": 266,
+      "name": "Silcoon",
       "forms": 1
     },
     {
       "devName": "DEV_AGEHANTO",
       "id": 267,
+      "name": "Beautifly",
       "forms": 1
     },
     {
       "devName": "DEV_MAYURUDO",
       "id": 268,
+      "name": "Cascoon",
       "forms": 1
     },
     {
       "devName": "DEV_DOKUKEIRU",
       "id": 269,
+      "name": "Dustox",
       "forms": 1
     },
     {
       "devName": "DEV_HASUBOO",
       "id": 270,
+      "name": "Lotad",
       "forms": 1
     },
     {
       "devName": "DEV_HASUBURERO",
       "id": 271,
+      "name": "Lombre",
       "forms": 1
     },
     {
       "devName": "DEV_RUNPAPPA",
       "id": 272,
+      "name": "Ludicolo",
       "forms": 1
     },
     {
       "devName": "DEV_TANEBOO",
       "id": 273,
+      "name": "Seedot",
       "forms": 1
     },
     {
       "devName": "DEV_KONOHANA",
       "id": 274,
+      "name": "Nuzleaf",
       "forms": 1
     },
     {
       "devName": "DEV_DAATENGU",
       "id": 275,
+      "name": "Shiftry",
       "forms": 1
     },
     {
       "devName": "DEV_SUBAME",
       "id": 276,
+      "name": "Taillow",
       "forms": 1
     },
     {
       "devName": "DEV_OOSUBAME",
       "id": 277,
+      "name": "Swellow",
       "forms": 1
     },
     {
       "devName": "DEV_KYAMOME",
       "id": 278,
+      "name": "Wingull",
       "forms": 1
     },
     {
       "devName": "DEV_PERIPPAA",
       "id": 279,
+      "name": "Pelipper",
       "forms": 1
     },
     {
       "devName": "DEV_RARUTOSU",
       "id": 280,
+      "name": "Ralts",
       "forms": 1
     },
     {
       "devName": "DEV_KIRURIA",
       "id": 281,
+      "name": "Kirlia",
       "forms": 1
     },
     {
       "devName": "DEV_SAANAITO",
       "id": 282,
+      "name": "Gardevoir",
       "forms": 1
     },
     {
       "devName": "DEV_AMETAMA",
       "id": 283,
+      "name": "Surskit",
       "forms": 1
     },
     {
       "devName": "DEV_AMEMOOSU",
       "id": 284,
+      "name": "Masquerain",
       "forms": 1
     },
     {
       "devName": "DEV_KINOKOKO",
       "id": 285,
+      "name": "Shroomish",
       "forms": 1
     },
     {
       "devName": "DEV_KINOGASSA",
       "id": 286,
+      "name": "Breloom",
       "forms": 1
     },
     {
       "devName": "DEV_NAMAKERO",
       "id": 287,
+      "name": "Slakoth",
       "forms": 1
     },
     {
       "devName": "DEV_YARUKIMONO",
       "id": 288,
+      "name": "Vigoroth",
       "forms": 1
     },
     {
       "devName": "DEV_KEKKINGU",
       "id": 289,
+      "name": "Slaking",
       "forms": 1
     },
     {
       "devName": "DEV_TUTININ",
       "id": 290,
+      "name": "Nincada",
       "forms": 1
     },
     {
       "devName": "DEV_TEKKANIN",
       "id": 291,
+      "name": "Ninjask",
       "forms": 1
     },
     {
       "devName": "DEV_NUKENIN",
       "id": 292,
+      "name": "Shedinja",
       "forms": 1
     },
     {
       "devName": "DEV_GONYONYO",
       "id": 293,
+      "name": "Whismur",
       "forms": 1
     },
     {
       "devName": "DEV_DOGOOMU",
       "id": 294,
+      "name": "Loudred",
       "forms": 1
     },
     {
       "devName": "DEV_BAKUONGU",
       "id": 295,
+      "name": "Exploud",
       "forms": 1
     },
     {
       "devName": "DEV_MAKUNOSITA",
       "id": 296,
+      "name": "Makuhita",
       "forms": 1
     },
     {
       "devName": "DEV_HARITEYAMA",
       "id": 297,
+      "name": "Hariyama",
       "forms": 1
     },
     {
       "devName": "DEV_RURIRI",
       "id": 298,
+      "name": "Azurill",
       "forms": 1
     },
     {
       "devName": "DEV_NOZUPASU",
       "id": 299,
+      "name": "Nosepass",
       "forms": 1
     },
     {
       "devName": "DEV_ENEKO",
       "id": 300,
+      "name": "Skitty",
       "forms": 1
     },
     {
       "devName": "DEV_ENEKORORO",
       "id": 301,
+      "name": "Delcatty",
       "forms": 1
     },
     {
       "devName": "DEV_YAMIRAMI",
       "id": 302,
+      "name": "Sableye",
       "forms": 1
     },
     {
       "devName": "DEV_KUTIITO",
       "id": 303,
+      "name": "Mawile",
       "forms": 1
     },
     {
       "devName": "DEV_KOKODORA",
       "id": 304,
+      "name": "Aron",
       "forms": 1
     },
     {
       "devName": "DEV_KODORA",
       "id": 305,
+      "name": "Lairon",
       "forms": 1
     },
     {
       "devName": "DEV_BOSUGODORA",
       "id": 306,
+      "name": "Aggron",
       "forms": 1
     },
     {
       "devName": "DEV_ASANAN",
       "id": 307,
+      "name": "Meditite",
       "forms": 1
     },
     {
       "devName": "DEV_TYAAREMU",
       "id": 308,
+      "name": "Medicham",
       "forms": 1
     },
     {
       "devName": "DEV_RAKURAI",
       "id": 309,
+      "name": "Electrike",
       "forms": 1
     },
     {
       "devName": "DEV_RAIBORUTO",
       "id": 310,
+      "name": "Manectric",
       "forms": 1
     },
     {
       "devName": "DEV_PURASURU",
       "id": 311,
+      "name": "Plusle",
       "forms": 1
     },
     {
       "devName": "DEV_MAINAN",
       "id": 312,
+      "name": "Minun",
       "forms": 1
     },
     {
       "devName": "DEV_BARUBIITO",
       "id": 313,
+      "name": "Volbeat",
       "forms": 1
     },
     {
       "devName": "DEV_IRUMIIZE",
       "id": 314,
+      "name": "Illumise",
       "forms": 1
     },
     {
       "devName": "DEV_ROZERIA",
       "id": 315,
+      "name": "Roselia",
       "forms": 1
     },
     {
       "devName": "DEV_GOKURIN",
       "id": 316,
+      "name": "Gulpin",
       "forms": 1
     },
     {
       "devName": "DEV_MARUNOOMU",
       "id": 317,
+      "name": "Swalot",
       "forms": 1
     },
     {
       "devName": "DEV_KIBANIA",
       "id": 318,
+      "name": "Carvanha",
       "forms": 1
     },
     {
       "devName": "DEV_SAMEHADAA",
       "id": 319,
+      "name": "Sharpedo",
       "forms": 1
     },
     {
       "devName": "DEV_HOERUKO",
       "id": 320,
+      "name": "Wailmer",
       "forms": 1
     },
     {
       "devName": "DEV_HOERUOO",
       "id": 321,
+      "name": "Wailord",
       "forms": 1
     },
     {
       "devName": "DEV_DONMERU",
       "id": 322,
+      "name": "Numel",
       "forms": 1
     },
     {
       "devName": "DEV_BAKUUDA",
       "id": 323,
+      "name": "Camerupt",
       "forms": 1
     },
     {
       "devName": "DEV_KOOTASU",
       "id": 324,
+      "name": "Torkoal",
       "forms": 1
     },
     {
       "devName": "DEV_BANEBUU",
       "id": 325,
+      "name": "Spoink",
       "forms": 1
     },
     {
       "devName": "DEV_BUUPIGGU",
       "id": 326,
+      "name": "Grumpig",
       "forms": 1
     },
     {
       "devName": "DEV_PATTIIRU",
       "id": 327,
+      "name": "Spinda",
       "forms": 1
     },
     {
       "devName": "DEV_NAKKURAA",
       "id": 328,
+      "name": "Trapinch",
       "forms": 1
     },
     {
       "devName": "DEV_BIBURAABA",
       "id": 329,
+      "name": "Vibrava",
       "forms": 1
     },
     {
       "devName": "DEV_HURAIGON",
       "id": 330,
+      "name": "Flygon",
       "forms": 1
     },
     {
       "devName": "DEV_SABONEA",
       "id": 331,
+      "name": "Cacnea",
       "forms": 1
     },
     {
       "devName": "DEV_NOKUTASU",
       "id": 332,
+      "name": "Cacturne",
       "forms": 1
     },
     {
       "devName": "DEV_TIRUTTO",
       "id": 333,
+      "name": "Swablu",
       "forms": 1
     },
     {
       "devName": "DEV_TIRUTARISU",
       "id": 334,
+      "name": "Altaria",
       "forms": 1
     },
     {
       "devName": "DEV_ZANGUUSU",
       "id": 335,
+      "name": "Zangoose",
       "forms": 1
     },
     {
       "devName": "DEV_HABUNEEKU",
       "id": 336,
+      "name": "Seviper",
       "forms": 1
     },
     {
       "devName": "DEV_RUNATOON",
       "id": 337,
+      "name": "Lunatone",
       "forms": 1
     },
     {
       "devName": "DEV_SORUROKKU",
       "id": 338,
+      "name": "Solrock",
       "forms": 1
     },
     {
       "devName": "DEV_DOZYOTTI",
       "id": 339,
+      "name": "Barboach",
       "forms": 1
     },
     {
       "devName": "DEV_NAMAZUN",
       "id": 340,
+      "name": "Whiscash",
       "forms": 1
     },
     {
       "devName": "DEV_HEIGANI",
       "id": 341,
+      "name": "Corphish",
       "forms": 1
     },
     {
       "devName": "DEV_SIZARIGAA",
       "id": 342,
+      "name": "Crawdaunt",
       "forms": 1
     },
     {
       "devName": "DEV_YAZIRON",
       "id": 343,
+      "name": "Baltoy",
       "forms": 1
     },
     {
       "devName": "DEV_NENDOORU",
       "id": 344,
+      "name": "Claydol",
       "forms": 1
     },
     {
       "devName": "DEV_RIRIIRA",
       "id": 345,
+      "name": "Lileep",
       "forms": 1
     },
     {
       "devName": "DEV_YUREIDORU",
       "id": 346,
+      "name": "Cradily",
       "forms": 1
     },
     {
       "devName": "DEV_ANOPUSU",
       "id": 347,
+      "name": "Anorith",
       "forms": 1
     },
     {
       "devName": "DEV_AAMARUDO",
       "id": 348,
+      "name": "Armaldo",
       "forms": 1
     },
     {
       "devName": "DEV_HINBASU",
       "id": 349,
+      "name": "Feebas",
       "forms": 1
     },
     {
       "devName": "DEV_MIROKAROSU",
       "id": 350,
+      "name": "Milotic",
       "forms": 1
     },
     {
       "devName": "DEV_POWARUN",
       "id": 351,
+      "name": "Castform",
       "forms": 1
     },
     {
       "devName": "DEV_KAKUREON",
       "id": 352,
+      "name": "Kecleon",
       "forms": 1
     },
     {
       "devName": "DEV_KAGEBOUZU",
       "id": 353,
+      "name": "Shuppet",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUPETTA",
       "id": 354,
+      "name": "Banette",
       "forms": 1
     },
     {
       "devName": "DEV_YOMAWARU",
       "id": 355,
+      "name": "Duskull",
       "forms": 1
     },
     {
       "devName": "DEV_SAMAYOORU",
       "id": 356,
+      "name": "Dusclops",
       "forms": 1
     },
     {
       "devName": "DEV_TOROPIUSU",
       "id": 357,
+      "name": "Tropius",
       "forms": 1
     },
     {
       "devName": "DEV_TIRIIN",
       "id": 358,
+      "name": "Chimecho",
       "forms": 1
     },
     {
       "devName": "DEV_ABUSORU",
       "id": 359,
+      "name": "Absol",
       "forms": 1
     },
     {
       "devName": "DEV_SOONANO",
       "id": 360,
+      "name": "Wynaut",
       "forms": 1
     },
     {
       "devName": "DEV_YUKIWARASI",
       "id": 361,
+      "name": "Snorunt",
       "forms": 1
     },
     {
       "devName": "DEV_ONIGOORI",
       "id": 362,
+      "name": "Glalie",
       "forms": 1
     },
     {
       "devName": "DEV_TAMAZARASI",
       "id": 363,
+      "name": "Spheal",
       "forms": 1
     },
     {
       "devName": "DEV_TODOGURAA",
       "id": 364,
+      "name": "Sealeo",
       "forms": 1
     },
     {
       "devName": "DEV_TODOZERUGA",
       "id": 365,
+      "name": "Walrein",
       "forms": 1
     },
     {
       "devName": "DEV_PAARURU",
       "id": 366,
+      "name": "Clamperl",
       "forms": 1
     },
     {
       "devName": "DEV_HANTEERU",
       "id": 367,
+      "name": "Huntail",
       "forms": 1
     },
     {
       "devName": "DEV_SAKURABISU",
       "id": 368,
+      "name": "Gorebyss",
       "forms": 1
     },
     {
       "devName": "DEV_ZIIRANSU",
       "id": 369,
+      "name": "Relicanth",
       "forms": 1
     },
     {
       "devName": "DEV_RABUKASU",
       "id": 370,
+      "name": "Luvdisc",
       "forms": 1
     },
     {
       "devName": "DEV_TATUBEI",
       "id": 371,
+      "name": "Bagon",
       "forms": 1
     },
     {
       "devName": "DEV_KOMORUU",
       "id": 372,
+      "name": "Shelgon",
       "forms": 1
     },
     {
       "devName": "DEV_BOOMANDA",
       "id": 373,
+      "name": "Salamence",
       "forms": 1
     },
     {
       "devName": "DEV_DANBARU",
       "id": 374,
+      "name": "Beldum",
       "forms": 1
     },
     {
       "devName": "DEV_METANGU",
       "id": 375,
+      "name": "Metang",
       "forms": 1
     },
     {
       "devName": "DEV_METAGUROSU",
       "id": 376,
+      "name": "Metagross",
       "forms": 1
     },
     {
       "devName": "DEV_REZIROKKU",
       "id": 377,
+      "name": "Regirock",
       "forms": 1
     },
     {
       "devName": "DEV_REZIAISU",
       "id": 378,
+      "name": "Regice",
       "forms": 1
     },
     {
       "devName": "DEV_REZISUTIRU",
       "id": 379,
+      "name": "Registeel",
       "forms": 1
     },
     {
       "devName": "DEV_RATHIASU",
       "id": 380,
+      "name": "Latias",
       "forms": 1
     },
     {
       "devName": "DEV_RATHIOSU",
       "id": 381,
+      "name": "Latios",
       "forms": 1
     },
     {
       "devName": "DEV_KAIOOGA",
       "id": 382,
+      "name": "Kyogre",
       "forms": 1
     },
     {
       "devName": "DEV_GURAADON",
       "id": 383,
+      "name": "Groudon",
       "forms": 1
     },
     {
       "devName": "DEV_REKKUUZA",
       "id": 384,
+      "name": "Rayquaza",
       "forms": 1
     },
     {
       "devName": "DEV_ZIRAATI",
       "id": 385,
+      "name": "Jirachi",
       "forms": 1
     },
     {
       "devName": "DEV_DEOKISISU",
       "id": 386,
+      "name": "Deoxys",
       "forms": 1
     },
     {
       "devName": "DEV_NAETORU",
       "id": 387,
+      "name": "Turtwig",
       "forms": 1
     },
     {
       "devName": "DEV_HAYASIGAME",
       "id": 388,
+      "name": "Grotle",
       "forms": 1
     },
     {
       "devName": "DEV_DODAITOSU",
       "id": 389,
+      "name": "Torterra",
       "forms": 1
     },
     {
       "devName": "DEV_HIKOZARU",
       "id": 390,
+      "name": "Chimchar",
       "forms": 1
     },
     {
       "devName": "DEV_MOUKAZARU",
       "id": 391,
+      "name": "Monferno",
       "forms": 1
     },
     {
       "devName": "DEV_GOUKAZARU",
       "id": 392,
+      "name": "Infernape",
       "forms": 1
     },
     {
       "devName": "DEV_POTTYAMA",
       "id": 393,
+      "name": "Piplup",
       "forms": 1
     },
     {
       "devName": "DEV_POTTAISI",
       "id": 394,
+      "name": "Prinplup",
       "forms": 1
     },
     {
       "devName": "DEV_ENPERUTO",
       "id": 395,
+      "name": "Empoleon",
       "forms": 1
     },
     {
       "devName": "DEV_MUKKURU",
       "id": 396,
+      "name": "Starly",
       "forms": 1
     },
     {
       "devName": "DEV_MUKUBAADO",
       "id": 397,
+      "name": "Staravia",
       "forms": 1
     },
     {
       "devName": "DEV_MUKUHOOKU",
       "id": 398,
+      "name": "Staraptor",
       "forms": 1
     },
     {
       "devName": "DEV_BIPPA",
       "id": 399,
+      "name": "Bidoof",
       "forms": 1
     },
     {
       "devName": "DEV_BIIDARU",
       "id": 400,
+      "name": "Bibarel",
       "forms": 1
     },
     {
       "devName": "DEV_KOROBOOSI",
       "id": 401,
+      "name": "Kricketot",
       "forms": 1
     },
     {
       "devName": "DEV_KOROTOKKU",
       "id": 402,
+      "name": "Kricketune",
       "forms": 1
     },
     {
       "devName": "DEV_KORINKU",
       "id": 403,
+      "name": "Shinx",
       "forms": 1
     },
     {
       "devName": "DEV_RUKUSIO",
       "id": 404,
+      "name": "Luxio",
       "forms": 1
     },
     {
       "devName": "DEV_RENTORAA",
       "id": 405,
+      "name": "Luxray",
       "forms": 1
     },
     {
       "devName": "DEV_SUBOMII",
       "id": 406,
+      "name": "Budew",
       "forms": 1
     },
     {
       "devName": "DEV_ROZUREIDO",
       "id": 407,
+      "name": "Roserade",
       "forms": 1
     },
     {
       "devName": "DEV_ZUGAIDOSU",
       "id": 408,
+      "name": "Cranidos",
       "forms": 1
     },
     {
       "devName": "DEV_RAMUPARUDO",
       "id": 409,
+      "name": "Rampardos",
       "forms": 1
     },
     {
       "devName": "DEV_TATETOPUSU",
       "id": 410,
+      "name": "Shieldon",
       "forms": 1
     },
     {
       "devName": "DEV_TORIDEPUSU",
       "id": 411,
+      "name": "Bastiodon",
       "forms": 1
     },
     {
       "devName": "DEV_MINOMUTTI",
       "id": 412,
+      "name": "Burmy",
       "forms": 1
     },
     {
       "devName": "DEV_MINOMADAMU",
       "id": 413,
+      "name": "Wormadam",
       "forms": 1
     },
     {
       "devName": "DEV_GAAMEIRU",
       "id": 414,
+      "name": "Mothim",
       "forms": 1
     },
     {
       "devName": "DEV_MITUHANII",
       "id": 415,
+      "name": "Combee",
       "forms": 1
     },
     {
       "devName": "DEV_BIIKUIN",
       "id": 416,
+      "name": "Vespiquen",
       "forms": 1
     },
     {
       "devName": "DEV_PATIRISU",
       "id": 417,
+      "name": "Pachirisu",
       "forms": 1
     },
     {
       "devName": "DEV_BUIZERU",
       "id": 418,
+      "name": "Buizel",
       "forms": 1
     },
     {
       "devName": "DEV_HUROOZERU",
       "id": 419,
+      "name": "Floatzel",
       "forms": 1
     },
     {
       "devName": "DEV_THERINBO",
       "id": 420,
+      "name": "Cherubi",
       "forms": 1
     },
     {
       "devName": "DEV_THERIMU",
       "id": 421,
+      "name": "Cherrim",
       "forms": 1
     },
     {
       "devName": "DEV_KARANAKUSI",
       "id": 422,
+      "name": "Shellos",
       "forms": 2
     },
     {
       "devName": "DEV_TORITODON",
       "id": 423,
+      "name": "Gastrodon",
       "forms": 2
     },
     {
       "devName": "DEV_ETEBOOSU",
       "id": 424,
+      "name": "Ambipom",
       "forms": 1
     },
     {
       "devName": "DEV_HUWANTE",
       "id": 425,
+      "name": "Drifloon",
       "forms": 1
     },
     {
       "devName": "DEV_HUWARAIDO",
       "id": 426,
+      "name": "Drifblim",
       "forms": 1
     },
     {
       "devName": "DEV_MIMIRORU",
       "id": 427,
+      "name": "Buneary",
       "forms": 1
     },
     {
       "devName": "DEV_MIMIROPPU",
       "id": 428,
+      "name": "Lopunny",
       "forms": 1
     },
     {
       "devName": "DEV_MUUMAAZI",
       "id": 429,
+      "name": "Mismagius",
       "forms": 1
     },
     {
       "devName": "DEV_DONKARASU",
       "id": 430,
+      "name": "Honchkrow",
       "forms": 1
     },
     {
       "devName": "DEV_NYARUMAA",
       "id": 431,
+      "name": "Glameow",
       "forms": 1
     },
     {
       "devName": "DEV_BUNYATTO",
       "id": 432,
+      "name": "Purugly",
       "forms": 1
     },
     {
       "devName": "DEV_RIISYAN",
       "id": 433,
+      "name": "Chingling",
       "forms": 1
     },
     {
       "devName": "DEV_SUKANPUU",
       "id": 434,
+      "name": "Stunky",
       "forms": 1
     },
     {
       "devName": "DEV_SUKATANKU",
       "id": 435,
+      "name": "Skuntank",
       "forms": 1
     },
     {
       "devName": "DEV_DOOMIRAA",
       "id": 436,
+      "name": "Bronzor",
       "forms": 1
     },
     {
       "devName": "DEV_DOOTAKUN",
       "id": 437,
+      "name": "Bronzong",
       "forms": 1
     },
     {
       "devName": "DEV_USOHATI",
       "id": 438,
+      "name": "Bonsly",
       "forms": 1
     },
     {
       "devName": "DEV_MANENE",
       "id": 439,
+      "name": "Mime Jr.",
       "forms": 1
     },
     {
       "devName": "DEV_PINPUKU",
       "id": 440,
+      "name": "Happiny",
       "forms": 1
     },
     {
       "devName": "DEV_PERAPPU",
       "id": 441,
+      "name": "Chatot",
       "forms": 1
     },
     {
       "devName": "DEV_MIKARUGE",
       "id": 442,
+      "name": "Spiritomb",
       "forms": 1
     },
     {
       "devName": "DEV_HUKAMARU",
       "id": 443,
+      "name": "Gible",
       "forms": 1
     },
     {
       "devName": "DEV_GABAITO",
       "id": 444,
+      "name": "Gabite",
       "forms": 1
     },
     {
       "devName": "DEV_GABURIASU",
       "id": 445,
+      "name": "Garchomp",
       "forms": 1
     },
     {
       "devName": "DEV_GONBE",
       "id": 446,
+      "name": "Munchlax",
       "forms": 1
     },
     {
       "devName": "DEV_RIORU",
       "id": 447,
+      "name": "Riolu",
       "forms": 1
     },
     {
       "devName": "DEV_RUKARIO",
       "id": 448,
+      "name": "Lucario",
       "forms": 1
     },
     {
       "devName": "DEV_HIPOPOTASU",
       "id": 449,
+      "name": "Hippopotas",
       "forms": 1
     },
     {
       "devName": "DEV_KABARUDON",
       "id": 450,
+      "name": "Hippowdon",
       "forms": 1
     },
     {
       "devName": "DEV_SUKORUPI",
       "id": 451,
+      "name": "Skorupi",
       "forms": 1
     },
     {
       "devName": "DEV_DORAPION",
       "id": 452,
+      "name": "Drapion",
       "forms": 1
     },
     {
       "devName": "DEV_GUREGGURU",
       "id": 453,
+      "name": "Croagunk",
       "forms": 1
     },
     {
       "devName": "DEV_DOKUROGGU",
       "id": 454,
+      "name": "Toxicroak",
       "forms": 1
     },
     {
       "devName": "DEV_MASUKIPPA",
       "id": 455,
+      "name": "Carnivine",
       "forms": 1
     },
     {
       "devName": "DEV_KEIKOUO",
       "id": 456,
+      "name": "Finneon",
       "forms": 1
     },
     {
       "devName": "DEV_NEORANTO",
       "id": 457,
+      "name": "Lumineon",
       "forms": 1
     },
     {
       "devName": "DEV_TAMANTA",
       "id": 458,
+      "name": "Mantyke",
       "forms": 1
     },
     {
       "devName": "DEV_YUKIKABURI",
       "id": 459,
+      "name": "Snover",
       "forms": 1
     },
     {
       "devName": "DEV_YUKINOOO",
       "id": 460,
+      "name": "Abomasnow",
       "forms": 1
     },
     {
       "devName": "DEV_MANYUURA",
       "id": 461,
+      "name": "Weavile",
       "forms": 1
     },
     {
       "devName": "DEV_ZIBAKOIRU",
       "id": 462,
+      "name": "Magnezone",
       "forms": 1
     },
     {
       "devName": "DEV_BEROBERUTO",
       "id": 463,
+      "name": "Lickilicky",
       "forms": 1
     },
     {
       "devName": "DEV_DOSAIDON",
       "id": 464,
+      "name": "Rhyperior",
       "forms": 1
     },
     {
       "devName": "DEV_MOZYANBO",
       "id": 465,
+      "name": "Tangrowth",
       "forms": 1
     },
     {
       "devName": "DEV_EREKIBURU",
       "id": 466,
+      "name": "Electivire",
       "forms": 1
     },
     {
       "devName": "DEV_BUUBAAN",
       "id": 467,
+      "name": "Magmortar",
       "forms": 1
     },
     {
       "devName": "DEV_TOGEKISSU",
       "id": 468,
+      "name": "Togekiss",
       "forms": 1
     },
     {
       "devName": "DEV_MEGAYANMA",
       "id": 469,
+      "name": "Yanmega",
       "forms": 1
     },
     {
       "devName": "DEV_RIIFIA",
       "id": 470,
+      "name": "Leafeon",
       "forms": 1
     },
     {
       "devName": "DEV_GUREISIA",
       "id": 471,
+      "name": "Glaceon",
       "forms": 1
     },
     {
       "devName": "DEV_GURAION",
       "id": 472,
+      "name": "Gliscor",
       "forms": 1
     },
     {
       "devName": "DEV_MANMUU",
       "id": 473,
+      "name": "Mamoswine",
       "forms": 1
     },
     {
       "devName": "DEV_PORIGONz",
       "id": 474,
+      "name": "Porygon-Z",
       "forms": 1
     },
     {
       "devName": "DEV_ERUREIDO",
       "id": 475,
+      "name": "Gallade",
       "forms": 1
     },
     {
       "devName": "DEV_DAINOOZU",
       "id": 476,
+      "name": "Probopass",
       "forms": 1
     },
     {
       "devName": "DEV_YONOWAARU",
       "id": 477,
+      "name": "Dusknoir",
       "forms": 1
     },
     {
       "devName": "DEV_YUKIMENOKO",
       "id": 478,
+      "name": "Froslass",
       "forms": 1
     },
     {
       "devName": "DEV_ROTOMU",
       "id": 479,
+      "name": "Rotom",
       "forms": 6
     },
     {
       "devName": "DEV_YUKUSII",
       "id": 480,
+      "name": "Uxie",
       "forms": 1
     },
     {
       "devName": "DEV_EMURITTO",
       "id": 481,
+      "name": "Mesprit",
       "forms": 1
     },
     {
       "devName": "DEV_AGUNOMU",
       "id": 482,
+      "name": "Azelf",
       "forms": 1
     },
     {
       "devName": "DEV_DHIARUGA",
       "id": 483,
+      "name": "Dialga",
       "forms": 2
     },
     {
       "devName": "DEV_PARUKIA",
       "id": 484,
+      "name": "Palkia",
       "forms": 2
     },
     {
       "devName": "DEV_HIIDORAN",
       "id": 485,
+      "name": "Heatran",
       "forms": 1
     },
     {
       "devName": "DEV_REZIGIGASU",
       "id": 486,
+      "name": "Regigigas",
       "forms": 1
     },
     {
       "devName": "DEV_GIRATHINA",
       "id": 487,
+      "name": "Giratina",
       "forms": 2
     },
     {
       "devName": "DEV_KURESERIA",
       "id": 488,
+      "name": "Cresselia",
       "forms": 1
     },
     {
       "devName": "DEV_FIONE",
       "id": 489,
+      "name": "Phione",
       "forms": 1
     },
     {
       "devName": "DEV_MANAFI",
       "id": 490,
+      "name": "Manaphy",
       "forms": 1
     },
     {
       "devName": "DEV_DAAKURAI",
       "id": 491,
+      "name": "Darkrai",
       "forms": 1
     },
     {
       "devName": "DEV_SHEIMI",
       "id": 492,
+      "name": "Shaymin",
       "forms": 1
     },
     {
       "devName": "DEV_ARUSEUSU",
       "id": 493,
+      "name": "Arceus",
       "forms": 18
     },
     {
       "devName": "DEV_BIKUTHINI",
       "id": 494,
+      "name": "Victini",
       "forms": 1
     },
     {
       "devName": "DEV_TUTAAZYA",
       "id": 495,
+      "name": "Snivy",
       "forms": 1
     },
     {
       "devName": "DEV_ZYANOBII",
       "id": 496,
+      "name": "Servine",
       "forms": 1
     },
     {
       "devName": "DEV_ZYAROODA",
       "id": 497,
+      "name": "Serperior",
       "forms": 1
     },
     {
       "devName": "DEV_POKABU",
       "id": 498,
+      "name": "Tepig",
       "forms": 1
     },
     {
       "devName": "DEV_TYAOBUU",
       "id": 499,
+      "name": "Pignite",
       "forms": 1
     },
     {
       "devName": "DEV_ENBUOO",
       "id": 500,
+      "name": "Emboar",
       "forms": 1
     },
     {
       "devName": "DEV_MIZYUMARU",
       "id": 501,
+      "name": "Oshawott",
       "forms": 1
     },
     {
       "devName": "DEV_HUTATIMARU",
       "id": 502,
+      "name": "Dewott",
       "forms": 1
     },
     {
       "devName": "DEV_DAIKENKI",
       "id": 503,
+      "name": "Samurott",
       "forms": 2
     },
     {
       "devName": "DEV_MINEZUMI",
       "id": 504,
+      "name": "Patrat",
       "forms": 1
     },
     {
       "devName": "DEV_MIRUHOGGU",
       "id": 505,
+      "name": "Watchog",
       "forms": 1
     },
     {
       "devName": "DEV_YOOTERII",
       "id": 506,
+      "name": "Lillipup",
       "forms": 1
     },
     {
       "devName": "DEV_HAADERIA",
       "id": 507,
+      "name": "Herdier",
       "forms": 1
     },
     {
       "devName": "DEV_MUURANDO",
       "id": 508,
+      "name": "Stoutland",
       "forms": 1
     },
     {
       "devName": "DEV_TYORONEKO",
       "id": 509,
+      "name": "Purrloin",
       "forms": 1
     },
     {
       "devName": "DEV_REPARUDASU",
       "id": 510,
+      "name": "Liepard",
       "forms": 1
     },
     {
       "devName": "DEV_YANAPPU",
       "id": 511,
+      "name": "Pansage",
       "forms": 1
     },
     {
       "devName": "DEV_YANAKKII",
       "id": 512,
+      "name": "Simisage",
       "forms": 1
     },
     {
       "devName": "DEV_BAOPPU",
       "id": 513,
+      "name": "Pansear",
       "forms": 1
     },
     {
       "devName": "DEV_BAOKKII",
       "id": 514,
+      "name": "Simisear",
       "forms": 1
     },
     {
       "devName": "DEV_HIYAPPU",
       "id": 515,
+      "name": "Panpour",
       "forms": 1
     },
     {
       "devName": "DEV_HIYAKKII",
       "id": 516,
+      "name": "Simipour",
       "forms": 1
     },
     {
       "devName": "DEV_MUNNA",
       "id": 517,
+      "name": "Munna",
       "forms": 1
     },
     {
       "devName": "DEV_MUSYAANA",
       "id": 518,
+      "name": "Musharna",
       "forms": 1
     },
     {
       "devName": "DEV_MAMEPATO",
       "id": 519,
+      "name": "Pidove",
       "forms": 1
     },
     {
       "devName": "DEV_HATOOBOO",
       "id": 520,
+      "name": "Tranquill",
       "forms": 1
     },
     {
       "devName": "DEV_KENHOROU",
       "id": 521,
+      "name": "Unfezant",
       "forms": 1
     },
     {
       "devName": "DEV_SIMAMA",
       "id": 522,
+      "name": "Blitzle",
       "forms": 1
     },
     {
       "devName": "DEV_ZEBURAIKA",
       "id": 523,
+      "name": "Zebstrika",
       "forms": 1
     },
     {
       "devName": "DEV_DANGORO",
       "id": 524,
+      "name": "Roggenrola",
       "forms": 1
     },
     {
       "devName": "DEV_GANTORU",
       "id": 525,
+      "name": "Boldore",
       "forms": 1
     },
     {
       "devName": "DEV_GIGAIASU",
       "id": 526,
+      "name": "Gigalith",
       "forms": 1
     },
     {
       "devName": "DEV_KOROMORI",
       "id": 527,
+      "name": "Woobat",
       "forms": 1
     },
     {
       "devName": "DEV_KOKOROMORI",
       "id": 528,
+      "name": "Swoobat",
       "forms": 1
     },
     {
       "devName": "DEV_MOGURYUU",
       "id": 529,
+      "name": "Drilbur",
       "forms": 1
     },
     {
       "devName": "DEV_DORYUUZU",
       "id": 530,
+      "name": "Excadrill",
       "forms": 1
     },
     {
       "devName": "DEV_TABUNNE",
       "id": 531,
+      "name": "Audino",
       "forms": 1
     },
     {
       "devName": "DEV_DOKKORAA",
       "id": 532,
+      "name": "Timburr",
       "forms": 1
     },
     {
       "devName": "DEV_DOTEKKOTU",
       "id": 533,
+      "name": "Gurdurr",
       "forms": 1
     },
     {
       "devName": "DEV_ROOBUSIN",
       "id": 534,
+      "name": "Conkeldurr",
       "forms": 1
     },
     {
       "devName": "DEV_OTAMARO",
       "id": 535,
+      "name": "Tympole",
       "forms": 1
     },
     {
       "devName": "DEV_GAMAGARU",
       "id": 536,
+      "name": "Palpitoad",
       "forms": 1
     },
     {
       "devName": "DEV_GAMAGEROGE",
       "id": 537,
+      "name": "Seismitoad",
       "forms": 1
     },
     {
       "devName": "DEV_NAGEKI",
       "id": 538,
+      "name": "Throh",
       "forms": 1
     },
     {
       "devName": "DEV_DAGEKI",
       "id": 539,
+      "name": "Sawk",
       "forms": 1
     },
     {
       "devName": "DEV_KURUMIRU",
       "id": 540,
+      "name": "Sewaddle",
       "forms": 1
     },
     {
       "devName": "DEV_KURUMAYU",
       "id": 541,
+      "name": "Swadloon",
       "forms": 1
     },
     {
       "devName": "DEV_HAHAKOMORI",
       "id": 542,
+      "name": "Leavanny",
       "forms": 1
     },
     {
       "devName": "DEV_HUSIDE",
       "id": 543,
+      "name": "Venipede",
       "forms": 1
     },
     {
       "devName": "DEV_HOIIGA",
       "id": 544,
+      "name": "Whirlipede",
       "forms": 1
     },
     {
       "devName": "DEV_PENDORAA",
       "id": 545,
+      "name": "Scolipede",
       "forms": 1
     },
     {
       "devName": "DEV_MONMEN",
       "id": 546,
+      "name": "Cottonee",
       "forms": 1
     },
     {
       "devName": "DEV_ERUHUUN",
       "id": 547,
+      "name": "Whimsicott",
       "forms": 1
     },
     {
       "devName": "DEV_TYURINE",
       "id": 548,
+      "name": "Petilil",
       "forms": 1
     },
     {
       "devName": "DEV_DOREDHIA",
       "id": 549,
+      "name": "Lilligant",
       "forms": 2
     },
     {
       "devName": "DEV_BASURAO",
       "id": 550,
+      "name": "Basculin",
       "forms": 3
     },
     {
       "devName": "DEV_MEGUROKO",
       "id": 551,
+      "name": "Sandile",
       "forms": 1
     },
     {
       "devName": "DEV_WARUBIRU",
       "id": 552,
+      "name": "Krokorok",
       "forms": 1
     },
     {
       "devName": "DEV_WARUBIARU",
       "id": 553,
+      "name": "Krookodile",
       "forms": 1
     },
     {
       "devName": "DEV_DARUMAKKA",
       "id": 554,
+      "name": "Darumaka",
       "forms": 1
     },
     {
       "devName": "DEV_HIHIDARUMA",
       "id": 555,
+      "name": "Darmanitan",
       "forms": 1
     },
     {
       "devName": "DEV_MARAKATTI",
       "id": 556,
+      "name": "Maractus",
       "forms": 1
     },
     {
       "devName": "DEV_ISIZUMAI",
       "id": 557,
+      "name": "Dwebble",
       "forms": 1
     },
     {
       "devName": "DEV_IWAPARESU",
       "id": 558,
+      "name": "Crustle",
       "forms": 1
     },
     {
       "devName": "DEV_ZURUGGU",
       "id": 559,
+      "name": "Scraggy",
       "forms": 1
     },
     {
       "devName": "DEV_ZURUZUKIN",
       "id": 560,
+      "name": "Scrafty",
       "forms": 1
     },
     {
       "devName": "DEV_SINBORAA",
       "id": 561,
+      "name": "Sigilyph",
       "forms": 1
     },
     {
       "devName": "DEV_DESUMASU",
       "id": 562,
+      "name": "Yamask",
       "forms": 1
     },
     {
       "devName": "DEV_DESUKAAN",
       "id": 563,
+      "name": "Cofagrigus",
       "forms": 1
     },
     {
       "devName": "DEV_PUROTOOGA",
       "id": 564,
+      "name": "Tirtouga",
       "forms": 1
     },
     {
       "devName": "DEV_ABAGOORA",
       "id": 565,
+      "name": "Carracosta",
       "forms": 1
     },
     {
       "devName": "DEV_AAKEN",
       "id": 566,
+      "name": "Archen",
       "forms": 1
     },
     {
       "devName": "DEV_AAKEOSU",
       "id": 567,
+      "name": "Archeops",
       "forms": 1
     },
     {
       "devName": "DEV_YABUKURON",
       "id": 568,
+      "name": "Trubbish",
       "forms": 1
     },
     {
       "devName": "DEV_DASUTODASU",
       "id": 569,
+      "name": "Garbodor",
       "forms": 1
     },
     {
       "devName": "DEV_ZOROA",
       "id": 570,
+      "name": "Zorua",
       "forms": 2
     },
     {
       "devName": "DEV_ZOROAAKU",
       "id": 571,
+      "name": "Zoroark",
       "forms": 2
     },
     {
       "devName": "DEV_TIRAAMHI",
       "id": 572,
+      "name": "Minccino",
       "forms": 1
     },
     {
       "devName": "DEV_TIRATIINO",
       "id": 573,
+      "name": "Cinccino",
       "forms": 1
     },
     {
       "devName": "DEV_GOTIMU",
       "id": 574,
+      "name": "Gothita",
       "forms": 1
     },
     {
       "devName": "DEV_GOTIMIRU",
       "id": 575,
+      "name": "Gothorita",
       "forms": 1
     },
     {
       "devName": "DEV_GOTIRUZERU",
       "id": 576,
+      "name": "Gothitelle",
       "forms": 1
     },
     {
       "devName": "DEV_YUNIRAN",
       "id": 577,
+      "name": "Solosis",
       "forms": 1
     },
     {
       "devName": "DEV_DABURAN",
       "id": 578,
+      "name": "Duosion",
       "forms": 1
     },
     {
       "devName": "DEV_RANKURUSU",
       "id": 579,
+      "name": "Reuniclus",
       "forms": 1
     },
     {
       "devName": "DEV_KOARUHII",
       "id": 580,
+      "name": "Ducklett",
       "forms": 1
     },
     {
       "devName": "DEV_SUWANNA",
       "id": 581,
+      "name": "Swanna",
       "forms": 1
     },
     {
       "devName": "DEV_BANIPUTTI",
       "id": 582,
+      "name": "Vanillite",
       "forms": 1
     },
     {
       "devName": "DEV_BANIRITTI",
       "id": 583,
+      "name": "Vanillish",
       "forms": 1
     },
     {
       "devName": "DEV_BAIBANIRA",
       "id": 584,
+      "name": "Vanilluxe",
       "forms": 1
     },
     {
       "devName": "DEV_SIKIZIKA",
       "id": 585,
+      "name": "Deerling",
       "forms": 4
     },
     {
       "devName": "DEV_MEBUKIZIKA",
       "id": 586,
+      "name": "Sawsbuck",
       "forms": 4
     },
     {
       "devName": "DEV_EMONGA",
       "id": 587,
+      "name": "Emolga",
       "forms": 1
     },
     {
       "devName": "DEV_KABURUMO",
       "id": 588,
+      "name": "Karrablast",
       "forms": 1
     },
     {
       "devName": "DEV_SYUBARUGO",
       "id": 589,
+      "name": "Escavalier",
       "forms": 1
     },
     {
       "devName": "DEV_TAMAGETAKE",
       "id": 590,
+      "name": "Foongus",
       "forms": 1
     },
     {
       "devName": "DEV_MOROBARERU",
       "id": 591,
+      "name": "Amoonguss",
       "forms": 1
     },
     {
       "devName": "DEV_PURURIRU",
       "id": 592,
+      "name": "Frillish",
       "forms": 1
     },
     {
       "devName": "DEV_BURUNGERU",
       "id": 593,
+      "name": "Jellicent",
       "forms": 1
     },
     {
       "devName": "DEV_MAMANBOU",
       "id": 594,
+      "name": "Alomomola",
       "forms": 1
     },
     {
       "devName": "DEV_BATYURU",
       "id": 595,
+      "name": "Joltik",
       "forms": 1
     },
     {
       "devName": "DEV_DENTYURA",
       "id": 596,
+      "name": "Galvantula",
       "forms": 1
     },
     {
       "devName": "DEV_TESSIIDO",
       "id": 597,
+      "name": "Ferroseed",
       "forms": 1
     },
     {
       "devName": "DEV_NATTOREI",
       "id": 598,
+      "name": "Ferrothorn",
       "forms": 1
     },
     {
       "devName": "DEV_GIARU",
       "id": 599,
+      "name": "Klink",
       "forms": 1
     },
     {
       "devName": "DEV_GIGIARU",
       "id": 600,
+      "name": "Klang",
       "forms": 1
     },
     {
       "devName": "DEV_GIGIGIARU",
       "id": 601,
+      "name": "Klinklang",
       "forms": 1
     },
     {
       "devName": "DEV_SIBISIRASU",
       "id": 602,
+      "name": "Tynamo",
       "forms": 1
     },
     {
       "devName": "DEV_SIBIBIIRU",
       "id": 603,
+      "name": "Eelektrik",
       "forms": 1
     },
     {
       "devName": "DEV_SIBIRUDON",
       "id": 604,
+      "name": "Eelektross",
       "forms": 1
     },
     {
       "devName": "DEV_RIGUREE",
       "id": 605,
+      "name": "Elgyem",
       "forms": 1
     },
     {
       "devName": "DEV_OOBEMU",
       "id": 606,
+      "name": "Beheeyem",
       "forms": 1
     },
     {
       "devName": "DEV_HITOMOSI",
       "id": 607,
+      "name": "Litwick",
       "forms": 1
     },
     {
       "devName": "DEV_RANPURAA",
       "id": 608,
+      "name": "Lampent",
       "forms": 1
     },
     {
       "devName": "DEV_SYANDERA",
       "id": 609,
+      "name": "Chandelure",
       "forms": 1
     },
     {
       "devName": "DEV_KIBAGO",
       "id": 610,
+      "name": "Axew",
       "forms": 1
     },
     {
       "devName": "DEV_ONONDO",
       "id": 611,
+      "name": "Fraxure",
       "forms": 1
     },
     {
       "devName": "DEV_ONONOKUSU",
       "id": 612,
+      "name": "Haxorus",
       "forms": 1
     },
     {
       "devName": "DEV_KUMASYUN",
       "id": 613,
+      "name": "Cubchoo",
       "forms": 1
     },
     {
       "devName": "DEV_TUNBEAA",
       "id": 614,
+      "name": "Beartic",
       "forms": 1
     },
     {
       "devName": "DEV_HURIIZIO",
       "id": 615,
+      "name": "Cryogonal",
       "forms": 1
     },
     {
       "devName": "DEV_TYOBOMAKI",
       "id": 616,
+      "name": "Shelmet",
       "forms": 1
     },
     {
       "devName": "DEV_AGIRUDAA",
       "id": 617,
+      "name": "Accelgor",
       "forms": 1
     },
     {
       "devName": "DEV_MAGGYO",
       "id": 618,
+      "name": "Stunfisk",
       "forms": 1
     },
     {
       "devName": "DEV_KOZYOHUU",
       "id": 619,
+      "name": "Mienfoo",
       "forms": 1
     },
     {
       "devName": "DEV_KOZYONDO",
       "id": 620,
+      "name": "Mienshao",
       "forms": 1
     },
     {
       "devName": "DEV_KURIMUGAN",
       "id": 621,
+      "name": "Druddigon",
       "forms": 1
     },
     {
       "devName": "DEV_GOBITTO",
       "id": 622,
+      "name": "Golett",
       "forms": 1
     },
     {
       "devName": "DEV_GORUUGU",
       "id": 623,
+      "name": "Golurk",
       "forms": 1
     },
     {
       "devName": "DEV_KOMATANA",
       "id": 624,
+      "name": "Pawniard",
       "forms": 1
     },
     {
       "devName": "DEV_KIRIKIZAN",
       "id": 625,
+      "name": "Bisharp",
       "forms": 1
     },
     {
       "devName": "DEV_BAHHURON",
       "id": 626,
+      "name": "Bouffalant",
       "forms": 1
     },
     {
       "devName": "DEV_WASIBON",
       "id": 627,
+      "name": "Rufflet",
       "forms": 1
     },
     {
       "devName": "DEV_WHOOGURU",
       "id": 628,
+      "name": "Braviary",
       "forms": 2
     },
     {
       "devName": "DEV_BARUTYAI",
       "id": 629,
+      "name": "Vullaby",
       "forms": 1
     },
     {
       "devName": "DEV_BARUZIINA",
       "id": 630,
+      "name": "Mandibuzz",
       "forms": 1
     },
     {
       "devName": "DEV_KUITARAN",
       "id": 631,
+      "name": "Heatmor",
       "forms": 1
     },
     {
       "devName": "DEV_AIANTO",
       "id": 632,
+      "name": "Durant",
       "forms": 1
     },
     {
       "devName": "DEV_MONOZU",
       "id": 633,
+      "name": "Deino",
       "forms": 1
     },
     {
       "devName": "DEV_ZIHEDDO",
       "id": 634,
+      "name": "Zweilous",
       "forms": 1
     },
     {
       "devName": "DEV_SAZANDORA",
       "id": 635,
+      "name": "Hydreigon",
       "forms": 1
     },
     {
       "devName": "DEV_MERARUBA",
       "id": 636,
+      "name": "Larvesta",
       "forms": 1
     },
     {
       "devName": "DEV_URUGAMOSU",
       "id": 637,
+      "name": "Volcarona",
       "forms": 1
     },
     {
       "devName": "DEV_KOBARUON",
       "id": 638,
+      "name": "Cobalion",
       "forms": 1
     },
     {
       "devName": "DEV_TERAKION",
       "id": 639,
+      "name": "Terrakion",
       "forms": 1
     },
     {
       "devName": "DEV_BIRIZION",
       "id": 640,
+      "name": "Virizion",
       "forms": 1
     },
     {
       "devName": "DEV_TORUNEROSU",
       "id": 641,
+      "name": "Tornadus",
       "forms": 2
     },
     {
       "devName": "DEV_BORUTOROSU",
       "id": 642,
+      "name": "Thundurus",
       "forms": 2
     },
     {
       "devName": "DEV_RESIRAMU",
       "id": 643,
+      "name": "Reshiram",
       "forms": 1
     },
     {
       "devName": "DEV_ZEKUROMU",
       "id": 644,
+      "name": "Zekrom",
       "forms": 1
     },
     {
       "devName": "DEV_RANDOROSU",
       "id": 645,
+      "name": "Landorus",
       "forms": 2
     },
     {
       "devName": "DEV_KYUREMU",
       "id": 646,
+      "name": "Kyurem",
       "forms": 1
     },
     {
       "devName": "DEV_KERUDHIO",
       "id": 647,
+      "name": "Keldeo",
       "forms": 1
     },
     {
       "devName": "DEV_MEROETTA",
       "id": 648,
+      "name": "Meloetta",
       "forms": 2
     },
     {
       "devName": "DEV_GENOSEKUTO",
       "id": 649,
+      "name": "Genesect",
       "forms": 1
     },
     {
       "devName": "DEV_HARIMARON",
       "id": 650,
+      "name": "Chespin",
       "forms": 1
     },
     {
       "devName": "DEV_HARIBOOGU",
       "id": 651,
+      "name": "Quilladin",
       "forms": 1
     },
     {
       "devName": "DEV_BURIGARON",
       "id": 652,
+      "name": "Chesnaught",
       "forms": 1
     },
     {
       "devName": "DEV_FOKKO",
       "id": 653,
+      "name": "Fennekin",
       "forms": 1
     },
     {
       "devName": "DEV_TEERUNAA",
       "id": 654,
+      "name": "Braixen",
       "forms": 1
     },
     {
       "devName": "DEV_MAFOKUSII",
       "id": 655,
+      "name": "Delphox",
       "forms": 1
     },
     {
       "devName": "DEV_KEROMATU",
       "id": 656,
+      "name": "Froakie",
       "forms": 1
     },
     {
       "devName": "DEV_GEKOGASIRA",
       "id": 657,
+      "name": "Frogadier",
       "forms": 1
     },
     {
       "devName": "DEV_GEKKOUGA",
       "id": 658,
+      "name": "Greninja",
       "forms": 2
     },
     {
       "devName": "DEV_HORUBII",
       "id": 659,
+      "name": "Bunnelby",
       "forms": 1
     },
     {
       "devName": "DEV_HORUUDO",
       "id": 660,
+      "name": "Diggersby",
       "forms": 1
     },
     {
       "devName": "DEV_YAYAKOMA",
       "id": 661,
+      "name": "Fletchling",
       "forms": 1
     },
     {
       "devName": "DEV_HINOYAKOMA",
       "id": 662,
+      "name": "Fletchinder",
       "forms": 1
     },
     {
       "devName": "DEV_FAIAROO",
       "id": 663,
+      "name": "Talonflame",
       "forms": 1
     },
     {
       "devName": "DEV_KOHUKIMUSI",
       "id": 664,
+      "name": "Scatterbug",
       "forms": 20
     },
     {
       "devName": "DEV_KOHUURAI",
       "id": 665,
+      "name": "Spewpa",
       "forms": 20
     },
     {
       "devName": "DEV_BIBIYON",
       "id": 666,
+      "name": "Vivillon",
       "forms": 20
     },
     {
       "devName": "DEV_SISIKO",
       "id": 667,
+      "name": "Litleo",
       "forms": 1
     },
     {
       "devName": "DEV_KAENZISI",
       "id": 668,
+      "name": "Pyroar",
       "forms": 1
     },
     {
       "devName": "DEV_HURABEBE",
       "id": 669,
+      "name": "Flab\u00E9b\u00E9",
       "forms": 5
     },
     {
       "devName": "DEV_HURAETTE",
       "id": 670,
+      "name": "Floette",
       "forms": 5
     },
     {
       "devName": "DEV_HURAAJESU",
       "id": 671,
+      "name": "Florges",
       "forms": 5
     },
     {
       "devName": "DEV_MHEEKURU",
       "id": 672,
+      "name": "Skiddo",
       "forms": 1
     },
     {
       "devName": "DEV_GOOGOOTO",
       "id": 673,
+      "name": "Gogoat",
       "forms": 1
     },
     {
       "devName": "DEV_YANTYAMU",
       "id": 674,
+      "name": "Pancham",
       "forms": 1
     },
     {
       "devName": "DEV_GORONDA",
       "id": 675,
+      "name": "Pangoro",
       "forms": 1
     },
     {
       "devName": "DEV_TORIMIAN",
       "id": 676,
+      "name": "Furfrou",
       "forms": 1
     },
     {
       "devName": "DEV_NYASUPAA",
       "id": 677,
+      "name": "Espurr",
       "forms": 1
     },
     {
       "devName": "DEV_NYAONIKUSU",
       "id": 678,
+      "name": "Meowstic",
       "forms": 1
     },
     {
       "devName": "DEV_HITOTUKI",
       "id": 679,
+      "name": "Honedge",
       "forms": 1
     },
     {
       "devName": "DEV_NIDANGIRU",
       "id": 680,
+      "name": "Doublade",
       "forms": 1
     },
     {
       "devName": "DEV_GIRUGARUDO",
       "id": 681,
+      "name": "Aegislash",
       "forms": 1
     },
     {
       "devName": "DEV_SYUSYUPU",
       "id": 682,
+      "name": "Spritzee",
       "forms": 1
     },
     {
       "devName": "DEV_HUREHUWAN",
       "id": 683,
+      "name": "Aromatisse",
       "forms": 1
     },
     {
       "devName": "DEV_PEROPPAHU",
       "id": 684,
+      "name": "Swirlix",
       "forms": 1
     },
     {
       "devName": "DEV_PERORIIMU",
       "id": 685,
+      "name": "Slurpuff",
       "forms": 1
     },
     {
       "devName": "DEV_MAAIIKA",
       "id": 686,
+      "name": "Inkay",
       "forms": 1
     },
     {
       "devName": "DEV_KARAMANERO",
       "id": 687,
+      "name": "Malamar",
       "forms": 1
     },
     {
       "devName": "DEV_KAMETETE",
       "id": 688,
+      "name": "Binacle",
       "forms": 1
     },
     {
       "devName": "DEV_GAMENODESU",
       "id": 689,
+      "name": "Barbaracle",
       "forms": 1
     },
     {
       "devName": "DEV_KUZUMOO",
       "id": 690,
+      "name": "Skrelp",
       "forms": 1
     },
     {
       "devName": "DEV_DORAMIDORO",
       "id": 691,
+      "name": "Dragalge",
       "forms": 1
     },
     {
       "devName": "DEV_UDEPPOU",
       "id": 692,
+      "name": "Clauncher",
       "forms": 1
     },
     {
       "devName": "DEV_BUROSUTAA",
       "id": 693,
+      "name": "Clawitzer",
       "forms": 1
     },
     {
       "devName": "DEV_ERIKITERU",
       "id": 694,
+      "name": "Helioptile",
       "forms": 1
     },
     {
       "devName": "DEV_EREZAADO",
       "id": 695,
+      "name": "Heliolisk",
       "forms": 1
     },
     {
       "devName": "DEV_TIGORASU",
       "id": 696,
+      "name": "Tyrunt",
       "forms": 1
     },
     {
       "devName": "DEV_GATIGORASU",
       "id": 697,
+      "name": "Tyrantrum",
       "forms": 1
     },
     {
       "devName": "DEV_AMARUSU",
       "id": 698,
+      "name": "Amaura",
       "forms": 1
     },
     {
       "devName": "DEV_AMARURUGA",
       "id": 699,
+      "name": "Aurorus",
       "forms": 1
     },
     {
       "devName": "DEV_NINFIA",
       "id": 700,
+      "name": "Sylveon",
       "forms": 1
     },
     {
       "devName": "DEV_RUTYABURU",
       "id": 701,
+      "name": "Hawlucha",
       "forms": 1
     },
     {
       "devName": "DEV_DEDENNE",
       "id": 702,
+      "name": "Dedenne",
       "forms": 1
     },
     {
       "devName": "DEV_MERESII",
       "id": 703,
+      "name": "Carbink",
       "forms": 1
     },
     {
       "devName": "DEV_NUMERA",
       "id": 704,
+      "name": "Goomy",
       "forms": 1
     },
     {
       "devName": "DEV_NUMEIRU",
       "id": 705,
+      "name": "Sliggoo",
       "forms": 2
     },
     {
       "devName": "DEV_NUMERUGON",
       "id": 706,
+      "name": "Goodra",
       "forms": 2
     },
     {
       "devName": "DEV_KUREHFI",
       "id": 707,
+      "name": "Klefki",
       "forms": 1
     },
     {
       "devName": "DEV_BOKUREE",
       "id": 708,
+      "name": "Phantump",
       "forms": 1
     },
     {
       "devName": "DEV_OOROTTO",
       "id": 709,
+      "name": "Trevenant",
       "forms": 1
     },
     {
       "devName": "DEV_BAKETTYA",
       "id": 710,
+      "name": "Pumpkaboo",
       "forms": 1
     },
     {
       "devName": "DEV_PANPUZIN",
       "id": 711,
+      "name": "Gourgeist",
       "forms": 1
     },
     {
       "devName": "DEV_KATIKOORU",
       "id": 712,
+      "name": "Bergmite",
       "forms": 1
     },
     {
       "devName": "DEV_KUREBEESU",
       "id": 713,
+      "name": "Avalugg",
       "forms": 2
     },
     {
       "devName": "DEV_ONBATTO",
       "id": 714,
+      "name": "Noibat",
       "forms": 1
     },
     {
       "devName": "DEV_ONBAAN",
       "id": 715,
+      "name": "Noivern",
       "forms": 1
     },
     {
       "devName": "DEV_ZERUNEASU",
       "id": 716,
+      "name": "Xerneas",
       "forms": 1
     },
     {
       "devName": "DEV_IBERUTARU",
       "id": 717,
+      "name": "Yveltal",
       "forms": 1
     },
     {
       "devName": "DEV_ZIGARUDE",
       "id": 718,
+      "name": "Zygarde",
       "forms": 1
     },
     {
       "devName": "DEV_DHIANSII",
       "id": 719,
+      "name": "Diancie",
       "forms": 1
     },
     {
       "devName": "DEV_HUUPA",
       "id": 720,
+      "name": "Hoopa",
       "forms": 2
     },
     {
       "devName": "DEV_BORUKENION",
       "id": 721,
+      "name": "Volcanion",
       "forms": 1
     },
     {
       "devName": "DEV_MOKUROO",
       "id": 722,
+      "name": "Rowlet",
       "forms": 1
     },
     {
       "devName": "DEV_HUKUSUROO",
       "id": 723,
+      "name": "Dartrix",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUNAIPAA",
       "id": 724,
+      "name": "Decidueye",
       "forms": 2
     },
     {
       "devName": "DEV_NYABII",
       "id": 725,
+      "name": "Litten",
       "forms": 1
     },
     {
       "devName": "DEV_NYAHIITO",
       "id": 726,
+      "name": "Torracat",
       "forms": 1
     },
     {
       "devName": "DEV_GAOGAEN",
       "id": 727,
+      "name": "Incineroar",
       "forms": 1
     },
     {
       "devName": "DEV_ASIMARI",
       "id": 728,
+      "name": "Popplio",
       "forms": 1
     },
     {
       "devName": "DEV_OSYAMARI",
       "id": 729,
+      "name": "Brionne",
       "forms": 1
     },
     {
       "devName": "DEV_ASIREENU",
       "id": 730,
+      "name": "Primarina",
       "forms": 1
     },
     {
       "devName": "DEV_TUTUKERA",
       "id": 731,
+      "name": "Pikipek",
       "forms": 1
     },
     {
       "devName": "DEV_KERARAPPA",
       "id": 732,
+      "name": "Trumbeak",
       "forms": 1
     },
     {
       "devName": "DEV_DODEKABASI",
       "id": 733,
+      "name": "Toucannon",
       "forms": 1
     },
     {
       "devName": "DEV_YANGUUSU",
       "id": 734,
+      "name": "Yungoos",
       "forms": 1
     },
     {
       "devName": "DEV_DEKAGUUSU",
       "id": 735,
+      "name": "Gumshoos",
       "forms": 1
     },
     {
       "devName": "DEV_AGOZIMUSI",
       "id": 736,
+      "name": "Grubbin",
       "forms": 1
     },
     {
       "devName": "DEV_DENDIMUSI",
       "id": 737,
+      "name": "Charjabug",
       "forms": 1
     },
     {
       "devName": "DEV_KUWAGANON",
       "id": 738,
+      "name": "Vikavolt",
       "forms": 1
     },
     {
       "devName": "DEV_MAKENKANI",
       "id": 739,
+      "name": "Crabrawler",
       "forms": 1
     },
     {
       "devName": "DEV_KEKENKANI",
       "id": 740,
+      "name": "Crabominable",
       "forms": 1
     },
     {
       "devName": "DEV_ODORIDORI",
       "id": 741,
+      "name": "Oricorio",
       "forms": 4
     },
     {
       "devName": "DEV_ABURII",
       "id": 742,
+      "name": "Cutiefly",
       "forms": 1
     },
     {
       "devName": "DEV_ABURIBON",
       "id": 743,
+      "name": "Ribombee",
       "forms": 1
     },
     {
       "devName": "DEV_IWANKO",
       "id": 744,
+      "name": "Rockruff",
       "forms": 2
     },
     {
       "devName": "DEV_RUGARUGAN",
       "id": 745,
+      "name": "Lycanroc",
       "forms": 3
     },
     {
       "devName": "DEV_YOWASI",
       "id": 746,
+      "name": "Wishiwashi",
       "forms": 1
     },
     {
       "devName": "DEV_HIDOIDE",
       "id": 747,
+      "name": "Mareanie",
       "forms": 1
     },
     {
       "devName": "DEV_DOHIDOIDE",
       "id": 748,
+      "name": "Toxapex",
       "forms": 1
     },
     {
       "devName": "DEV_DOROBANKO",
       "id": 749,
+      "name": "Mudbray",
       "forms": 1
     },
     {
       "devName": "DEV_BANBADORO",
       "id": 750,
+      "name": "Mudsdale",
       "forms": 1
     },
     {
       "devName": "DEV_SIZUKUMO",
       "id": 751,
+      "name": "Dewpider",
       "forms": 1
     },
     {
       "devName": "DEV_ONISIZUKUMO",
       "id": 752,
+      "name": "Araquanid",
       "forms": 1
     },
     {
       "devName": "DEV_KARIKIRI",
       "id": 753,
+      "name": "Fomantis",
       "forms": 1
     },
     {
       "devName": "DEV_RARANTESU",
       "id": 754,
+      "name": "Lurantis",
       "forms": 1
     },
     {
       "devName": "DEV_NEMASYU",
       "id": 755,
+      "name": "Morelull",
       "forms": 1
     },
     {
       "devName": "DEV_MASHEEDO",
       "id": 756,
+      "name": "Shiinotic",
       "forms": 1
     },
     {
       "devName": "DEV_YATOUMORI",
       "id": 757,
+      "name": "Salandit",
       "forms": 1
     },
     {
       "devName": "DEV_ENNYUUTO",
       "id": 758,
+      "name": "Salazzle",
       "forms": 1
     },
     {
       "devName": "DEV_NUIKOGUMA",
       "id": 759,
+      "name": "Stufful",
       "forms": 1
     },
     {
       "devName": "DEV_KITERUGUMA",
       "id": 760,
+      "name": "Bewear",
       "forms": 1
     },
     {
       "devName": "DEV_AMAKAZI",
       "id": 761,
+      "name": "Bounsweet",
       "forms": 1
     },
     {
       "devName": "DEV_AMAMAIKO",
       "id": 762,
+      "name": "Steenee",
       "forms": 1
     },
     {
       "devName": "DEV_AMAAZYO",
       "id": 763,
+      "name": "Tsareena",
       "forms": 1
     },
     {
       "devName": "DEV_KYUWAWAA",
       "id": 764,
+      "name": "Comfey",
       "forms": 1
     },
     {
       "devName": "DEV_YAREYUUTAN",
       "id": 765,
+      "name": "Oranguru",
       "forms": 1
     },
     {
       "devName": "DEV_NAGETUKESARU",
       "id": 766,
+      "name": "Passimian",
       "forms": 1
     },
     {
       "devName": "DEV_KOSOKUMUSI",
       "id": 767,
+      "name": "Wimpod",
       "forms": 1
     },
     {
       "devName": "DEV_GUSOKUMUSYA",
       "id": 768,
+      "name": "Golisopod",
       "forms": 1
     },
     {
       "devName": "DEV_SUNABHA",
       "id": 769,
+      "name": "Sandygast",
       "forms": 1
     },
     {
       "devName": "DEV_SIRODESUNA",
       "id": 770,
+      "name": "Palossand",
       "forms": 1
     },
     {
       "devName": "DEV_NAMAKOBUSI",
       "id": 771,
+      "name": "Pyukumuku",
       "forms": 1
     },
     {
       "devName": "DEV_TAIPUNURU",
       "id": 772,
+      "name": "Type: Null",
       "forms": 1
     },
     {
       "devName": "DEV_SIRUVHADHI",
       "id": 773,
+      "name": "Silvally",
       "forms": 1
     },
     {
       "devName": "DEV_METENO",
       "id": 774,
+      "name": "Minior",
       "forms": 1
     },
     {
       "devName": "DEV_NEKKOARA",
       "id": 775,
+      "name": "Komala",
       "forms": 1
     },
     {
       "devName": "DEV_BAKUGAMESU",
       "id": 776,
+      "name": "Turtonator",
       "forms": 1
     },
     {
       "devName": "DEV_TOGEDEMARU",
       "id": 777,
+      "name": "Togedemaru",
       "forms": 1
     },
     {
       "devName": "DEV_MIMIKKYU",
       "id": 778,
+      "name": "Mimikyu",
       "forms": 2
     },
     {
       "devName": "DEV_HAGIGISIRI",
       "id": 779,
+      "name": "Bruxish",
       "forms": 1
     },
     {
       "devName": "DEV_ZIZIIRON",
       "id": 780,
+      "name": "Drampa",
       "forms": 1
     },
     {
       "devName": "DEV_DADARIN",
       "id": 781,
+      "name": "Dhelmise",
       "forms": 1
     },
     {
       "devName": "DEV_ZYARAKO",
       "id": 782,
+      "name": "Jangmo-o",
       "forms": 1
     },
     {
       "devName": "DEV_ZYARANGO",
       "id": 783,
+      "name": "Hakamo-o",
       "forms": 1
     },
     {
       "devName": "DEV_ZYARARANGA",
       "id": 784,
+      "name": "Kommo-o",
       "forms": 1
     },
     {
       "devName": "DEV_KAPUKOKEKO",
       "id": 785,
+      "name": "Tapu Koko",
       "forms": 1
     },
     {
       "devName": "DEV_KAPUTETEHU",
       "id": 786,
+      "name": "Tapu Lele",
       "forms": 1
     },
     {
       "devName": "DEV_KAPUBURURU",
       "id": 787,
+      "name": "Tapu Bulu",
       "forms": 1
     },
     {
       "devName": "DEV_KAPUREHIRE",
       "id": 788,
+      "name": "Tapu Fini",
       "forms": 1
     },
     {
       "devName": "DEV_KOSUMOGGU",
       "id": 789,
+      "name": "Cosmog",
       "forms": 1
     },
     {
       "devName": "DEV_KOSUMOUMU",
       "id": 790,
+      "name": "Cosmoem",
       "forms": 1
     },
     {
       "devName": "DEV_SORUGAREO",
       "id": 791,
+      "name": "Solgaleo",
       "forms": 1
     },
     {
       "devName": "DEV_RUNAAARA",
       "id": 792,
+      "name": "Lunala",
       "forms": 1
     },
     {
       "devName": "DEV_UTUROIDO",
       "id": 793,
+      "name": "Nihilego",
       "forms": 1
     },
     {
       "devName": "DEV_MASSIBUUN",
       "id": 794,
+      "name": "Buzzwole",
       "forms": 1
     },
     {
       "devName": "DEV_FEROOTHE",
       "id": 795,
+      "name": "Pheromosa",
       "forms": 1
     },
     {
       "devName": "DEV_DENZYUMOKU",
       "id": 796,
+      "name": "Xurkitree",
       "forms": 1
     },
     {
       "devName": "DEV_TEKKAGUYA",
       "id": 797,
+      "name": "Celesteela",
       "forms": 1
     },
     {
       "devName": "DEV_KAMITURUGI",
       "id": 798,
+      "name": "Kartana",
       "forms": 1
     },
     {
       "devName": "DEV_AKUZIKINGU",
       "id": 799,
+      "name": "Guzzlord",
       "forms": 1
     },
     {
       "devName": "DEV_NEKUROZUMA",
       "id": 800,
+      "name": "Necrozma",
       "forms": 1
     },
     {
       "devName": "DEV_MAGIANA",
       "id": 801,
+      "name": "Magearna",
       "forms": 2
     },
     {
       "devName": "DEV_MAASYADOO",
       "id": 802,
+      "name": "Marshadow",
       "forms": 1
     },
     {
       "devName": "DEV_BEBENOMU",
       "id": 803,
+      "name": "Poipole",
       "forms": 1
     },
     {
       "devName": "DEV_AAGOYON",
       "id": 804,
+      "name": "Naganadel",
       "forms": 1
     },
     {
       "devName": "DEV_TUNDETUNDE",
       "id": 805,
+      "name": "Stakataka",
       "forms": 1
     },
     {
       "devName": "DEV_ZUGADOON",
       "id": 806,
+      "name": "Blacephalon",
       "forms": 1
     },
     {
       "devName": "DEV_ZERAORA",
       "id": 807,
+      "name": "Zeraora",
       "forms": 1
     },
     {
       "devName": "DEV_MERUTAN",
       "id": 808,
+      "name": "Meltan",
       "forms": 1
     },
     {
       "devName": "DEV_MERUMETARU",
       "id": 809,
+      "name": "Melmetal",
       "forms": 1
     },
     {
       "devName": "DEV_SARUNORI",
       "id": 810,
+      "name": "Grookey",
       "forms": 1
     },
     {
       "devName": "DEV_BATINKII",
       "id": 811,
+      "name": "Thwackey",
       "forms": 1
     },
     {
       "devName": "DEV_GORIRANDAA",
       "id": 812,
+      "name": "Rillaboom",
       "forms": 1
     },
     {
       "devName": "DEV_HIBANII",
       "id": 813,
+      "name": "Scorbunny",
       "forms": 1
     },
     {
       "devName": "DEV_RABIHUTTO",
       "id": 814,
+      "name": "Raboot",
       "forms": 1
     },
     {
       "devName": "DEV_EESUBAAN",
       "id": 815,
+      "name": "Cinderace",
       "forms": 1
     },
     {
       "devName": "DEV_MESSON",
       "id": 816,
+      "name": "Sobble",
       "forms": 1
     },
     {
       "devName": "DEV_ZIMEREON",
       "id": 817,
+      "name": "Drizzile",
       "forms": 1
     },
     {
       "devName": "DEV_INTEREON",
       "id": 818,
+      "name": "Inteleon",
       "forms": 1
     },
     {
       "devName": "DEV_HOSIGARISU",
       "id": 819,
+      "name": "Skwovet",
       "forms": 1
     },
     {
       "devName": "DEV_YOKUBARISU",
       "id": 820,
+      "name": "Greedent",
       "forms": 1
     },
     {
       "devName": "DEV_KOKOGARA",
       "id": 821,
+      "name": "Rookidee",
       "forms": 1
     },
     {
       "devName": "DEV_AOGARASU",
       "id": 822,
+      "name": "Corvisquire",
       "forms": 1
     },
     {
       "devName": "DEV_AAMAAGAA",
       "id": 823,
+      "name": "Corviknight",
       "forms": 1
     },
     {
       "devName": "DEV_SATTIMUSI",
       "id": 824,
+      "name": "Blipbug",
       "forms": 1
     },
     {
       "devName": "DEV_REDOOMUSI",
       "id": 825,
+      "name": "Dottler",
       "forms": 1
     },
     {
       "devName": "DEV_IORUBU",
       "id": 826,
+      "name": "Orbeetle",
       "forms": 1
     },
     {
       "devName": "DEV_KUSUNE",
       "id": 827,
+      "name": "Nickit",
       "forms": 1
     },
     {
       "devName": "DEV_FOKUSURAI",
       "id": 828,
+      "name": "Thievul",
       "forms": 1
     },
     {
       "devName": "DEV_HIMENKA",
       "id": 829,
+      "name": "Gossifleur",
       "forms": 1
     },
     {
       "devName": "DEV_WATASIRAGA",
       "id": 830,
+      "name": "Eldegoss",
       "forms": 1
     },
     {
       "devName": "DEV_UURUU",
       "id": 831,
+      "name": "Wooloo",
       "forms": 1
     },
     {
       "devName": "DEV_BAIUURUU",
       "id": 832,
+      "name": "Dubwool",
       "forms": 1
     },
     {
       "devName": "DEV_KAMUKAME",
       "id": 833,
+      "name": "Chewtle",
       "forms": 1
     },
     {
       "devName": "DEV_KAZIRIGAME",
       "id": 834,
+      "name": "Drednaw",
       "forms": 1
     },
     {
       "devName": "DEV_WANPATI",
       "id": 835,
+      "name": "Yamper",
       "forms": 1
     },
     {
       "devName": "DEV_PARUSUWAN",
       "id": 836,
+      "name": "Boltund",
       "forms": 1
     },
     {
       "devName": "DEV_TANDON",
       "id": 837,
+      "name": "Rolycoly",
       "forms": 1
     },
     {
       "devName": "DEV_TOROGGON",
       "id": 838,
+      "name": "Carkol",
       "forms": 1
     },
     {
       "devName": "DEV_SEKITANZAN",
       "id": 839,
+      "name": "Coalossal",
       "forms": 1
     },
     {
       "devName": "DEV_KAZITTYU",
       "id": 840,
+      "name": "Applin",
       "forms": 1
     },
     {
       "devName": "DEV_APPURYUU",
       "id": 841,
+      "name": "Flapple",
       "forms": 1
     },
     {
       "devName": "DEV_TARUPPURU",
       "id": 842,
+      "name": "Appletun",
       "forms": 1
     },
     {
       "devName": "DEV_SUNAHEBI",
       "id": 843,
+      "name": "Silicobra",
       "forms": 1
     },
     {
       "devName": "DEV_SADAIZYA",
       "id": 844,
+      "name": "Sandaconda",
       "forms": 1
     },
     {
       "devName": "DEV_UUU",
       "id": 845,
+      "name": "Cramorant",
       "forms": 1
     },
     {
       "devName": "DEV_SASIKAMASU",
       "id": 846,
+      "name": "Arrokuda",
       "forms": 1
     },
     {
       "devName": "DEV_KAMASUZYOO",
       "id": 847,
+      "name": "Barraskewda",
       "forms": 1
     },
     {
       "devName": "DEV_EREZUN",
       "id": 848,
+      "name": "Toxel",
       "forms": 1
     },
     {
       "devName": "DEV_SUTORINDAA",
       "id": 849,
+      "name": "Toxtricity",
       "forms": 2
     },
     {
       "devName": "DEV_YAKUDE",
       "id": 850,
+      "name": "Sizzlipede",
       "forms": 1
     },
     {
       "devName": "DEV_MARUYAKUDE",
       "id": 851,
+      "name": "Centiskorch",
       "forms": 1
     },
     {
       "devName": "DEV_TATAKKO",
       "id": 852,
+      "name": "Clobbopus",
       "forms": 1
     },
     {
       "devName": "DEV_OTOSUPASU",
       "id": 853,
+      "name": "Grapploct",
       "forms": 1
     },
     {
       "devName": "DEV_YABATYA",
       "id": 854,
+      "name": "Sinistea",
       "forms": 2
     },
     {
       "devName": "DEV_POTTODESU",
       "id": 855,
+      "name": "Polteageist",
       "forms": 2
     },
     {
       "devName": "DEV_MIBURIMU",
       "id": 856,
+      "name": "Hatenna",
       "forms": 1
     },
     {
       "devName": "DEV_TEBURIMU",
       "id": 857,
+      "name": "Hattrem",
       "forms": 1
     },
     {
       "devName": "DEV_BURIMUON",
       "id": 858,
+      "name": "Hatterene",
       "forms": 1
     },
     {
       "devName": "DEV_BEROBAA",
       "id": 859,
+      "name": "Impidimp",
       "forms": 1
     },
     {
       "devName": "DEV_GIMOO",
       "id": 860,
+      "name": "Morgrem",
       "forms": 1
     },
     {
       "devName": "DEV_OORONGE",
       "id": 861,
+      "name": "Grimmsnarl",
       "forms": 1
     },
     {
       "devName": "DEV_TATIHUSAGUMA",
       "id": 862,
+      "name": "Obstagoon",
       "forms": 1
     },
     {
       "devName": "DEV_NYAIKINGU",
       "id": 863,
+      "name": "Perrserker",
       "forms": 1
     },
     {
       "devName": "DEV_SANIGOON",
       "id": 864,
+      "name": "Cursola",
       "forms": 1
     },
     {
       "devName": "DEV_NEGIGANAITO",
       "id": 865,
+      "name": "Sirfetch\u2019d",
       "forms": 1
     },
     {
       "devName": "DEV_BARIKOORU",
       "id": 866,
+      "name": "Mr. Rime",
       "forms": 1
     },
     {
       "devName": "DEV_DESUBAAN",
       "id": 867,
+      "name": "Runerigus",
       "forms": 1
     },
     {
       "devName": "DEV_MAHOMIRU",
       "id": 868,
+      "name": "Milcery",
       "forms": 1
     },
     {
       "devName": "DEV_MAHOIPPU",
       "id": 869,
+      "name": "Alcremie",
       "forms": 1
     },
     {
       "devName": "DEV_TAIREETU",
       "id": 870,
+      "name": "Falinks",
       "forms": 1
     },
     {
       "devName": "DEV_BATINUNI",
       "id": 871,
+      "name": "Pincurchin",
       "forms": 1
     },
     {
       "devName": "DEV_YUKIHAMI",
       "id": 872,
+      "name": "Snom",
       "forms": 1
     },
     {
       "devName": "DEV_MOSUNOU",
       "id": 873,
+      "name": "Frosmoth",
       "forms": 1
     },
     {
       "devName": "DEV_ISIHENZIN",
       "id": 874,
+      "name": "Stonjourner",
       "forms": 1
     },
     {
       "devName": "DEV_KOORIPPO",
       "id": 875,
+      "name": "Eiscue",
       "forms": 2
     },
     {
       "devName": "DEV_IESSAN",
       "id": 876,
+      "name": "Indeedee",
       "forms": 2
     },
     {
       "devName": "DEV_MORUPEKO",
       "id": 877,
+      "name": "Morpeko",
       "forms": 1
     },
     {
       "devName": "DEV_ZOUDOU",
       "id": 878,
+      "name": "Cufant",
       "forms": 1
     },
     {
       "devName": "DEV_DAIOUDOU",
       "id": 879,
+      "name": "Copperajah",
       "forms": 1
     },
     {
       "devName": "DEV_PATTIRAGON",
       "id": 880,
+      "name": "Dracozolt",
       "forms": 1
     },
     {
       "devName": "DEV_PATTIRUDON",
       "id": 881,
+      "name": "Arctozolt",
       "forms": 1
     },
     {
       "devName": "DEV_UONORAGON",
       "id": 882,
+      "name": "Dracovish",
       "forms": 1
     },
     {
       "devName": "DEV_UOTIRUDON",
       "id": 883,
+      "name": "Arctovish",
       "forms": 1
     },
     {
       "devName": "DEV_ZYURARUDON",
       "id": 884,
+      "name": "Duraludon",
       "forms": 1
     },
     {
       "devName": "DEV_DORAMESIYA",
       "id": 885,
+      "name": "Dreepy",
       "forms": 1
     },
     {
       "devName": "DEV_DORONTI",
       "id": 886,
+      "name": "Drakloak",
       "forms": 1
     },
     {
       "devName": "DEV_DORAPARUTO",
       "id": 887,
+      "name": "Dragapult",
       "forms": 1
     },
     {
       "devName": "DEV_ZASIAN",
       "id": 888,
+      "name": "Zacian",
       "forms": 2
     },
     {
       "devName": "DEV_ZAMAZENTA",
       "id": 889,
+      "name": "Zamazenta",
       "forms": 2
     },
     {
       "devName": "DEV_MUGENDAINA",
       "id": 890,
+      "name": "Eternatus",
       "forms": 1
     },
     {
       "devName": "DEV_AAMAA1",
       "id": 891,
+      "name": "Kubfu",
       "forms": 1
     },
     {
       "devName": "DEV_AAMAA2",
       "id": 892,
+      "name": "Urshifu",
       "forms": 2
     },
     {
       "devName": "DEV_m23",
       "id": 893,
+      "name": "Zarude",
       "forms": 2
     },
     {
       "devName": "DEV_REDEN",
       "id": 894,
+      "name": "Regieleki",
       "forms": 1
     },
     {
       "devName": "DEV_REDORA",
       "id": 895,
+      "name": "Regidrago",
       "forms": 1
     },
     {
       "devName": "DEV_HAKUBA",
       "id": 896,
+      "name": "Glastrier",
       "forms": 1
     },
     {
       "devName": "DEV_KOKUBA",
       "id": 897,
+      "name": "Spectrier",
       "forms": 1
     },
     {
       "devName": "DEV_KURAUN",
       "id": 898,
+      "name": "Calyrex",
       "forms": 3
     },
     {
       "devName": "DEV_ODOSISI2",
       "id": 899,
+      "name": "Wyrdeer",
       "forms": 1
     },
     {
       "devName": "DEV_SUTORAIKU2",
       "id": 900,
+      "name": "Kleavor",
       "forms": 1
     },
     {
       "devName": "DEV_HIMEGUMA3",
       "id": 901,
+      "name": "Ursaluna",
       "forms": 1
     },
     {
       "devName": "DEV_rBASURAO2",
       "id": 902,
+      "name": "Basculegion",
       "forms": 2
     },
     {
       "devName": "DEV_rNYUURA2",
       "id": 903,
+      "name": "Sneasler",
       "forms": 1
     },
     {
       "devName": "DEV_rHARISEN2",
       "id": 904,
+      "name": "Overqwil",
       "forms": 1
     },
     {
       "devName": "DEV_FEATOROSU",
       "id": 905,
+      "name": "Enamorus",
       "forms": 2
     },
     {
       "devName": "DEV_NEKO1",
       "id": 906,
+      "name": "Sprigatito",
       "forms": 1
     },
     {
       "devName": "DEV_NEKO2",
       "id": 907,
+      "name": "Floragato",
       "forms": 1
     },
     {
       "devName": "DEV_NEKO3",
       "id": 908,
+      "name": "Meowscarada",
       "forms": 1
     },
     {
       "devName": "DEV_WANI1",
       "id": 909,
+      "name": "Fuecoco",
       "forms": 1
     },
     {
       "devName": "DEV_WANI2",
       "id": 910,
+      "name": "Crocalor",
       "forms": 1
     },
     {
       "devName": "DEV_WANI3",
       "id": 911,
+      "name": "Skeledirge",
       "forms": 1
     },
     {
       "devName": "DEV_KAMO1",
       "id": 912,
+      "name": "Quaxly",
       "forms": 1
     },
     {
       "devName": "DEV_KAMO2",
       "id": 913,
+      "name": "Quaxwell",
       "forms": 1
     },
     {
       "devName": "DEV_KAMO3",
       "id": 914,
+      "name": "Quaquaval",
       "forms": 1
     },
     {
       "devName": "DEV_BUTA1",
       "id": 915,
+      "name": "Lechonk",
       "forms": 1
     },
     {
       "devName": "DEV_BUTA2",
       "id": 916,
+      "name": "Oinkologne",
       "forms": 2
     },
     {
       "devName": "DEV_NOKOTTI2",
       "id": 917,
+      "name": "Dudunsparce",
       "forms": 2
     },
     {
       "devName": "DEV_KUMO1",
       "id": 918,
+      "name": "Tarountula",
       "forms": 1
     },
     {
       "devName": "DEV_KUMO2",
       "id": 919,
+      "name": "Spidops",
       "forms": 1
     },
     {
       "devName": "DEV_BATTA1",
       "id": 920,
+      "name": "Nymble",
       "forms": 1
     },
     {
       "devName": "DEV_BATTA2",
       "id": 921,
+      "name": "Lokix",
       "forms": 1
     },
     {
       "devName": "DEV_SUKARABE1",
       "id": 922,
+      "name": "Rellor",
       "forms": 1
     },
     {
       "devName": "DEV_SUKARABE2",
       "id": 923,
+      "name": "Rabsca",
       "forms": 1
     },
     {
       "devName": "DEV_OBAKEINU1",
       "id": 924,
+      "name": "Greavard",
       "forms": 1
     },
     {
       "devName": "DEV_OBAKEINU2",
       "id": 925,
+      "name": "Houndstone",
       "forms": 1
     },
     {
       "devName": "DEV_DATYOU1",
       "id": 926,
+      "name": "Flittle",
       "forms": 1
     },
     {
       "devName": "DEV_DATYOU2",
       "id": 927,
+      "name": "Espathra",
       "forms": 1
     },
     {
       "devName": "DEV_KIRINRIKI2",
       "id": 928,
+      "name": "Farigiraf",
       "forms": 1
     },
     {
       "devName": "DEV_UMIDHIGUDA",
       "id": 929,
+      "name": "Wiglett",
       "forms": 1
     },
     {
       "devName": "DEV_UMITORIO",
       "id": 930,
+      "name": "Wugtrio",
       "forms": 1
     },
     {
       "devName": "DEV_OYAKATA",
       "id": 931,
+      "name": "Dondozo",
       "forms": 1
     },
     {
       "devName": "DEV_MERURUUSA",
       "id": 932,
+      "name": "Veluza",
       "forms": 1
     },
     {
       "devName": "DEV_IRUKA1",
       "id": 933,
+      "name": "Finizen",
       "forms": 1
     },
     {
       "devName": "DEV_IRUKA2",
       "id": 934,
+      "name": "Palafin",
       "forms": 2
     },
     {
       "devName": "DEV_ORIIBU1",
       "id": 935,
+      "name": "Smoliv",
       "forms": 1
     },
     {
       "devName": "DEV_ORIIBU2",
       "id": 936,
+      "name": "Dolliv",
       "forms": 1
     },
     {
       "devName": "DEV_ORIIBU3",
       "id": 937,
+      "name": "Arboliva",
       "forms": 1
     },
     {
       "devName": "DEV_HABANERO1",
       "id": 938,
+      "name": "Capsakid",
       "forms": 1
     },
     {
       "devName": "DEV_HABANERO2",
       "id": 939,
+      "name": "Scovillain",
       "forms": 1
     },
     {
       "devName": "DEV_KAERU1",
       "id": 940,
+      "name": "Tadbulb",
       "forms": 1
     },
     {
       "devName": "DEV_KAERU2",
       "id": 941,
+      "name": "Bellibolt",
       "forms": 1
     },
     {
       "devName": "DEV_ENZIN1",
       "id": 942,
+      "name": "Varoom",
       "forms": 1
     },
     {
       "devName": "DEV_ENZIN2",
       "id": 943,
+      "name": "Revavroom",
       "forms": 1
     },
     {
       "devName": "DEV_MIMIZU",
       "id": 944,
+      "name": "Orthworm",
       "forms": 1
     },
     {
       "devName": "DEV_NEZUMI1",
       "id": 945,
+      "name": "Tandemaus",
       "forms": 1
     },
     {
       "devName": "DEV_NEZUMI2",
       "id": 946,
+      "name": "Maushold",
       "forms": 2
     },
     {
       "devName": "DEV_OKAKUZIRA1",
       "id": 947,
+      "name": "Cetoddle",
       "forms": 1
     },
     {
       "devName": "DEV_OKAKUZIRA2",
       "id": 948,
+      "name": "Cetitan",
       "forms": 1
     },
     {
       "devName": "DEV_KOORIDORA1",
       "id": 949,
+      "name": "Frigibax",
       "forms": 1
     },
     {
       "devName": "DEV_KOORIDORA2",
       "id": 950,
+      "name": "Arctibax",
       "forms": 1
     },
     {
       "devName": "DEV_KOORIDORA3",
       "id": 951,
+      "name": "Baxcalibur",
       "forms": 1
     },
     {
       "devName": "DEV_SUSIDORA",
       "id": 952,
+      "name": "Tatsugiri",
       "forms": 3
     },
     {
       "devName": "DEV_BAIKU",
       "id": 953,
+      "name": "Cyclizar",
       "forms": 1
     },
     {
       "devName": "DEV_MAAMOTTO1",
       "id": 954,
+      "name": "Pawmi",
       "forms": 1
     },
     {
       "devName": "DEV_MAAMOTTO2",
       "id": 955,
+      "name": "Pawmo",
       "forms": 1
     },
     {
       "devName": "DEV_MAAMOTTO3",
       "id": 956,
+      "name": "Pawmot",
       "forms": 1
     },
     {
       "devName": "DEV_MIZUDORI1",
       "id": 957,
+      "name": "Wattrel",
       "forms": 1
     },
     {
       "devName": "DEV_MIZUDORI2",
       "id": 958,
+      "name": "Kilowattrel",
       "forms": 1
     },
     {
       "devName": "DEV_KOUNOTORI",
       "id": 959,
+      "name": "Bombirdier",
       "forms": 1
     },
     {
       "devName": "DEV_INKO",
       "id": 960,
+      "name": "Squawkabilly",
       "forms": 4
     },
     {
       "devName": "DEV_HURAMINGO",
       "id": 961,
+      "name": "Flamigo",
       "forms": 1
     },
     {
       "devName": "DEV_KEGANI",
       "id": 962,
+      "name": "Klawf",
       "forms": 1
     },
     {
       "devName": "DEV_GANEN1",
       "id": 963,
+      "name": "Nacli",
       "forms": 1
     },
     {
       "devName": "DEV_GANEN2",
       "id": 964,
+      "name": "Naclstack",
       "forms": 1
     },
     {
       "devName": "DEV_GANEN3",
       "id": 965,
+      "name": "Garganacl",
       "forms": 1
     },
     {
       "devName": "DEV_KARUKAN1",
       "id": 966,
+      "name": "Glimmet",
       "forms": 1
     },
     {
       "devName": "DEV_KARUKAN2",
       "id": 967,
+      "name": "Glimmora",
       "forms": 1
     },
     {
       "devName": "DEV_AIAI1",
       "id": 968,
+      "name": "Shroodle",
       "forms": 1
     },
     {
       "devName": "DEV_AIAI2",
       "id": 969,
+      "name": "Grafaiai",
       "forms": 1
     },
     {
       "devName": "DEV_PANINU1",
       "id": 970,
+      "name": "Fidough",
       "forms": 1
     },
     {
       "devName": "DEV_PANINU2",
       "id": 971,
+      "name": "Dachsbun",
       "forms": 1
     },
     {
       "devName": "DEV_MASUTHIHU1",
       "id": 972,
+      "name": "Maschiff",
       "forms": 1
     },
     {
       "devName": "DEV_MASUTHIHU2",
       "id": 973,
+      "name": "Mabosstiff",
       "forms": 1
     },
     {
       "devName": "DEV_TANBURU1",
       "id": 974,
+      "name": "Bramblin",
       "forms": 1
     },
     {
       "devName": "DEV_TANBURU2",
       "id": 975,
+      "name": "Brambleghast",
       "forms": 1
     },
     {
       "devName": "DEV_KOIN1",
       "id": 976,
+      "name": "Gimmighoul",
       "forms": 2
     },
     {
       "devName": "DEV_KOIN2",
       "id": 977,
+      "name": "Gholdengo",
       "forms": 1
     },
     {
       "devName": "DEV_ADONFAN",
       "id": 978,
+      "name": "Great Tusk",
       "forms": 1
     },
     {
       "devName": "DEV_AMOROBARERU",
       "id": 979,
+      "name": "Brute Bonnet",
       "forms": 1
     },
     {
       "devName": "DEV_AKETUBAN",
       "id": 980,
+      "name": "Walking Wake",
       "forms": 1
     },
     {
       "devName": "DEV_AREAKOIRU",
       "id": 981,
+      "name": "Sandy Shocks",
       "forms": 1
     },
     {
       "devName": "DEV_APURIN",
       "id": 982,
+      "name": "Scream Tail",
       "forms": 1
     },
     {
       "devName": "DEV_AMUUMA",
       "id": 983,
+      "name": "Flutter Mane",
       "forms": 1
     },
     {
       "devName": "DEV_AURUGAMOSU",
       "id": 984,
+      "name": "Slither Wing",
       "forms": 1
     },
     {
       "devName": "DEV_AAAAA",
       "id": 985,
+      "name": "Roaring Moon",
       "forms": 1
     },
     {
       "devName": "DEV_BDONFAN",
       "id": 986,
+      "name": "Iron Treads",
       "forms": 1
     },
     {
       "devName": "DEV_BKETUBAN",
       "id": 987,
+      "name": "Iron Leaves",
       "forms": 1
     },
     {
       "devName": "DEV_BURUGAMOSU",
       "id": 988,
+      "name": "Iron Moth",
       "forms": 1
     },
     {
       "devName": "DEV_BHARITEYAMA",
       "id": 989,
+      "name": "Iron Hands",
       "forms": 1
     },
     {
       "devName": "DEV_BSAZANDORA",
       "id": 990,
+      "name": "Iron Jugulis",
       "forms": 1
     },
     {
       "devName": "DEV_BBANGIRASU",
       "id": 991,
+      "name": "Iron Thorns",
       "forms": 1
     },
     {
       "devName": "DEV_BKOORI",
       "id": 992,
+      "name": "Iron Bundle",
       "forms": 1
     },
     {
       "devName": "DEV_BBBBB",
       "id": 993,
+      "name": "Iron Valiant",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUNDEN1",
       "id": 994,
+      "name": "Ting-Lu",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUNDEN2",
       "id": 995,
+      "name": "Chien-Pao",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUNDEN3",
       "id": 996,
+      "name": "Wo-Chien",
       "forms": 1
     },
     {
       "devName": "DEV_ZYUNDEN4",
       "id": 997,
+      "name": "Chi-Yu",
       "forms": 1
     },
     {
       "devName": "DEV_AIGUANA",
       "id": 998,
+      "name": "Koraidon",
       "forms": 5
     },
     {
       "devName": "DEV_BIGUANA",
       "id": 999,
+      "name": "Miraidon",
       "forms": 5
     },
     {
       "devName": "DEV_FEARII1",
       "id": 1000,
+      "name": "Tinkatink",
       "forms": 1
     },
     {
       "devName": "DEV_FEARII2",
       "id": 1001,
+      "name": "Tinkatuff",
       "forms": 1
     },
     {
       "devName": "DEV_FEARII3",
       "id": 1002,
+      "name": "Tinkaton",
       "forms": 1
     },
     {
       "devName": "DEV_HINOKO1",
       "id": 1003,
+      "name": "Charcadet",
       "forms": 1
     },
     {
       "devName": "DEV_HINOKO2A",
       "id": 1004,
+      "name": "Armarouge",
       "forms": 1
     },
     {
       "devName": "DEV_HINOKO2B",
       "id": 1005,
+      "name": "Ceruledge",
       "forms": 1
     },
     {
       "devName": "DEV_OKAKINGU",
       "id": 1006,
+      "name": "Toedscool",
       "forms": 1
     },
     {
       "devName": "DEV_OKAGYARADOSU",
       "id": 1007,
+      "name": "Toedscruel",
       "forms": 1
     },
     {
       "devName": "DEV_KOMATANA3",
       "id": 1008,
+      "name": "Kingambit",
       "forms": 1
     },
     {
       "devName": "DEV_rUPAA2",
       "id": 1009,
+      "name": "Clodsire",
       "forms": 1
     },
     {
       "devName": "DEV_MANKII3",
       "id": 1010,
+      "name": "Annihilape",
       "forms": 1
     }
   ]

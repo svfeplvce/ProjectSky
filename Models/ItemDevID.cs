@@ -11,6 +11,7 @@ namespace ProjectSky.Models
         public class Item
         {
             public string devName { get; set; }
+            public string name { get; set; }
             public int id { get; set; }
         }
 

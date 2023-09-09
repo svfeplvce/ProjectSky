@@ -4,10 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjectSky.Views"
+             xmlns:core="clr-namespace:ProjectSky.Core"
              xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              Height="518" Width="998"
+             Name="Trainer"
              d:DesignHeight="518" d:DesignWidth="998">
+    <UserControl.Resources>
+        <core:TalentStringToBool x:Key="TalentStringToBool"/>
+        <core:RareStringToBool x:Key="RareStringToBool"/>
+        <core:CommandMultiVal x:Key="CommandMultiValueConv"/>
+        <core:MoveStringToBool x:Key="MoveStringToBool"/>
+    </UserControl.Resources>
     <Grid>
 
         <Grid.RowDefinitions>
@@ -15,15 +24,14 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <hc:ComboBox Grid.Row="0" HorizontalAlignment="Right" Width="250" Height="25" ItemsSource="{Binding TrDevID.trainers}" DisplayMemberPath="name" SelectedValuePath="dev_id" SelectedValue="{Binding SelectedTrainer.DevID, Mode=TwoWay}">
+        <hc:ComboBox Grid.Row="0" HorizontalAlignment="Right" Width="250" Height="25" ItemsSource="{Binding TrDevID.trainers}" DisplayMemberPath="name" SelectedValuePath="dev_id" SelectedItem="{Binding Selected, Mode=TwoWay}">
             <ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel/>
                 </ItemsPanelTemplate>
             </ComboBox.ItemsPanel>
         </hc:ComboBox>
-
-   
+        
         <hc:TabControl Grid.Row="1" BorderBrush="{x:Null}" Background="#202020" TabStripPlacement="Right" TabItemWidth="142.5">
 
             <hc:TabItem Header="Pokemon 1" Background="#252525">
@@ -42,26 +50,201 @@
                     </Grid.RowDefinitions>
 
                     <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
-                        
-                        
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="IVs" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="EVs" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Random?" Command="{Binding ToggleRandomIVCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>1</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource TalentStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke1.talentType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.talentValue.hp}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.talentValue.atk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.talentValue.def}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.talentValue.spAtk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.talentValue.spDef}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.talentValue.agi}" Minimum="0" Maximum="31"/>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.effortValue.hp}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.effortValue.atk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.effortValue.def}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.effortValue.spAtk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.effortValue.spDef}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke1.effortValue.agi}" Minimum="0" Maximum="255"/>
+
+                        </Grid>
                         
                     </Border>
 
                     <Border Grid.Row="0" Grid.Column="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
-                        
-                        
-                        
-                    </Border>
+                        <Grid>
 
-                    <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                        
-                        
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="160"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            
+                            <hc:ImageBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding SelectedTrainer.Data.poke1.sprite}" Height="125" Width="125"/>
+                            <hc:ComboBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="175" ItemsSource="{Binding PkDevID.values}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.devId}"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="60" Value="{Binding SelectedTrainer.Data.poke1.formId}"/>
+                        </Grid>
                     </Border>
 
                     <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
+
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke1.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke1.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke1.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="4" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke1.waza4.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Random?" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ToggleRandomMovesCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>1</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource MoveStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke1.wazaType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+                        </Grid>
+
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+
+                        <Grid>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Miscellaneous Options" FontSize="30" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ball" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Tera Type" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Item" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
+
+                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.ballId}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.gemType}"/>
+                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.item}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.tokusei}"/>
+
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke1.level}" Minimum="1" Maximum="100"/>
+
+                            <CheckBox Grid.Row="4" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding ToggleShinyCommand}" IsChecked="{Binding SelectedTrainer.Data.poke1.rareType, Converter={StaticResource RareStringToBool}}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>1</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                            </CheckBox>
+
+                        </Grid>
                         
                     </Border>
 
@@ -86,25 +269,200 @@
 
                     <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="IVs" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="EVs" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Random?" Command="{Binding ToggleRandomIVCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>2</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource TalentStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke2.talentType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.talentValue.hp}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.talentValue.atk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.talentValue.def}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.talentValue.spAtk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.talentValue.spDef}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.talentValue.agi}" Minimum="0" Maximum="31"/>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.effortValue.hp}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.effortValue.atk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.effortValue.def}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.effortValue.spAtk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.effortValue.spDef}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke2.effortValue.agi}" Minimum="0" Maximum="255"/>
+
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="0" Grid.Column="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="160"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <hc:ImageBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding SelectedTrainer.Data.poke2.sprite}" Height="125" Width="125"/>
+                            <hc:ComboBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="175" ItemsSource="{Binding PkDevID.values}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.devId}"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="60" Value="{Binding SelectedTrainer.Data.poke2.formId}"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
+
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke2.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke2.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke2.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="4" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke2.waza4.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Random?" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ToggleRandomMovesCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>2</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource MoveStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke2.wazaType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                    </Border>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Miscellaneous Options" FontSize="30" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ball" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Tera Type" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Item" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.ballId}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.gemType}"/>
+                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.item}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.tokusei}"/>
 
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke2.level}" Minimum="1" Maximum="100"/>
 
+                            <CheckBox Grid.Row="4" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding ToggleShinyCommand}" IsChecked="{Binding SelectedTrainer.Data.poke2.rareType, Converter={StaticResource RareStringToBool}}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>2</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                            </CheckBox>
+
+                        </Grid>
 
                     </Border>
 
@@ -129,25 +487,200 @@
 
                     <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="IVs" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="EVs" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Random?" Command="{Binding ToggleRandomIVCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>3</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource TalentStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke3.talentType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.talentValue.hp}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.talentValue.atk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.talentValue.def}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.talentValue.spAtk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.talentValue.spDef}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.talentValue.agi}" Minimum="0" Maximum="31"/>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.effortValue.hp}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.effortValue.atk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.effortValue.def}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.effortValue.spAtk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.effortValue.spDef}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke3.effortValue.agi}" Minimum="0" Maximum="255"/>
+
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="0" Grid.Column="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="160"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <hc:ImageBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding SelectedTrainer.Data.poke3.sprite}" Height="125" Width="125"/>
+                            <hc:ComboBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="175" ItemsSource="{Binding PkDevID.values}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.devId}"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="60" Value="{Binding SelectedTrainer.Data.poke3.formId}"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
+
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke3.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke3.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke3.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="4" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke3.waza4.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Random?" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ToggleRandomMovesCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>3</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource MoveStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke3.wazaType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                    </Border>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Miscellaneous Options" FontSize="30" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ball" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Tera Type" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Item" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.ballId}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.gemType}"/>
+                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.item}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.tokusei}"/>
 
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke3.level}" Minimum="1" Maximum="100"/>
 
+                            <CheckBox Grid.Row="4" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding ToggleShinyCommand}" IsChecked="{Binding SelectedTrainer.Data.poke3.rareType, Converter={StaticResource RareStringToBool}}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>3</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                            </CheckBox>
+
+                        </Grid>
 
                     </Border>
 
@@ -156,7 +689,6 @@
             </hc:TabItem>
 
             <hc:TabItem Header="Pokemon 4" Background="#252525">
-
                 <Grid>
 
                     <Grid.ColumnDefinitions>
@@ -172,34 +704,207 @@
 
                     <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="IVs" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="EVs" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Random?" Command="{Binding ToggleRandomIVCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>4</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource TalentStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke4.talentType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.talentValue.hp}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.talentValue.atk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.talentValue.def}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.talentValue.spAtk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.talentValue.spDef}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.talentValue.agi}" Minimum="0" Maximum="31"/>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.effortValue.hp}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.effortValue.atk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.effortValue.def}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.effortValue.spAtk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.effortValue.spDef}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke4.effortValue.agi}" Minimum="0" Maximum="255"/>
+
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="0" Grid.Column="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="160"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <hc:ImageBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding SelectedTrainer.Data.poke4.sprite}" Height="125" Width="125"/>
+                            <hc:ComboBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="175" ItemsSource="{Binding PkDevID.values}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.devId}"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="60" Value="{Binding SelectedTrainer.Data.poke4.formId}"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
+
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke4.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke4.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke4.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="4" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke4.waza4.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Random?" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ToggleRandomMovesCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>4</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource MoveStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke4.wazaType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                    </Border>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Miscellaneous Options" FontSize="30" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ball" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Tera Type" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Item" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.ballId}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.gemType}"/>
+                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.item}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.tokusei}"/>
 
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke4.level}" Minimum="1" Maximum="100"/>
 
+                            <CheckBox Grid.Row="4" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding ToggleShinyCommand}" IsChecked="{Binding SelectedTrainer.Data.poke4.rareType, Converter={StaticResource RareStringToBool}}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>4</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                            </CheckBox>
+
+                        </Grid>
 
                     </Border>
 
                 </Grid>
-
             </hc:TabItem>
 
             <hc:TabItem Header="Pokemon 5" Background="#252525">
-
                 <Grid>
 
                     <Grid.ColumnDefinitions>
@@ -215,25 +920,200 @@
 
                     <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="IVs" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="EVs" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Random?" Command="{Binding ToggleRandomIVCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>5</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource TalentStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke5.talentType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.talentValue.hp}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.talentValue.atk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.talentValue.def}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.talentValue.spAtk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.talentValue.spDef}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.talentValue.agi}" Minimum="0" Maximum="31"/>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.effortValue.hp}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.effortValue.atk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.effortValue.def}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.effortValue.spAtk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.effortValue.spDef}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke5.effortValue.agi}" Minimum="0" Maximum="255"/>
+
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="0" Grid.Column="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="160"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <hc:ImageBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding SelectedTrainer.Data.poke5.sprite}" Height="125" Width="125"/>
+                            <hc:ComboBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="175" ItemsSource="{Binding PkDevID.values}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.devId}"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="60" Value="{Binding SelectedTrainer.Data.poke5.formId}"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
+
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke5.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke5.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke5.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="4" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke5.waza4.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Random?" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ToggleRandomMovesCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>5</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource MoveStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke5.wazaType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                    </Border>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Miscellaneous Options" FontSize="30" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ball" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Tera Type" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Item" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.ballId}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.gemType}"/>
+                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.item}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.tokusei}"/>
 
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke5.level}" Minimum="1" Maximum="100"/>
 
+                            <CheckBox Grid.Row="4" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding ToggleShinyCommand}" IsChecked="{Binding SelectedTrainer.Data.poke5.rareType, Converter={StaticResource RareStringToBool}}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>5</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                            </CheckBox>
+
+                        </Grid>
 
                     </Border>
 
@@ -242,7 +1122,6 @@
             </hc:TabItem>
     
             <hc:TabItem Header="Pokemon 6" Background="#252525">
-
                 <Grid>
 
                     <Grid.ColumnDefinitions>
@@ -258,35 +1137,246 @@
 
                     <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="IVs" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="EVs" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" FontFamily="{StaticResource Gill}" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="HP" Grid.Row="1" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="ATK" Grid.Row="2" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="DEF" Grid.Row="3" Grid.Column="0" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPA" Grid.Row="1" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPD" Grid.Row="2" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="SPE" Grid.Row="3" Grid.Column="8" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Random?" Command="{Binding ToggleRandomIVCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>6</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource TalentStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke6.talentType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.talentValue.hp}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.talentValue.atk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.talentValue.def}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.talentValue.spAtk}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.talentValue.spDef}" Minimum="0" Maximum="31"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="2" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.talentValue.agi}" Minimum="0" Maximum="31"/>
+
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.effortValue.hp}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.effortValue.atk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="5" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.effortValue.def}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.effortValue.spAtk}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.effortValue.spDef}" Minimum="0" Maximum="255"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="6" Margin="5" Value="{Binding SelectedTrainer.Data.poke6.effortValue.agi}" Minimum="0" Maximum="255"/>
+
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="0" Grid.Column="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                        <Grid>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="160"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <hc:ImageBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding SelectedTrainer.Data.poke6.sprite}" Height="125" Width="125"/>
+                            <hc:ComboBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="175" ItemsSource="{Binding PkDevID.values}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.devId}"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10" Height="25" Width="60" Value="{Binding SelectedTrainer.Data.poke6.formId}"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
+
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke6.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke6.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke6.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+                            <hc:NumericUpDown Grid.Row="4" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke6.waza4.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Random?" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ToggleRandomMovesCommand}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>6</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                                <CheckBox.IsChecked>
+                                    <MultiBinding Converter="{StaticResource MoveStringToBool}">
+                                        <Binding Path="SelectedTrainer.Data.poke6.wazaType"/>
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                    </MultiBinding>
+                                </CheckBox.IsChecked>
+                            </CheckBox>
+                        </Grid>
 
                     </Border>
 
                     <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
 
+                        <Grid>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                    </Border>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Miscellaneous Options" FontSize="30" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ball" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Tera Type" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Item" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                    <Border Grid.Row="1" Grid.Column="0" Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.ballId}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.gemType}"/>
+                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.item}"/>
+                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.tokusei}"/>
 
+                            <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke6.level}" Minimum="1" Maximum="100"/>
 
+                            <CheckBox Grid.Row="4" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding ToggleShinyCommand}" IsChecked="{Binding SelectedTrainer.Data.poke6.rareType, Converter={StaticResource RareStringToBool}}">
+                                <CheckBox.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource CommandMultiValueConv}">
+                                        <Binding RelativeSource="{RelativeSource Self}" Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:String>6</sys:String>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </CheckBox.CommandParameter>
+                            </CheckBox>
+
+                        </Grid>
 
                     </Border>
 
                 </Grid>
-
             </hc:TabItem>
 
             <hc:TabItem Header="Trainer Options" Background="#252525">
 
                 <Border Background="#202020" BorderBrush="{x:Null}" Margin="10" CornerRadius="5">
+
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Trainer Options" FontFamily="{StaticResource Gill}" FontSize="60"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="5" Text="Money Rate" FontFamily="{StaticResource Gill}"/>
+                        <hc:NumericUpDown Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5" Width="75" Minimum="0" Maximum="100" Value="{Binding SelectedTrainer.Data.moneyRate}"/>
+                        <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Is Strong?" IsChecked="{Binding SelectedTrainer.Data.isStrong}"/>
+                        <CheckBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Basic Difficulty AI" IsChecked="{Binding SelectedTrainer.Data.aiBasic}"/>
+                        <CheckBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="High Difficulty AI" IsChecked="{Binding SelectedTrainer.Data.aiHigh}"/>
+                        <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Expert Difficulty AI" IsChecked="{Binding SelectedTrainer.Data.aiExpert}"/>
+                        <CheckBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Doubles AI" IsChecked="{Binding SelectedTrainer.Data.aiDouble}"/>
+                        <CheckBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Raid AI" IsChecked="{Binding SelectedTrainer.Data.aiRaid}"/>
+                        <CheckBox Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Weak AI" IsChecked="{Binding SelectedTrainer.Data.aiWeak}"/>
+                        <CheckBox Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Can Use Items?" IsChecked="{Binding SelectedTrainer.Data.aiItem}"/>
+                        <CheckBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Can Change Pokemon?" IsChecked="{Binding SelectedTrainer.Data.aiChange}"/>
+                        <CheckBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Can Terastalize?" IsChecked="{Binding SelectedTrainer.Data.changeGem}"/>
+
+                    </Grid>
                     
                 </Border>
 

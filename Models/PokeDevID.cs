@@ -17,6 +17,7 @@ namespace ProjectSky.Models
         {
             public string devName { get; set; }
             public int id { get; set; }
+            public string name { get; set; }
             public int forms { get; set; }
         }
     }
