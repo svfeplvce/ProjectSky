@@ -95,7 +95,7 @@ namespace ProjectSky.ViewModels
 
         private void FillButtonList()
         {
-            for (int num = 1; num < pictureNames.Count; num++)
+            for (int num = 1; num < pictureNames.Count + 1; num++)
             {
                 try
                 {
