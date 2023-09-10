@@ -23,8 +23,8 @@ namespace ProjectSky.ViewModels
         public ICommand CloseCommand { get; }
         public ICommand MinimiseCommand { get; }
         public ICommand ChangeOutConfCommand { get; }
-        public Config configVals { get; }
-        public string UpdateConf { get; }
+        public Config configVals { get; } = (Config)System.Windows.Application.Current.Properties["config"];
+        public string UpdateConf { get; set; }
 
         public List<string> UpdateOptions { get; } = new List<string>() { "Automatically Update", "Don't Automatically Update" };
         Dictionary<string, bool> updateConfToCB = new Dictionary<string, bool>
@@ -37,6 +37,7 @@ namespace ProjectSky.ViewModels
             CloseCommand = new RelayCommand(o => { CloseWindow(o); }, o => true);
             MinimiseCommand = new RelayCommand(o => { MinimiseWindow(o); }, o => true);
             ChangeOutConfCommand = new RelayCommand(o => { ChangeUpdateConf(o); }, o => true);
+            UpdateConf = updateConfToCB.First(x => x.Value == configVals.autoUpdate).Key;
         }
 
         public void UpdateConfChanged(object sender, EventArgs e)

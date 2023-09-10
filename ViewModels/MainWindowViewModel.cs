@@ -116,6 +116,7 @@ namespace ProjectSky.ViewModels
                 Application.Current.Properties["movesWithDevID"] = MvDevID;
                 Application.Current.Properties["itemdevid"] = ItmDevID;
             }
+            Application.Current.Properties["config"] = configVals;
             Application.Current.Properties["abilities"] = Abilities;
             Application.Current.Properties["moves"] = Moves;
             Application.Current.Properties["species"] = SpeciesNames;
