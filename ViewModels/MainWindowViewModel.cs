@@ -188,7 +188,7 @@ namespace ProjectSky.ViewModels
 
                 foreach (var x in update)
                 {
-                    if (x == "trdata")
+                    if (x == "trdata" && x == "weednose")
                     {
                         using (var trdataNewReader = new StreamReader(trdataNewFile))
                         {

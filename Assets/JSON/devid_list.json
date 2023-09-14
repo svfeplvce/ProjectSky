@@ -6065,6 +6065,48 @@
       "id": 1010,
       "name": "Annihilape",
       "forms": 1
+    },
+    {
+      "devName": "DEV_KAMENONI",
+      "id": 1011,
+      "name": "Ogerpon",
+      "forms": 5 
+    },
+    {
+      "devName": "DEV_KAZITTYU2",
+      "id": 1012,
+      "name": "Dipplin",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_DOKUINU",
+      "id": 1014,
+      "name": "Okidogi",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_DOKUZARU",
+      "id": 1015,
+      "name": "Munkidori",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_DOKUKIZI",
+      "id": 1016,
+      "name": "Fezandipiti",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_MATCHA1",
+      "id": 1024,
+      "name": "Poltchageist",
+      "forms": 2
+    },
+    {
+      "devName": "DEV_MATCHA2",
+      "id": 1025,
+      "name": "Sinistcha",
+      "forms": 2
     }
   ]
 }
