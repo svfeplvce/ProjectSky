@@ -16,11 +16,11 @@
         </Grid.RowDefinitions>
 
         <hc:ComboBox Grid.Row="0" HorizontalAlignment="Right" Width="250" Height="25" ItemsSource="{Binding MvDevID.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedItem="{Binding Selected, Mode=TwoWay}">
-            <ComboBox.ItemsPanel>
+            <hc:ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel/>
                 </ItemsPanelTemplate>
-            </ComboBox.ItemsPanel>
+            </hc:ComboBox.ItemsPanel>
         </hc:ComboBox>
 
         <Border Grid.Row="1" Background="#202020" CornerRadius="5" Margin="5">

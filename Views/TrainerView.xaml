@@ -25,11 +25,11 @@
         </Grid.RowDefinitions>
 
         <hc:ComboBox Grid.Row="0" HorizontalAlignment="Right" Width="250" Height="25" ItemsSource="{Binding TrDevID.trainers}" DisplayMemberPath="name" SelectedValuePath="dev_id" SelectedItem="{Binding Selected, Mode=TwoWay}">
-            <ComboBox.ItemsPanel>
+            <hc:ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel/>
                 </ItemsPanelTemplate>
-            </ComboBox.ItemsPanel>
+            </hc:ComboBox.ItemsPanel>
         </hc:ComboBox>
         
         <hc:TabControl Grid.Row="1" BorderBrush="{x:Null}" Background="#202020" TabStripPlacement="Right" TabItemWidth="142.5">
@@ -163,10 +163,10 @@
 
                             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
 
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke1.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke1.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke1.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
@@ -224,10 +224,10 @@
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.ballId}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.gemType}"/>
-                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.item}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.tokusei}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.ballId}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.gemType}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.item}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.tokusei}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke1.level}" Minimum="1" Maximum="100"/>
 
@@ -381,10 +381,10 @@
 
                             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
 
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke2.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke2.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke2.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
@@ -442,10 +442,10 @@
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.ballId}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.gemType}"/>
-                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.item}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.tokusei}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.ballId}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.gemType}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.item}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.tokusei}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke2.level}" Minimum="1" Maximum="100"/>
 
@@ -599,10 +599,10 @@
 
                             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
 
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke3.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke3.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke3.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
@@ -660,10 +660,10 @@
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.ballId}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.gemType}"/>
-                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.item}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.tokusei}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.ballId}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.gemType}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.item}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.tokusei}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke3.level}" Minimum="1" Maximum="100"/>
 
@@ -816,10 +816,10 @@
 
                             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
 
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke4.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke4.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke4.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
@@ -877,10 +877,10 @@
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.ballId}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.gemType}"/>
-                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.item}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.tokusei}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.ballId}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.gemType}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.item}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.tokusei}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke4.level}" Minimum="1" Maximum="100"/>
 
@@ -1032,10 +1032,10 @@
 
                             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
 
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke5.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke5.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke5.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
@@ -1093,10 +1093,10 @@
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.ballId}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.gemType}"/>
-                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.item}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.tokusei}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.ballId}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.gemType}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.item}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.tokusei}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke5.level}" Minimum="1" Maximum="100"/>
 
@@ -1249,10 +1249,10 @@
 
                             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Moves" FontFamily="{StaticResource Gill}" FontSize="30"/>
 
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
-                            <ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza1.wazaId}" Grid.Row="1" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza2.wazaId}" Grid.Row="2" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza3.wazaId}" Grid.Row="3" Grid.Column="0" Margin="2"/>
+                            <hc:ComboBox ItemsSource="{Binding Moves.moves}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.waza4.wazaId}" Grid.Row="4" Grid.Column="0" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke6.waza1.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke6.waza2.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
                             <hc:NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding SelectedTrainer.Data.poke6.waza3.pointUp}" Minimum="0" Maximum="3" Margin="2"/>
@@ -1310,10 +1310,10 @@
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
-                            <ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.ballId}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.gemType}"/>
-                            <ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.item}"/>
-                            <ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.tokusei}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.ballId}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.gemType}"/>
+                            <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.item}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.tokusei}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke6.level}" Minimum="1" Maximum="100"/>
 
