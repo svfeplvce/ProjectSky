@@ -197,7 +197,6 @@ namespace ProjectSky.ViewModels
 
                             var trainerOrig = System.Text.Json.JsonSerializer.Deserialize<Trainer.TrainerArray>(trdataOrigJson);
                             var trainerNew = System.Text.Json.JsonSerializer.Deserialize<Trainer.TrainerArray>(trdataNewJson);
-                            fix
                             for (var i = 0; i < trainerOrig.values.Count; i++)
                             {
                                 if (trainerNew.values[i] == null)
