@@ -1,357 +1,357 @@
 {
-  values: [
+  "values": [
     {
-      plibID: 66
+      "plibID": 66
     },
     {
-      itemID: 280,
-      plibID: 19
+      "itemID": 280,
+      "plibID": 19
     },
     {
-      plibID: 11
+      "plibID": 11
     },
     {
-      itemID: 1857,
-      plibID: 88
+      "itemID": 1857,
+      "plibID": 88
     },
     {
-      itemID: 1116,
-      plibID: 79
+      "itemID": 1116,
+      "plibID": 79
     },
     {
-      itemID: 306,
-      plibID: 34
+      "itemID": 306,
+      "plibID": 34
     },
     {
-      plibID: 42
+      "plibID": 42
     },
     {
-      plibID: 58
+      "plibID": 58
     },
     {
-      plibID: 74
+      "plibID": 74
     },
     {
-      itemID: 2403,
-      plibID: 94
+      "itemID": 2403,
+      "plibID": 94
     },
     {
-      plibID: 13
+      "plibID": 13
     },
     {
-      plibID: 68
+      "plibID": 68
     },
     {
-      itemID: 305,
-      plibID: 33
+      "itemID": 305,
+      "plibID": 33
     },
     {
-      itemID: 236,
-      plibID: 16
+      "itemID": 236,
+      "plibID": 16
     },
     {
-      plibID: 67
+      "plibID": 67
     },
     {
-      plibID: 64
+      "plibID": 64
     },
     {
-      plibID: 53
+      "plibID": 53
     },
     {
-      plibID: 61
+      "plibID": 61
     },
     {
-      plibID: 69
+      "plibID": 69
     },
     {
-      plibID: 43
+      "plibID": 43
     },
     {
-      itemID: 309,
-      plibID: 37
+      "itemID": 309,
+      "plibID": 37
     },
     {
-      itemID: 1582,
-      plibID: 83
+      "itemID": 1582,
+      "plibID": 83
     },
     {
-      itemID: 1592,
-      plibID: 84
+      "itemID": 1592,
+      "plibID": 84
     },
     {
-      plibID: 59
+      "plibID": 59
     },
     {
-      plibID: 63
+      "plibID": 63
     },
     {
-      plibID: 56
+      "plibID": 56
     },
     {
-      plibID: 73
+      "plibID": 73
     },
     {
-      itemID: 1779,
-      plibID: 10
+      "itemID": 1779,
+      "plibID": 10
     },
     {
-      itemID: 107,
-      plibID: 7
+      "itemID": 107,
+      "plibID": 7
     },
     {
-      itemID: 298,
-      plibID: 26
+      "itemID": 298,
+      "plibID": 26
     },
     {
-      itemID: 82,
-      plibID: 3
+      "itemID": 82,
+      "plibID": 3
     },
     {
-      plibID: 54
+      "plibID": 54
     },
     {
-      plibID: 14
+      "plibID": 14
     },
     {
-      itemID: 307,
-      plibID: 35
+      "itemID": 307,
+      "plibID": 35
     },
     {
-      itemID: 300,
-      plibID: 28
+      "itemID": 300,
+      "plibID": 28
     },
     {
-      plibID: 12
+      "plibID": 12
     },
     {
-      plibID: 72
+      "plibID": 72
     },
     {
-      itemID: 2344,
-      plibID: 85
+      "itemID": 2344,
+      "plibID": 85
     },
     {
-      itemID: 1254,
-      plibID: 82
+      "itemID": 1254,
+      "plibID": 82
     },
     {
-      itemID: 83,
-      plibID: 4
+      "itemID": 83,
+      "plibID": 4
     },
     {
-      itemID: 2345,
-      plibID: 87
+      "itemID": 2345,
+      "plibID": 87
     },
     {
-      itemID: 229,
-      plibID: 15
+      "itemID": 229,
+      "plibID": 15
     },
     {
-      itemID: 2404,
-      plibID: 95
+      "itemID": 2404,
+      "plibID": 95
     },
     {
-      itemID: 537,
-      plibID: 111
+      "itemID": 537,
+      "plibID": 111
     },
     {
-      plibID: 48
+      "plibID": 48
     },
     {
-      itemID: 303,
-      plibID: 31
+      "itemID": 303,
+      "plibID": 31
     },
     {
-      itemID: 849,
-      plibID: 52
+      "itemID": 849,
+      "plibID": 52
     },
     {
-      itemID: 313,
-      plibID: 41
+      "itemID": 313,
+      "plibID": 41
     },
     {
-      plibID: 47
+      "plibID": 47
     },
     {
-      itemID: 312,
-      plibID: 40
+      "itemID": 312,
+      "plibID": 40
     },
     {
-      itemID: 1103,
-      plibID: 70
+      "itemID": 1103,
+      "plibID": 70
     },
     {
-      itemID: 1104,
-      plibID: 71
+      "itemID": 1104,
+      "plibID": 71
     },
     {
-      itemID: 110,
-      plibID: 9
+      "itemID": 110,
+      "plibID": 9
     },
     {
-      plibID: 44
+      "plibID": 44
     },
     {
-      itemID: 109,
-      plibID: 93
+      "itemID": 109,
+      "plibID": 93
     },
     {
-      itemID: 301,
-      plibID: 29
+      "itemID": 301,
+      "plibID": 29
     },
     {
-      itemID: 2402,
-      plibID: 96
+      "itemID": 2402,
+      "plibID": 96
     },
     {
-      itemID: 84,
-      plibID: 5
+      "itemID": 84,
+      "plibID": 5
     },
     {
-      itemID: 1858,
-      plibID: 89
+      "itemID": 1858,
+      "plibID": 89
     },
     {
-      itemID: 310,
-      plibID: 38
+      "itemID": 310,
+      "plibID": 38
     },
     {
-      itemID: 304,
-      plibID: 32
+      "itemID": 304,
+      "plibID": 32
     },
     {
-      plibID: 18
+      "plibID": 18
     },
     {
-      itemID: 1861,
-      plibID: 86
+      "itemID": 1861,
+      "plibID": 86
     },
     {
-      plibID: 76
+      "plibID": 76
     },
     {
-      plibID: 46
+      "plibID": 46
     },
     {
-      itemID: 293,
-      plibID: 24
+      "itemID": 293,
+      "plibID": 24
     },
     {
-      itemID: 292,
-      plibID: 23
+      "itemID": 292,
+      "plibID": 23
     },
     {
-      itemID: 290,
-      plibID: 21
+      "itemID": 290,
+      "plibID": 21
     },
     {
-      itemID: 291,
-      plibID: 22
+      "itemID": 291,
+      "plibID": 22
     },
     {
-      itemID: 289,
-      plibID: 20
+      "itemID": 289,
+      "plibID": 20
     },
     {
-      itemID: 294,
-      plibID: 25
+      "itemID": 294,
+      "plibID": 25
     },
     {
-      plibID: 90
+      "plibID": 90
     },
     {
-      plibID: 55
+      "plibID": 55
     },
     {
-      itemID: 325,
-      plibID: 112
+      "itemID": 325,
+      "plibID": 112
     },
     {
-      plibID: 78
+      "plibID": 78
     },
     {
-      itemID: 85,
-      plibID: 6
+      "itemID": 85,
+      "plibID": 6
     },
     {
-      plibID: 57
+      "plibID": 57
     },
     {
-      itemID: 311,
-      plibID: 39
+      "itemID": 311,
+      "plibID": 39
     },
     {
-      plibID: 65
+      "plibID": 65
     },
     {
-      plibID: 45
+      "plibID": 45
     },
     {
-      itemID: 644,
-      plibID: 51
+      "itemID": 644,
+      "plibID": 51
     },
     {
-      itemID: 299,
-      plibID: 27
+      "itemID": 299,
+      "plibID": 27
     },
     {
-      itemID: 1117,
-      plibID: 80
+      "itemID": 1117,
+      "plibID": 80
     },
     {
-      itemID: 327,
-      plibID: 50
+      "itemID": 327,
+      "plibID": 50
     },
     {
-      itemID: 326,
-      plibID: 49
+      "itemID": 326,
+      "plibID": 49
     },
     {
-      plibID: 77
+      "plibID": 77
     },
     {
-      plibID: 60
+      "plibID": 60
     },
     {
-      itemID: 80,
-      plibID: 1
+      "itemID": 80,
+      "plibID": 1
     },
     {
-      itemID: 308,
-      plibID: 36
+      "itemID": 308,
+      "plibID": 36
     },
     {
-      plibID: 91
+      "plibID": 91
     },
     {
-      itemID: 81,
-      plibID: 2
+      "itemID": 81,
+      "plibID": 2
     },
     {
-      itemID: 302,
-      plibID: 30
+      "itemID": 302,
+      "plibID": 30
     },
     {
-      plibID: 62
+      "plibID": 62
     },
     {
-      plibID: 17
+      "plibID": 17
     },
     {
-      itemID: 1253,
-      plibID: 81
+      "itemID": 1253,
+      "plibID": 81
     },
     {
-      itemID: 108,
-      plibID: 8
+      "itemID": 108,
+      "plibID": 8
     },
     {
-      itemID: 218,
-      plibID: 92
+      "itemID": 218,
+      "plibID": 92
     },
     {
-      plibID: 75
+      "plibID": 75
     }
   ]
 }
