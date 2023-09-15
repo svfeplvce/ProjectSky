@@ -226,7 +226,21 @@ namespace ProjectSky.ViewModels
                             {
                                 if (i < personalNew.entry.Count)
                                 {
-                                    personalNew.entry[i] = personalOrig.entry[i];
+                                    PropertyInfo[] properties = typeof(Personal.Entry).GetProperties();
+
+                                    foreach (var property in properties)
+                                    {
+                                        object targetValue = property.GetValue(personalNew.entry[i]);
+                                        object sourceValue = property.GetValue(personalOrig.entry[i]);
+
+                                        bool isTargetValueDefault = targetValue == null || (property.PropertyType.IsValueType && targetValue.Equals(Activator.CreateInstance(property.PropertyType)));
+
+
+                                        if (isTargetValueDefault || property.ToString() == "kitakami_dex" || property.ToString() == "blueberry_dex")
+                                        {
+                                            property.SetValue(personalNew.entry[i], sourceValue);
+                                        }
+                                    }
                                 }
                                 else if (i >= personalNew.entry.Count)
                                 {
@@ -364,7 +378,7 @@ namespace ProjectSky.ViewModels
 
         private async void CheckUpdate()
         {
-            var currentVersion = "2.0.1-FIX";
+            var currentVersion = "2.0.2";
 
             try
             {
