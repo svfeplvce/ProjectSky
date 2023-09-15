@@ -39,6 +39,8 @@ namespace ProjectSky.Models
         {
             public Species species { get; set; }
             public bool is_present { get; set; }
+            public int kitakami_dex { get; set; }
+            public int blueberry_dex { get; set; }
             public int type_1 { get; set; }
             public int type_2 { get; set; }
             public int ability_1 { get; set; }

@@ -57,8 +57,8 @@ table Personal {
     species: SpeciesInfo;
     is_present: bool;
     dex: DexData;
-    kitakami_dex: uint16;
-    blueberry_dex: uint16;
+    kitakami_dex: uint8;
+    blueberry_dex: uint8;
     type_1: uint8;
     type_2: uint8;
     ability_1: uint16;
