@@ -5,6 +5,7 @@ using ProjectSky.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -130,7 +131,7 @@ namespace ProjectSky.ViewModels
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(ex);
+                        Debug.WriteLine(ex);
                     }
                 });
             }

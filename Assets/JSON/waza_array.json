@@ -81091,7 +81091,7 @@
       "flag_cant_use_twice": false
     },
     {
-      "move_id": 901,
+      "move_id": "WAZA_BURADDOMUN",
       "can_use_move": true,
       "type": 0,
       "quality": 0,
@@ -81181,7 +81181,7 @@
       "flag_cant_use_twice": true
     },
     {
-      "move_id": 902,
+      "move_id": "WAZA_SHAKASHAKAHO",
       "can_use_move": true,
       "type": 11,
       "quality": 8,
@@ -81271,7 +81271,7 @@
       "flag_cant_use_twice": false
     },
     {
-      "move_id": 903,
+      "move_id": "WAZA_MITSUAMEKOTO",
       "can_use_move": true,
       "type": 11,
       "quality": 4,
@@ -81361,7 +81361,7 @@
       "flag_cant_use_twice": false
     },
     {
-      "move_id": 904,
+      "move_id": "WAZA_ONIKANABOO",
       "can_use_move": true,
       "type": 11,
       "quality": 0,

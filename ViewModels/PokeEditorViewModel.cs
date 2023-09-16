@@ -146,20 +146,9 @@ namespace ProjectSky.ViewModels
             NavigationService.NavigatedToViewModel += OnNavigatedToViewModel;
         }
 
-        public readonly ObservableCollection<string> Abilities = Application.Current.Properties["abilities"] as ObservableCollection<string>;
-        public readonly ObservableCollection<string> Moves = Application.Current.Properties["moves"] as ObservableCollection<string>;
-        public readonly ObservableCollection<string> SpeciesNames = Application.Current.Properties["species"] as ObservableCollection<string>;
-        public readonly ObservableCollection<string> Items = Application.Current.Properties["items"] as ObservableCollection<string>;
-        private ObservableCollection<ComboBoxItem> _abilitiesComboBoxItems = new ObservableCollection<ComboBoxItem> { };
-        public ObservableCollection<ComboBoxItem> AbilitiesComboBoxItems
-        {
-            get => _abilitiesComboBoxItems;
-            set
-            {
-                _abilitiesComboBoxItems = value;
-                OnPropertyChanged();
-            }
-        }
+        private ObservableCollection<string> Moves = Application.Current.Properties["moves"] as ObservableCollection<string>;
+        private ObservableCollection<string> SpeciesNames { get; } = Application.Current.Properties["species"] as ObservableCollection<string>;
+        public ObservableCollection<string> Items { get;  } = Application.Current.Properties["items"] as ObservableCollection<string>;
         private ObservableCollection<Models.ComboBoxItemSky> _itemsComboBoxItems = new ObservableCollection<Models.ComboBoxItemSky> { };
         public ObservableCollection<Models.ComboBoxItemSky> ItemsComboBoxItems
         {
@@ -177,16 +166,6 @@ namespace ProjectSky.ViewModels
             set
             {
                 _tmComboBoxItems = value;
-                OnPropertyChanged();
-            }
-        }
-        private ObservableCollection<ComboBoxItem> _movesComboBoxItems = new ObservableCollection<ComboBoxItem>();
-        public ObservableCollection<ComboBoxItem> MovesComboBoxItems
-        {
-            get => _movesComboBoxItems;
-            set
-            {
-                _movesComboBoxItems = value;
                 OnPropertyChanged();
             }
         }
@@ -243,10 +222,8 @@ namespace ProjectSky.ViewModels
             {
                 IsLoaded = false;
                 PlibItems.Clear();
-                AbilitiesComboBoxItems.Clear();
                 ItemsComboBoxItems.Clear();
                 TMComboBoxItems.Clear();
-                MovesComboBoxItems.Clear();
                 SelectorParamsToSend parameter = (SelectorParamsToSend)NavigationService.GetParameter<PokeEditorViewModel>();
                 PokeIndex = parameter.PokeNum;
                 PokeName = parameter.PokeName;
@@ -289,6 +266,20 @@ namespace ProjectSky.ViewModels
                 ItemDevID = JsonSerializer.Deserialize<ItemDevID.DevID>(itemDevIDJson);
             }
 
+            await Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                SetSpecies();
+                FillItemList();
+                FillTMList();
+            });
+
+            IsLoaded = true;
+
+            OnPropertyChanged(nameof(CurrentSpecies));
+        }
+
+        private async Task SetSpecies()
+        {
             var currentDevID = PokeDevID.values.FirstOrDefault(x => x.name == PokeName.Replace("Alolan ", "").Replace("Galarian ", "").Replace("Paldean ", "").Replace("Mega ", "").Replace(" X", "").Replace(" Y", "").Replace("Hisuian ", "").Replace("Origin ", "").Replace("Primal ", "").Replace(" Hearthflame", "").Replace(" Wellspring", "").Replace(" Cornerstone", "").Replace("Bloodmoon ", "")).devName;
             var currentPdata = _pdataNew.values.Exists(x => x.devid == currentDevID) ? _pdataNew.values.First(x => x.devid == currentDevID) : null;
             try
@@ -308,18 +299,6 @@ namespace ProjectSky.ViewModels
                 HasPokeData = true;
                 HeldItemDevName = currentPdata.bringItem.itemID;
             }
-
-            await Application.Current.Dispatcher.InvokeAsync(() =>
-            {
-                FillItemList();
-                FillAbilitiesList();
-                FillMoveList();
-                FillTMList();
-            });
-
-            IsLoaded = true;
-
-            OnPropertyChanged(nameof(CurrentSpecies));
         }
 
         private async Task FillItemList()
@@ -364,26 +343,6 @@ namespace ProjectSky.ViewModels
                         Thread.Sleep(delay);
                     }
                 });
-            }
-        }
-
-        private async Task FillAbilitiesList()
-        {
-            foreach (var x in Abilities)
-            {
-                var ComboBoxItem = new ComboBoxItem();
-                ComboBoxItem.Content = x;
-                AbilitiesComboBoxItems.Add(ComboBoxItem);
-            }
-        }
-
-        private async Task FillMoveList()
-        {
-            foreach (var x in Moves)
-            {
-                var ComboBoxItem = new ComboBoxItem();
-                ComboBoxItem.Content = x;
-                MovesComboBoxItems.Add(ComboBoxItem);
             }
         }
 

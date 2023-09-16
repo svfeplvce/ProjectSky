@@ -4430,6 +4430,69 @@
       "name": "Aqua Cutter",
       "type": 10,
       "power": 70
+    },
+    {
+      "devName": "WAZA_MOOBIRUKOUGEKI",
+      "id": 896,
+      "name": "Blazing Torque",
+      "type": 9,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_MOOBIRUKOUGEKI2",
+      "id": 897,
+      "name": "Wicked Torque",
+      "type": 16,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_MOOBIRUKOUGEKI3",
+      "id": 898,
+      "name": "Noxious Torque",
+      "type": 3,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_MOOBIRUKOUGEKI4",
+      "id": 899,
+      "name": "Combat Torque",
+      "type": 1,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_MOOBIRUKOUGEKI5",
+      "id": 900,
+      "name": "Magical Torque",
+      "type": 17,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_BURADDOMUN",
+      "id": 901,
+      "name": "Blood Moon",
+      "type": 0,
+      "power": 140
+    },
+    {
+      "devName": "WAZA_SHAKASHAKAHO",
+      "id": 902,
+      "name": "Matcha Gotcha",
+      "type": 11,
+      "power": 80
+    },
+    {
+      "devName": "WAZA_MITSUAMEKOTO",
+      "id": 903,
+      "name": "Syrup Bomb",
+      "type": 11,
+      "power": 60
+    },
+    {
+      "devName": "WAZA_ONIKANABOO",
+      "id": 904,
+      "name": "Ivy Cudgel",
+      "type": 11,
+      "power": 100
     }
   ]
 }

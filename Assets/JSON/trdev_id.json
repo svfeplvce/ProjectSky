@@ -2151,6 +2151,358 @@
     {
       "dev_id": "zinia_02",
       "name": "Jacq"
+    },
+    {
+      "dev_id": "area01_dlc1_trainer_j_child_m",
+      "name": "Kazuaki"
+    },
+    {
+      "dev_id": "area01_dlc1_trainer_j_child_m_strong",
+      "name": "Kazuaki"
+    },
+    {
+      "dev_id": "area01_dlc1_trainer_j_infant_m",
+      "name": "Makoto"
+    },
+    {
+      "dev_id": "area01_dlc1_trainer_j_infant_m_strong",
+      "name": "Makoto"
+    },
+    {
+      "dev_id": "area01_dlc1_trainer_j_youth_f",
+      "name": "Mayu"
+    },
+    {
+      "dev_id": "area01_dlc1_trainer_j_youth_f_strong",
+      "name": "Mayu"
+    },
+    {
+      "dev_id": "area01_dlc1_trainer_scary_m",
+      "name": "Shinsaku"
+    },
+    {
+      "dev_id": "area01_dlc1_trainer_scary_m_strong",
+      "name": "Shinsaku"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_j_child_m",
+      "name": "Tatsurou"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_j_child_m_strong",
+      "name": "Tatsurou"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_j_infant_m",
+      "name": "Kousei"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_j_infant_m_strong",
+      "name": "Kousei"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_j_youth_f",
+      "name": "Minami"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_j_youth_f_strong",
+      "name": "Minami"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_scary_f",
+      "name": "Kaya"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_scary_f_1",
+      "name": "Kaya"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_scary_f_1_strong",
+      "name": "Kaname"
+    },
+    {
+      "dev_id": "area02_dlc1_trainer_scary_f_strong",
+      "name": "Kaname"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_backpacker",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_backpacker_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_deliverer",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_deliverer_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_j_child_m",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_j_child_m_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_j_infant_m",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_j_infant_m_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_j_youth_f",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_j_youth_f_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_scary_f",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_scary_f_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_scary_m",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area03_dlc1_trainer_scary_m_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area04_dlc1_trainer_mountain",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area04_dlc1_trainer_mountain_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_j_child_m",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_j_child_m_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_j_infant_m",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_j_infant_m_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_j_youth_f",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_j_youth_f_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_mania",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_mania_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_scary_f",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_scary_f_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_scary_m",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area07_dlc1_trainer_scary_m_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area08_dlc1_trainer_businessman",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area08_dlc1_trainer_businessman_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area09_dlc1_trainer_dragontamer",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area09_dlc1_trainer_dragontamer_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area10_dlc1_trainer_j_child_m",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area10_dlc1_trainer_j_child_m_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area10_dlc1_trainer_j_youth_f",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area10_dlc1_trainer_j_youth_f_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area10_dlc1_trainer_karate",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "area10_dlc1_trainer_karate_strong",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "brother_01_01",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_01_strong",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_02",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_02_strong",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_03",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_03_strong",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_04",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_04_strong",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_05",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "brother_01_05_strong",
+      "name": "Kieran"
+    },
+    {
+      "dev_id": "camera_01_01",
+      "name": "Perrin"
+    },
+    {
+      "dev_id": "serebu_01",
+      "name": "O'Nare"
+    },
+    {
+      "dev_id": "serebu_02",
+      "name": "O'Nare"
+    },
+    {
+      "dev_id": "serevy_03",
+      "name": "O'Nare"
+    },
+    {
+      "dev_id": "sister_01_01",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_01_01_strong",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_01_02",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_01_02_strong",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_01_03",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_01_03_strong",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_muruchi_01",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_muruchi_01_strong",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_onitaizi",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sister_onitaizi_strong",
+      "name": "Carmine"
+    },
+    {
+      "dev_id": "sp_trainer_01",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "sp_trainer_02",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "sp_trainer_03",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "sp_trainer_04",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "sp_trainer_05",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "sp_trainer_06",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "sp_trainer_07",
+      "name": "NAME_PLACEHOLDER"
+    },
+    {
+      "dev_id": "sp_trainer_boss",
+      "name": "NAME_PLACEHOLDER"
     }
   ]
 }

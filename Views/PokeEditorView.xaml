@@ -209,7 +209,7 @@
                                 <ComboBoxItem Content="Dark"/>
                                 <ComboBoxItem Content="Fairy"/>
                             </hc:ComboBox>
-                            <hc:ComboBox Grid.Row="2" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesComboBoxItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_1}" Width="120" Height="35">
+                            <hc:ComboBox Grid.Row="2" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding Source={x:Static Application.Current}, Path=Properties[abilities]}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_1}" Width="120" Height="35">
                                 <hc:ComboBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <VirtualizingStackPanel/>
@@ -234,7 +234,7 @@
                                 <ComboBoxItem Content="Dragon"/>
                                 <ComboBoxItem Content="Undiscovered"/>
                             </hc:ComboBox>
-                            <hc:ComboBox Grid.Row="3" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesComboBoxItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_2}" Width="120" Height="35">
+                            <hc:ComboBox Grid.Row="3" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding Source={x:Static Application.Current}, Path=Properties[abilities]}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_2}" Width="120" Height="35">
                                 <hc:ComboBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <VirtualizingStackPanel/>
@@ -259,7 +259,7 @@
                                 <ComboBoxItem Content="Dragon"/>
                                 <ComboBoxItem Content="Undiscovered"/>
                             </hc:ComboBox>
-                            <hc:ComboBox Grid.Row="4" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesComboBoxItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_hidden}" Width="120" Height="35">
+                            <hc:ComboBox Grid.Row="4" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding Source={x:Static Application.Current}, Path=Properties[abilities]}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_hidden}" Width="120" Height="35">
                                 <hc:ComboBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <VirtualizingStackPanel/>
@@ -347,7 +347,7 @@
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                                                 <hc:NumericUpDown BorderBrush="{x:Null}" Minimum="1" Maximum="253" Value="{Binding level}" Margin="0 0 5 0" Width="75"/>
-                                                <hc:ComboBox BorderBrush="{x:Null}" ItemsSource="{Binding Path=DataContext.MovesComboBoxItems, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:PokeEditorView}}}" SelectedIndex="{Binding move, Mode=TwoWay}" Width="525" Margin="5 0 0 0">
+                                                <hc:ComboBox BorderBrush="{x:Null}" ItemsSource="{Binding Source={x:Static Application.Current}, Path=Properties[moves]}" SelectedIndex="{Binding move, Mode=TwoWay}" Width="525" Margin="5 0 0 0">
                                                     <hc:ComboBox.ItemsPanel>
                                                         <ItemsPanelTemplate>
                                                             <VirtualizingStackPanel />
