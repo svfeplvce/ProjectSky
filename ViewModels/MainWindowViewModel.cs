@@ -378,7 +378,7 @@ namespace ProjectSky.ViewModels
 
         private async void CheckUpdate()
         {
-            var currentVersion = "2.0.3.2";
+            var currentVersion = "2.0.3.3";
 
             try
             {
