@@ -68,13 +68,13 @@ namespace ProjectSky.ViewModels
             }
         }
 
-        private ObservableCollection<FlagBoxItemViewModel> _flagMenuItems = new ObservableCollection<FlagBoxItemViewModel>();
-        public ObservableCollection<FlagBoxItemViewModel> FlagMenuItems
+        private ObservableCollection<FlagBoxItemViewModel> _flagComboBoxItems = new ObservableCollection<FlagBoxItemViewModel>();
+        public ObservableCollection<FlagBoxItemViewModel> FlagComboBoxItems
         {
-            get => _flagMenuItems;
+            get => _flagComboBoxItems;
             set
             {
-                _flagMenuItems = value;
+                _flagComboBoxItems = value;
                 OnPropertyChanged();
             }
         }
@@ -144,31 +144,31 @@ namespace ProjectSky.ViewModels
 
         private async Task FillList()
         {
-            FlagMenuItems.Clear();
+            FlagComboBoxItems.Clear();
             List<Tuple<string, string>> moveAttributes = new List<Tuple<string, string>> { Tuple.Create("can_use_move", "In the game?"), Tuple.Create("flag_protect", "Affected by protect?"), Tuple.Create("flag_mirror", "Can be mirrored?"), Tuple.Create("flag_makes_contact", "Makes contact?"), Tuple.Create("flag_metronome", "Selectable by metronome?"), Tuple.Create("flag_punch", "Is a punch move?"), Tuple.Create("flag_no_effectiveness", "No effectiveness?"), Tuple.Create("flag_charge", "Can be boosted by charge?"), Tuple.Create("flag_no_sleep_talk", "Can't be used by sleep talk?"), Tuple.Create("flag_fail_instruct", "Can make instruct fail?"), Tuple.Create("flag_snatch", "Affected by snatch?"), Tuple.Create("flag_dance", "Is a dance move?"), Tuple.Create("flag_slicing", "Is a slicing move?"), Tuple.Create("flag_distance_triple", "Can hit Bounce/Sky Attack?"), Tuple.Create("flag_wind", "Is a wind move?"), Tuple.Create("flag_reflectable", "Is reflectable?"), Tuple.Create("flag_ignore_substitute", "Ignores substitute?"), Tuple.Create("flag_animate_ally", "Swaps enemy Pokemon?"), Tuple.Create("flag_no_assist", "No assist?"), Tuple.Create("flag_fail_copy_cat", "Can make copy cat fail?"), Tuple.Create("flag_gravity", "Affected by gravity?"), Tuple.Create("flag_fail_sky_battle", "Can fail in sky battle?"), Tuple.Create("flag_bite", "Is a bite move?"), Tuple.Create("flag_sound", "Is a sound move?") };
             for (var x = 0; x < 24; x++)
             {
                 if (SelectedMove.Name == "None")
                 {
-                    var menuItem = new FlagBoxItemViewModel();
-                    menuItem.Value = moveAttributes[x].Item2;
-                    menuItem.IsChecked = false;
-                    menuItem.Flag = moveAttributes[x].Item1;
-                    FlagMenuItems.Add(menuItem);
+                    var ComboBoxItem = new FlagBoxItemViewModel();
+                    ComboBoxItem.Value = moveAttributes[x].Item2;
+                    ComboBoxItem.IsChecked = false;
+                    ComboBoxItem.Flag = moveAttributes[x].Item1;
+                    FlagComboBoxItems.Add(ComboBoxItem);
                 }
                 else
                 {
-                    var menuItem = new FlagBoxItemViewModel();
-                    menuItem.Value = moveAttributes[x].Item2;
+                    var ComboBoxItem = new FlagBoxItemViewModel();
+                    ComboBoxItem.Value = moveAttributes[x].Item2;
                     object propertyValue = SelectedMove.Data.GetType().GetProperty(moveAttributes[x].Item1)?.GetValue(SelectedMove.Data);
                     bool flag = propertyValue != null ? (bool)propertyValue : false;
                     if (flag)
                     {
-                        menuItem.IsChecked = true;
+                        ComboBoxItem.IsChecked = true;
                     }
-                    else menuItem.IsChecked = false;
-                    menuItem.Flag = moveAttributes[x].Item1;
-                    FlagMenuItems.Add(menuItem);
+                    else ComboBoxItem.IsChecked = false;
+                    ComboBoxItem.Flag = moveAttributes[x].Item1;
+                    FlagComboBoxItems.Add(ComboBoxItem);
                 }
             }
         }

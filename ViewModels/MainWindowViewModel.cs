@@ -41,9 +41,9 @@ namespace ProjectSky.ViewModels
         public RelayCommand MinimiseCommand { get; }
         public RelayCommand DropdownCommand { get; }
         public RelayCommand GoBackCommand { get; }
-        public RelayCommand SelectMenuItemCommand { get; }
+        public RelayCommand SelectComboBoxItemCommand { get; }
         
-        public ObservableCollection<string> MenuItems { get; } = new ObservableCollection<string> { "Edit Config", "Minimise", "Close" };
+        public ObservableCollection<string> ComboBoxItems { get; } = new ObservableCollection<string> { "Edit Config", "Minimise", "Close" };
 
         private bool _isDropdownOpen;
         public bool IsDropdownOpen
@@ -73,7 +73,7 @@ namespace ProjectSky.ViewModels
             MinimiseCommand = new RelayCommand(o => { MinimiseWindow(); }, o => true);
             DropdownCommand = new RelayCommand(o => { OpenCtxDropdown(); }, o => true);
             GoBackCommand = new RelayCommand(o => { GoBack(); }, o => true);
-            SelectMenuItemCommand = new RelayCommand(o => { SelectMenuItem(o); }, o => true);
+            SelectComboBoxItemCommand = new RelayCommand(o => { SelectComboBoxItem(o); }, o => true);
 
             // init the config.json file if one does not exist
             var configLocation = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "config.json");
@@ -326,12 +326,12 @@ namespace ProjectSky.ViewModels
             }
         }
 
-        private void SelectMenuItem(object menuItem)
+        private void SelectComboBoxItem(object ComboBoxItem)
         {
             var current = NavigationService.CurrentView;
-            if (menuItem is string selectedMenuItem)
+            if (ComboBoxItem is string selectedComboBoxItem)
             {
-                switch (selectedMenuItem)
+                switch (selectedComboBoxItem)
                 {
                     case "Edit Config":
                         Window config = new Views.Config();
@@ -378,7 +378,7 @@ namespace ProjectSky.ViewModels
 
         private async void CheckUpdate()
         {
-            var currentVersion = "2.0.3";
+            var currentVersion = "2.0.3.2";
 
             try
             {

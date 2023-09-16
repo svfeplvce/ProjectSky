@@ -75,7 +75,7 @@
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.Row="0" Text="Auto Update" Foreground="White" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Gill}"/>
-                        <hc:ComboBox Grid.Row="1" Width="300" Foreground="White" SelectedItem="{Binding Path=UpdateConf}" ItemsSource="{Binding UpdateOptions}"  SelectionChanged="ComboBox_SelectionChanged"/>
+                        <hc:ComboBox Grid.Row="1" Width="300" BorderBrush="{x:Null}" Foreground="White" SelectedItem="{Binding Path=UpdateConf}" ItemsSource="{Binding UpdateOptions}" HorizontalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged"/>
 
                     </Grid>
 

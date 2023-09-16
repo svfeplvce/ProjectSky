@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectSky.Models
 {
-    public class ComboBoxItem
+    public class ComboBoxItemSky
     {
         public string DisplayName { get; set; }
         public string DevName { get; set; }

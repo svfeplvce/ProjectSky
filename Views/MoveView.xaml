@@ -42,7 +42,7 @@
 
                 <ScrollViewer Grid.Row="1" Grid.Column="0" Background="#202020" Margin="5">
                     <StackPanel Orientation="Vertical">
-                        <ItemsControl ItemsSource="{Binding FlagMenuItems}" >
+                        <ItemsControl ItemsSource="{Binding FlagComboBoxItems}" >
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate DataType="{x:Type vm:FlagBoxItemViewModel}">
                                     <CheckBox Content="{Binding Value}" IsChecked="{Binding IsChecked}" Command="{Binding Path=DataContext.ToggleCheckBoxCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MoveView}}}" CommandParameter="{Binding}"/>

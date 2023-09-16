@@ -150,43 +150,43 @@ namespace ProjectSky.ViewModels
         public readonly ObservableCollection<string> Moves = Application.Current.Properties["moves"] as ObservableCollection<string>;
         public readonly ObservableCollection<string> SpeciesNames = Application.Current.Properties["species"] as ObservableCollection<string>;
         public readonly ObservableCollection<string> Items = Application.Current.Properties["items"] as ObservableCollection<string>;
-        private ObservableCollection<MenuItem> _abilitiesMenuItems = new ObservableCollection<MenuItem> { };
-        public ObservableCollection<MenuItem> AbilitiesMenuItems
+        private ObservableCollection<ComboBoxItem> _abilitiesComboBoxItems = new ObservableCollection<ComboBoxItem> { };
+        public ObservableCollection<ComboBoxItem> AbilitiesComboBoxItems
         {
-            get => _abilitiesMenuItems;
+            get => _abilitiesComboBoxItems;
             set
             {
-                _abilitiesMenuItems = value;
+                _abilitiesComboBoxItems = value;
                 OnPropertyChanged();
             }
         }
-        private ObservableCollection<Models.ComboBoxItem> _itemsMenuItems = new ObservableCollection<Models.ComboBoxItem> { };
-        public ObservableCollection<Models.ComboBoxItem> ItemsMenuItems
+        private ObservableCollection<Models.ComboBoxItemSky> _itemsComboBoxItems = new ObservableCollection<Models.ComboBoxItemSky> { };
+        public ObservableCollection<Models.ComboBoxItemSky> ItemsComboBoxItems
         {
-            get => _itemsMenuItems;
+            get => _itemsComboBoxItems;
             set
             {
-                _itemsMenuItems = value;
+                _itemsComboBoxItems = value;
                 OnPropertyChanged();
             }
         }
-        private ObservableCollection<CheckBoxItemViewModel> _tmMenuItems = new ObservableCollection<CheckBoxItemViewModel>();
-        public ObservableCollection<CheckBoxItemViewModel> TMMenuItems
+        private ObservableCollection<CheckBoxItemViewModel> _tmComboBoxItems = new ObservableCollection<CheckBoxItemViewModel>();
+        public ObservableCollection<CheckBoxItemViewModel> TMComboBoxItems
         {
-            get => _tmMenuItems;
+            get => _tmComboBoxItems;
             set
             {
-                _tmMenuItems = value;
+                _tmComboBoxItems = value;
                 OnPropertyChanged();
             }
         }
-        private ObservableCollection<MenuItem> _movesMenuItems = new ObservableCollection<MenuItem>();
-        public ObservableCollection<MenuItem> MovesMenuItems
+        private ObservableCollection<ComboBoxItem> _movesComboBoxItems = new ObservableCollection<ComboBoxItem>();
+        public ObservableCollection<ComboBoxItem> MovesComboBoxItems
         {
-            get => _movesMenuItems;
+            get => _movesComboBoxItems;
             set
             {
-                _movesMenuItems = value;
+                _movesComboBoxItems = value;
                 OnPropertyChanged();
             }
         }
@@ -243,10 +243,10 @@ namespace ProjectSky.ViewModels
             {
                 IsLoaded = false;
                 PlibItems.Clear();
-                AbilitiesMenuItems.Clear();
-                ItemsMenuItems.Clear();
-                TMMenuItems.Clear();
-                MovesMenuItems.Clear();
+                AbilitiesComboBoxItems.Clear();
+                ItemsComboBoxItems.Clear();
+                TMComboBoxItems.Clear();
+                MovesComboBoxItems.Clear();
                 SelectorParamsToSend parameter = (SelectorParamsToSend)NavigationService.GetParameter<PokeEditorViewModel>();
                 PokeIndex = parameter.PokeNum;
                 PokeName = parameter.PokeName;
@@ -333,13 +333,13 @@ namespace ProjectSky.ViewModels
                 {
                     for (var i = 0; i < Items.Count; i += batchSize)
                     {
-                        var batch = new List<Models.ComboBoxItem>();
+                        var batch = new List<Models.ComboBoxItemSky>();
 
                         for (var j = i; j < Math.Min(i + batchSize, Items.Count); j++)
                         {
                             string name;
                             string devName;
-                            var menuItem = new Models.ComboBoxItem();
+                            var ComboBoxItem = new Models.ComboBoxItemSky();
                             var y = ItemDevID.items.Exists(z => z.id == j) ? ItemDevID.items.First(z => z.id == j).devName : "";
                             if (Items[j] == "???")
                             {
@@ -351,14 +351,14 @@ namespace ProjectSky.ViewModels
                                 name = Items[j];
                                 devName = y;
                             }
-                            menuItem.DisplayName = name;
-                            menuItem.DevName = devName;
-                            batch.Add(menuItem);
+                            ComboBoxItem.DisplayName = name;
+                            ComboBoxItem.DevName = devName;
+                            batch.Add(ComboBoxItem);
                         }
 
                         Application.Current.Dispatcher.Invoke(() =>
                         {
-                            ItemsMenuItems.AddRange(batch);
+                            ItemsComboBoxItems.AddRange(batch);
                         });
 
                         Thread.Sleep(delay);
@@ -371,9 +371,9 @@ namespace ProjectSky.ViewModels
         {
             foreach (var x in Abilities)
             {
-                var menuItem = new MenuItem();
-                menuItem.Header = x;
-                AbilitiesMenuItems.Add(menuItem);
+                var ComboBoxItem = new ComboBoxItem();
+                ComboBoxItem.Content = x;
+                AbilitiesComboBoxItems.Add(ComboBoxItem);
             }
         }
 
@@ -381,9 +381,9 @@ namespace ProjectSky.ViewModels
         {
             foreach (var x in Moves)
             {
-                var menuItem = new MenuItem();
-                menuItem.Header = x;
-                MovesMenuItems.Add(menuItem);
+                var ComboBoxItem = new ComboBoxItem();
+                ComboBoxItem.Content = x;
+                MovesComboBoxItems.Add(ComboBoxItem);
             }
         }
 
@@ -391,15 +391,15 @@ namespace ProjectSky.ViewModels
         {
             for (var x = 0; x < tmList.Count; x++)
             {
-                var menuItem = new CheckBoxItemViewModel();
-                menuItem.Value = tmList[x];
+                var ComboBoxItem = new CheckBoxItemViewModel();
+                ComboBoxItem.Value = tmList[x];
                 if (_currentSpecies.EntryInfo.tm_moves.Contains(Moves.IndexOf(tmList[x])))
                 {
-                    menuItem.IsChecked = true;
+                    ComboBoxItem.IsChecked = true;
                 }
-                else menuItem.IsChecked = false;
-                menuItem.Index = Moves.IndexOf(tmList[x]);
-                TMMenuItems.Add(menuItem);
+                else ComboBoxItem.IsChecked = false;
+                ComboBoxItem.Index = Moves.IndexOf(tmList[x]);
+                TMComboBoxItems.Add(ComboBoxItem);
             }
         }
         

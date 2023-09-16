@@ -170,46 +170,46 @@
                             <TextBlock Grid.Row="8" Grid.Column="4" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" Text=" Hatch Cycles" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
                             <hc:ComboBox Grid.Row="1" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" SelectedIndex="{Binding CurrentSpecies.EntryInfo.type_1}" Width="120" Height="35">
-                                <MenuItem Header="Normal"/>
-                                <MenuItem Header="Fighting"/>
-                                <MenuItem Header="Flying"/>
-                                <MenuItem Header="Poison"/>
-                                <MenuItem Header="Ground"/>
-                                <MenuItem Header="Rock"/>
-                                <MenuItem Header="Bug"/>
-                                <MenuItem Header="Ghost"/>
-                                <MenuItem Header="Steel"/>
-                                <MenuItem Header="Fire"/>
-                                <MenuItem Header="Water"/>
-                                <MenuItem Header="Grass"/>
-                                <MenuItem Header="Electric"/>
-                                <MenuItem Header="Psychic"/>
-                                <MenuItem Header="Ice"/>
-                                <MenuItem Header="Dragon"/>
-                                <MenuItem Header="Dark"/>
-                                <MenuItem Header="Fairy"/>
+                                <ComboBoxItem Content="Normal"/>
+                                <ComboBoxItem Content="Fighting"/>
+                                <ComboBoxItem Content="Flying"/>
+                                <ComboBoxItem Content="Poison"/>
+                                <ComboBoxItem Content="Ground"/>
+                                <ComboBoxItem Content="Rock"/>
+                                <ComboBoxItem Content="Bug"/>
+                                <ComboBoxItem Content="Ghost"/>
+                                <ComboBoxItem Content="Steel"/>
+                                <ComboBoxItem Content="Fire"/>
+                                <ComboBoxItem Content="Water"/>
+                                <ComboBoxItem Content="Grass"/>
+                                <ComboBoxItem Content="Electric"/>
+                                <ComboBoxItem Content="Psychic"/>
+                                <ComboBoxItem Content="Ice"/>
+                                <ComboBoxItem Content="Dragon"/>
+                                <ComboBoxItem Content="Dark"/>
+                                <ComboBoxItem Content="Fairy"/>
                             </hc:ComboBox>
                             <hc:ComboBox Grid.Row="1" Grid.Column="2" Background="#1F1F1F" BorderBrush="#252525" SelectedIndex="{Binding CurrentSpecies.EntryInfo.type_2}" Width="120" Height="35">
-                                <MenuItem Header="Normal"/>
-                                <MenuItem Header="Fighting"/>
-                                <MenuItem Header="Flying"/>
-                                <MenuItem Header="Poison"/>
-                                <MenuItem Header="Ground"/>
-                                <MenuItem Header="Rock"/>
-                                <MenuItem Header="Bug"/>
-                                <MenuItem Header="Ghost"/>
-                                <MenuItem Header="Steel"/>
-                                <MenuItem Header="Fire"/>
-                                <MenuItem Header="Water"/>
-                                <MenuItem Header="Grass"/>
-                                <MenuItem Header="Electric"/>
-                                <MenuItem Header="Psychic"/>
-                                <MenuItem Header="Ice"/>
-                                <MenuItem Header="Dragon"/>
-                                <MenuItem Header="Dark"/>
-                                <MenuItem Header="Fairy"/>
+                                <ComboBoxItem Content="Normal"/>
+                                <ComboBoxItem Content="Fighting"/>
+                                <ComboBoxItem Content="Flying"/>
+                                <ComboBoxItem Content="Poison"/>
+                                <ComboBoxItem Content="Ground"/>
+                                <ComboBoxItem Content="Rock"/>
+                                <ComboBoxItem Content="Bug"/>
+                                <ComboBoxItem Content="Ghost"/>
+                                <ComboBoxItem Content="Steel"/>
+                                <ComboBoxItem Content="Fire"/>
+                                <ComboBoxItem Content="Water"/>
+                                <ComboBoxItem Content="Grass"/>
+                                <ComboBoxItem Content="Electric"/>
+                                <ComboBoxItem Content="Psychic"/>
+                                <ComboBoxItem Content="Ice"/>
+                                <ComboBoxItem Content="Dragon"/>
+                                <ComboBoxItem Content="Dark"/>
+                                <ComboBoxItem Content="Fairy"/>
                             </hc:ComboBox>
-                            <hc:ComboBox Grid.Row="2" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesMenuItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_1}" Width="120" Height="35">
+                            <hc:ComboBox Grid.Row="2" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesComboBoxItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_1}" Width="120" Height="35">
                                 <hc:ComboBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <VirtualizingStackPanel/>
@@ -217,24 +217,24 @@
                                 </hc:ComboBox.ItemsPanel>
                             </hc:ComboBox>
                             <hc:ComboBox Grid.Row="2" Grid.Column="2" Background="#1F1F1F" BorderBrush="#252525" SelectedIndex="{Binding CurrentSpecies.EntryInfo.egg_group_1}" Width="120" Height="35">
-                                <MenuItem Header="None"/>
-                                <MenuItem Header="Monster"/>
-                                <MenuItem Header="Water-1"/>
-                                <MenuItem Header="Bug"/>
-                                <MenuItem Header="Flying"/>
-                                <MenuItem Header="Field"/>
-                                <MenuItem Header="Fairy"/>
-                                <MenuItem Header="Grass"/>
-                                <MenuItem Header="Humanlike"/>
-                                <MenuItem Header="Water-3"/>
-                                <MenuItem Header="Mineral"/>
-                                <MenuItem Header="Amorphous"/>
-                                <MenuItem Header="Water-2"/>
-                                <MenuItem Header="Ditto"/>
-                                <MenuItem Header="Dragon"/>
-                                <MenuItem Header="Undiscovered"/>
+                                <ComboBoxItem Content="None"/>
+                                <ComboBoxItem Content="Monster"/>
+                                <ComboBoxItem Content="Water-1"/>
+                                <ComboBoxItem Content="Bug"/>
+                                <ComboBoxItem Content="Flying"/>
+                                <ComboBoxItem Content="Field"/>
+                                <ComboBoxItem Content="Fairy"/>
+                                <ComboBoxItem Content="Grass"/>
+                                <ComboBoxItem Content="Humanlike"/>
+                                <ComboBoxItem Content="Water-3"/>
+                                <ComboBoxItem Content="Mineral"/>
+                                <ComboBoxItem Content="Amorphous"/>
+                                <ComboBoxItem Content="Water-2"/>
+                                <ComboBoxItem Content="Ditto"/>
+                                <ComboBoxItem Content="Dragon"/>
+                                <ComboBoxItem Content="Undiscovered"/>
                             </hc:ComboBox>
-                            <hc:ComboBox Grid.Row="3" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesMenuItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_2}" Width="120" Height="35">
+                            <hc:ComboBox Grid.Row="3" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesComboBoxItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_2}" Width="120" Height="35">
                                 <hc:ComboBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <VirtualizingStackPanel/>
@@ -242,24 +242,24 @@
                                 </hc:ComboBox.ItemsPanel>
                             </hc:ComboBox>
                             <hc:ComboBox Grid.Row="3" Grid.Column="2" Background="#1F1F1F" BorderBrush="#252525" SelectedIndex="{Binding CurrentSpecies.EntryInfo.egg_group_2}" Width="120" Height="35">
-                                <MenuItem Header="None"/>
-                                <MenuItem Header="Monster"/>
-                                <MenuItem Header="Water-1"/>
-                                <MenuItem Header="Bug"/>
-                                <MenuItem Header="Flying"/>
-                                <MenuItem Header="Field"/>
-                                <MenuItem Header="Fairy"/>
-                                <MenuItem Header="Grass"/>
-                                <MenuItem Header="Humanlike"/>
-                                <MenuItem Header="Water-3"/>
-                                <MenuItem Header="Mineral"/>
-                                <MenuItem Header="Amorphous"/>
-                                <MenuItem Header="Water-2"/>
-                                <MenuItem Header="Ditto"/>
-                                <MenuItem Header="Dragon"/>
-                                <MenuItem Header="Undiscovered"/>
+                                <ComboBoxItem Content="None"/>
+                                <ComboBoxItem Content="Monster"/>
+                                <ComboBoxItem Content="Water-1"/>
+                                <ComboBoxItem Content="Bug"/>
+                                <ComboBoxItem Content="Flying"/>
+                                <ComboBoxItem Content="Field"/>
+                                <ComboBoxItem Content="Fairy"/>
+                                <ComboBoxItem Content="Grass"/>
+                                <ComboBoxItem Content="Humanlike"/>
+                                <ComboBoxItem Content="Water-3"/>
+                                <ComboBoxItem Content="Mineral"/>
+                                <ComboBoxItem Content="Amorphous"/>
+                                <ComboBoxItem Content="Water-2"/>
+                                <ComboBoxItem Content="Ditto"/>
+                                <ComboBoxItem Content="Dragon"/>
+                                <ComboBoxItem Content="Undiscovered"/>
                             </hc:ComboBox>
-                            <hc:ComboBox Grid.Row="4" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesMenuItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_hidden}" Width="120" Height="35">
+                            <hc:ComboBox Grid.Row="4" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding AbilitiesComboBoxItems}" SelectedIndex="{Binding CurrentSpecies.EntryInfo.ability_hidden}" Width="120" Height="35">
                                 <hc:ComboBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <VirtualizingStackPanel/>
@@ -267,14 +267,14 @@
                                 </hc:ComboBox.ItemsPanel>
                             </hc:ComboBox>
                             <hc:ComboBox Grid.Row="4" Grid.Column="2" Background="#1F1F1F" BorderBrush="#252525" SelectedIndex="{Binding CurrentSpecies.EntryInfo.xp_growth}" Width="120" Height="35">
-                                <MenuItem Header="Medium Fast"/>
-                                <MenuItem Header="Erratic"/>
-                                <MenuItem Header="Fluctuating"/>
-                                <MenuItem Header="Medium Slow"/>
-                                <MenuItem Header="Fast"/>
-                                <MenuItem Header="Slow"/>
+                                <ComboBoxItem Content="Medium Fast"/>
+                                <ComboBoxItem Content="Erratic"/>
+                                <ComboBoxItem Content="Fluctuating"/>
+                                <ComboBoxItem Content="Medium Slow"/>
+                                <ComboBoxItem Content="Fast"/>
+                                <ComboBoxItem Content="Slow"/>
                             </hc:ComboBox>
-                            <hc:ComboBox Grid.Row="5" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding ItemsMenuItems}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" DisplayMemberPath="DisplayName" SelectedValuePath="DevName" SelectedValue="{Binding HeldItemDevName}" Visibility="{Binding HasPokeData, Converter={StaticResource BooleanToVisibilityConverter}}"  Width="120" Height="35">
+                            <hc:ComboBox Grid.Row="5" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" ItemsSource="{Binding ItemsComboBoxItems}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" DisplayMemberPath="DisplayName" SelectedValuePath="DevName" SelectedValue="{Binding HeldItemDevName}" Visibility="{Binding HasPokeData, Converter={StaticResource BooleanToVisibilityConverter}}"  Width="120" Height="35">
                                 <hc:ComboBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <VirtualizingStackPanel/>
@@ -282,10 +282,10 @@
                                 </hc:ComboBox.ItemsPanel>
                             </hc:ComboBox>
                             <hc:ComboBox Grid.Row="6" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" SelectedIndex="{Binding CurrentSpecies.EntryInfo.gender.group}" Width="120" Height="35">
-                                <MenuItem Header="Male/Female"/>
-                                <MenuItem Header="Male Only"/>
-                                <MenuItem Header="Female Only"/>
-                                <MenuItem Header="Genderless"/>
+                                <ComboBoxItem Content="Male/Female"/>
+                                <ComboBoxItem Content="Male Only"/>
+                                <ComboBoxItem Content="Female Only"/>
+                                <ComboBoxItem Content="Genderless"/>
                             </hc:ComboBox>
                             <hc:NumericUpDown Grid.Row="5" Grid.Column="2" Background="#1F1F1F" BorderBrush="#252525" Foreground="White" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="120" Height="35" Minimum="1" Maximum="100" Value="{Binding CurrentSpecies.PokeDataInfo.bringItem.bringRate}"  Visibility="{Binding HasPokeData, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                             <hc:NumericUpDown Grid.Row="6" Grid.Column="2" Background="#1F1F1F" BorderBrush="#252525" Foreground="White" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="120" Height="35" Minimum="1" Maximum="100" Value="{Binding CurrentSpecies.EntryInfo.gender.ratio}"/>
@@ -347,7 +347,7 @@
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                                                 <hc:NumericUpDown BorderBrush="{x:Null}" Minimum="1" Maximum="253" Value="{Binding level}" Margin="0 0 5 0" Width="75"/>
-                                                <hc:ComboBox BorderBrush="{x:Null}" ItemsSource="{Binding Path=DataContext.MovesMenuItems, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:PokeEditorView}}}" SelectedIndex="{Binding move, Mode=TwoWay}" Width="525" Margin="5 0 0 0">
+                                                <hc:ComboBox BorderBrush="{x:Null}" ItemsSource="{Binding Path=DataContext.MovesComboBoxItems, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:PokeEditorView}}}" SelectedIndex="{Binding move, Mode=TwoWay}" Width="525" Margin="5 0 0 0">
                                                     <hc:ComboBox.ItemsPanel>
                                                         <ItemsPanelTemplate>
                                                             <VirtualizingStackPanel />
@@ -364,7 +364,7 @@
 
                     <ScrollViewer Grid.Row="1" Grid.Column="2" Background="#202020" Margin="5">
                         <StackPanel Orientation="Vertical">
-                            <ItemsControl ItemsSource="{Binding TMMenuItems}" >
+                            <ItemsControl ItemsSource="{Binding TMComboBoxItems}" >
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate DataType="{x:Type vm:CheckBoxItemViewModel}">
                                         <CheckBox Content="{Binding Value}" IsChecked="{Binding IsChecked}" Command="{Binding Path=DataContext.ToggleCheckBoxCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:PokeEditorView}}}" CommandParameter="{Binding}"/>

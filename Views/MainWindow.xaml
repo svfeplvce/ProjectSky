@@ -50,11 +50,11 @@
                                     <VirtualizingStackPanel/>
                                 </ItemsPanelTemplate>
                             </ContextMenu.ItemsPanel>
-                            <MenuItem Header="Edit Config" Command="{Binding SelectMenuItemCommand}" CommandParameter="Edit Config"/>
-                            <MenuItem Header="Save" Command="{Binding SelectMenuItemCommand}" CommandParameter="Save" Visibility="{Binding NavigationService.IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                            <MenuItem Header="Reset" Command="{Binding SelectMenuItemCommand}" CommandParameter="Reset" Visibility="{Binding NavigationService.IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                            <MenuItem Header="Minimise" Command="{Binding SelectMenuItemCommand}" CommandParameter="Minimise"/>
-                            <MenuItem Header="Close" Command="{Binding SelectMenuItemCommand}" CommandParameter="Close"/>
+                            <MenuItem Header="Edit Config" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Edit Config"/>
+                            <MenuItem Header="Save" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Save" Visibility="{Binding NavigationService.IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            <MenuItem Header="Reset" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Reset" Visibility="{Binding NavigationService.IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                            <MenuItem Header="Minimise" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Minimise"/>
+                            <MenuItem Header="Close" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Close"/>
                         </ContextMenu>
                     </Button.ContextMenu>
                 </Button>
