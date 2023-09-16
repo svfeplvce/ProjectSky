@@ -425,7 +425,15 @@ namespace ProjectSky.ViewModels
                     Save();
                     NavigationService.NavigateTo<SelectorViewModel>();
                 }
-                else return;
+                else
+                {
+                    var results2 = MessageBox.Show("Exit without saving?", "Caution", MessageBoxButton.YesNo);
+                    if (results2 == MessageBoxResult.Yes)
+                    {
+                        NavigationService.NavigateTo<SelectorViewModel>();
+                    }
+                    else return;
+                }
             } catch (Exception ex) {
                 Console.WriteLine(ex);
             }

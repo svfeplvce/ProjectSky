@@ -113,16 +113,17 @@ namespace ProjectSky.ViewModels
                     tb.FontFamily = (System.Windows.Media.FontFamily)Application.Current.FindResource("Gill");
                     tb.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255,255,255,255));
                     panel.Children.Add(tb);
-                    var monName = pictureNames[num - 1].Replace("alola", "").Replace("galar", "").Replace("paldea", "").Replace("megax", "").Replace("megay", "").Replace("mega", "").Replace("hisui", "").Replace("origin", "").Replace("primal", "").Replace("-wellspring", "").Replace("-hearthflame", "").Replace("-cornerstone", "").Replace("-bloodmoon", "");
-                    int formNum = 0;
-                    for (int num2 = 0; num2 < pictureNames.Count; num2 ++)
+                    var monName = pictureNames[num-1] == "yanmega" || pictureNames[num-1] == "meganium" ? pictureNames[num-1] : pictureNames[num - 1].Replace("alola", "").Replace("galar", "").Replace("paldea", "").Replace("megax", "").Replace("megay", "").Replace("mega", "").Replace("hisui", "").Replace("origin", "").Replace("primal", "").Replace("-wellspring", "").Replace("-hearthflame", "").Replace("-cornerstone", "").Replace("-bloodmoon", "");
+                    int formNum1 = 0;
+                    for (int num2 = 0; num2 < num - 1; num2 ++)
                     {
-                        if (pictureNames[num2].Contains(monName) && num2 < num - 1)
+                        if (pictureNames[num2].Contains(monName))
                         {
-                            formNum++;
+                            formNum1++;
                         }
                     }
                     int currentNum = num;
+                    int formNum = formNum1;
                     ImageButtons.Add(new ButtonModel(panel, new RelayCommand(o => { NavigationService.NavigateTo<PokeEditorViewModel>(new SelectorParamsToSend { PokeNum = currentNum, FormNum = formNum, Personal = _personal, Plib = _plib, PokeData = _pdata, PokeName = buttonNames[currentNum - 1] }); }, o => true)));
                 }
                 catch (Exception ex)
