@@ -481,7 +481,11 @@ namespace ProjectSky.ViewModels
                     CurrentSpecies.PokeDataInfo.bringItem.itemID = HeldItemDevName;
                 }
 
-                _personalNew.entry[PokeIndex] = CurrentSpecies.EntryInfo;
+                var devName = PokeDevID.values.First(y => y.devName == CurrentSpecies.DevID).id;
+                var personalEntry = _personalNew.entry.FirstOrDefault(x => x.species.species == devName);
+
+                personalEntry = CurrentSpecies.EntryInfo;
+
                 if (HasPokeData)
                 {
                     var entry = _pdataNew.values.First(x => x.devid == CurrentSpecies.DevID);

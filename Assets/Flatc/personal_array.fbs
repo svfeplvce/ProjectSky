@@ -74,7 +74,7 @@ table Personal {
     base_friendship: uint8;
     exp_addend: int16;
     evo_stage: uint8;
-    type_change_disallowed: bool;
+    unk_flag: bool;
     ev_yield: StatInfo;
     base_stats: StatInfo;
     evo_data:[EvoData];

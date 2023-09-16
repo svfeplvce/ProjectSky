@@ -12,10 +12,15 @@
     <None Remove="Assets\Fonts\BankGothic.ttf" />
     <None Remove="Assets\Fonts\DripIcons.ttf" />
     <None Remove="Assets\Fonts\Montserrat.ttf" />
+    <None Remove="Assets\JSON\personal_array.json~RF1090c832.TMP" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\**\*.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Remove="Assets\JSON\personal_array.json~RF1090c832.TMP" />
   </ItemGroup>
 
   <ItemGroup>

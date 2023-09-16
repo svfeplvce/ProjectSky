@@ -180,6 +180,23 @@ namespace ProjectSky.ViewModels
                 var plibBFBSPath = Path.Combine(configVals.outPath, "plib_item_conversion_array.bfbs");
                 var pdataBFBSPath = Path.Combine(configVals.outPath, "pokedata_array.bfbs");
 
+                if (File.Exists(personalFBSPath))
+                {
+                    File.Delete(personalFBSPath);
+                }
+                if (File.Exists(tempExePath))
+                {
+                    File.Delete(tempExePath);
+                }
+                if (File.Exists(plibBFBSPath))
+                {
+                    File.Delete(plibBFBSPath);
+                }
+                if (File.Exists(pdataBFBSPath))
+                {
+                    File.Delete(pdataBFBSPath);
+                }
+
                 byte[] exebytes = new byte[(int)flatcExe.Length];
                 byte[] pbytes = new byte[(int)personalFBS.Length];
                 byte[] plbytes = new byte[(int)plibBFBS.Length];
