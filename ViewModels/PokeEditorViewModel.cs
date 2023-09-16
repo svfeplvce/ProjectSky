@@ -482,7 +482,7 @@ namespace ProjectSky.ViewModels
                 }
 
                 var devName = PokeDevID.values.First(y => y.devName == CurrentSpecies.DevID).id;
-                var personalEntry = _personalNew.entry.FirstOrDefault(x => x.species.species == devName);
+                var personalEntry = _personalNew.entry.FirstOrDefault(x => x.species.species == devName && x.species.form == PokeForm);
 
                 personalEntry = CurrentSpecies.EntryInfo;
 
