@@ -113,7 +113,7 @@ namespace ProjectSky.ViewModels
                     tb.FontFamily = (System.Windows.Media.FontFamily)Application.Current.FindResource("Gill");
                     tb.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255,255,255,255));
                     panel.Children.Add(tb);
-                    var monName = pictureNames[num-1] == "yanmega" || pictureNames[num-1] == "meganium" ? pictureNames[num-1] : pictureNames[num - 1].Replace("alola", "").Replace("galar", "").Replace("paldea", "").Replace("megax", "").Replace("megay", "").Replace("mega", "").Replace("hisui", "").Replace("origin", "").Replace("primal", "").Replace("-wellspring", "").Replace("-hearthflame", "").Replace("-cornerstone", "").Replace("-bloodmoon", "");
+                    var monName = pictureNames[num-1] == "yanmega" || pictureNames[num-1] == "meganium" ? pictureNames[num-1] : pictureNames[num - 1].Replace("fire", "").Replace("water", "").Replace("alola", "").Replace("galar", "").Replace("paldea", "").Replace("megax", "").Replace("megay", "").Replace("mega", "").Replace("hisui", "").Replace("origin", "").Replace("primal", "").Replace("-wellspring", "").Replace("-hearthflame", "").Replace("-cornerstone", "").Replace("-bloodmoon", "").Replace("therian", "");
                     int formNum1 = 0;
                     for (int num2 = 0; num2 < num - 1; num2 ++)
                     {
