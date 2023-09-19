@@ -109,12 +109,7 @@ namespace ProjectSky.ViewModels
         {
             NavigationService = navService;
             NavigationService.NavigatedToViewModel += OnNavigatedToViewModel;
-            var configLocation = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "config.json");
-            using (var r = new StreamReader(configLocation))
-            {
-                var conf = r.ReadToEnd();
-                configVals = JsonSerializer.Deserialize<Config>(conf);
-            }
+            configVals = (Config)Application.Current.Properties["config"];
             ToggleRandomIVCommand = new RelayCommand(o => {ToggleRandomIV(o); }, o => true);
             ToggleRandomMovesCommand = new RelayCommand(o => {ToggleRandomMoves(o); }, o => true);
             ToggleShinyCommand = new RelayCommand(o => {ToggleShiny(o); }, o => true);
@@ -400,6 +395,8 @@ namespace ProjectSky.ViewModels
         {
             try
             {
+                Debug.WriteLine(configVals.outPath);
+
                 var path = Path.Combine(configVals.outPath, "trdata_array.json");
 
                 var json = JsonSerializer.Serialize(_trainerNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
@@ -436,11 +433,13 @@ namespace ProjectSky.ViewModels
                     File.Delete(zipPath);
                 }
 
+                Debug.WriteLine("WROTE");
+
                 ZipFile.CreateFromDirectory(zipDirs, zipPath);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("woops");
+                Debug.WriteLine(ex);
             }
         }
 
