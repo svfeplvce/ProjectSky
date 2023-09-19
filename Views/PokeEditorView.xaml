@@ -15,6 +15,7 @@
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <core:MethodArgType x:Key="MethodArgType"/>
         <core:ItemToPlib x:Key="ItemToPlib"/>
+        <core:DesiredValues x:Key="DesiredValues"/>
         <vm:EvoViewModel x:Key="EvoViewModel"/>
     </UserControl.Resources>
 
@@ -425,22 +426,44 @@
                                                             </MultiBinding.ValidationRules>
                                                         </MultiBinding>
                                                     </hc:ComboBox.ItemsSource>
-                                                    <hc:ComboBox.SelectedIndex>
-                                                        <MultiBinding Converter="{StaticResource ItemToPlib}" ValidatesOnDataErrors="True">
-                                                            <Binding Path="parameter" ValidatesOnDataErrors="True">
-                                                                <Binding.ValidationRules>
-                                                                    <core:ValidationRules/>
-                                                                </Binding.ValidationRules>
-                                                            </Binding>
-                                                            <Binding ElementName="ConditionComboBox" Path="SelectedValue" />
-                                                            <Binding Source="{StaticResource EvoViewModel}" Path="EvoMethods" />
-                                                            <Binding Source="{StaticResource EvoViewModel}" Path="EvoArgs"/>
-                                                            <Binding Path="DataContext._plibOrig" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PokeEditorView}}" />
-                                                            <MultiBinding.ValidationRules>
-                                                                <core:ValidationRules/>
-                                                            </MultiBinding.ValidationRules>
-                                                        </MultiBinding>
-                                                    </hc:ComboBox.SelectedIndex>
+                                                    <hc:ComboBox.Style>
+                                                        <Style TargetType="hc:ComboBox" BasedOn="{hc:StaticResource ComboBoxExtend}">
+                                                            <Setter Property="SelectedIndex">
+                                                                <Setter.Value>
+                                                                    <MultiBinding Converter="{StaticResource ItemToPlib}" ValidatesOnDataErrors="True">
+                                                                        <Binding Path="parameter" ValidatesOnDataErrors="True">
+                                                                            <Binding.ValidationRules>
+                                                                                <core:ValidationRules/>
+                                                                            </Binding.ValidationRules>
+                                                                        </Binding>
+                                                                        <Binding ElementName="ConditionComboBox" Path="SelectedValue" />
+                                                                        <Binding Source="{StaticResource EvoViewModel}" Path="EvoMethods" />
+                                                                        <Binding Source="{StaticResource EvoViewModel}" Path="EvoArgs"/>
+                                                                        <Binding Path="DataContext._plibOrig" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PokeEditorView}}" />
+                                                                        <MultiBinding.ValidationRules>
+                                                                            <core:ValidationRules/>
+                                                                        </MultiBinding.ValidationRules>
+                                                                    </MultiBinding>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                            <Style.Triggers>
+                                                                <DataTrigger Value="True">
+                                                                    <DataTrigger.Binding>
+                                                                        <Binding Converter="{StaticResource DesiredValues}" ElementName="ConditionComboBox" Path="SelectedValue" />
+                                                                    </DataTrigger.Binding>
+                                                                    <Setter Property="SelectedIndex">
+                                                                        <Setter.Value>
+                                                                            <Binding Path="parameter" ValidatesOnDataErrors="True">
+                                                                                <Binding.ValidationRules>
+                                                                                    <core:ValidationRules/>
+                                                                                </Binding.ValidationRules>
+                                                                            </Binding>
+                                                                        </Setter.Value>
+                                                                    </Setter>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </hc:ComboBox.Style>
                                                 </hc:ComboBox>
                                                 <hc:NumericUpDown Value="{Binding level}" Visibility="{Binding SelectedItem.UsesLevel, ElementName=ConditionComboBox, Converter={StaticResource BooleanToVisibilityConverter}}" Width="190" Margin="0 0 5 0"/>
                                                 <hc:ComboBox ItemsSource="{Binding Source={StaticResource EvoViewModel}, Path=SpeciesNames}" SelectedIndex="{Binding species}" Width="190" Margin="0 0 5 0"/>

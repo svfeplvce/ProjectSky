@@ -448,6 +448,24 @@ namespace ProjectSky.ViewModels
                     CurrentSpecies.PokeDataInfo.bringItem.itemID = HeldItemDevName;
                 }
 
+                foreach (var x in CurrentSpecies.EntryInfo.evo_data)
+                {
+                    if (x.parameter == -1)
+                    {
+                        x.parameter = 0;
+                    }
+                }
+
+                int number = 0;
+                foreach (var x in CurrentSpecies.EntryInfo.levelup_moves)
+                {
+                    if (x.move == -1)
+                    {
+                        x.move = _personalOrig.entry[PokeIndex].levelup_moves[number].move;
+                    }
+                    number++;
+                }
+
                 var devName = PokeDevID.values.First(y => y.devName == CurrentSpecies.DevID).id;
                 var personalEntry = _personalNew.entry.FirstOrDefault(x => x.species.species == devName && x.species.form == PokeForm);
 
