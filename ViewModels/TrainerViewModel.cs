@@ -217,23 +217,23 @@ namespace ProjectSky.ViewModels
                 }
                 if (poke == "2")
                 {
-                    SelectedTrainer.Data.poke2.talentType = "MANUAL";
+                    SelectedTrainer.Data.poke2.wazaType = "MANUAL";
                 }
                 if (poke == "3")
                 {
-                    SelectedTrainer.Data.poke3.talentType = "MANUAL";
+                    SelectedTrainer.Data.poke3.wazaType = "MANUAL";
                 }
                 if (poke == "4")
                 {
-                    SelectedTrainer.Data.poke4.talentType = "MANUAL";
+                    SelectedTrainer.Data.poke4.wazaType = "MANUAL";
                 }
                 if (poke == "5")
                 {
-                    SelectedTrainer.Data.poke5.talentType = "MANUAL";
+                    SelectedTrainer.Data.poke5.wazaType = "MANUAL";
                 }
                 if (poke == "6")
                 {
-                    SelectedTrainer.Data.poke6.talentType = "MANUAL";
+                    SelectedTrainer.Data.poke6.wazaType = "MANUAL";
                 }
                 for (var i = 1; i < grid.Children.Count - 1; i++)
                 {
@@ -245,27 +245,27 @@ namespace ProjectSky.ViewModels
             {
                 if (poke == "1")
                 {
-                    SelectedTrainer.Data.poke1.talentType = "DEFAULT";
+                    SelectedTrainer.Data.poke1.wazaType = "DEFAULT";
                 }
                 if (poke == "2")
                 {
-                    SelectedTrainer.Data.poke2.talentType = "DEFAULT";
+                    SelectedTrainer.Data.poke2.wazaType = "DEFAULT";
                 }
                 if (poke == "3")
                 {
-                    SelectedTrainer.Data.poke3.talentType = "DEFAULT";
+                    SelectedTrainer.Data.poke3.wazaType = "DEFAULT";
                 }
                 if (poke == "4")
                 {
-                    SelectedTrainer.Data.poke4.talentType = "DEFAULT";
+                    SelectedTrainer.Data.poke4.wazaType = "DEFAULT";
                 }
                 if (poke == "5")
                 {
-                    SelectedTrainer.Data.poke5.talentType = "DEFAULT";
+                    SelectedTrainer.Data.poke5.wazaType = "DEFAULT";
                 }
                 if (poke == "6")
                 {
-                    SelectedTrainer.Data.poke6.talentType = "DEFAULT";
+                    SelectedTrainer.Data.poke6.wazaType = "DEFAULT";
                 }
                 for (var i = 1; i < grid.Children.Count - 1; i++)
                 {
@@ -408,6 +408,15 @@ namespace ProjectSky.ViewModels
 
                 var tempExePath = Path.Combine(configVals.outPath, "flatc.exe");
                 var fbsPath = Path.Combine(configVals.outPath, "trdata_array.bfbs");
+
+                if (File.Exists(tempExePath))
+                {
+                    File.Delete(tempExePath);
+                }
+                if (File.Exists(fbsPath))
+                {
+                    File.Delete(fbsPath);
+                }
 
                 byte[] exebytes = new byte[(int)flatcExe.Length];
                 byte[] tbytes = new byte[(int)fbs.Length];
