@@ -90,7 +90,7 @@ namespace ProjectSky.ViewModels
                     configVals = JsonSerializer.Deserialize<Models.Config>(conf);
                 }
             }
-            CheckUpdate();
+            // CheckUpdate();
             SetProperties();
             CheckBins();
         }
