@@ -113,11 +113,11 @@ namespace ProjectSky.ViewModels
                     tb.FontFamily = (System.Windows.Media.FontFamily)Application.Current.FindResource("Gill");
                     tb.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255,255,255,255));
                     panel.Children.Add(tb);
-                    var monName = pictureNames[num-1] == "yanmega" || pictureNames[num-1] == "meganium" ? pictureNames[num-1] : pictureNames[num - 1].Replace("fire", "").Replace("water", "").Replace("alola", "").Replace("galar", "").Replace("paldea", "").Replace("megax", "").Replace("megay", "").Replace("mega", "").Replace("hisui", "").Replace("origin", "").Replace("primal", "").Replace("-wellspring", "").Replace("-hearthflame", "").Replace("-cornerstone", "").Replace("-bloodmoon", "").Replace("therian", "");
+                    var monName = pictureNames[num-1] == "yanmega" || pictureNames[num-1] == "meganium" || pictureNames[num-1] == "mew" ? pictureNames[num-1] : pictureNames[num - 1].Replace("fire", "").Replace("water", "").Replace("alola", "").Replace("galar", "").Replace("paldea", "").Replace("megax", "").Replace("megay", "").Replace("mega", "").Replace("hisui", "").Replace("origin", "").Replace("primal", "").Replace("-wellspring", "").Replace("-hearthflame", "").Replace("-cornerstone", "").Replace("-bloodmoon", "").Replace("therian", "");
                     int formNum1 = 0;
                     for (int num2 = 0; num2 < num - 1; num2 ++)
                     {
-                        if (pictureNames[num2].Contains(monName))
+                        if (pictureNames[num2].Contains(monName) && monName != "mew" && monName != "porygon" && monName != "porygon2" && monName != "porygonz" && monName != "pidgeotto")
                         {
                             formNum1++;
                         }
@@ -150,6 +150,30 @@ namespace ProjectSky.ViewModels
                 _personal = JsonSerializer.Deserialize<Personal.PersonalArray>(personalJson);
                 _plib = JsonSerializer.Deserialize<Plib.PlibArray>(plibJson);
                 _pdata = JsonSerializer.Deserialize<PokeData.DataArray>(pdataJson);
+                Application.Current.Properties["plib"] = _plib;
+
+                foreach (var x in _personal.entry)
+                {
+                    // go through everything that can have a -1 value and set it to 0 just to be completely sure its fine
+                    if (x.ability_1 == -1) x.ability_1 = 0;
+                    if (x.ability_2 == -1) x.ability_2 = 0;
+                    if (x.ability_hidden == -1) x.ability_hidden = 0;
+                    if (x.type_1 == -1) x.type_1 = 0;
+                    if (x.type_2 == -1) x.type_2 = 0;
+
+                    foreach (var y in x.evo_data)
+                    {
+                        if (y.parameter == -1) y.parameter = 0;
+                        if (y.condition == -1) y.condition = 0;
+                        if (y.species == -1) y.species = 0;
+                    }
+                    foreach (var y in x.levelup_moves)
+                    {
+                        if (y.move == -1) y.move = 0;
+                    }
+
+                    x.tm_moves.RemoveAll(y => y == -1);
+                }
             }
         }
 

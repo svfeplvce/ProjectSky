@@ -11,14 +11,95 @@ namespace ProjectSky.Models
 {
     public class Personal
     {
-        public class BaseStats
+        public class BaseStats : ViewModel
         {
-            public int HP { get; set; }
-            public int ATK { get; set; }
-            public int DEF { get; set; }
-            public int SPA { get; set; }
-            public int SPD { get; set; }
-            public int SPE { get; set; }
+            [JsonIgnore]
+            private int _HP;
+            public int HP
+            {
+                get => _HP;
+                set
+                {
+                    _HP = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(BST));
+                }
+            }
+            [JsonIgnore]
+            private int _ATK;
+            public int ATK
+            {
+                get => _ATK;
+                set
+                {
+                    _ATK = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(BST));
+                }
+            }
+            [JsonIgnore]
+            private int _DEF;
+            public int DEF
+            {
+                get => _DEF;
+                set
+                {
+                    _DEF = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(BST));
+                }
+            }
+            [JsonIgnore]
+            private int _SPA;
+            public int SPA
+            {
+                get => _SPA;
+                set
+                {
+                    _SPA = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(BST));
+                }
+            }
+            [JsonIgnore]
+            private int _SPD;
+            public int SPD
+            {
+                get => _SPD;
+                set
+                {
+                    _SPD = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(BST));
+                }
+            }
+            [JsonIgnore]
+            private int _SPE;
+            public int SPE
+            {
+                get => _SPE;
+                set
+                {
+                    _SPE = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(BST));
+                }
+            }
+            [JsonIgnore]
+            private int _BST;
+            [JsonIgnore]
+            public int BST
+            {
+                get
+                {
+                    return HP + ATK + DEF + SPA + SPD + SPE;
+                }
+                set
+                {
+                    _BST = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
         public class Dex

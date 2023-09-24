@@ -28,11 +28,11 @@ namespace ProjectSky.Views
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (sender is ComboBox combobox && DataContext is PokeEditorViewModel vm)
+            if (sender is HandyControl.Controls.ComboBox combobox && DataContext is PokeEditorViewModel vm)
             {
                 if (e.AddedItems.Count > 0 && e.AddedItems[0] is string selectedArgType && vm.Items.Contains(selectedArgType))
                 {
-                    vm.EditPlib(vm.Items.IndexOf(selectedArgType));
+                    vm.EditPlib(vm.Items.IndexOf(selectedArgType), combobox);
                 }
             }
         }

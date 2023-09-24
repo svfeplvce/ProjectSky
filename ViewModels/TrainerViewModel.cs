@@ -28,6 +28,7 @@ namespace ProjectSky.ViewModels
         public Dictionary<string, string> TeraTypes { get; } = Application.Current.Properties["teratypes"] as Dictionary<string, string>;
         public Dictionary<string, string> BallItemID { get; } = new Dictionary<string, string> { };
         public Dictionary<string, string> AbilityTr { get; } = new Dictionary<string, string> { { "Automatic", "RANDOM_12" }, { "Ability 1", "SET_1" }, { "Ability 2", "SET_2" }, { "Hidden Ability", "SET_3" } };
+        public Dictionary<string, string> NatureTr { get; } = new Dictionary<string, string> { { "Automatic", "DEFAULT" }, { "Hardy", "GANBARIYA" }, { "Lonely", "SAMISIGARIYA" }, { "Brave", "YUUKAN" }, { "Adamant", "IJIPPARI" }, { "Naughty", "YANTYA" }, { "Bold", "ZUBUTOI" }, { "Docile", "SUNAO" }, { "Relaxed", "NONKI" }, { "Impish", "WANPAKU" }, { "Lax", "NOUTENKI" }, { "Timid", "OKUBYOU" }, { "Hasty", "SEKKATI" }, { "Serious", "MAJIME" }, { "Jolly", "YOUKI" }, { "Naive", "MUJYAKI" }, { "Modest", "HIKAEME" }, { "Mild", "OTTORI" }, { "Quiet", "REISEI" }, { "Bashful", "TEREYA" }, { "Rash", "UKKARIYA" }, { "Calm", "ODAYAKA" }, { "Gentle", "OTONASII" }, { "Sassy", "NAMAIKI" }, { "Careful", "SINNTYOU" }, { "Quirky", "KIMAGURE" } };
 
         private INavigationService _navigationService;
         public INavigationService NavigationService

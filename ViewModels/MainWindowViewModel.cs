@@ -241,6 +241,10 @@ namespace ProjectSky.ViewModels
                                             property.SetValue(personalNew.entry[i], sourceValue);
                                         }
                                     }
+                                    if (!personalNew.entry.Contains(personalOrig.entry[i]))
+                                    {
+                                        personalNew.entry.Insert(i, personalOrig.entry[i]);
+                                    }
                                 }
                                 else if (i >= personalNew.entry.Count)
                                 {
@@ -378,7 +382,7 @@ namespace ProjectSky.ViewModels
 
         private async void CheckUpdate()
         {
-            var currentVersion = "2.0.4";
+            var currentVersion = "2.0.4.2";
 
             try
             {

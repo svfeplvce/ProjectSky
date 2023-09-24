@@ -221,6 +221,7 @@
                             <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Tera Type" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Item" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nature" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
@@ -228,6 +229,7 @@
                             <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.gemType}"/>
                             <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke1.item}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.tokusei}"/>
+                            <hc:ComboBox Grid.Row="6" Grid.Column="3" ItemsSource="{Binding NatureTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke1.seikaku}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke1.level}" Minimum="1" Maximum="100"/>
 
@@ -441,11 +443,13 @@
                             <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nature" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
                             <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.ballId}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.gemType}"/>
                             <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke2.item}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.tokusei}"/>
+                            <hc:ComboBox Grid.Row="6" Grid.Column="3" ItemsSource="{Binding NatureTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke2.seikaku}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke2.level}" Minimum="1" Maximum="100"/>
 
@@ -659,11 +663,13 @@
                             <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nature" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
                             <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.ballId}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.gemType}"/>
                             <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke3.item}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.tokusei}"/>
+                            <hc:ComboBox Grid.Row="6" Grid.Column="3" ItemsSource="{Binding NatureTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke3.seikaku}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke3.level}" Minimum="1" Maximum="100"/>
 
@@ -876,11 +882,13 @@
                             <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nature" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
                             <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.ballId}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.gemType}"/>
                             <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke4.item}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.tokusei}"/>
+                            <hc:ComboBox Grid.Row="6" Grid.Column="3" ItemsSource="{Binding NatureTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke4.seikaku}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke4.level}" Minimum="1" Maximum="100"/>
 
@@ -1092,10 +1100,12 @@
                             <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nature" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
                             <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.ballId}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.gemType}"/>
                             <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke5.item}"/>
+                            <hc:ComboBox Grid.Row="6" Grid.Column="3" ItemsSource="{Binding NatureTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.seikaku}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke5.tokusei}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke5.level}" Minimum="1" Maximum="100"/>
@@ -1309,11 +1319,12 @@
                             <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ability" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Level" FontSize="15" FontFamily="{StaticResource Gill}"/>
                             <TextBlock Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Shiny?" FontSize="15" FontFamily="{StaticResource Gill}"/>
+                            <TextBlock Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nature" FontSize="15" FontFamily="{StaticResource Gill}"/>
 
                             <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.ballId}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.gemType}"/>
                             <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.item}"/>
-                            <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.tokusei}"/>
+                            <hc:ComboBox Grid.Row="6" Grid.Column="3" ItemsSource="{Binding NatureTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.seikaku}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke6.level}" Minimum="1" Maximum="100"/>
 

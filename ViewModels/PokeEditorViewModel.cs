@@ -1,5 +1,7 @@
-﻿using HandyControl.Data;
+﻿using HandyControl.Controls;
+using HandyControl.Data;
 using HandyControl.Expression.Shapes;
+using HandyControl.Tools;
 using HandyControl.Tools.Command;
 using HandyControl.Tools.Extension;
 using ProjectSky.Core;
@@ -22,6 +24,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Xml.Linq;
+using ComboBox = HandyControl.Controls.ComboBox;
+using MessageBox = System.Windows.MessageBox;
 
 namespace ProjectSky.ViewModels
 {
@@ -42,8 +46,8 @@ namespace ProjectSky.ViewModels
 
         private Personal.PersonalArray _personalOrig;
         private Personal.PersonalArray _personalNew;
-        public Plib.PlibArray _plibOrig { get; set; }
-        private Plib.PlibArray _plibNew;
+        private Plib.PlibArray _plibOrig; 
+        public Plib.PlibArray _plibNew { get; set; }
         private PokeData.DataArray _pdataOrig;
         private PokeData.DataArray _pdataNew;
 
@@ -180,6 +184,7 @@ namespace ProjectSky.ViewModels
         private ItemDevID.DevID ItemDevID;
         private Config configVals;
         private bool _isLoaded = false;
+        
         public bool IsLoaded
         {
             get => _isLoaded;
@@ -284,7 +289,9 @@ namespace ProjectSky.ViewModels
             var currentPdata = _pdataNew.values.Exists(x => x.devid == currentDevID) ? _pdataNew.values.First(x => x.devid == currentDevID) : null;
             try
             {
-                CurrentSpecies = new Species { DevID = currentDevID, EntryInfo = _personalNew.entry.FirstOrDefault(x => x.species.species == PokeDevID.values.First(y => y.devName == currentDevID).id && x.species.form == PokeForm), PokeDataInfo = currentPdata, Index = PokeIndex, isForm = (alolaForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || galarForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || hisuiForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || megaForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || paldeaForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || miscForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || PokeName == "Indeedee" || PokeName == "Oricorio" || PokeName == "Lycanroc" || PokeName.Contains("Charizard") || PokeName.Contains("Mewtwo") || PokeName == "Eevee" || PokeName == "Pikachu" || PokeName == "Miraidon" || PokeName == "Koraidon" || PokeName == "Ogerpon" || PokeName == "Poltchageist" || PokeName == "Sinistcha") ? true : false };
+                var devEntry = PokeDevID.values.First(y => y.devName == currentDevID);
+                var pkEntry = _personalNew.entry.First(x => x.species.species == devEntry.id && x.species.form == PokeForm);
+                CurrentSpecies = new Species { DevID = currentDevID, EntryInfo = pkEntry, PokeDataInfo = currentPdata, Index = PokeIndex, isForm = (alolaForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || galarForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || hisuiForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || megaForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || paldeaForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || miscForms.Contains(SpeciesNames[_personalNew.entry[PokeIndex].species.species]) || PokeName == "Indeedee" || PokeName == "Oricorio" || PokeName == "Lycanroc" || PokeName.Contains("Charizard") || PokeName.Contains("Mewtwo") || PokeName == "Eevee" || PokeName == "Pikachu" || PokeName == "Miraidon" || PokeName == "Koraidon" || PokeName == "Ogerpon" || PokeName == "Poltchageist" || PokeName == "Sinistcha") ? true : false };
             } catch (Exception ex)
             {
                 Debug.WriteLine(ex);
@@ -388,9 +395,10 @@ namespace ProjectSky.ViewModels
             }
         }
 
-        public void EditPlib(int item)
+        public void EditPlib(int item, HandyControl.Controls.ComboBox cb)
         {
             var editedEntry = _plibNew.values.FirstOrDefault(x => x.itemID == 0);
+            var parentSP = cb.Parent as StackPanel;
             if (editedEntry != null)
             {
                 var checkIfInPlib = _plibNew.values.Where(x => x.itemID == item).Count() > 0;
@@ -398,6 +406,11 @@ namespace ProjectSky.ViewModels
                 {
                     editedEntry.itemID = item;
                 }
+                var condcb = (ComboBox)parentSP.Children[0];
+                var speciescb = (ComboBox)parentSP.Children[3];
+                var formbox = (NumericUpDown)parentSP.Children[4];
+                var index = CurrentSpecies.EntryInfo.evo_data.First(x => x.species == speciescb.SelectedIndex && x.form == formbox.Value && x.condition == condcb.SelectedIndex);
+                index.parameter = _plibNew.values.First(x => x.itemID == item).plibID;
             }
             else MessageBox.Show("No more entries available in Plib. Please set the item to something else.");
         }
@@ -454,16 +467,6 @@ namespace ProjectSky.ViewModels
                     {
                         x.parameter = 0;
                     }
-                }
-
-                int number = 0;
-                foreach (var x in CurrentSpecies.EntryInfo.levelup_moves)
-                {
-                    if (x.move == -1)
-                    {
-                        x.move = _personalOrig.entry[PokeIndex].levelup_moves[number].move;
-                    }
-                    number++;
                 }
 
                 var devName = PokeDevID.values.First(y => y.devName == CurrentSpecies.DevID).id;

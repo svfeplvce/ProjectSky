@@ -74,6 +74,8 @@
                             <TextBlock Grid.Row="1" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" Text=" SPA" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             <TextBlock Grid.Row="2" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" Text=" SPD " HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             <TextBlock Grid.Row="3" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" Text=" SPE " HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                            <TextBlock Grid.Row="4" Grid.Column="3" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" Text="{Binding CurrentSpecies.EntryInfo.base_stats.BST}" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                            <TextBlock Grid.Row="4" Grid.Column="2" FontFamily="{StaticResource Gill}" FontSize="15" Foreground="White" Text=" BST " HorizontalAlignment="Right"  VerticalAlignment="Center"/>
 
                             <hc:NumericUpDown Grid.Row="1" Grid.Column="1" Background="#1F1F1F" BorderBrush="#252525" Foreground="White" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="120" Height="35" Minimum="1" Maximum="255" Value="{Binding CurrentSpecies.EntryInfo.base_stats.HP}"/>
                             <hc:NumericUpDown Grid.Row="1" Grid.Column="2" Background="#1F1F1F" BorderBrush="#252525" Foreground="White" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="120" Height="35" Minimum="1" Maximum="255" Value="{Binding CurrentSpecies.EntryInfo.base_stats.SPA}"/>
@@ -414,6 +416,7 @@
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                                                <TextBlock Text="{Binding}"/>
                                                 <hc:ComboBox x:Name="ConditionComboBox" ItemsSource="{Binding Source={StaticResource EvoViewModel}, Path=EvoMethods}" DisplayMemberPath="Method" SelectedValuePath="MethodID" SelectedValue="{Binding condition}" Width="190" Margin="0 0 5 0"/>
                                                 <hc:ComboBox Width="190" Margin="0 0 5 0" SelectionChanged="ComboBox_SelectionChanged">
                                                     <hc:ComboBox.ItemsSource>
@@ -439,7 +442,7 @@
                                                                         <Binding ElementName="ConditionComboBox" Path="SelectedValue" />
                                                                         <Binding Source="{StaticResource EvoViewModel}" Path="EvoMethods" />
                                                                         <Binding Source="{StaticResource EvoViewModel}" Path="EvoArgs"/>
-                                                                        <Binding Path="DataContext._plibOrig" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PokeEditorView}}" />
+                                                                        <Binding Path="DataContext._plibNew" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PokeEditorView}}" />
                                                                         <MultiBinding.ValidationRules>
                                                                             <core:ValidationRules/>
                                                                         </MultiBinding.ValidationRules>
