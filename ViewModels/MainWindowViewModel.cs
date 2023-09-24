@@ -221,6 +221,7 @@ namespace ProjectSky.ViewModels
 
                             var personalOrig = System.Text.Json.JsonSerializer.Deserialize<Personal.PersonalArray>(personalOrigJson);
                             var personalNew = System.Text.Json.JsonSerializer.Deserialize<Personal.PersonalArray>(personalNewJson);
+                            var personalNew2 = personalNew;
 
                             for (var i = 0; i < personalOrig.entry.Count; i++)
                             {
@@ -238,20 +239,27 @@ namespace ProjectSky.ViewModels
 
                                         if (isTargetValueDefault || property.ToString() == "kitakami_dex" || property.ToString() == "blueberry_dex")
                                         {
-                                            property.SetValue(personalNew.entry[i], sourceValue);
+                                            property.SetValue(personalNew2.entry[i], sourceValue);
                                         }
                                     }
                                     if (!personalNew.entry.Contains(personalOrig.entry[i]))
                                     {
-                                        personalNew.entry.Insert(i, personalOrig.entry[i]);
+                                        personalNew2.entry.Insert(i, personalOrig.entry[i]);
                                     }
                                 }
-                                else if (i >= personalNew.entry.Count)
+                                else if (i >= personalNew.entry.Count && personalNew.entry.Count != personalOrig.entry.Count())
                                 {
                                     // Add a new item to personalNew if the index doesn't exist in personalNew
-                                    personalNew.entry.Add(personalOrig.entry[i]);
+                                    personalNew2.entry.Add(personalOrig.entry[i]);
                                 }
                             }
+
+                            var tempPers = personalNew2;
+
+                            tempPers.entry = tempPers.entry.DistinctBy(y => new { y.species.species, y.species.form }).ToList<Personal.Entry>();
+
+                            personalNew = tempPers;
+
                             var path = Path.Combine(configVals.outPath, "personal_array.json");
 
                             var json = System.Text.Json.JsonSerializer.Serialize(personalNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });

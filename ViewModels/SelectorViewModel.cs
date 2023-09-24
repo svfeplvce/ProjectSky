@@ -241,9 +241,20 @@ namespace ProjectSky.ViewModels
                 var plcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/world/data/battle/plib_item_conversion/ -b plib_item_conversion_array.bfbs plib_item_conversion_array.json").WithWorkingDirectory(configVals.outPath);
                 var pdcmd = Cli.Wrap(tempExePath).WithArguments("-o romfs/world/data/encount/pokedata/pokedata/ -b pokedata_array.bfbs pokedata_array.json").WithWorkingDirectory(configVals.outPath);
 
-                await pcmd.ExecuteBufferedAsync();
-                await plcmd.ExecuteBufferedAsync();
-                await pdcmd.ExecuteBufferedAsync();
+                if (File.Exists(Path.Combine(configVals.outPath, "personal_array.json")))
+                {
+                    await pcmd.ExecuteBufferedAsync();
+                }
+
+                if (File.Exists(Path.Combine(configVals.outPath, "plib_item_conversion_array.json")))
+                {
+                    await plcmd.ExecuteBufferedAsync();
+                }
+
+                if (File.Exists(Path.Combine(configVals.outPath, "pokedata_array.json")))
+                {
+                    await pdcmd.ExecuteBufferedAsync();
+                }
 
                 File.Delete(tempExePath);
                 File.Delete(personalFBSPath);
