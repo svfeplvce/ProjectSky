@@ -1324,6 +1324,7 @@
                             <hc:ComboBox Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding BallItemID}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.ballId}"/>
                             <hc:ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding TeraTypes}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.gemType}"/>
                             <hc:ComboBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ItmDevID.items}" DisplayMemberPath="name" SelectedValuePath="devName" SelectedValue="{Binding SelectedTrainer.Data.poke6.item}"/>
+                            <hc:ComboBox Grid.Row="4" Grid.Column="3" ItemsSource="{Binding AbilityTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.tokusei}"/>
                             <hc:ComboBox Grid.Row="6" Grid.Column="3" ItemsSource="{Binding NatureTr}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding SelectedTrainer.Data.poke6.seikaku}"/>
 
                             <hc:NumericUpDown Grid.Row="2" Grid.Column="5" Value="{Binding SelectedTrainer.Data.poke6.level}" Minimum="1" Maximum="100"/>
