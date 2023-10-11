@@ -188,25 +188,57 @@ namespace ProjectSky.ViewModels
 
                 foreach (var x in update)
                 {
-                    if (x == "trdata" && x == "weednose")
+                    if (x == "trdata")
                     {
                         using (var trdataNewReader = new StreamReader(trdataNewFile))
                         {
                             var trdataOrigJson = trdataReader.ReadToEnd();
                             var trdataNewJson = trdataNewReader.ReadToEnd();
 
-                            var trainerOrig = System.Text.Json.JsonSerializer.Deserialize<Trainer.TrainerArray>(trdataOrigJson);
-                            var trainerNew = System.Text.Json.JsonSerializer.Deserialize<Trainer.TrainerArray>(trdataNewJson);
-                            for (var i = 0; i < trainerOrig.values.Count; i++)
+                            var trdataOrig = System.Text.Json.JsonSerializer.Deserialize<Trainer.TrainerArray>(trdataOrigJson);
+                            var trdataNew = System.Text.Json.JsonSerializer.Deserialize<Trainer.TrainerArray>(trdataNewJson);
+                            var trdataNew2 = trdataNew;
+
+                            for (var i = 0; i < trdataOrig.values.Count; i++)
                             {
-                                if (trainerNew.values[i] == null)
+                                if (i < trdataNew.values.Count)
                                 {
-                                    trainerNew.values[i] = trainerOrig.values[i];
+                                    PropertyInfo[] properties = typeof(Trainer.Value).GetProperties();
+
+                                    foreach (var property in properties)
+                                    {
+                                        object targetValue = property.GetValue(trdataNew.values[i]);
+                                        object sourceValue = property.GetValue(trdataOrig.values[i]);
+
+                                        bool isTargetValueDefault = targetValue == null || (property.PropertyType.IsValueType && targetValue.Equals(Activator.CreateInstance(property.PropertyType)));
+
+
+                                        if (isTargetValueDefault)
+                                        {
+                                            property.SetValue(trdataNew2.values[i], sourceValue);
+                                        }
+                                    }
+                                    if (!trdataNew.values.Contains(trdataOrig.values[i]))
+                                    {
+                                        trdataNew2.values.Insert(i, trdataOrig.values[i]);
+                                    }
+                                }
+                                else if (i >= trdataNew.values.Count && trdataNew.values.Count != trdataOrig.values.Count())
+                                {
+                                    // Add a new item to trdataNew if the index doesn't exist in trdataNew
+                                    trdataNew2.values.Add(trdataOrig.values[i]);
                                 }
                             }
+
+                            var tempTr = trdataNew2;
+
+                            tempTr.values = tempTr.values.DistinctBy(y => new { y.trid }).ToList<Trainer.Value>();
+
+                            trdataNew = tempTr;
+
                             var path = Path.Combine(configVals.outPath, "trdata_array.json");
 
-                            var json = JsonSerializer.Serialize(trainerNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
+                            var json = System.Text.Json.JsonSerializer.Serialize(trdataNew, new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, WriteIndented = true });
 
                             File.WriteAllText(path, json);
                         }
