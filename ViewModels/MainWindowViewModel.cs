@@ -23,6 +23,7 @@ using Newtonsoft.Json;
 using Application = System.Windows.Application;
 using MessageBox = System.Windows.MessageBox;
 using JsonSerializer = System.Text.Json.JsonSerializer;
+using static ProjectSky.Models.Personal;
 
 namespace ProjectSky.ViewModels
 {
@@ -197,7 +198,10 @@ namespace ProjectSky.ViewModels
 
                             var trdataOrig = System.Text.Json.JsonSerializer.Deserialize<Trainer.TrainerArray>(trdataOrigJson);
                             var trdataNew = System.Text.Json.JsonSerializer.Deserialize<Trainer.TrainerArray>(trdataNewJson);
-                            var trdataNew2 = trdataNew;
+                            var trdataNew2 = new Trainer.TrainerArray
+                            {
+                                values = new List<Trainer.Value>(trdataNew.values)
+                            };
 
                             for (var i = 0; i < trdataOrig.values.Count; i++)
                             {
@@ -210,12 +214,17 @@ namespace ProjectSky.ViewModels
                                         object targetValue = property.GetValue(trdataNew.values[i]);
                                         object sourceValue = property.GetValue(trdataOrig.values[i]);
 
-                                        bool isTargetValueDefault = targetValue == null || (property.PropertyType.IsValueType && targetValue.Equals(Activator.CreateInstance(property.PropertyType)));
+                                        bool isTargetValueDefault = targetValue == null || (property.PropertyType.IsValueType && targetValue.Equals(sourceValue));
 
 
                                         if (isTargetValueDefault)
                                         {
                                             property.SetValue(trdataNew2.values[i], sourceValue);
+                                        }
+
+                                        if (property.PropertyType == typeof(int) && (int)targetValue == -1)
+                                        {
+                                            property.SetValue(targetValue, 0); // Replace -1 with 0, or any other desired default value
                                         }
                                     }
                                     if (!trdataNew.values.Contains(trdataOrig.values[i]))
@@ -232,7 +241,13 @@ namespace ProjectSky.ViewModels
 
                             var tempTr = trdataNew2;
 
-                            tempTr.values = tempTr.values.DistinctBy(y => new { y.trid }).ToList<Trainer.Value>();
+                            for (var i = tempTr.values.Count - 1; i > 0; i--)
+                            {
+                                if (trdataOrig.values.Contains(tempTr.values[i]) && tempTr.values.Count(x => x.trid == tempTr.values[i].trid) > 1)
+                                {
+                                    tempTr.values.RemoveAt(i);
+                                }
+                            }
 
                             trdataNew = tempTr;
 
@@ -253,11 +268,14 @@ namespace ProjectSky.ViewModels
 
                             var personalOrig = System.Text.Json.JsonSerializer.Deserialize<Personal.PersonalArray>(personalOrigJson);
                             var personalNew = System.Text.Json.JsonSerializer.Deserialize<Personal.PersonalArray>(personalNewJson);
-                            var personalNew2 = personalNew;
+                            var personalNew2 = new Personal.PersonalArray
+                            {
+                                entry = new List<Personal.Entry>(personalNew.entry)
+                            };
 
                             for (var i = 0; i < personalOrig.entry.Count; i++)
                             {
-                                if (i < personalNew.entry.Count)
+                                if (i < personalNew.entry.Count && i == 1)
                                 {
                                     PropertyInfo[] properties = typeof(Personal.Entry).GetProperties();
 
@@ -266,29 +284,39 @@ namespace ProjectSky.ViewModels
                                         object targetValue = property.GetValue(personalNew.entry[i]);
                                         object sourceValue = property.GetValue(personalOrig.entry[i]);
 
-                                        bool isTargetValueDefault = targetValue == null || (property.PropertyType.IsValueType && targetValue.Equals(Activator.CreateInstance(property.PropertyType)));
+                                        bool isTargetValueDefault = targetValue == null || (property.PropertyType.IsValueType && targetValue.Equals(sourceValue));
 
-
-                                        if (isTargetValueDefault || property.ToString() == "kitakami_dex" || property.ToString() == "blueberry_dex")
+                                        if (isTargetValueDefault || property.Name == "kitakami_dex" || property.Name == "blueberry_dex")
                                         {
                                             property.SetValue(personalNew2.entry[i], sourceValue);
                                         }
+
+                                        if (property.PropertyType == typeof(int) && (int)targetValue == -1)
+                                        {
+                                            property.SetValue(targetValue, 0); // Replace -1 with 0, or any other desired default value
+                                        }
                                     }
-                                    if (!personalNew.entry.Contains(personalOrig.entry[i]))
+                                    if (!personalNew2.entry.Contains(personalOrig.entry[i]))
                                     {
                                         personalNew2.entry.Insert(i, personalOrig.entry[i]);
                                     }
                                 }
-                                else if (i >= personalNew.entry.Count && personalNew.entry.Count != personalOrig.entry.Count())
+                                else if (i >= personalNew.entry.Count && personalNew.entry.Count != personalOrig.entry.Count)
                                 {
-                                    // Add a new item to personalNew if the index doesn't exist in personalNew
+                                    // Add a new item to personalNew2 if the index doesn't exist in personalNew
                                     personalNew2.entry.Add(personalOrig.entry[i]);
                                 }
                             }
 
                             var tempPers = personalNew2;
 
-                            tempPers.entry = tempPers.entry.DistinctBy(y => new { y.species.species, y.species.form }).ToList<Personal.Entry>();
+                            for (var i = tempPers.entry.Count - 1; i > 0 ; i--)
+                            {
+                                if (personalOrig.entry.Contains(tempPers.entry[i]) && tempPers.entry.Count(x => x.species.species == tempPers.entry[i].species.species && x.species.form == tempPers.entry[i].species.form) > 1)
+                                {
+                                    tempPers.entry.RemoveAt(i);
+                                }
+                            }
 
                             personalNew = tempPers;
 
