@@ -31,6 +31,7 @@ namespace ProjectSky.ViewModels
             NavigateSelectCommand = new RelayCommand(o => { NavigationService.NavigateTo<SelectorViewModel>(); }, o => true);
             NavigateTrainerCommand = new RelayCommand(o => { NavigationService.NavigateTo<TrainerViewModel>(); }, o => true);
             NavigateMoveCommand = new RelayCommand(o => { NotAdded(); }, o => true);
+            //NavigateMoveCommand = new RelayCommand(o => { NavigationService.NavigateTo<MoveViewModel>(); }, o => true);
         }
 
         private void NotAdded()

@@ -51,6 +51,8 @@
                                 </ItemsPanelTemplate>
                             </ContextMenu.ItemsPanel>
                             <MenuItem Header="Edit Config" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Edit Config"/>
+                            <!--<MenuItem Header="Convert BIN to JSON" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="BIN to JSON"/>-->
+                            <!--<MenuItem Header="Combine JSON Files" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Combine JSON"/>-->
                             <MenuItem Header="Save" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Save" Visibility="{Binding NavigationService.IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}" />
                             <MenuItem Header="Reset" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Reset" Visibility="{Binding NavigationService.IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                             <MenuItem Header="Minimise" Command="{Binding SelectComboBoxItemCommand}" CommandParameter="Minimise"/>

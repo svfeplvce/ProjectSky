@@ -138,8 +138,11 @@ namespace ProjectSky.ViewModels
             SelectedMove.Data = _moveNew.table.FirstOrDefault(x => x.move_id == waza.devName);
             SelectedMove.DevID = waza.devName;
             SelectedMove.Name = waza.name;
-            FillList();
             OnPropertyChanged(nameof(SelectedMove));
+            await Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                FillList();
+            });
         }
 
         private async Task FillList()

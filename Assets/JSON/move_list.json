@@ -4495,6 +4495,111 @@
       "power": 100
     },
     {
+      "devName": "WAZA_TYOUDENGIHOU",
+      "id": 905,
+      "name": "Electro Shot",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_TERAKURASUTAA",
+      "id": 906,
+      "name": "Tera Starstorm",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_KIMAGUREEZAA",
+      "id": 907,
+      "name": "Fickle Beam",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_KAZANNOFURIRU",
+      "id": 908,
+      "name": "Burning Bulwark",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_SEITENHEKIREKI",
+      "id": 909,
+      "name": "Thunderclap",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_ROKKUKUREIMOA",
+      "id": 910,
+      "name": "Mighty Cleave",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_METARUSXYOOTERU",
+      "id": 911,
+      "name": "Tachyon Cutter",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_HAADOPURESU",
+      "id": 912,
+      "name": "Hard Press",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_WOOKURAI",
+      "id": 913,
+      "name": "Dragon Cheer",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_TENSHINOSOPURANO",
+      "id": 914,
+      "name": "Alluring Voice",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_YAKETUPATI",
+      "id": 915,
+      "name": "Temper Flare",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_INAZUMADAIBU",
+      "id": 916,
+      "name": "Supercell Slam",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_SAIKONOIZU",
+      "id": 917,
+      "name": "Psychic Noise",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_HAYATEGAESHI",
+      "id": 918,
+      "name": "Upper Hand",
+      "type": 11,
+      "power": 100
+    },
+    {
+      "devName": "WAZA_KUSARIENN",
+      "id": 919,
+      "name": "Malignant Chain",
+      "type": 11,
+      "power": 100
+    },
+    {
       "devName": "WAZA_NULL",
       "id": 0,
       "name": "\u2014\u2014\u2014",

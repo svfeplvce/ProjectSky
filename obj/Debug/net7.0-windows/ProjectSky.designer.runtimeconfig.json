@@ -13,10 +13,10 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\foxna\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\foxna\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\foxna\\.nuget\\packages"
     ],
     "configProperties": {
+      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }

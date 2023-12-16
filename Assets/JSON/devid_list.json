@@ -6079,6 +6079,12 @@
       "forms": 1
     },
     {
+      "devName": "DEV_KAZITTYU3",
+      "id": 1013,
+      "name": "Hydrapple",
+      "forms": 1
+    },
+    {
       "devName": "DEV_DOKUINU",
       "id": 1014,
       "name": "Okidogi",
@@ -6094,6 +6100,48 @@
       "devName": "DEV_DOKUKIZI",
       "id": 1016,
       "name": "Fezandipiti",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_AENTEI",
+      "id": 1017,
+      "name": "Gouging Fire",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_ARAIKOU",
+      "id": 1018,
+      "name": "Raging Bolt",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_BKOBARUON",
+      "id": 1019,
+      "name": "Iron Crown",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_BTERAKION",
+      "id": 1020,
+      "name": "Iron Boulder",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_KODAIGAME",
+      "id": 1021,
+      "name": "Terapagos",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_DOKUTAROU",
+      "id": 1022,
+      "name": "Pecharunt",
+      "forms": 1
+    },
+    {
+      "devName": "DEV_ZYURARUDO2",
+      "id": 1023,
+      "name": "Archaludon",
       "forms": 1
     },
     {

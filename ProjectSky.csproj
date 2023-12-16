@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <PackageReference Include="CliWrap" Version="3.6.4" />
+    <PackageReference Include="CompareNETObjects" Version="4.82.0" />
     <PackageReference Include="HandyControls" Version="3.4.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
