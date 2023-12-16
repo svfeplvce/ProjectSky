@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\foxna\programs\PROJECT SKY\ProjectSky\obj\Release\net7.0-windows\
+D:\programs\PROJECT SKY\ProjectSky\obj\Release\net7.0-windows\
 ProjectSky
 none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
-C:\Users\foxna\programs\PROJECT SKY\ProjectSky\App.xaml
-9-106133503
+D:\programs\PROJECT SKY\ProjectSky\App.xaml
+111276719291
 
-501377116363
-214879989298
-Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;Views\Config.xaml;Views\HomeView.xaml;Views\MainWindow.xaml;Views\MoveView.xaml;Views\PokeEditorView.xaml;Views\SelectorView.xaml;Views\TrainerView.xaml;
+55-1193532524
+215-843179768
+Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;Views\Combiner.xaml;Views\Config.xaml;Views\Converter.xaml;Views\HomeView.xaml;Views\MainWindow.xaml;Views\MoveView.xaml;Views\PokeEditorView.xaml;Views\SelectorView.xaml;Views\TrainerView.xaml;
 
 False
 
